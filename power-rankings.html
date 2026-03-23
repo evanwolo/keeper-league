@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Rankings - Keeper League</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .pr-container { padding: 24px 32px; }
+
+    /* League Rules Section */
+    .rules-panel {
+      background: #13161f;
+      border: 1px solid #2e3550;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .rules-header {
+      background: linear-gradient(135deg, #1e2a1a, #1a2e1e);
+      border-bottom: 2px solid #2e7d32;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+    .rules-header h2 { font-size: 1.1rem; color: #fff; }
+    .rules-header .toggle-icon { color: #4caf50; font-size: 1.2rem; transition: transform 0.2s; }
+    .rules-header .toggle-icon.collapsed { transform: rotate(-90deg); }
+    .rules-body { padding: 20px; }
+    .rules-body.collapsed { display: none; }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 768px) { .rules-grid { grid-template-columns: 1fr; } }
+
+    .rules-card {
+      background: #1a1f2e;
+      border: 1px solid #2e3550;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .rules-card h3 {
+      color: #4caf50;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .rules-card h3 .icon { font-size: 1.1rem; }
+    .cat-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .cat-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: #ccc;
+      padding: 4px 8px;
+      background: #151926;
+      border-radius: 4px;
+    }
+    .cat-item .abbr {
+      color: #4caf50;
+      font-weight: 700;
+      min-width: 44px;
+    }
+    .roster-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 8px;
+    }
+    .roster-slot {
+      text-align: center;
+      padding: 8px 4px;
+      background: #151926;
+      border-radius: 4px;
+    }
+    .roster-slot .pos {
+      color: #4caf50;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    .roster-slot .count {
+      color: #aaa;
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+    .league-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .league-meta .meta-pill {
+      background: #151926;
+      border: 1px solid #2e3550;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+    .league-meta .meta-pill span { color: #4caf50; font-weight: 600; }
+
+    /* Algorithm Explanation */
+    .algo-section {
+      background: #13161f;
+      border-left: 4px solid #2e7d32;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      border-radius: 4px;
+    }
+    .algo-section h3 { color: #fff; font-size: 1rem; margin-bottom: 8px; }
+    .algo-section p { color: #aaa; font-size: 0.85rem; line-height: 1.5; }
+    .algo-weights {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .algo-weight {
+      background: #1a1f2e;
+      border: 1px solid #2e3550;
+      border-radius: 6px;
+      padding: 8px 14px;
+      text-align: center;
+    }
+    .algo-weight .pct {
+      color: #4caf50;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .algo-weight .label {
+      color: #aaa;
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+
+    /* Rankings Table */
+    .ranking-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1a1f2e;
+      border: 1px solid #2e3550;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .ranking-table thead {
+      background: linear-gradient(135deg, #1e2a1a, #1a2e1e);
+      border-bottom: 2px solid #2e7d32;
+    }
+    .ranking-table th {
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 600;
+      color: #fff;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .ranking-table tbody tr {
+      border-bottom: 1px solid #252b3b;
+      transition: background 0.2s;
+      cursor: pointer;
+    }
+    .ranking-table tbody tr:hover { background: #252b3b; }
+    .ranking-table td {
+      padding: 12px 14px;
+      color: #e0e0e0;
+      font-size: 0.85rem;
+    }
+    .rank-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #2e7d32;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .rank-badge.gold { background: #ffc107; color: #000; }
+    .rank-badge.silver { background: #c0c0c0; color: #000; }
+    .rank-badge.bronze { background: #cd7f32; color: #fff; }
+
+
+    .sub-score {
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* Team Detail Panel */
+    .team-detail {
+      background: #1a1f2e;
+      border: 1px solid #2e3550;
+      border-radius: 10px;
+      margin-bottom: 24px;
+      overflow: hidden;
+      display: none;
+    }
+    .team-detail.active { display: block; }
+    .team-detail-header {
+      background: linear-gradient(135deg, #1e2a1a, #1a2e1e);
+      border-bottom: 2px solid #2e7d32;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .team-detail-header h3 { color: #fff; font-size: 1rem; }
+    .team-detail-header .close-btn {
+      background: none;
+      border: 1px solid #444;
+      color: #aaa;
+      border-radius: 4px;
+      padding: 4px 12px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .team-detail-header .close-btn:hover { border-color: #4caf50; color: #fff; }
+    .detail-body { padding: 20px; }
+
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .breakdown-card {
+      background: #151926;
+      border: 1px solid #2e3550;
+      border-radius: 6px;
+      padding: 12px;
+      text-align: center;
+    }
+    .breakdown-card .val {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #4caf50;
+    }
+    .breakdown-card .lbl {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    .player-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 768px) { .player-grid { grid-template-columns: 1fr; } }
+    .player-section h4 {
+      color: #4caf50;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #2e3550;
+    }
+    .player-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-size: 0.83rem;
+    }
+    .player-row:nth-child(even) { background: #151926; }
+    .player-row .slot {
+      color: #4caf50;
+      font-weight: 700;
+      min-width: 28px;
+    }
+    .player-row .pname { color: #e0e0e0; flex: 1; }
+    .player-row .pteam { color: #888; font-size: 0.78rem; }
+    .player-row .pelig { color: #666; font-size: 0.75rem; }
+    .player-row.reserve { opacity: 0.6; }
+
+    .filters-section {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filters-section label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #aaa;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .filters-section input[type="checkbox"] {
+      cursor: pointer;
+      accent-color: #2e7d32;
+    }
+
+    /* Category columns */
+    .cat-cell { text-align: center; font-weight: 700; font-size: 0.85rem; padding: 12px 6px !important; }
+    .group-hit { background: rgba(76, 175, 80, 0.1); text-align: center; border-bottom: 1px solid #2e7d32; font-size: 0.8rem; }
+    .group-pit { background: rgba(59, 130, 246, 0.1); text-align: center; border-bottom: 1px solid #3b82f6; font-size: 0.8rem; color: #93c5fd; }
+    .cat-hit { text-align: center; font-size: 0.75rem; padding: 8px 4px; }
+    .cat-pit { text-align: center; font-size: 0.75rem; padding: 8px 4px; }
+    .match-badge { margin-left: 8px; font-size: 0.7rem; color: #888; background: #151926; padding: 2px 6px; border-radius: 3px; }
+
+    /* Detail: category breakdown grid */
+    .cat-breakdown-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+    @media (max-width: 900px) { .cat-breakdown-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 600px) { .cat-breakdown-grid { grid-template-columns: repeat(3, 1fr); } }
+    .cat-card { background: #151926; border: 1px solid #2e3550; border-radius: 6px; padding: 10px; text-align: center; }
+    .cat-label { color: #aaa; font-size: 0.75rem; margin-bottom: 4px; }
+    .cat-value { color: #fff; font-weight: 700; font-size: 1.1rem; }
+    .cat-record { font-size: 0.72rem; color: #888; margin-top: 2px; }
+    .cat-rank { font-weight: 700; font-size: 0.85rem; margin-top: 4px; }
+    .cat-rank span { color: #666; font-weight: 400; font-size: 0.75rem; }
+    .est-note { color: #888; font-size: 0.75rem; margin-top: 8px; font-style: italic; }
+
+    /* Detail: player stat tables */
+    .player-stat-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .player-stat-table th { color: #4caf50; font-weight: 600; text-align: right; padding: 6px 8px; border-bottom: 1px solid #2e3550; font-size: 0.75rem; }
+    .player-stat-table th:nth-child(1), .player-stat-table th:nth-child(2) { text-align: left; }
+    .player-stat-table td { padding: 5px 8px; text-align: right; color: #ccc; }
+    .player-stat-table td:nth-child(1), .player-stat-table td:nth-child(2) { text-align: left; }
+    .player-stat-table tr:nth-child(even) { background: #151926; }
+    .player-stat-table tr.unmatched td { color: #666; }
+    .no-proj { text-align: center !important; color: #555; font-style: italic; }
+
+    /* Detail: reserves & warnings */
+    .reserves-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .reserve-pill { background: #151926; border: 1px solid #2e3550; border-radius: 4px; padding: 4px 10px; font-size: 0.78rem; color: #888; }
+    .reserve-pos { color: #4caf50; margin-left: 4px; }
+    .unmatched-note { background: #1a1a0f; border: 1px solid #554400; border-radius: 6px; padding: 12px; margin-top: 16px; font-size: 0.82rem; color: #aa8800; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="width:10px;height:10px;border-radius:50%;background:#4caf50;box-shadow:0 0 8px #4caf50"></div>
+  <h1>Power Rankings</h1>
+  <div style="margin-left: auto; display: flex; gap: 12px; align-items: center;">
+    <a href="index.html" style="padding: 8px 16px; background: #2e7d32; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.85rem;">Roster Viewer</a>
+    <span id="last-updated" style="font-size:0.8rem;color:#aaa;">Loading...</span>
+  </div>
+</header>
+
+<div class="pr-container">
+
+  <!-- League Rules & Scoring -->
+  <div class="rules-panel" id="rules-panel">
+    <div class="rules-header" id="rules-toggle">
+      <h2>League Rules & Scoring System</h2>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div class="rules-body" id="rules-body">
+      <div class="rules-grid">
+        <div class="rules-card">
+          <h3><span class="icon">&#9918;</span> Hitting Categories (5)</h3>
+          <div class="cat-list">
+            <div class="cat-item"><span class="abbr">HR</span> Home Runs</div>
+            <div class="cat-item"><span class="abbr">RBI</span> Runs Batted In</div>
+            <div class="cat-item"><span class="abbr">TB</span> Total Bases</div>
+            <div class="cat-item"><span class="abbr">OPS</span> OBP + SLG</div>
+            <div class="cat-item"><span class="abbr">SBN</span> Net Stolen Bases</div>
+          </div>
+        </div>
+        <div class="rules-card">
+          <h3><span class="icon">&#9917;</span> Pitching Categories (5)</h3>
+          <div class="cat-list">
+            <div class="cat-item"><span class="abbr">K</span> Strikeouts</div>
+            <div class="cat-item"><span class="abbr">ERA</span> Earned Run Avg</div>
+            <div class="cat-item"><span class="abbr">WHIP</span> WHIP Ratio</div>
+            <div class="cat-item"><span class="abbr">W+QS</span> Wins + Quality Starts</div>
+            <div class="cat-item"><span class="abbr">SVH</span> Saves + Holds</div>
+          </div>
+        </div>
+        <div class="rules-card">
+          <h3><span class="icon">&#128101;</span> Roster Configuration</h3>
+          <div class="roster-info" id="roster-slots">
+            <div class="roster-slot"><div class="pos">C</div><div class="count">&times;1</div></div>
+            <div class="roster-slot"><div class="pos">1B</div><div class="count">&times;1</div></div>
+            <div class="roster-slot"><div class="pos">2B</div><div class="count">&times;1</div></div>
+            <div class="roster-slot"><div class="pos">3B</div><div class="count">&times;1</div></div>
+            <div class="roster-slot"><div class="pos">SS</div><div class="count">&times;1</div></div>
+            <div class="roster-slot"><div class="pos">OF</div><div class="count">&times;3</div></div>
+            <div class="roster-slot"><div class="pos">UT</div><div class="count">&times;1</div></div>
+            <div class="roster-slot"><div class="pos">P</div><div class="count">&times;6</div></div>
+          </div>
+        </div>
+        <div class="rules-card">
+          <h3><span class="icon">&#128210;</span> League Settings</h3>
+          <div class="league-meta">
+            <div class="meta-pill">Format: <span>H2H Categories</span></div>
+            <div class="meta-pill">Teams: <span>10</span></div>
+            <div class="meta-pill">Roster: <span>20 (15A / 5R)</span></div>
+            <div class="meta-pill">Draft: <span>Snake</span></div>
+            <div class="meta-pill">Season: <span>2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Algorithm Explanation -->
+  <div class="algo-section">
+    <h3>Ranking Method</h3>
+    <p>Each team's active roster is matched to <strong>FanGraphs projections</strong> and aggregated across all 10 scoring categories. Teams are ranked 1&ndash;10 in each category and the overall ranking is determined by the sum of per-category ranks.</p>
+    <div style="margin-top:10px;padding:8px 12px;background:#151926;border-radius:4px;font-size:0.78rem;color:#888;line-height:1.6">
+      <strong style="color:#aaa">Data:</strong> FanGraphs Projections (selectable) &nbsp;|&nbsp;
+      <strong style="color:#aaa">Method:</strong> Aggregate team stats &rarr; rank 1&ndash;10 per category &nbsp;|&nbsp;
+      <strong style="color:#aaa">Note:</strong> IRS and FLD% excluded (no reliable projection data available)
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-section">
+    <label style="color:#aaa;font-size:0.85rem;">
+      Projections:
+      <select id="projection-select" style="margin-left:6px;background:#151926;color:#e0e0e0;border:1px solid #2e3550;border-radius:4px;padding:4px 8px;font-size:0.85rem;cursor:pointer;"></select>
+    </label>
+    <label><input type="checkbox" id="sort-by-name" /> Sort Alphabetically</label>
+  </div>
+
+  <!-- Rankings Table -->
+  <div style="overflow-x:auto">
+  <table class="ranking-table">
+    <thead>
+      <tr>
+        <th rowspan="2" style="width:44px">#</th>
+        <th rowspan="2">Team</th>
+        <th colspan="5" class="group-hit">Hitting</th>
+        <th colspan="5" class="group-pit">Pitching</th>
+      </tr>
+      <tr>
+        <th class="cat-hit">HR</th>
+        <th class="cat-hit">RBI</th>
+        <th class="cat-hit">TB</th>
+        <th class="cat-hit">OPS</th>
+        <th class="cat-hit">SBN</th>
+        <th class="cat-pit">K</th>
+        <th class="cat-pit">ERA</th>
+        <th class="cat-pit">WHIP</th>
+        <th class="cat-pit">W+QS</th>
+        <th class="cat-pit">SVH</th>
+      </tr>
+    </thead>
+    <tbody id="rankings-body">
+      <tr><td colspan="12" style="text-align:center;padding:32px;">Loading rankings...</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- Team Detail (populated by JS) -->
+  <div class="team-detail" id="team-detail"></div>
+</div>
+
+<script src="projections.js"></script>
+<script src="power-rankings.js"></script>
+</body>
+</html>
