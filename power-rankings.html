@@ -8,113 +8,59 @@
   <style>
     .pr-container { padding: 24px 32px; }
 
-    /* League Rules Section */
-    .rules-panel {
-      background: #13161f;
-      border: 1px solid #2e3550;
+    /* League Rules Chips */
+    .rules-chips-panel {
+      background: #0e1828;
+      border: 1px solid #243a58;
       border-radius: 10px;
       margin-bottom: 24px;
-      overflow: hidden;
-    }
-    .rules-header {
-      background: linear-gradient(135deg, #1e2a1a, #1a2e1e);
-      border-bottom: 2px solid #2e7d32;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      user-select: none;
-    }
-    .rules-header h2 { font-size: 1.1rem; color: #fff; }
-    .rules-header .toggle-icon { color: #4caf50; font-size: 1.2rem; transition: transform 0.2s; }
-    .rules-header .toggle-icon.collapsed { transform: rotate(-90deg); }
-    .rules-body { padding: 20px; }
-    .rules-body.collapsed { display: none; }
-
-    .rules-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    @media (max-width: 768px) { .rules-grid { grid-template-columns: 1fr; } }
-
-    .rules-card {
-      background: #1a1f2e;
-      border: 1px solid #2e3550;
-      border-radius: 8px;
       padding: 16px;
     }
-    .rules-card h3 {
-      color: #4caf50;
-      font-size: 0.95rem;
+    .rules-chips-panel h3 {
+      color: #fff;
+      font-size: 1rem;
       margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
-    .rules-card h3 .icon { font-size: 1.1rem; }
-    .cat-list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6px;
+    .chip-group {
+      margin-bottom: 10px;
     }
-    .cat-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      color: #ccc;
-      padding: 4px 8px;
-      background: #151926;
-      border-radius: 4px;
+    .chip-group:last-child {
+      margin-bottom: 0;
     }
-    .cat-item .abbr {
-      color: #4caf50;
-      font-weight: 700;
-      min-width: 44px;
-    }
-    .roster-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-      gap: 8px;
-    }
-    .roster-slot {
-      text-align: center;
-      padding: 8px 4px;
-      background: #151926;
-      border-radius: 4px;
-    }
-    .roster-slot .pos {
-      color: #4caf50;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
-    .roster-slot .count {
+    .chip-group-label {
+      display: block;
       color: #aaa;
-      font-size: 0.75rem;
-      margin-top: 2px;
+      font-size: 0.78rem;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
     }
-    .league-meta {
+    .chip-row {
       display: flex;
-      gap: 16px;
       flex-wrap: wrap;
-      margin-top: 16px;
+      gap: 8px;
     }
-    .league-meta .meta-pill {
-      background: #151926;
-      border: 1px solid #2e3550;
-      border-radius: 20px;
-      padding: 6px 14px;
+    .rule-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #111d32;
+      border: 1px solid #243a58;
+      border-radius: 999px;
+      padding: 6px 12px;
+      color: #d9e1ee;
       font-size: 0.8rem;
-      color: #aaa;
+      line-height: 1;
     }
-    .league-meta .meta-pill span { color: #4caf50; font-weight: 600; }
+    .rule-chip .abbr {
+      color: #e63946;
+      font-weight: 700;
+    }
 
     /* Algorithm Explanation */
     .algo-section {
-      background: #13161f;
-      border-left: 4px solid #2e7d32;
+      background: #0e1828;
+      border-left: 4px solid #c41e3a;
       padding: 16px 20px;
       margin-bottom: 24px;
       border-radius: 4px;
@@ -128,14 +74,14 @@
       margin-top: 12px;
     }
     .algo-weight {
-      background: #1a1f2e;
-      border: 1px solid #2e3550;
+      background: #111d32;
+      border: 1px solid #243a58;
       border-radius: 6px;
       padding: 8px 14px;
       text-align: center;
     }
     .algo-weight .pct {
-      color: #4caf50;
+      color: #e63946;
       font-weight: 700;
       font-size: 1.1rem;
     }
@@ -149,34 +95,39 @@
     .ranking-table {
       width: 100%;
       border-collapse: collapse;
-      background: #1a1f2e;
-      border: 1px solid #2e3550;
+      background: #111d32;
+      border: 1px solid #243a58;
       border-radius: 10px;
       overflow: hidden;
       margin-bottom: 24px;
     }
     .ranking-table thead {
-      background: linear-gradient(135deg, #1e2a1a, #1a2e1e);
-      border-bottom: 2px solid #2e7d32;
+      background: linear-gradient(135deg, #15233a, #1a2d48);
+      border-bottom: 2px solid #c41e3a;
     }
     .ranking-table th {
       padding: 12px 14px;
-      text-align: left;
+      text-align: center;
       font-weight: 600;
       color: #fff;
       font-size: 0.85rem;
       white-space: nowrap;
     }
     .ranking-table tbody tr {
-      border-bottom: 1px solid #252b3b;
+      border-bottom: 1px solid #1a2d48;
       transition: background 0.2s;
       cursor: pointer;
     }
-    .ranking-table tbody tr:hover { background: #252b3b; }
+    .ranking-table tbody tr:hover { background: #182a44; }
     .ranking-table td {
       padding: 12px 14px;
       color: #e0e0e0;
       font-size: 0.85rem;
+      text-align: center;
+    }
+    .ranking-table th:nth-child(2),
+    .ranking-table td:nth-child(2) {
+      text-align: left;
     }
     .rank-badge {
       display: inline-flex;
@@ -185,7 +136,7 @@
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background: #2e7d32;
+      background: #c41e3a;
       color: #fff;
       font-weight: 700;
       font-size: 0.85rem;
@@ -203,8 +154,8 @@
 
     /* Team Detail Panel */
     .team-detail {
-      background: #1a1f2e;
-      border: 1px solid #2e3550;
+      background: #111d32;
+      border: 1px solid #243a58;
       border-radius: 10px;
       margin-bottom: 24px;
       overflow: hidden;
@@ -212,8 +163,8 @@
     }
     .team-detail.active { display: block; }
     .team-detail-header {
-      background: linear-gradient(135deg, #1e2a1a, #1a2e1e);
-      border-bottom: 2px solid #2e7d32;
+      background: linear-gradient(135deg, #15233a, #1a2d48);
+      border-bottom: 2px solid #c41e3a;
       padding: 14px 20px;
       display: flex;
       align-items: center;
@@ -229,7 +180,7 @@
       cursor: pointer;
       font-size: 0.85rem;
     }
-    .team-detail-header .close-btn:hover { border-color: #4caf50; color: #fff; }
+    .team-detail-header .close-btn:hover { border-color: #e63946; color: #fff; }
     .detail-body { padding: 20px; }
 
     .breakdown-grid {
@@ -239,8 +190,8 @@
       margin-bottom: 20px;
     }
     .breakdown-card {
-      background: #151926;
-      border: 1px solid #2e3550;
+      background: #0e1828;
+      border: 1px solid #243a58;
       border-radius: 6px;
       padding: 12px;
       text-align: center;
@@ -248,7 +199,7 @@
     .breakdown-card .val {
       font-size: 1.3rem;
       font-weight: 700;
-      color: #4caf50;
+      color: #e63946;
     }
     .breakdown-card .lbl {
       font-size: 0.75rem;
@@ -263,11 +214,11 @@
     }
     @media (max-width: 768px) { .player-grid { grid-template-columns: 1fr; } }
     .player-section h4 {
-      color: #4caf50;
+      color: #e63946;
       font-size: 0.9rem;
       margin-bottom: 10px;
       padding-bottom: 6px;
-      border-bottom: 1px solid #2e3550;
+      border-bottom: 1px solid #243a58;
     }
     .player-row {
       display: flex;
@@ -277,9 +228,9 @@
       border-radius: 4px;
       font-size: 0.83rem;
     }
-    .player-row:nth-child(even) { background: #151926; }
+    .player-row:nth-child(even) { background: #0e1828; }
     .player-row .slot {
-      color: #4caf50;
+      color: #e63946;
       font-weight: 700;
       min-width: 28px;
     }
@@ -305,22 +256,22 @@
     }
     .filters-section input[type="checkbox"] {
       cursor: pointer;
-      accent-color: #2e7d32;
+      accent-color: #c41e3a;
     }
 
     /* Category columns */
     .cat-cell { text-align: center; font-weight: 700; font-size: 0.85rem; padding: 12px 6px !important; }
-    .group-hit { background: rgba(76, 175, 80, 0.1); text-align: center; border-bottom: 1px solid #2e7d32; font-size: 0.8rem; }
+    .group-hit { background: rgba(196, 30, 58, 0.1); text-align: center; border-bottom: 1px solid #c41e3a; font-size: 0.8rem; }
     .group-pit { background: rgba(59, 130, 246, 0.1); text-align: center; border-bottom: 1px solid #3b82f6; font-size: 0.8rem; color: #93c5fd; }
     .cat-hit { text-align: center; font-size: 0.75rem; padding: 8px 4px; }
     .cat-pit { text-align: center; font-size: 0.75rem; padding: 8px 4px; }
-    .match-badge { margin-left: 8px; font-size: 0.7rem; color: #888; background: #151926; padding: 2px 6px; border-radius: 3px; }
+    .match-badge { margin-left: 8px; font-size: 0.7rem; color: #888; background: #0e1828; padding: 2px 6px; border-radius: 3px; }
 
     /* Detail: category breakdown grid */
     .cat-breakdown-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
     @media (max-width: 900px) { .cat-breakdown-grid { grid-template-columns: repeat(4, 1fr); } }
     @media (max-width: 600px) { .cat-breakdown-grid { grid-template-columns: repeat(3, 1fr); } }
-    .cat-card { background: #151926; border: 1px solid #2e3550; border-radius: 6px; padding: 10px; text-align: center; }
+    .cat-card { background: #0e1828; border: 1px solid #243a58; border-radius: 6px; padding: 10px; text-align: center; }
     .cat-label { color: #aaa; font-size: 0.75rem; margin-bottom: 4px; }
     .cat-value { color: #fff; font-weight: 700; font-size: 1.1rem; }
     .cat-record { font-size: 0.72rem; color: #888; margin-top: 2px; }
@@ -330,107 +281,56 @@
 
     /* Detail: player stat tables */
     .player-stat-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
-    .player-stat-table th { color: #4caf50; font-weight: 600; text-align: right; padding: 6px 8px; border-bottom: 1px solid #2e3550; font-size: 0.75rem; }
+    .player-stat-table th { color: #e63946; font-weight: 600; text-align: right; padding: 6px 8px; border-bottom: 1px solid #243a58; font-size: 0.75rem; }
     .player-stat-table th:nth-child(1), .player-stat-table th:nth-child(2) { text-align: left; }
     .player-stat-table td { padding: 5px 8px; text-align: right; color: #ccc; }
     .player-stat-table td:nth-child(1), .player-stat-table td:nth-child(2) { text-align: left; }
-    .player-stat-table tr:nth-child(even) { background: #151926; }
+    .player-stat-table tr:nth-child(even) { background: #0e1828; }
     .player-stat-table tr.unmatched td { color: #666; }
     .no-proj { text-align: center !important; color: #555; font-style: italic; }
 
     /* Detail: reserves & warnings */
     .reserves-list { display: flex; flex-wrap: wrap; gap: 8px; }
-    .reserve-pill { background: #151926; border: 1px solid #2e3550; border-radius: 4px; padding: 4px 10px; font-size: 0.78rem; color: #888; }
-    .reserve-pos { color: #4caf50; margin-left: 4px; }
+    .reserve-pill { background: #0e1828; border: 1px solid #243a58; border-radius: 4px; padding: 4px 10px; font-size: 0.78rem; color: #888; }
+    .reserve-pos { color: #e63946; margin-left: 4px; }
     .unmatched-note { background: #1a1a0f; border: 1px solid #554400; border-radius: 6px; padding: 12px; margin-top: 16px; font-size: 0.82rem; color: #aa8800; }
+
+    @media (max-width: 900px) {
+      .pr-container { padding: 16px; }
+      .ranking-table { min-width: 860px; }
+      .algo-section { padding: 14px; }
+      .team-detail-header { padding: 12px 14px; flex-wrap: wrap; gap: 8px; }
+      .detail-body { padding: 14px; }
+      .filters-section { gap: 10px; }
+    }
+
+    @media (max-width: 600px) {
+      .pr-container { padding: 12px; }
+      .breakdown-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <div style="width:10px;height:10px;border-radius:50%;background:#4caf50;box-shadow:0 0 8px #4caf50"></div>
+  <div style="width:10px;height:10px;border-radius:50%;background:#c41e3a;box-shadow:0 0 8px #c41e3a"></div>
   <h1>Power Rankings</h1>
-  <div style="margin-left: auto; display: flex; gap: 12px; align-items: center;">
-    <a href="index.html" style="padding: 8px 16px; background: #2e7d32; color: #fff; text-decoration: none; border-radius: 6px; font-size: 0.85rem;">Roster Viewer</a>
-    <span id="last-updated" style="font-size:0.8rem;color:#aaa;">Loading...</span>
+  <div class="header-actions">
+    <a href="index.html" class="header-link">Roster Viewer</a>
+    <span id="last-updated">Loading...</span>
   </div>
 </header>
 
 <div class="pr-container">
 
-  <!-- League Rules & Scoring -->
-  <div class="rules-panel" id="rules-panel">
-    <div class="rules-header" id="rules-toggle">
-      <h2>League Rules & Scoring System</h2>
-      <span class="toggle-icon">&#9660;</span>
-    </div>
-    <div class="rules-body" id="rules-body">
-      <div class="rules-grid">
-        <div class="rules-card">
-          <h3><span class="icon">&#9918;</span> Hitting Categories (5)</h3>
-          <div class="cat-list">
-            <div class="cat-item"><span class="abbr">HR</span> Home Runs</div>
-            <div class="cat-item"><span class="abbr">RBI</span> Runs Batted In</div>
-            <div class="cat-item"><span class="abbr">TB</span> Total Bases</div>
-            <div class="cat-item"><span class="abbr">OPS</span> OBP + SLG</div>
-            <div class="cat-item"><span class="abbr">SBN</span> Net Stolen Bases</div>
-          </div>
-        </div>
-        <div class="rules-card">
-          <h3><span class="icon">&#9917;</span> Pitching Categories (5)</h3>
-          <div class="cat-list">
-            <div class="cat-item"><span class="abbr">K</span> Strikeouts</div>
-            <div class="cat-item"><span class="abbr">ERA</span> Earned Run Avg</div>
-            <div class="cat-item"><span class="abbr">WHIP</span> WHIP Ratio</div>
-            <div class="cat-item"><span class="abbr">W+QS</span> Wins + Quality Starts</div>
-            <div class="cat-item"><span class="abbr">SVH</span> Saves + Holds</div>
-          </div>
-        </div>
-        <div class="rules-card">
-          <h3><span class="icon">&#128101;</span> Roster Configuration</h3>
-          <div class="roster-info" id="roster-slots">
-            <div class="roster-slot"><div class="pos">C</div><div class="count">&times;1</div></div>
-            <div class="roster-slot"><div class="pos">1B</div><div class="count">&times;1</div></div>
-            <div class="roster-slot"><div class="pos">2B</div><div class="count">&times;1</div></div>
-            <div class="roster-slot"><div class="pos">3B</div><div class="count">&times;1</div></div>
-            <div class="roster-slot"><div class="pos">SS</div><div class="count">&times;1</div></div>
-            <div class="roster-slot"><div class="pos">OF</div><div class="count">&times;3</div></div>
-            <div class="roster-slot"><div class="pos">UT</div><div class="count">&times;1</div></div>
-            <div class="roster-slot"><div class="pos">P</div><div class="count">&times;6</div></div>
-          </div>
-        </div>
-        <div class="rules-card">
-          <h3><span class="icon">&#128210;</span> League Settings</h3>
-          <div class="league-meta">
-            <div class="meta-pill">Format: <span>H2H Categories</span></div>
-            <div class="meta-pill">Teams: <span>10</span></div>
-            <div class="meta-pill">Roster: <span>20 (15A / 5R)</span></div>
-            <div class="meta-pill">Draft: <span>Snake</span></div>
-            <div class="meta-pill">Season: <span>2026</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Algorithm Explanation -->
-  <div class="algo-section">
-    <h3>Ranking Method</h3>
-    <p>Each team's active roster is matched to <strong>FanGraphs projections</strong> and aggregated across all 10 scoring categories. Teams are ranked 1&ndash;10 in each category and the overall ranking is determined by the sum of per-category ranks.</p>
-    <div style="margin-top:10px;padding:8px 12px;background:#151926;border-radius:4px;font-size:0.78rem;color:#888;line-height:1.6">
-      <strong style="color:#aaa">Data:</strong> FanGraphs Projections (selectable) &nbsp;|&nbsp;
-      <strong style="color:#aaa">Method:</strong> Aggregate team stats &rarr; rank 1&ndash;10 per category &nbsp;|&nbsp;
-      <strong style="color:#aaa">Note:</strong> IRS and FLD% excluded (no reliable projection data available)
-    </div>
-  </div>
-
   <!-- Filters -->
   <div class="filters-section">
     <label style="color:#aaa;font-size:0.85rem;">
       Projections:
-      <select id="projection-select" style="margin-left:6px;background:#151926;color:#e0e0e0;border:1px solid #2e3550;border-radius:4px;padding:4px 8px;font-size:0.85rem;cursor:pointer;"></select>
+      <select id="projection-select" style="margin-left:6px;background:#0e1828;color:#e0e0e0;border:1px solid #243a58;border-radius:4px;padding:4px 8px;font-size:0.85rem;cursor:pointer;"></select>
     </label>
     <label><input type="checkbox" id="sort-by-name" /> Sort Alphabetically</label>
+    <span id="real-stats-status" style="font-size:0.78rem;color:#888;"></span>
   </div>
 
   <!-- Rankings Table -->
@@ -460,6 +360,58 @@
       <tr><td colspan="12" style="text-align:center;padding:32px;">Loading rankings...</td></tr>
     </tbody>
   </table>
+  </div>
+
+  <!-- League Rules & Scoring -->
+  <div class="rules-chips-panel" id="rules-panel">
+    <h3>League Rules &amp; Scoring System</h3>
+
+    <div class="chip-group">
+      <span class="chip-group-label">Hitting Categories (5)</span>
+      <div class="chip-row">
+        <span class="rule-chip"><span class="abbr">HR</span>Home Runs</span>
+        <span class="rule-chip"><span class="abbr">RBI</span>Runs Batted In</span>
+        <span class="rule-chip"><span class="abbr">TB</span>Total Bases</span>
+        <span class="rule-chip"><span class="abbr">OPS</span>OBP + SLG</span>
+        <span class="rule-chip"><span class="abbr">SBN</span>Net Stolen Bases</span>
+      </div>
+    </div>
+
+    <div class="chip-group">
+      <span class="chip-group-label">Pitching Categories (5)</span>
+      <div class="chip-row">
+        <span class="rule-chip"><span class="abbr">K</span>Strikeouts</span>
+        <span class="rule-chip"><span class="abbr">ERA</span>Earned Run Avg</span>
+        <span class="rule-chip"><span class="abbr">WHIP</span>WHIP Ratio</span>
+        <span class="rule-chip"><span class="abbr">W+QS</span>Wins + Quality Starts</span>
+        <span class="rule-chip"><span class="abbr">SVH</span>Saves + Holds</span>
+      </div>
+    </div>
+
+    <div class="chip-group">
+      <span class="chip-group-label">Roster Configuration</span>
+      <div class="chip-row">
+        <span class="rule-chip"><span class="abbr">C</span>x1</span>
+        <span class="rule-chip"><span class="abbr">1B</span>x1</span>
+        <span class="rule-chip"><span class="abbr">2B</span>x1</span>
+        <span class="rule-chip"><span class="abbr">3B</span>x1</span>
+        <span class="rule-chip"><span class="abbr">SS</span>x1</span>
+        <span class="rule-chip"><span class="abbr">OF</span>x3</span>
+        <span class="rule-chip"><span class="abbr">UT</span>x1</span>
+        <span class="rule-chip"><span class="abbr">P</span>x6</span>
+      </div>
+    </div>
+
+    <div class="chip-group">
+      <span class="chip-group-label">League Settings</span>
+      <div class="chip-row">
+        <span class="rule-chip">Format: <span class="abbr">H2H Categories</span></span>
+        <span class="rule-chip">Teams: <span class="abbr">10</span></span>
+        <span class="rule-chip">Roster: <span class="abbr">20 (15A / 5R)</span></span>
+        <span class="rule-chip">Draft: <span class="abbr">Snake</span></span>
+        <span class="rule-chip">Season: <span class="abbr">2026</span></span>
+      </div>
+    </div>
   </div>
 
   <!-- Team Detail (populated by JS) -->

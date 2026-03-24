@@ -21,6 +21,18 @@ const CATEGORIES = [
   { key: 'SVH',  label: 'SVH',  type: 'pitching', higher: true },
 ];
 
+const REAL_STATS_FILE = 'data/fantrax_real_stats.json';
+const DEFAULT_REAL_STATS_WEIGHT = 0.35;
+
+function getAutoRealStatsWeight(rosters) {
+  const period = Number(rosters && rosters.period);
+  if (!Number.isFinite(period)) return DEFAULT_REAL_STATS_WEIGHT;
+
+  // Gradually increase trust in real stats as the season progresses.
+  const progress = Math.min(Math.max((period - 1) / 26, 0), 1);
+  return +(0.30 + progress * 0.30).toFixed(2);
+}
+
 // Fantrax -> FanGraphs team abbreviation mapping
 const TEAM_ABBR_MAP = {
   KC: 'KCR', TB: 'TBR', SD: 'SDP', SF: 'SFG', WAS: 'WSN'
@@ -188,6 +200,14 @@ function makeRow(rosterItem, player, type) {
   };
 }
 
+function cloneProjection(projection) {
+  return {
+    ...projection,
+    stats: { ...projection.stats },
+    playerDetails: projection.playerDetails,
+  };
+}
+
 // ── Category Rankings (Roto-Style Points) ──
 
 function rankTeams(teams) {
@@ -224,18 +244,71 @@ function rankTeams(teams) {
 // ── Data Loading ──
 
 async function loadAllData(provider) {
-  const [rostersR, playersR, batR, pitR] = await Promise.all([
+  const [rostersR, playersR, batR, pitR, realStats] = await Promise.all([
     fetch('data/fantrax_rosters.json'),
     fetch('data/fantrax_players.json'),
     fetch(provider.battingFile),
     fetch(provider.pitchingFile),
+    loadOptionalJSON(REAL_STATS_FILE),
   ]);
   return {
     rosters: await rostersR.json(),
     players: await playersR.json(),
     batting: await batR.json(),
     pitching: await pitR.json(),
+    realStats,
   };
+}
+
+async function loadOptionalJSON(path) {
+  try {
+    const resp = await fetch(path);
+    if (!resp.ok) return null;
+    return await resp.json();
+  } catch {
+    return null;
+  }
+}
+
+function hasRealStats(realStats) {
+  return !!(realStats && realStats.teams && Object.keys(realStats.teams).length > 0);
+}
+
+function blendedStat(projected, actual, weight) {
+  if (!Number.isFinite(actual)) return projected;
+  return projected * (1 - weight) + actual * weight;
+}
+
+function applyRealStatsToTeam(team, realStatsByTeamId, weight) {
+  const actual = realStatsByTeamId && realStatsByTeamId[team.teamId] ? realStatsByTeamId[team.teamId].stats : null;
+  if (!actual) {
+    team.projection.adjustment = {
+      applied: false,
+      weight,
+      source: 'projection-only',
+    };
+    return;
+  }
+
+  for (const cat of CATEGORIES) {
+    const current = team.projection.stats[cat.key];
+    const actualValue = Number(actual[cat.key]);
+    if (!Number.isFinite(actualValue)) continue;
+    team.projection.stats[cat.key] = blendedStat(current, actualValue, weight);
+  }
+
+  team.projection.adjustment = {
+    applied: true,
+    weight,
+    source: 'fantrax-real-stats',
+    actual,
+  };
+}
+
+function finalizeRankings(teams) {
+  rankTeams(teams);
+  teams.sort((a, b) => b.totalPoints - a.totalPoints);
+  return teams;
 }
 
 function buildRankings(rosters, players, battingData, pitchingData, provider) {
@@ -248,14 +321,39 @@ function buildRankings(rosters, players, battingData, pitchingData, provider) {
     teams.push({ teamId, teamName: teamData.teamName, projection, catRank: {} });
   }
 
-  rankTeams(teams);
-  teams.sort((a, b) => b.totalPoints - a.totalPoints);
   return teams;
+}
+
+function buildDisplayRankings(baseTeams, realStats, realStatsWeight) {
+  const teams = baseTeams.map(team => ({
+    ...team,
+    projection: cloneProjection(team.projection),
+    catRank: {},
+  }));
+
+  if (hasRealStats(realStats)) {
+    for (const team of teams) {
+      applyRealStatsToTeam(team, realStats.teams, realStatsWeight);
+    }
+  } else {
+    for (const team of teams) {
+      team.projection.adjustment = {
+        applied: false,
+        weight: realStatsWeight,
+        source: 'projection-only',
+      };
+    }
+  }
+
+  return finalizeRankings(teams);
 }
 
 // ── Rendering ──
 
 let currentRankings = [];
+let baseTeams = [];
+let cachedRealStats = null;
+let realStatsWeight = DEFAULT_REAL_STATS_WEIGHT;
 
 function renderRankings(sortByName) {
   const tbody = document.getElementById('rankings-body');
@@ -277,7 +375,6 @@ function renderRankings(sortByName) {
       <td><span class="rank-badge ${badgeClass}">${rank}</span></td>
       <td>
         <strong style="color:#fff">${escapeHtml(team.teamName)}</strong>
-        <span class="match-badge">${team.projection.matchedCount}/${team.projection.totalActive}</span>
       </td>
     `;  
 
@@ -296,12 +393,33 @@ function renderRankings(sortByName) {
   document.getElementById('last-updated').textContent = 'Updated: ' + new Date().toLocaleTimeString();
 }
 
+function updateRealStatsStatus() {
+  const status = document.getElementById('real-stats-status');
+  if (!status) return;
+
+  if (!hasRealStats(cachedRealStats)) {
+    status.textContent = 'Real-stats auto-adjust unavailable: no Fantrax real-stats file detected';
+    return;
+  }
+
+  const source = cachedRealStats.sourceMethod || 'Fantrax';
+  status.textContent = 'Real-stats auto-adjust ON (' + Math.round(realStatsWeight * 100) + '%, source: ' + source + ')';
+}
+
+function recomputeAndRender() {
+  currentRankings = buildDisplayRankings(baseTeams, cachedRealStats, realStatsWeight);
+  renderRankings(document.getElementById('sort-by-name').checked);
+  updateRealStatsStatus();
+}
+
 function getRankColor(rank, total) {
-  if (rank <= 2) return '#4caf50';
-  if (rank <= 4) return '#66bb6a';
-  if (rank <= 6) return '#f59e0b';
-  if (rank <= 8) return '#ff8a65';
-  return '#ef4444';
+  if (rank === 1) return '#3b82f6';
+  const pct = (rank - 1) / Math.max(total - 1, 1);
+  if (pct <= 0.2) return '#2e7d32';
+  if (pct <= 0.4) return '#66bb6a';
+  if (pct <= 0.65) return '#fbc02d';
+  if (pct <= 0.85) return '#ef6c00';
+  return '#c62828';
 }
 
 function fmtStat(key, value) {
@@ -321,7 +439,6 @@ function showTeamDetail(team) {
   const pitchers = team.projection.playerDetails.filter(p => p.type === 'pitcher' && p.status === 'ACTIVE');
   const reserves = team.projection.playerDetails.filter(p => p.status === 'RESERVE');
   const unmatched = team.projection.playerDetails.filter(p => p.status === 'ACTIVE' && !p.matched);
-  const matchPct = Math.round((team.projection.matchedCount / team.projection.totalActive) * 100);
 
   panel.innerHTML = `
     <div class="team-detail-header">
@@ -329,10 +446,6 @@ function showTeamDetail(team) {
       <button class="close-btn" id="close-detail">&times; Close</button>
     </div>
     <div class="detail-body">
-      <div class="breakdown-grid">
-        <div class="breakdown-card"><div class="val">${matchPct}%</div><div class="lbl">Match Rate</div></div>
-      </div>
-
       <h4 style="color:#fff;margin:16px 0 8px;font-size:0.95rem;">Category Projections &amp; Rankings</h4>
       <div class="cat-breakdown-grid">
         ${CATEGORIES.map(cat => {
@@ -370,7 +483,7 @@ function showTeamDetail(team) {
 
       ${reserves.length > 0 ? '<h4 style="color:#888;margin:16px 0 8px;font-size:0.85rem;">Reserves (' + reserves.length + ')</h4><div class="reserves-list">' + reserves.map(p => '<span class="reserve-pill">' + escapeHtml(p.name) + ' <span class="reserve-pos">' + escapeHtml(p.slot) + '</span></span>').join('') + '</div>' : ''}
 
-      ${unmatched.length > 0 ? '<div class="unmatched-note"><strong>\u26A0 ' + unmatched.length + ' active player(s) without projections:</strong> ' + unmatched.map(p => escapeHtml(p.name)).join(', ') + '</div>' : ''}
+      ${unmatched.length > 0 ? '<div class="unmatched-note"><strong>Warning: ' + unmatched.length + ' active player(s) without projections:</strong> ' + unmatched.map(p => escapeHtml(p.name)).join(', ') + '</div>' : ''}
     </div>`;
 
   document.getElementById('close-detail').addEventListener('click', () => {
@@ -457,11 +570,11 @@ async function switchProvider(providerId) {
     const batting = await batR.json();
     const pitching = await pitR.json();
 
-    currentRankings = buildRankings(
+    baseTeams = buildRankings(
       cachedLeagueData.rosters, cachedLeagueData.players,
       batting, pitching, provider
     );
-    renderRankings(document.getElementById('sort-by-name').checked);
+    recomputeAndRender();
   } catch (err) {
     console.error('Failed to load projections:', err);
     tbody.innerHTML =
@@ -485,18 +598,15 @@ async function init() {
 
     const data = await loadAllData(currentProvider);
     cachedLeagueData = { rosters: data.rosters, players: data.players };
+    cachedRealStats = data.realStats;
+    realStatsWeight = getAutoRealStatsWeight(data.rosters);
 
-    currentRankings = buildRankings(
+    baseTeams = buildRankings(
       data.rosters, data.players,
       data.batting, data.pitching,
       currentProvider
     );
-    renderRankings(false);
-
-    document.getElementById('rules-toggle').addEventListener('click', () => {
-      document.getElementById('rules-body').classList.toggle('collapsed');
-      document.querySelector('.toggle-icon').classList.toggle('collapsed');
-    });
+    recomputeAndRender();
 
     document.getElementById('sort-by-name').addEventListener('change', e => {
       renderRankings(e.target.checked);
