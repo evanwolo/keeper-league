@@ -6,6 +6,8 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
+    "refresh": "node scripts/refresh-data.js",
+    "refresh:rankings": "node scripts/refresh-data.js --skip-api",
     "fetch": "node data/api.js",
     "fetch:rosters": "node data/api.js --rosters",
     "fetch:projections": "node data/api.js --projections steamer zips atc thebat thebatx dc",

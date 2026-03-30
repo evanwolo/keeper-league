@@ -155,22 +155,61 @@ function findProjection(fantraxPlayer, lookup, provider) {
 
 // ── Team projection ─────────────────────────────────────────────────────────
 
+// Composite value score used to pick the "best" hitters/pitchers from the full pool
+function hitterValue(s) {
+  return s.HR * 2 + s.RBI + s.TB * 0.4 + s.SBN * 1.5 + s.OPS * 20 + s.PA * 0.01;
+}
+
+function pitcherValue(s) {
+  return s.K * 0.5 + s.WQS * 3 + s.SVH * 2 + s.IP * 0.1
+    - (s.ERA > 0 ? s.ERA * 2 : 0) - (s.WHIP > 0 ? s.WHIP * 5 : 0);
+}
+
 function projectTeam(teamData, players, batLookup, pitLookup, provider) {
   const roster = teamData.rosterItems;
-  const activeHitters = roster.filter(r => r.status === 'ACTIVE' && r.position !== 'P');
-  const activePitchers = roster.filter(r => r.status === 'ACTIVE' && r.position === 'P');
+
+  // Count active slots to determine how many players to pick per group
+  const numHitterSlots  = roster.filter(r => r.status === 'ACTIVE' && r.position !== 'P').length;
+  const numPitcherSlots = roster.filter(r => r.status === 'ACTIVE' && r.position === 'P').length;
+
+  // Pool all rostered non-IL players (active + bench)
+  const availableHitters  = roster.filter(r => r.status !== 'INJURED_RESERVE' && r.position !== 'P');
+  const availablePitchers = roster.filter(r => r.status !== 'INJURED_RESERVE' && r.position === 'P');
+
+  // Score and sort each pool, then take top N matching the active slot count
+  function scoreAndPick(pool, lookupFn, valueFn, slots) {
+    const scored = [];
+    for (const r of pool) {
+      const p = players[r.id];
+      if (!p) continue;
+      const proj = lookupFn(p);
+      if (!proj) continue;
+      scored.push({ r, proj });
+    }
+    scored.sort((a, b) => valueFn(b.proj) - valueFn(a.proj));
+    return scored.slice(0, slots > 0 ? slots : scored.length);
+  }
+
+  const bestHitters  = scoreAndPick(
+    availableHitters,
+    p => { const proj = findProjection(p, batLookup, provider); return proj ? provider.extractBatting(proj) : null; },
+    s => hitterValue(s),
+    numHitterSlots,
+  );
+
+  const bestPitchers = scoreAndPick(
+    availablePitchers,
+    p => { const proj = findProjection(p, pitLookup, provider); return proj ? provider.extractPitching(proj) : null; },
+    s => pitcherValue(s),
+    numPitcherSlots,
+  );
 
   // Batting aggregation
   const bat = { HR: 0, RBI: 0, H: 0, BB: 0, HBP: 0, PA: 0, AB: 0, SF: 0, TB: 0, SB: 0, CS: 0 };
   let matchedHitters = 0;
 
-  for (const r of activeHitters) {
-    const p = players[r.id];
-    if (!p) continue;
-    const proj = findProjection(p, batLookup, provider);
-    if (!proj) continue;
+  for (const { proj: s } of bestHitters) {
     matchedHitters++;
-    const s = provider.extractBatting(proj);
     bat.HR += s.HR; bat.RBI += s.RBI; bat.TB += s.TB;
     bat.H += s.H; bat.BB += s.BB;
     bat.HBP += s.HBP; bat.SF += s.SF;
@@ -186,13 +225,8 @@ function projectTeam(teamData, players, batLookup, pitLookup, provider) {
   const pit = { K: 0, ER: 0, IP: 0, H: 0, BB: 0, W: 0, QS: 0, SV: 0, HLD: 0 };
   let matchedPitchers = 0;
 
-  for (const r of activePitchers) {
-    const p = players[r.id];
-    if (!p) continue;
-    const proj = findProjection(p, pitLookup, provider);
-    if (!proj) continue;
+  for (const { proj: s } of bestPitchers) {
     matchedPitchers++;
-    const s = provider.extractPitching(proj);
     pit.K += s.K; pit.ER += s.ER; pit.IP += s.IP;
     pit.H += s.H; pit.BB += s.BB;
     pit.W += s.W; pit.QS += s.QS; pit.SV += s.SV; pit.HLD += s.HLD;
@@ -213,7 +247,7 @@ function projectTeam(teamData, players, batLookup, pitLookup, provider) {
     },
     matchedHitters,
     matchedPitchers,
-    totalActive: activeHitters.length + activePitchers.length,
+    totalActive: numHitterSlots + numPitcherSlots,
   };
 }
 

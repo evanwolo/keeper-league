@@ -13190,7 +13190,7 @@
     },
     {
       "date": "2026-03-29",
-      "generatedAt": "2026-03-30T00:56:00.562Z",
+      "generatedAt": "2026-03-30T01:28:10.441Z",
       "isRetroactive": false,
       "realStatsAvailable": true,
       "realStatsWeight": 0.36,
@@ -13200,63 +13200,63 @@
           "rankings": [
             {
               "rank": 1,
-              "teamId": "wy7sg1p4mg9m448m",
-              "teamName": "She jazz on my holm till I chis",
-              "totalPoints": 71
+              "teamId": "3tdnrntnmg9m448l",
+              "teamName": "Booby Titt’s",
+              "totalPoints": 70
             },
             {
               "rank": 2,
-              "teamId": "jgg562fvmg9m448n",
-              "teamName": "Wander If Franco was Right",
-              "totalPoints": 64
+              "teamId": "jzyh7c72mg9m448r",
+              "teamName": "Durans Tennis Racket",
+              "totalPoints": 68.5
             },
             {
               "rank": 3,
-              "teamId": "3tdnrntnmg9m448l",
-              "teamName": "Booby Titt’s",
-              "totalPoints": 63
+              "teamId": "wy7sg1p4mg9m448m",
+              "teamName": "She jazz on my holm till I chis",
+              "totalPoints": 64
             },
             {
               "rank": 4,
-              "teamId": "jzyh7c72mg9m448r",
-              "teamName": "Durans Tennis Racket",
-              "totalPoints": 61
+              "teamId": "jgg562fvmg9m448n",
+              "teamName": "Wander If Franco was Right",
+              "totalPoints": 60
             },
             {
               "rank": 5,
-              "teamId": "h5oigo07mg9m448r",
-              "teamName": "Shohei’s gambling buddies",
-              "totalPoints": 57
+              "teamId": "l2qxmel1mg9m448n",
+              "teamName": "Chaz Jizzolm",
+              "totalPoints": 55
             },
             {
               "rank": 6,
-              "teamId": "g3w8nouhmg9m448p",
-              "teamName": "Wander Franco Children's Foundation",
-              "totalPoints": 53
+              "teamId": "h5oigo07mg9m448r",
+              "teamName": "Shohei’s gambling buddies",
+              "totalPoints": 54
             },
             {
               "rank": 7,
-              "teamId": "9qvn9hxamg9m448q",
-              "teamName": "Ohtani Betts",
-              "totalPoints": 49
+              "teamId": "zcapyjosmg9m448o",
+              "teamName": "Monkey Neva Cramp",
+              "totalPoints": 48
             },
             {
               "rank": 8,
-              "teamId": "ksl78cwnmg9m448p",
-              "teamName": "Ippeis Bookie",
+              "teamId": "9qvn9hxamg9m448q",
+              "teamName": "Ohtani Betts",
               "totalPoints": 47
             },
             {
               "rank": 9,
-              "teamId": "zcapyjosmg9m448o",
-              "teamName": "Monkey Neva Cramp",
-              "totalPoints": 45
+              "teamId": "ksl78cwnmg9m448p",
+              "teamName": "Ippeis Bookie",
+              "totalPoints": 44
             },
             {
               "rank": 10,
-              "teamId": "l2qxmel1mg9m448n",
-              "teamName": "Chaz Jizzolm",
-              "totalPoints": 40
+              "teamId": "g3w8nouhmg9m448p",
+              "teamName": "Wander Franco Children's Foundation",
+              "totalPoints": 39.5
             }
           ]
         },
@@ -13267,61 +13267,61 @@
               "rank": 1,
               "teamId": "wy7sg1p4mg9m448m",
               "teamName": "She jazz on my holm till I chis",
-              "totalPoints": 71
+              "totalPoints": 75
             },
             {
               "rank": 2,
-              "teamId": "3tdnrntnmg9m448l",
-              "teamName": "Booby Titt’s",
-              "totalPoints": 65
+              "teamId": "jzyh7c72mg9m448r",
+              "teamName": "Durans Tennis Racket",
+              "totalPoints": 71
             },
             {
               "rank": 3,
-              "teamId": "jzyh7c72mg9m448r",
-              "teamName": "Durans Tennis Racket",
-              "totalPoints": 62
+              "teamId": "3tdnrntnmg9m448l",
+              "teamName": "Booby Titt’s",
+              "totalPoints": 67
             },
             {
               "rank": 4,
               "teamId": "h5oigo07mg9m448r",
               "teamName": "Shohei’s gambling buddies",
-              "totalPoints": 60
-            },
-            {
-              "rank": 5,
-              "teamId": "9qvn9hxamg9m448q",
-              "teamName": "Ohtani Betts",
-              "totalPoints": 59
-            },
-            {
-              "rank": 6,
-              "teamId": "jgg562fvmg9m448n",
-              "teamName": "Wander If Franco was Right",
               "totalPoints": 58
             },
             {
-              "rank": 7,
+              "rank": 5,
               "teamId": "g3w8nouhmg9m448p",
               "teamName": "Wander Franco Children's Foundation",
+              "totalPoints": 49.5
+            },
+            {
+              "rank": 6,
+              "teamId": "l2qxmel1mg9m448n",
+              "teamName": "Chaz Jizzolm",
               "totalPoints": 49
             },
             {
-              "rank": 8,
-              "teamId": "ksl78cwnmg9m448p",
-              "teamName": "Ippeis Bookie",
+              "rank": 7,
+              "teamId": "zcapyjosmg9m448o",
+              "teamName": "Monkey Neva Cramp",
               "totalPoints": 47
             },
             {
+              "rank": 8,
+              "teamId": "jgg562fvmg9m448n",
+              "teamName": "Wander If Franco was Right",
+              "totalPoints": 46
+            },
+            {
               "rank": 9,
-              "teamId": "l2qxmel1mg9m448n",
-              "teamName": "Chaz Jizzolm",
-              "totalPoints": 40
+              "teamId": "ksl78cwnmg9m448p",
+              "teamName": "Ippeis Bookie",
+              "totalPoints": 44
             },
             {
               "rank": 10,
-              "teamId": "zcapyjosmg9m448o",
-              "teamName": "Monkey Neva Cramp",
-              "totalPoints": 39
+              "teamId": "9qvn9hxamg9m448q",
+              "teamName": "Ohtani Betts",
+              "totalPoints": 43.5
             }
           ]
         },
@@ -13332,61 +13332,61 @@
               "rank": 1,
               "teamId": "wy7sg1p4mg9m448m",
               "teamName": "She jazz on my holm till I chis",
-              "totalPoints": 72
+              "totalPoints": 71
             },
             {
               "rank": 2,
               "teamId": "3tdnrntnmg9m448l",
               "teamName": "Booby Titt’s",
-              "totalPoints": 62
+              "totalPoints": 68
             },
             {
               "rank": 3,
-              "teamId": "jgg562fvmg9m448n",
-              "teamName": "Wander If Franco was Right",
-              "totalPoints": 61
+              "teamId": "jzyh7c72mg9m448r",
+              "teamName": "Durans Tennis Racket",
+              "totalPoints": 66
             },
             {
               "rank": 4,
-              "teamId": "jzyh7c72mg9m448r",
-              "teamName": "Durans Tennis Racket",
-              "totalPoints": 59
+              "teamId": "jgg562fvmg9m448n",
+              "teamName": "Wander If Franco was Right",
+              "totalPoints": 57
             },
             {
               "rank": 5,
               "teamId": "h5oigo07mg9m448r",
               "teamName": "Shohei’s gambling buddies",
-              "totalPoints": 58
+              "totalPoints": 55
             },
             {
               "rank": 6,
-              "teamId": "g3w8nouhmg9m448p",
-              "teamName": "Wander Franco Children's Foundation",
-              "totalPoints": 53
+              "teamId": "l2qxmel1mg9m448n",
+              "teamName": "Chaz Jizzolm",
+              "totalPoints": 52
             },
             {
               "rank": 7,
-              "teamId": "9qvn9hxamg9m448q",
-              "teamName": "Ohtani Betts",
-              "totalPoints": 51
+              "teamId": "zcapyjosmg9m448o",
+              "teamName": "Monkey Neva Cramp",
+              "totalPoints": 50
             },
             {
               "rank": 8,
               "teamId": "ksl78cwnmg9m448p",
               "teamName": "Ippeis Bookie",
-              "totalPoints": 47.5
+              "totalPoints": 47
             },
             {
               "rank": 9,
-              "teamId": "zcapyjosmg9m448o",
-              "teamName": "Monkey Neva Cramp",
-              "totalPoints": 46.5
+              "teamId": "9qvn9hxamg9m448q",
+              "teamName": "Ohtani Betts",
+              "totalPoints": 42
             },
             {
               "rank": 10,
-              "teamId": "l2qxmel1mg9m448n",
-              "teamName": "Chaz Jizzolm",
-              "totalPoints": 40
+              "teamId": "g3w8nouhmg9m448p",
+              "teamName": "Wander Franco Children's Foundation",
+              "totalPoints": 42
             }
           ]
         },
@@ -13397,61 +13397,61 @@
               "rank": 1,
               "teamId": "wy7sg1p4mg9m448m",
               "teamName": "She jazz on my holm till I chis",
-              "totalPoints": 73
+              "totalPoints": 71
             },
             {
               "rank": 2,
-              "teamId": "jgg562fvmg9m448n",
-              "teamName": "Wander If Franco was Right",
-              "totalPoints": 63
+              "teamId": "3tdnrntnmg9m448l",
+              "teamName": "Booby Titt’s",
+              "totalPoints": 68
             },
             {
               "rank": 3,
-              "teamId": "3tdnrntnmg9m448l",
-              "teamName": "Booby Titt’s",
-              "totalPoints": 63
+              "teamId": "jzyh7c72mg9m448r",
+              "teamName": "Durans Tennis Racket",
+              "totalPoints": 67
             },
             {
               "rank": 4,
-              "teamId": "jzyh7c72mg9m448r",
-              "teamName": "Durans Tennis Racket",
-              "totalPoints": 58
+              "teamId": "h5oigo07mg9m448r",
+              "teamName": "Shohei’s gambling buddies",
+              "totalPoints": 56
             },
             {
               "rank": 5,
-              "teamId": "h5oigo07mg9m448r",
-              "teamName": "Shohei’s gambling buddies",
-              "totalPoints": 56.5
+              "teamId": "zcapyjosmg9m448o",
+              "teamName": "Monkey Neva Cramp",
+              "totalPoints": 54
             },
             {
               "rank": 6,
-              "teamId": "ksl78cwnmg9m448p",
-              "teamName": "Ippeis Bookie",
-              "totalPoints": 51
+              "teamId": "l2qxmel1mg9m448n",
+              "teamName": "Chaz Jizzolm",
+              "totalPoints": 52
             },
             {
               "rank": 7,
-              "teamId": "9qvn9hxamg9m448q",
-              "teamName": "Ohtani Betts",
-              "totalPoints": 50
+              "teamId": "jgg562fvmg9m448n",
+              "teamName": "Wander If Franco was Right",
+              "totalPoints": 49
             },
             {
               "rank": 8,
-              "teamId": "g3w8nouhmg9m448p",
-              "teamName": "Wander Franco Children's Foundation",
+              "teamId": "ksl78cwnmg9m448p",
+              "teamName": "Ippeis Bookie",
               "totalPoints": 48
             },
             {
               "rank": 9,
-              "teamId": "zcapyjosmg9m448o",
-              "teamName": "Monkey Neva Cramp",
-              "totalPoints": 46
+              "teamId": "9qvn9hxamg9m448q",
+              "teamName": "Ohtani Betts",
+              "totalPoints": 44
             },
             {
               "rank": 10,
-              "teamId": "l2qxmel1mg9m448n",
-              "teamName": "Chaz Jizzolm",
-              "totalPoints": 41.5
+              "teamId": "g3w8nouhmg9m448p",
+              "teamName": "Wander Franco Children's Foundation",
+              "totalPoints": 41
             }
           ]
         },
@@ -13462,61 +13462,61 @@
               "rank": 1,
               "teamId": "wy7sg1p4mg9m448m",
               "teamName": "She jazz on my holm till I chis",
-              "totalPoints": 68
+              "totalPoints": 70
             },
             {
               "rank": 2,
-              "teamId": "jgg562fvmg9m448n",
-              "teamName": "Wander If Franco was Right",
-              "totalPoints": 64
+              "teamId": "3tdnrntnmg9m448l",
+              "teamName": "Booby Titt’s",
+              "totalPoints": 69
             },
             {
               "rank": 3,
-              "teamId": "3tdnrntnmg9m448l",
-              "teamName": "Booby Titt’s",
-              "totalPoints": 63
+              "teamId": "jzyh7c72mg9m448r",
+              "teamName": "Durans Tennis Racket",
+              "totalPoints": 65.5
             },
             {
               "rank": 4,
-              "teamId": "h5oigo07mg9m448r",
-              "teamName": "Shohei’s gambling buddies",
-              "totalPoints": 57
+              "teamId": "jgg562fvmg9m448n",
+              "teamName": "Wander If Franco was Right",
+              "totalPoints": 54
             },
             {
               "rank": 5,
-              "teamId": "jzyh7c72mg9m448r",
-              "teamName": "Durans Tennis Racket",
-              "totalPoints": 56
+              "teamId": "zcapyjosmg9m448o",
+              "teamName": "Monkey Neva Cramp",
+              "totalPoints": 54
             },
             {
               "rank": 6,
-              "teamId": "g3w8nouhmg9m448p",
-              "teamName": "Wander Franco Children's Foundation",
-              "totalPoints": 53
+              "teamId": "l2qxmel1mg9m448n",
+              "teamName": "Chaz Jizzolm",
+              "totalPoints": 54
             },
             {
               "rank": 7,
-              "teamId": "ksl78cwnmg9m448p",
-              "teamName": "Ippeis Bookie",
-              "totalPoints": 53
+              "teamId": "h5oigo07mg9m448r",
+              "teamName": "Shohei’s gambling buddies",
+              "totalPoints": 50
             },
             {
               "rank": 8,
-              "teamId": "9qvn9hxamg9m448q",
-              "teamName": "Ohtani Betts",
-              "totalPoints": 49
+              "teamId": "ksl78cwnmg9m448p",
+              "teamName": "Ippeis Bookie",
+              "totalPoints": 47
             },
             {
               "rank": 9,
-              "teamId": "zcapyjosmg9m448o",
-              "teamName": "Monkey Neva Cramp",
-              "totalPoints": 46
+              "teamId": "9qvn9hxamg9m448q",
+              "teamName": "Ohtani Betts",
+              "totalPoints": 44
             },
             {
               "rank": 10,
-              "teamId": "l2qxmel1mg9m448n",
-              "teamName": "Chaz Jizzolm",
-              "totalPoints": 41
+              "teamId": "g3w8nouhmg9m448p",
+              "teamName": "Wander Franco Children's Foundation",
+              "totalPoints": 42.5
             }
           ]
         },
@@ -13525,63 +13525,63 @@
           "rankings": [
             {
               "rank": 1,
-              "teamId": "wy7sg1p4mg9m448m",
-              "teamName": "She jazz on my holm till I chis",
-              "totalPoints": 73
+              "teamId": "jzyh7c72mg9m448r",
+              "teamName": "Durans Tennis Racket",
+              "totalPoints": 71
             },
             {
               "rank": 2,
               "teamId": "3tdnrntnmg9m448l",
               "teamName": "Booby Titt’s",
-              "totalPoints": 63
+              "totalPoints": 69
             },
             {
               "rank": 3,
-              "teamId": "jzyh7c72mg9m448r",
-              "teamName": "Durans Tennis Racket",
-              "totalPoints": 62
+              "teamId": "wy7sg1p4mg9m448m",
+              "teamName": "She jazz on my holm till I chis",
+              "totalPoints": 67
             },
             {
               "rank": 4,
-              "teamId": "h5oigo07mg9m448r",
-              "teamName": "Shohei’s gambling buddies",
-              "totalPoints": 61
+              "teamId": "l2qxmel1mg9m448n",
+              "teamName": "Chaz Jizzolm",
+              "totalPoints": 56
             },
             {
               "rank": 5,
               "teamId": "jgg562fvmg9m448n",
               "teamName": "Wander If Franco was Right",
-              "totalPoints": 58.5
+              "totalPoints": 54
             },
             {
               "rank": 6,
-              "teamId": "g3w8nouhmg9m448p",
-              "teamName": "Wander Franco Children's Foundation",
-              "totalPoints": 56.5
+              "teamId": "h5oigo07mg9m448r",
+              "teamName": "Shohei’s gambling buddies",
+              "totalPoints": 52
             },
             {
               "rank": 7,
-              "teamId": "ksl78cwnmg9m448p",
-              "teamName": "Ippeis Bookie",
-              "totalPoints": 48
-            },
-            {
-              "rank": 8,
-              "teamId": "9qvn9hxamg9m448q",
-              "teamName": "Ohtani Betts",
+              "teamId": "zcapyjosmg9m448o",
+              "teamName": "Monkey Neva Cramp",
               "totalPoints": 47
             },
             {
+              "rank": 8,
+              "teamId": "ksl78cwnmg9m448p",
+              "teamName": "Ippeis Bookie",
+              "totalPoints": 46
+            },
+            {
               "rank": 9,
-              "teamId": "zcapyjosmg9m448o",
-              "teamName": "Monkey Neva Cramp",
-              "totalPoints": 42
+              "teamId": "9qvn9hxamg9m448q",
+              "teamName": "Ohtani Betts",
+              "totalPoints": 45
             },
             {
               "rank": 10,
-              "teamId": "l2qxmel1mg9m448n",
-              "teamName": "Chaz Jizzolm",
-              "totalPoints": 39
+              "teamId": "g3w8nouhmg9m448p",
+              "teamName": "Wander Franco Children's Foundation",
+              "totalPoints": 43
             }
           ]
         },
@@ -13592,61 +13592,61 @@
               "rank": 1,
               "teamId": "wy7sg1p4mg9m448m",
               "teamName": "She jazz on my holm till I chis",
-              "totalPoints": 82.5
+              "totalPoints": 78
             },
             {
               "rank": 2,
-              "teamId": "zcapyjosmg9m448o",
-              "teamName": "Monkey Neva Cramp",
-              "totalPoints": 69
+              "teamId": "3tdnrntnmg9m448l",
+              "teamName": "Booby Titt’s",
+              "totalPoints": 77
             },
             {
               "rank": 3,
-              "teamId": "3tdnrntnmg9m448l",
-              "teamName": "Booby Titt’s",
+              "teamId": "zcapyjosmg9m448o",
+              "teamName": "Monkey Neva Cramp",
               "totalPoints": 63.5
             },
             {
               "rank": 4,
-              "teamId": "ksl78cwnmg9m448p",
-              "teamName": "Ippeis Bookie",
-              "totalPoints": 58.5
+              "teamId": "jzyh7c72mg9m448r",
+              "teamName": "Durans Tennis Racket",
+              "totalPoints": 61
             },
             {
               "rank": 5,
-              "teamId": "9qvn9hxamg9m448q",
-              "teamName": "Ohtani Betts",
-              "totalPoints": 57
+              "teamId": "ksl78cwnmg9m448p",
+              "teamName": "Ippeis Bookie",
+              "totalPoints": 55.5
             },
             {
               "rank": 6,
-              "teamId": "g3w8nouhmg9m448p",
-              "teamName": "Wander Franco Children's Foundation",
-              "totalPoints": 52
+              "teamId": "l2qxmel1mg9m448n",
+              "teamName": "Chaz Jizzolm",
+              "totalPoints": 50.5
             },
             {
               "rank": 7,
-              "teamId": "jzyh7c72mg9m448r",
-              "teamName": "Durans Tennis Racket",
-              "totalPoints": 50
+              "teamId": "g3w8nouhmg9m448p",
+              "teamName": "Wander Franco Children's Foundation",
+              "totalPoints": 48.5
             },
             {
               "rank": 8,
-              "teamId": "jgg562fvmg9m448n",
-              "teamName": "Wander If Franco was Right",
-              "totalPoints": 48
+              "teamId": "h5oigo07mg9m448r",
+              "teamName": "Shohei’s gambling buddies",
+              "totalPoints": 41
             },
             {
               "rank": 9,
-              "teamId": "h5oigo07mg9m448r",
-              "teamName": "Shohei’s gambling buddies",
-              "totalPoints": 35.5
+              "teamId": "jgg562fvmg9m448n",
+              "teamName": "Wander If Franco was Right",
+              "totalPoints": 38.5
             },
             {
               "rank": 10,
-              "teamId": "l2qxmel1mg9m448n",
-              "teamName": "Chaz Jizzolm",
-              "totalPoints": 34
+              "teamId": "9qvn9hxamg9m448q",
+              "teamName": "Ohtani Betts",
+              "totalPoints": 36.5
             }
           ]
         }
@@ -13657,61 +13657,61 @@
             "rank": 1,
             "teamId": "wy7sg1p4mg9m448m",
             "teamName": "She jazz on my holm till I chis",
-            "totalPoints": 72.9
+            "totalPoints": 70.9
           },
           {
             "rank": 2,
             "teamId": "3tdnrntnmg9m448l",
             "teamName": "Booby Titt’s",
-            "totalPoints": 63.2
+            "totalPoints": 69.7
           },
           {
             "rank": 3,
-            "teamId": "jgg562fvmg9m448n",
-            "teamName": "Wander If Franco was Right",
-            "totalPoints": 59.5
+            "teamId": "jzyh7c72mg9m448r",
+            "teamName": "Durans Tennis Racket",
+            "totalPoints": 67.1
           },
           {
             "rank": 4,
-            "teamId": "jzyh7c72mg9m448r",
-            "teamName": "Durans Tennis Racket",
-            "totalPoints": 58.3
+            "teamId": "l2qxmel1mg9m448n",
+            "teamName": "Chaz Jizzolm",
+            "totalPoints": 52.6
           },
           {
             "rank": 5,
             "teamId": "h5oigo07mg9m448r",
             "teamName": "Shohei’s gambling buddies",
-            "totalPoints": 55
+            "totalPoints": 52.3
           },
           {
             "rank": 6,
-            "teamId": "g3w8nouhmg9m448p",
-            "teamName": "Wander Franco Children's Foundation",
-            "totalPoints": 52.1
+            "teamId": "zcapyjosmg9m448o",
+            "teamName": "Monkey Neva Cramp",
+            "totalPoints": 51.9
           },
           {
             "rank": 7,
-            "teamId": "9qvn9hxamg9m448q",
-            "teamName": "Ohtani Betts",
-            "totalPoints": 51.7
+            "teamId": "jgg562fvmg9m448n",
+            "teamName": "Wander If Franco was Right",
+            "totalPoints": 51.2
           },
           {
             "rank": 8,
             "teamId": "ksl78cwnmg9m448p",
             "teamName": "Ippeis Bookie",
-            "totalPoints": 50.3
+            "totalPoints": 47.4
           },
           {
             "rank": 9,
-            "teamId": "zcapyjosmg9m448o",
-            "teamName": "Monkey Neva Cramp",
-            "totalPoints": 47.6
+            "teamId": "g3w8nouhmg9m448p",
+            "teamName": "Wander Franco Children's Foundation",
+            "totalPoints": 43.7
           },
           {
             "rank": 10,
-            "teamId": "l2qxmel1mg9m448n",
-            "teamName": "Chaz Jizzolm",
-            "totalPoints": 39.4
+            "teamId": "9qvn9hxamg9m448q",
+            "teamName": "Ohtani Betts",
+            "totalPoints": 43.1
           }
         ],
         "systemsUsed": [

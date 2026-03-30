@@ -89,43 +89,76 @@ function isPlayerPitcher(id, players) {
 
 // ── Team projection ──
 
+function hitterValue(s) {
+  return s.HR * 2 + s.RBI + s.TB * 0.4 + s.SBN * 1.5 + s.OPS * 20 + s.PA * 0.01;
+}
+
+function pitcherValue(s) {
+  return s.K * 0.5 + s.WQS * 3 + s.SVH * 2 + s.IP * 0.1
+    - (s.ERA > 0 ? s.ERA * 2 : 0) - (s.WHIP > 0 ? s.WHIP * 5 : 0);
+}
+
 function projectTeam(teamData, players, batLookup, pitLookup, provider) {
   const roster = teamData.rosterItems;
-  const activeHitters = roster.filter(r => r.status === 'ACTIVE' && r.position !== 'P');
-  const activePitchers = roster.filter(r => r.status === 'ACTIVE' && r.position === 'P');
-  const reserves = roster.filter(r => r.status === 'RESERVE');
 
-  // Batting aggregation
+  // Count active slots to determine how many players to use per group
+  const numHitterSlots  = roster.filter(r => r.status === 'ACTIVE' && r.position !== 'P').length;
+  const numPitcherSlots = roster.filter(r => r.status === 'ACTIVE' && r.position === 'P').length;
+
+  // Pool all non-IL players (active + bench)
+  const availableHitters  = roster.filter(r => r.status !== 'INJURED_RESERVE' && r.position !== 'P');
+  const availablePitchers = roster.filter(r => r.status !== 'INJURED_RESERVE' && r.position === 'P');
+
+  // Score each player, sort best first, mark top N as selected
+  function pickBest(pool, lookup, extractFn, valueFn, slots) {
+    const rows = pool.map(r => {
+      const p = players[r.id];
+      if (!p) return { r, p: null, stats: null };
+      const proj = findProjection(p, lookup, provider);
+      if (!proj) return { r, p, stats: null };
+      return { r, p, stats: extractFn(proj) };
+    });
+    rows.sort((a, b) => {
+      if (a.stats && b.stats) return valueFn(b.stats) - valueFn(a.stats);
+      if (a.stats) return -1;
+      if (b.stats) return 1;
+      return 0;
+    });
+    const selectedIds = new Set(rows.slice(0, slots).map(row => row.r.id));
+    return { rows, selectedIds };
+  }
+
+  const { rows: hitterRows, selectedIds: selectedHitterIds } = pickBest(
+    availableHitters, batLookup, proj => provider.extractBatting(proj), hitterValue, numHitterSlots
+  );
+  const { rows: pitcherRows, selectedIds: selectedPitcherIds } = pickBest(
+    availablePitchers, pitLookup, proj => provider.extractPitching(proj), pitcherValue, numPitcherSlots
+  );
+
+  // Batting aggregation (selected players only)
   const bat = { HR: 0, RBI: 0, H: 0, BB: 0, HBP: 0, PA: 0, AB: 0, SF: 0, TB: 0, SB: 0, CS: 0 };
   let matchedHitters = 0;
   const playerDetails = [];
 
-  for (const r of activeHitters) {
-    const p = players[r.id];
-    if (!p) { playerDetails.push(makeRow(r, null, 'hitter')); continue; }
-    const proj = findProjection(p, batLookup, provider);
-    if (proj) {
+  for (const { r, p, stats: s } of hitterRows) {
+    const selected = selectedHitterIds.has(r.id);
+    if (!p) { playerDetails.push({ ...makeRow(r, null, 'hitter'), selected }); continue; }
+    if (s && selected) {
       matchedHitters++;
-      const s = provider.extractBatting(proj);
-
       bat.HR += s.HR; bat.RBI += s.RBI; bat.TB += s.TB;
       bat.H += s.H; bat.BB += s.BB;
       bat.HBP += s.HBP; bat.SF += s.SF;
       bat.PA += s.PA; bat.AB += s.AB;
       bat.SB += s.SB; bat.CS += s.CS;
-
-      playerDetails.push({
-        id: r.id, name: p.name, team: p.team, slot: r.position,
-        status: 'ACTIVE', type: 'hitter', matched: true,
-        stats: {
-          HR: s.HR, RBI: s.RBI, TB: Math.round(s.TB),
-          OPS: s.OPS, SB: s.SB, CS: s.CS,
-          SBN: s.SBN, PA: s.PA
-        }
-      });
-    } else {
-      playerDetails.push(makeRow(r, p, 'hitter'));
     }
+    playerDetails.push({
+      id: r.id, name: p.name, team: p.team, slot: r.position,
+      status: r.status, selected, type: 'hitter', matched: !!s,
+      stats: s ? {
+        HR: s.HR, RBI: s.RBI, TB: Math.round(s.TB),
+        OPS: s.OPS, SB: s.SB, CS: s.CS, SBN: s.SBN, PA: s.PA
+      } : null
+    });
   }
 
   // Compute team OPS from aggregates (proper roto calculation)
@@ -133,44 +166,38 @@ function projectTeam(teamData, players, batLookup, pitLookup, provider) {
   const teamOBP = obpDenom > 0 ? (bat.H + bat.BB + bat.HBP) / obpDenom : 0;
   const teamSLG = bat.AB > 0 ? bat.TB / bat.AB : 0;
 
-  // Pitching aggregation
+  // Pitching aggregation (selected players only)
   const pit = { K: 0, ER: 0, IP: 0, H: 0, BB: 0, W: 0, QS: 0, SV: 0, HLD: 0 };
   let matchedPitchers = 0;
 
-  for (const r of activePitchers) {
-    const p = players[r.id];
-    if (!p) { playerDetails.push(makeRow(r, null, 'pitcher')); continue; }
-    const proj = findProjection(p, pitLookup, provider);
-    if (proj) {
+  for (const { r, p, stats: s } of pitcherRows) {
+    const selected = selectedPitcherIds.has(r.id);
+    if (!p) { playerDetails.push({ ...makeRow(r, null, 'pitcher'), selected }); continue; }
+    if (s && selected) {
       matchedPitchers++;
-      const s = provider.extractPitching(proj);
-
       pit.K += s.K; pit.ER += s.ER; pit.IP += s.IP;
       pit.H += s.H; pit.BB += s.BB;
       pit.W += s.W; pit.QS += s.QS; pit.SV += s.SV; pit.HLD += s.HLD;
-
-      playerDetails.push({
-        id: r.id, name: p.name, team: p.team, slot: 'P',
-        status: 'ACTIVE', type: 'pitcher', matched: true,
-        pitcherType: provider.isReliever(s, p) ? 'RP' : 'SP',
-        stats: {
-          K: s.K, ERA: s.ERA, WHIP: s.WHIP,
-          W: s.W, QS: s.QS, SV: s.SV, HLD: s.HLD, IP: s.IP,
-          WQS: s.WQS, SVH: s.SVH
-        }
-      });
-    } else {
-      playerDetails.push(makeRow(r, p, 'pitcher'));
     }
+    playerDetails.push({
+      id: r.id, name: p.name, team: p.team, slot: 'P',
+      status: r.status, selected, type: 'pitcher', matched: !!s,
+      pitcherType: s ? (provider.isReliever(s, p) ? 'RP' : 'SP') : null,
+      stats: s ? {
+        K: s.K, ERA: s.ERA, WHIP: s.WHIP,
+        W: s.W, QS: s.QS, SV: s.SV, HLD: s.HLD, IP: s.IP,
+        WQS: s.WQS, SVH: s.SVH
+      } : null
+    });
   }
 
-  // Reserves (display only, no stat aggregation)
-  for (const r of reserves) {
+  // IL players (display only)
+  for (const r of roster.filter(r => r.status === 'INJURED_RESERVE')) {
     const p = players[r.id];
     const type = isPlayerPitcher(r.id, players) ? 'pitcher' : 'hitter';
     playerDetails.push({
       id: r.id, name: p ? p.name : 'Unknown', team: p ? p.team : '?',
-      slot: r.position, status: 'RESERVE', type, matched: false, stats: null
+      slot: r.position, status: 'INJURED_RESERVE', selected: false, type, matched: false, stats: null
     });
   }
 
@@ -188,7 +215,7 @@ function projectTeam(teamData, players, batLookup, pitLookup, provider) {
       SVH:  +(pit.SV + pit.HLD).toFixed(1),
     },
     matchedCount: matchedHitters + matchedPitchers,
-    totalActive: activeHitters.length + activePitchers.length,
+    totalActive: numHitterSlots + numPitcherSlots,
     playerDetails,
   };
 }
@@ -464,10 +491,11 @@ function showTeamDetail(team) {
   const panel = document.getElementById('team-detail');
   panel.className = 'team-detail active';
 
-  const hitters = team.projection.playerDetails.filter(p => p.type === 'hitter' && p.status === 'ACTIVE');
-  const pitchers = team.projection.playerDetails.filter(p => p.type === 'pitcher' && p.status === 'ACTIVE');
-  const reserves = team.projection.playerDetails.filter(p => p.status === 'RESERVE');
-  const unmatched = team.projection.playerDetails.filter(p => p.status === 'ACTIVE' && !p.matched);
+  const hitters  = team.projection.playerDetails.filter(p => p.type === 'hitter'  && p.selected);
+  const pitchers = team.projection.playerDetails.filter(p => p.type === 'pitcher' && p.selected);
+  const benched  = team.projection.playerDetails.filter(p => !p.selected && p.status !== 'INJURED_RESERVE');
+  const il       = team.projection.playerDetails.filter(p => p.status === 'INJURED_RESERVE');
+  const unmatched = team.projection.playerDetails.filter(p => p.selected && !p.matched);
 
   panel.innerHTML = `
     <div class="team-detail-header">
@@ -491,7 +519,7 @@ function showTeamDetail(team) {
 
       <div class="player-grid" style="margin-top:20px">
         <div class="player-section">
-          <h4>Active Hitters (${hitters.length})</h4>
+          <h4>Best Lineup — Hitters (${hitters.length})</h4>
           <div style="overflow-x:auto">
             <table class="player-stat-table">
               <thead><tr><th>Slot</th><th>Player</th><th>HR</th><th>RBI</th><th>TB</th><th>OPS</th><th>SBN</th></tr></thead>
@@ -500,7 +528,7 @@ function showTeamDetail(team) {
           </div>
         </div>
         <div class="player-section">
-          <h4>Active Pitchers (${pitchers.length})</h4>
+          <h4>Best Lineup — Pitchers (${pitchers.length})</h4>
           <div style="overflow-x:auto">
             <table class="player-stat-table">
               <thead><tr><th>Slot</th><th>Player</th><th>IP</th><th>K</th><th>ERA</th><th>WHIP</th><th>W+QS</th><th>SVH</th></tr></thead>
@@ -510,9 +538,11 @@ function showTeamDetail(team) {
         </div>
       </div>
 
-      ${reserves.length > 0 ? '<h4 style="color:#888;margin:16px 0 8px;font-size:0.85rem;">Reserves (' + reserves.length + ')</h4><div class="reserves-list">' + reserves.map(p => '<span class="reserve-pill">' + escapeHtml(p.name) + ' <span class="reserve-pos">' + escapeHtml(p.slot) + '</span></span>').join('') + '</div>' : ''}
+      ${benched.length > 0 ? '<h4 style="color:#888;margin:16px 0 8px;font-size:0.85rem;">Benched (' + benched.length + ')</h4><div class="reserves-list">' + benched.map(p => '<span class="reserve-pill">' + escapeHtml(p.name) + ' <span class="reserve-pos">' + escapeHtml(p.slot) + (p.status === 'RESERVE' ? ' BN' : '') + '</span></span>').join('') + '</div>' : ''}
 
-      ${unmatched.length > 0 ? '<div class="unmatched-note"><strong>Warning: ' + unmatched.length + ' active player(s) without projections:</strong> ' + unmatched.map(p => escapeHtml(p.name)).join(', ') + '</div>' : ''}
+      ${il.length > 0 ? '<h4 style="color:#888;margin:16px 0 8px;font-size:0.85rem;">Injured Reserve (' + il.length + ')</h4><div class="reserves-list">' + il.map(p => '<span class="reserve-pill" style="opacity:0.5">' + escapeHtml(p.name) + ' <span class="reserve-pos">IL</span></span>').join('') + '</div>' : ''}
+
+      ${unmatched.length > 0 ? '<div class="unmatched-note"><strong>Warning: ' + unmatched.length + ' lineup player(s) without projections:</strong> ' + unmatched.map(p => escapeHtml(p.name)).join(', ') + '</div>' : ''}
     </div>`;
 
   document.getElementById('close-detail').addEventListener('click', () => {
