@@ -1,397 +1,44 @@
 /*
- * Keeper League Power Rankings — Projection-Based
- * 10-Category League:
- *   Hitting: HR, RBI, TB, OPS, SBN (net steals)
- *   Pitching: K, ERA, WHIP, W+QS, SVH
- *
- * Method: Aggregate projected stats per team using a pluggable projection
- * provider (see projections.js), rank each team 1-10 in every category.
+ * Keeper League Power Rankings — render-only frontend.
+ * All stat computation is done server-side (server/rankings.js).
+ * Loads data/power_rankings.json and renders it.
  */
 
-const CATEGORIES = [
-  { key: 'HR',   label: 'HR',   type: 'hitting',  higher: true },
-  { key: 'RBI',  label: 'RBI',  type: 'hitting',  higher: true },
-  { key: 'TB',   label: 'TB',   type: 'hitting',  higher: true },
-  { key: 'OPS',  label: 'OPS',  type: 'hitting',  higher: true },
-  { key: 'SBN',  label: 'SBN',  type: 'hitting',  higher: true },
-  { key: 'K',    label: 'K',    type: 'pitching', higher: true },
-  { key: 'ERA',  label: 'ERA',  type: 'pitching', higher: false },
-  { key: 'WHIP', label: 'WHIP', type: 'pitching', higher: false },
-  { key: 'WQS',  label: 'W+QS', type: 'pitching', higher: true },
-  { key: 'SVH',  label: 'SVH',  type: 'pitching', higher: true },
-];
+const { CATEGORIES } = KeeperShared;
 
-const REAL_STATS_FILE = 'data/fantrax_real_stats.json';
-const DEFAULT_REAL_STATS_WEIGHT = 0.35;
+// ── State ──────────────────────────────────────────────────────────────────
 
-function getAutoRealStatsWeight(rosters) {
-  const period = Number(rosters && rosters.period);
-  if (!Number.isFinite(period)) return DEFAULT_REAL_STATS_WEIGHT;
+let rankingsData    = null; // loaded power_rankings.json
+let currentSystemId = null;
+let currentRankings = [];   // [{teamId, teamName, totalPoints, projection, catRank}]
+let rankingsDelta   = {};   // teamId → signed int (positive = moved up, negative = down)
 
-  // Gradually increase trust in real stats as the season progresses.
-  const progress = Math.min(Math.max((period - 1) / 26, 0), 1);
-  return +(0.30 + progress * 0.30).toFixed(2);
-}
+// ── Data transform ─────────────────────────────────────────────────────────
 
-// Fantrax -> FanGraphs team abbreviation mapping
-const TEAM_ABBR_MAP = {
-  KC: 'KCR', TB: 'TBR', SD: 'SDP', SF: 'SFG', WAS: 'WSN'
-};
-
-// ── Name normalization & matching ──
-
-function normalizeName(name) {
-  return name
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/\bjr\.?\b/gi, '')
-    .replace(/\bsr\.?\b/gi, '')
-    .replace(/\b(ii|iii|iv|v)\b/gi, '')
-    .replace(/[^a-z ]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function fantraxNameToNormal(fantraxName) {
-  // Strip Fantrax two-way player suffixes: "Ohtani-P, Shohei" -> "Ohtani, Shohei"
-  const cleaned = fantraxName.replace(/-[A-Z]\b/g, '');
-  // "Ramirez, Jose" -> "jose ramirez"
-  const parts = cleaned.split(',').map(s => s.trim());
-  if (parts.length >= 2) return normalizeName(parts[1] + ' ' + parts[0]);
-  return normalizeName(cleaned);
-}
-
-function buildProjectionLookup(data, provider) {
-  const arr = Array.isArray(data) ? data : (data.players || []);
-  const byName = {};
-  for (const p of arr) {
-    const key = normalizeName(provider.getPlayerName(p));
-    if (!byName[key]) byName[key] = [];
-    byName[key].push(p);
-  }
-  return byName;
-}
-
-function findProjection(fantraxPlayer, lookup, provider) {
-  const key = fantraxNameToNormal(fantraxPlayer.name);
-  const candidates = lookup[key];
-  if (!candidates || candidates.length === 0) return null;
-  if (candidates.length === 1) return candidates[0];
-  // Disambiguate by team
-  const fgTeam = TEAM_ABBR_MAP[fantraxPlayer.team] || fantraxPlayer.team;
-  return candidates.find(c => provider.getTeam(c) === fgTeam) || candidates[0];
-}
-
-function isPlayerPitcher(id, players) {
-  const p = players[id];
-  return p && (p.position === 'SP' || p.position === 'RP');
-}
-
-// ── Team projection ──
-
-function hitterValue(s) {
-  return s.HR * 2 + s.RBI + s.TB * 0.4 + s.SBN * 1.5 + s.OPS * 20 + s.PA * 0.01;
-}
-
-function pitcherValue(s) {
-  return s.K * 0.5 + s.WQS * 3 + s.SVH * 2 + s.IP * 0.1
-    - (s.ERA > 0 ? s.ERA * 2 : 0) - (s.WHIP > 0 ? s.WHIP * 5 : 0);
-}
-
-function projectTeam(teamData, players, batLookup, pitLookup, provider) {
-  const roster = teamData.rosterItems;
-
-  // Count active slots to determine how many players to use per group
-  const numHitterSlots  = roster.filter(r => r.status === 'ACTIVE' && r.position !== 'P').length;
-  const numPitcherSlots = roster.filter(r => r.status === 'ACTIVE' && r.position === 'P').length;
-
-  // Pool all non-IL players (active + bench)
-  const availableHitters  = roster.filter(r => r.status !== 'INJURED_RESERVE' && r.position !== 'P');
-  const availablePitchers = roster.filter(r => r.status !== 'INJURED_RESERVE' && r.position === 'P');
-
-  // Score each player, sort best first, mark top N as selected
-  function pickBest(pool, lookup, extractFn, valueFn, slots) {
-    const rows = pool.map(r => {
-      const p = players[r.id];
-      if (!p) return { r, p: null, stats: null };
-      const proj = findProjection(p, lookup, provider);
-      if (!proj) return { r, p, stats: null };
-      return { r, p, stats: extractFn(proj) };
-    });
-    rows.sort((a, b) => {
-      if (a.stats && b.stats) return valueFn(b.stats) - valueFn(a.stats);
-      if (a.stats) return -1;
-      if (b.stats) return 1;
-      return 0;
-    });
-    const selectedIds = new Set(rows.slice(0, slots).map(row => row.r.id));
-    return { rows, selectedIds };
-  }
-
-  const { rows: hitterRows, selectedIds: selectedHitterIds } = pickBest(
-    availableHitters, batLookup, proj => provider.extractBatting(proj), hitterValue, numHitterSlots
-  );
-  const { rows: pitcherRows, selectedIds: selectedPitcherIds } = pickBest(
-    availablePitchers, pitLookup, proj => provider.extractPitching(proj), pitcherValue, numPitcherSlots
-  );
-
-  // Batting aggregation (selected players only)
-  const bat = { HR: 0, RBI: 0, H: 0, BB: 0, HBP: 0, PA: 0, AB: 0, SF: 0, TB: 0, SB: 0, CS: 0 };
-  let matchedHitters = 0;
-  const playerDetails = [];
-
-  for (const { r, p, stats: s } of hitterRows) {
-    const selected = selectedHitterIds.has(r.id);
-    if (!p) { playerDetails.push({ ...makeRow(r, null, 'hitter'), selected }); continue; }
-    if (s && selected) {
-      matchedHitters++;
-      bat.HR += s.HR; bat.RBI += s.RBI; bat.TB += s.TB;
-      bat.H += s.H; bat.BB += s.BB;
-      bat.HBP += s.HBP; bat.SF += s.SF;
-      bat.PA += s.PA; bat.AB += s.AB;
-      bat.SB += s.SB; bat.CS += s.CS;
-    }
-    playerDetails.push({
-      id: r.id, name: p.name, team: p.team, slot: r.position,
-      status: r.status, selected, type: 'hitter', matched: !!s,
-      stats: s ? {
-        HR: s.HR, RBI: s.RBI, TB: Math.round(s.TB),
-        OPS: s.OPS, SB: s.SB, CS: s.CS, SBN: s.SBN, PA: s.PA
-      } : null
-    });
-  }
-
-  // Compute team OPS from aggregates (proper roto calculation)
-  const obpDenom = bat.AB + bat.BB + bat.HBP + bat.SF;
-  const teamOBP = obpDenom > 0 ? (bat.H + bat.BB + bat.HBP) / obpDenom : 0;
-  const teamSLG = bat.AB > 0 ? bat.TB / bat.AB : 0;
-
-  // Pitching aggregation (selected players only)
-  const pit = { K: 0, ER: 0, IP: 0, H: 0, BB: 0, W: 0, QS: 0, SV: 0, HLD: 0 };
-  let matchedPitchers = 0;
-
-  for (const { r, p, stats: s } of pitcherRows) {
-    const selected = selectedPitcherIds.has(r.id);
-    if (!p) { playerDetails.push({ ...makeRow(r, null, 'pitcher'), selected }); continue; }
-    if (s && selected) {
-      matchedPitchers++;
-      pit.K += s.K; pit.ER += s.ER; pit.IP += s.IP;
-      pit.H += s.H; pit.BB += s.BB;
-      pit.W += s.W; pit.QS += s.QS; pit.SV += s.SV; pit.HLD += s.HLD;
-    }
-    playerDetails.push({
-      id: r.id, name: p.name, team: p.team, slot: 'P',
-      status: r.status, selected, type: 'pitcher', matched: !!s,
-      pitcherType: s ? (provider.isReliever(s, p) ? 'RP' : 'SP') : null,
-      stats: s ? {
-        K: s.K, ERA: s.ERA, WHIP: s.WHIP,
-        W: s.W, QS: s.QS, SV: s.SV, HLD: s.HLD, IP: s.IP,
-        WQS: s.WQS, SVH: s.SVH
-      } : null
-    });
-  }
-
-  // IL players (display only)
-  for (const r of roster.filter(r => r.status === 'INJURED_RESERVE')) {
-    const p = players[r.id];
-    const type = isPlayerPitcher(r.id, players) ? 'pitcher' : 'hitter';
-    playerDetails.push({
-      id: r.id, name: p ? p.name : 'Unknown', team: p ? p.team : '?',
-      slot: r.position, status: 'INJURED_RESERVE', selected: false, type, matched: false, stats: null
-    });
-  }
-
+function transformEntry(entry) {
   return {
-    stats: {
-      HR:   Math.round(bat.HR),
-      RBI:  Math.round(bat.RBI),
-      TB:   Math.round(bat.TB),
-      OPS:  +(teamOBP + teamSLG).toFixed(3),
-      SBN:  +(bat.SB - bat.CS).toFixed(1),
-      K:    Math.round(pit.K),
-      ERA:  pit.IP > 0 ? +((pit.ER * 9) / pit.IP).toFixed(2) : 99,
-      WHIP: pit.IP > 0 ? +((pit.H + pit.BB) / pit.IP).toFixed(3) : 99,
-      WQS:  +(pit.W + pit.QS).toFixed(1),
-      SVH:  +(pit.SV + pit.HLD).toFixed(1),
+    teamId: entry.teamId,
+    teamName: entry.teamName,
+    totalPoints: entry.totalPoints,
+    projection: {
+      stats: entry.stats || {},
+      playerDetails: entry.playerDetails || [],
+      adjustment: entry.adjustment || null,
     },
-    matchedCount: matchedHitters + matchedPitchers,
-    totalActive: numHitterSlots + numPitcherSlots,
-    playerDetails,
+    catRank: entry.catRanks || {},
   };
 }
 
-function makeRow(rosterItem, player, type) {
-  return {
-    id: rosterItem.id, name: player ? player.name : 'Unknown',
-    team: player ? player.team : '?', slot: rosterItem.position,
-    status: rosterItem.status, type, matched: false, stats: null
-  };
-}
-
-function cloneProjection(projection) {
-  return {
-    ...projection,
-    stats: { ...projection.stats },
-    playerDetails: projection.playerDetails,
-  };
-}
-
-// ── Category Rankings (Roto-Style Points) ──
-
-function rankTeams(teams) {
-  for (const cat of CATEGORIES) {
-    // Sort teams by this category's stat
-    const sorted = [...teams].sort((a, b) => {
-      const av = a.projection.stats[cat.key], bv = b.projection.stats[cat.key];
-      return cat.higher ? bv - av : av - bv; // best first
-    });
-
-    // Assign points: 10 for best, 1 for worst (handle ties by averaging)
-    let i = 0;
-    while (i < sorted.length) {
-      let j = i;
-      while (j < sorted.length - 1 &&
-        Math.abs(sorted[j + 1].projection.stats[cat.key] - sorted[i].projection.stats[cat.key]) < 0.001) {
-        j++;
-      }
-      const avgPoints = (sorted.length - i + sorted.length - j) / 2;
-      for (let k = i; k <= j; k++) {
-        sorted[k].catRank[cat.key] = { rank: i + 1, points: avgPoints };
-      }
-      i = j + 1;
-    }
-  }
-
-  // Total points
-  for (const t of teams) {
-    t.totalPoints = 0;
-    for (const cat of CATEGORIES) t.totalPoints += t.catRank[cat.key].points;
-  }
-}
-
-// ── Data Loading ──
-
-let liveServerDate = null; // server's local date from power_rankings.json
-
-async function loadAllData(provider) {
-  const [rostersR, playersR, batR, pitR, rankingsR] = await Promise.all([
-    fetch('data/fantrax_rosters.json'),
-    fetch('data/fantrax_players.json'),
-    fetch(provider.battingFile),
-    fetch(provider.pitchingFile),
-    loadOptionalJSON('data/power_rankings.json'),
-  ]);
-  const rosters = await rostersR.json();
-  const batting = await batR.json();
-  const pitching = await pitR.json();
-  if (rankingsR && rankingsR.serverDate) liveServerDate = rankingsR.serverDate;
-  return {
-    rosters,
-    players: await playersR.json(),
-    batting,
-    pitching,
-    rankingsMeta: rankingsR || null,
-    dataGeneratedAt: batting.generatedAt || pitching.generatedAt || rosters.generatedAt || null,
-  };
-}
-
-async function loadOptionalJSON(path) {
-  try {
-    const resp = await fetch(path);
-    if (!resp.ok) return null;
-    return await resp.json();
-  } catch {
-    return null;
-  }
-}
-
-function hasRealStats(realStats) {
-  return !!(realStats && realStats.teams && Object.keys(realStats.teams).length > 0);
-}
-
-function blendedStat(projected, actual, weight) {
-  if (!Number.isFinite(actual)) return projected;
-  return projected * (1 - weight) + actual * weight;
-}
-
-function applyRealStatsToTeam(team, realStatsByTeamId, weight) {
-  const actual = realStatsByTeamId && realStatsByTeamId[team.teamId] ? realStatsByTeamId[team.teamId].stats : null;
-  if (!actual) {
-    team.projection.adjustment = {
-      applied: false,
-      weight,
-      source: 'projection-only',
-    };
-    return;
-  }
-
-  for (const cat of CATEGORIES) {
-    const current = team.projection.stats[cat.key];
-    const actualValue = Number(actual[cat.key]);
-    if (!Number.isFinite(actualValue)) continue;
-    team.projection.stats[cat.key] = blendedStat(current, actualValue, weight);
-  }
-
-  team.projection.adjustment = {
-    applied: true,
-    weight,
-    source: 'fantrax-real-stats',
-    actual,
-  };
-}
-
-function finalizeRankings(teams) {
-  rankTeams(teams);
-  teams.sort((a, b) => b.totalPoints - a.totalPoints);
-  return teams;
-}
-
-function buildRankings(rosters, players, battingData, pitchingData, provider) {
-  const batLookup = buildProjectionLookup(battingData, provider);
-  const pitLookup = buildProjectionLookup(pitchingData, provider);
-
-  const teams = [];
-  for (const [teamId, teamData] of Object.entries(rosters.rosters)) {
-    const projection = projectTeam(teamData, players, batLookup, pitLookup, provider);
-    teams.push({ teamId, teamName: teamData.teamName, projection, catRank: {} });
-  }
-
-  return teams;
-}
-
-function buildDisplayRankings(baseTeams, realStats, realStatsWeight) {
-  const teams = baseTeams.map(team => ({
-    ...team,
-    projection: cloneProjection(team.projection),
-    catRank: {},
-  }));
-
-  if (hasRealStats(realStats)) {
-    for (const team of teams) {
-      applyRealStatsToTeam(team, realStats.teams, realStatsWeight);
-    }
-  } else {
-    for (const team of teams) {
-      team.projection.adjustment = {
-        applied: false,
-        weight: realStatsWeight,
-        source: 'projection-only',
-      };
-    }
-  }
-
-  return finalizeRankings(teams);
+function setCurrentSystem(systemId) {
+  const sysData = systemId === 'consensus'
+    ? rankingsData.consensus
+    : (rankingsData.systems && rankingsData.systems[systemId]);
+  if (!sysData) return;
+  currentSystemId = systemId;
+  currentRankings = (sysData.rankings || []).map(transformEntry);
 }
 
 // ── Rendering ──
-
-let currentRankings = [];
-let baseTeams = [];
-const cachedRealStats = null; // server already blends real stats; client-side blending not used
-let cachedRankingsMeta = null; // metadata from power_rankings.json (realStatsAvailable, source, etc.)
-let rankingsDelta = {}; // teamId → signed int (positive = moved up, negative = down)
-
-let realStatsWeight = DEFAULT_REAL_STATS_WEIGHT;
 
 function renderRankings() {
   const tbody = document.getElementById('rankings-body');
@@ -441,29 +88,27 @@ function updateRealStatsStatus() {
   const status = document.getElementById('real-stats-status');
   if (!status) return;
 
-  const meta = cachedRankingsMeta;
-  if (!meta) {
+  if (!rankingsData) {
     status.textContent = 'Run the backend to generate rankings data.';
     return;
   }
 
-  if (!meta.realStatsAvailable) {
+  if (!rankingsData.realStatsAvailable) {
     status.textContent = 'Projections only — no real stats available yet.';
     return;
   }
 
-  const source = meta.realStatsSource || 'FanGraphs';
-  const weight = meta.realStatsWeight != null
-    ? Math.round(meta.realStatsWeight * 100)
-    : Math.round(realStatsWeight * 100);
-  const updated = meta.generatedAt
-    ? ' · updated ' + new Date(meta.generatedAt).toLocaleString()
+  const source = rankingsData.realStatsSource || 'FanGraphs';
+  const weight = rankingsData.realStatsWeight != null
+    ? Math.round(rankingsData.realStatsWeight * 100)
+    : 35;
+  const updated = rankingsData.generatedAt
+    ? ' · updated ' + new Date(rankingsData.generatedAt).toLocaleString()
     : '';
-  status.textContent = `Real-stats blending ON (${weight}% actual · source: ${source}${updated})`;
+  status.textContent = `Real-stats blending ON (${weight}% actual \u00b7 source: ${source}${updated})`;
 }
 
 function recomputeAndRender() {
-  currentRankings = buildDisplayRankings(baseTeams, cachedRealStats, realStatsWeight);
   renderRankings();
   updateRealStatsStatus();
 }
@@ -491,11 +136,17 @@ function showTeamDetail(team) {
   const panel = document.getElementById('team-detail');
   panel.className = 'team-detail active';
 
-  const hitters  = team.projection.playerDetails.filter(p => p.type === 'hitter'  && p.selected);
-  const pitchers = team.projection.playerDetails.filter(p => p.type === 'pitcher' && p.selected);
-  const benched  = team.projection.playerDetails.filter(p => !p.selected && p.status !== 'INJURED_RESERVE');
-  const il       = team.projection.playerDetails.filter(p => p.status === 'INJURED_RESERVE');
-  const unmatched = team.projection.playerDetails.filter(p => p.selected && !p.matched);
+  const allHitters  = team.projection.playerDetails.filter(p => p.type === 'hitter' && p.status !== 'INJURED_RESERVE');
+  const allPitchers = team.projection.playerDetails.filter(p => p.type === 'pitcher' && p.status !== 'INJURED_RESERVE');
+  const il          = team.projection.playerDetails.filter(p => p.status === 'INJURED_RESERVE');
+
+  // Sort by value descending (players with stats first, then no-projection at bottom)
+  const hVal = p => p.stats ? (p.stats.HR * 2 + p.stats.RBI + p.stats.TB * 0.4 + p.stats.SBN * 1.5 + p.stats.OPS * 20 + (p.stats.PA || 0) * 0.01) : -1;
+  const pVal = p => p.stats ? (p.stats.K * 0.5 + p.stats.WQS * 3 + p.stats.SVH * 2 + p.stats.IP * 0.1 - p.stats.ERA * 2 - p.stats.WHIP * 5) : -1;
+  allHitters.sort((a, b) => hVal(b) - hVal(a));
+  allPitchers.sort((a, b) => pVal(b) - pVal(a));
+
+  const selectedCount = team.projection.playerDetails.filter(p => p.selected).length;
 
   panel.innerHTML = `
     <div class="team-detail-header">
@@ -517,32 +168,30 @@ function showTeamDetail(team) {
         }).join('')}
       </div>
 
-      <div class="player-grid" style="margin-top:20px">
+      <p style="color:#888;font-size:0.75rem;margin:16px 0 4px;">Top ${selectedCount} players by value are counted in rankings. Dimmed rows are on the roster but not in the optimal lineup.</p>
+
+      <div class="player-grid" style="margin-top:8px">
         <div class="player-section">
-          <h4>Best Lineup — Hitters (${hitters.length})</h4>
+          <h4>Hitters (${allHitters.length})</h4>
           <div style="overflow-x:auto">
             <table class="player-stat-table">
-              <thead><tr><th>Slot</th><th>Player</th><th>HR</th><th>RBI</th><th>TB</th><th>OPS</th><th>SBN</th></tr></thead>
-              <tbody>${hitters.map(p => renderHitterRow(p)).join('')}</tbody>
+              <thead><tr><th>#</th><th>Player</th><th>Pos</th><th>HR</th><th>RBI</th><th>TB</th><th>OPS</th><th>SBN</th></tr></thead>
+              <tbody>${allHitters.map((p, i) => renderHitterRow(p, i + 1)).join('')}</tbody>
             </table>
           </div>
         </div>
         <div class="player-section">
-          <h4>Best Lineup — Pitchers (${pitchers.length})</h4>
+          <h4>Pitchers (${allPitchers.length})</h4>
           <div style="overflow-x:auto">
             <table class="player-stat-table">
-              <thead><tr><th>Slot</th><th>Player</th><th>IP</th><th>K</th><th>ERA</th><th>WHIP</th><th>W+QS</th><th>SVH</th></tr></thead>
-              <tbody>${pitchers.map(p => renderPitcherRow(p)).join('')}</tbody>
+              <thead><tr><th>#</th><th>Player</th><th>Pos</th><th>IP</th><th>K</th><th>ERA</th><th>WHIP</th><th>W+QS</th><th>SVH</th></tr></thead>
+              <tbody>${allPitchers.map((p, i) => renderPitcherRow(p, i + 1)).join('')}</tbody>
             </table>
           </div>
         </div>
       </div>
 
-      ${benched.length > 0 ? '<h4 style="color:#888;margin:16px 0 8px;font-size:0.85rem;">Benched (' + benched.length + ')</h4><div class="reserves-list">' + benched.map(p => '<span class="reserve-pill">' + escapeHtml(p.name) + ' <span class="reserve-pos">' + escapeHtml(p.slot) + (p.status === 'RESERVE' ? ' BN' : '') + '</span></span>').join('') + '</div>' : ''}
-
       ${il.length > 0 ? '<h4 style="color:#888;margin:16px 0 8px;font-size:0.85rem;">Injured Reserve (' + il.length + ')</h4><div class="reserves-list">' + il.map(p => '<span class="reserve-pill" style="opacity:0.5">' + escapeHtml(p.name) + ' <span class="reserve-pos">IL</span></span>').join('') + '</div>' : ''}
-
-      ${unmatched.length > 0 ? '<div class="unmatched-note"><strong>Warning: ' + unmatched.length + ' lineup player(s) without projections:</strong> ' + unmatched.map(p => escapeHtml(p.name)).join(', ') + '</div>' : ''}
     </div>`;
 
   document.getElementById('close-detail').addEventListener('click', () => {
@@ -551,24 +200,27 @@ function showTeamDetail(team) {
   panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-function renderHitterRow(p) {
-  if (!p.matched) {
-    return '<tr class="unmatched"><td>' + escapeHtml(p.slot) + '</td><td>' + escapeHtml(p.name) + '</td><td colspan="5" class="no-proj">No projection</td></tr>';
+function renderHitterRow(p, rank) {
+  const dim = p.selected ? '' : ' style="opacity:0.4"';
+  if (!p.stats) {
+    return '<tr' + dim + '><td>' + rank + '</td><td>' + escapeHtml(p.name) + '</td><td>' + escapeHtml(p.position) + '</td><td colspan="5" class="no-proj">No projection</td></tr>';
   }
   const s = p.stats;
-  return '<tr><td>' + escapeHtml(p.slot) + '</td><td>' + escapeHtml(p.name) +
+  return '<tr' + dim + '><td>' + rank + '</td><td>' + escapeHtml(p.name) +
+    '</td><td>' + escapeHtml(p.position) +
     '</td><td>' + Math.round(s.HR) + '</td><td>' + Math.round(s.RBI) +
     '</td><td>' + Math.round(s.TB) + '</td><td>' + s.OPS.toFixed(3) +
     '</td><td>' + s.SBN.toFixed(1) + '</td></tr>';
 }
 
-function renderPitcherRow(p) {
-  if (!p.matched) {
-    return '<tr class="unmatched"><td>P</td><td>' + escapeHtml(p.name) + '</td><td colspan="6" class="no-proj">No projection</td></tr>';
+function renderPitcherRow(p, rank) {
+  const dim = p.selected ? '' : ' style="opacity:0.4"';
+  if (!p.stats) {
+    return '<tr' + dim + '><td>' + rank + '</td><td>' + escapeHtml(p.name) + '</td><td>' + escapeHtml(p.position) + '</td><td colspan="6" class="no-proj">No projection</td></tr>';
   }
   const s = p.stats;
-  const label = p.pitcherType ? 'P (' + p.pitcherType + ')' : 'P';
-  return '<tr><td>' + label + '</td><td>' + escapeHtml(p.name) +
+  return '<tr' + dim + '><td>' + rank + '</td><td>' + escapeHtml(p.name) +
+    '</td><td>' + escapeHtml(p.position) +
     '</td><td>' + s.IP.toFixed(1) + '</td><td>' + Math.round(s.K) +
     '</td><td>' + s.ERA.toFixed(2) + '</td><td>' + s.WHIP.toFixed(3) +
     '</td><td>' + s.WQS.toFixed(1) + '</td><td>' + s.SVH.toFixed(1) + '</td></tr>';
@@ -580,14 +232,9 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-// ── Init ──
-
-let currentProvider = null;
-let cachedLeagueData = null; // { rosters, players } — reused across provider switches
-let availableProviders = []; // providers whose data files exist
-
 // ── History navigation ──
 
+let liveServerDate = null;
 let historyData = null;   // full history JSON { entries: [...] }
 let histPastEntries = []; // entries before today (today is always shown as live)
 let histDateIdx  = -1;    // -1 = live view; else index into histPastEntries
@@ -804,113 +451,44 @@ async function navigateHistory(idx) {
 
 // ── Composite Rankings ──
 
-async function buildCompositeRankings(rosters, players) {
-  if (availableProviders.length === 0) return null;
 
-  const results = await Promise.all(availableProviders.map(async p => {
-    try {
-      const [batR, pitR] = await Promise.all([
-        fetch(p.battingFile),
-        fetch(p.pitchingFile),
-      ]);
-      if (!batR.ok || !pitR.ok) return null;
-      const batting = await batR.json();
-      const pitching = await pitR.json();
-      return buildRankings(rosters, players, batting, pitching, p);
-    } catch {
-      return null;
-    }
-  }));
 
-  const valid = results.filter(Boolean);
-  if (valid.length === 0) return null;
-
-  // Average stats per team across all systems
-  return valid[0].map(team => {
-    const statSums = {};
-    let count = 0;
-    for (const teams of valid) {
-      const t = teams.find(tt => tt.teamId === team.teamId);
-      if (!t) continue;
-      count++;
-      for (const cat of CATEGORIES) {
-        statSums[cat.key] = (statSums[cat.key] || 0) + t.projection.stats[cat.key];
-      }
-    }
-    const avgStats = {};
-    for (const cat of CATEGORIES) {
-      avgStats[cat.key] = count > 0 ? statSums[cat.key] / count : 0;
-    }
-    return {
-      teamId: team.teamId,
-      teamName: team.teamName,
-      projection: { ...team.projection, stats: avgStats },
-      catRank: {},
-    };
-  });
-}
-
-async function detectAvailableProviders() {
-  const all = ProjectionRegistry.list();
-  const checks = all.map(async (p) => {
-    try {
-      const res = await fetch(p.battingFile, { method: 'HEAD' });
-      return res.ok ? p : null;
-    } catch {
-      return null;
-    }
-  });
-  return (await Promise.all(checks)).filter(Boolean);
-}
-
-function populateProviderDropdown(available) {
+function populateProviderDropdown() {
   const select = document.getElementById('projection-select');
   if (!select) return;
   select.innerHTML = '';
-  for (const p of available) {
+  const systems = (rankingsData && rankingsData.systems) || {};
+  for (const [id, sys] of Object.entries(systems)) {
     const opt = document.createElement('option');
-    opt.value = p.id;
-    opt.textContent = p.name;
-    if (p.id === currentProvider.id) opt.selected = true;
+    opt.value = id;
+    opt.textContent = sys.name;
     select.appendChild(opt);
   }
-  if (available.length > 1) {
+  if (rankingsData && rankingsData.consensus) {
     const sep = document.createElement('option');
     sep.disabled = true;
     sep.textContent = '──────────';
     select.appendChild(sep);
     const opt = document.createElement('option');
-    opt.value = 'composite';
-    opt.textContent = 'Composite (All Systems)';
+    opt.value = 'consensus';
+    opt.textContent = 'Consensus (All Systems)';
+    opt.selected = true;
     select.appendChild(opt);
   }
 }
 
 // ── Rankings history & delta ──
 
-async function loadRankingsDelta(todayConsensus) {
-  // If historyData is already loaded, use it; otherwise fall back to a fetch
-  const hist = historyData || await (async () => {
-    try {
-      const resp = await fetch('data/power_rankings_history.json');
-      return resp.ok ? resp.json() : null;
-    } catch { return null; }
-  })();
-
-  if (!hist || !hist.entries || hist.entries.length === 0) return;
-
-  const today = localDateKey();
-  const prev = [...hist.entries]
-    .filter(e => e.date < today)
-    .sort((a, b) => b.date.localeCompare(a.date))[0];
+function computeLiveDelta() {
+  if (!histPastEntries.length) return;
+  const prev = [...histPastEntries].sort((a, b) => b.date.localeCompare(a.date))[0];
   if (!prev || !prev.consensus || !prev.consensus.rankings) return;
 
   const prevRank = {};
   for (const t of prev.consensus.rankings) prevRank[t.teamId] = t.rank;
 
-  const sorted = [...todayConsensus].sort((a, b) => b.totalPoints - a.totalPoints);
   const deltas = {};
-  sorted.forEach((t, i) => {
+  currentRankings.forEach((t, i) => {
     const yRank = prevRank[t.teamId];
     if (yRank != null) deltas[t.teamId] = yRank - (i + 1);
   });
@@ -925,122 +503,69 @@ function setDataTimestamp(isoString) {
   } else {
     el.textContent = 'Data updated: unknown';
   }
+  checkDataStaleness(isoString);
 }
 
-async function switchProvider(providerId) {
-  if (providerId === 'composite') {
-    if (!cachedLeagueData) return;
-    const tbody = document.getElementById('rankings-body');
-    tbody.innerHTML = '<tr><td colspan="12" style="text-align:center;padding:32px;">Building composite rankings across all ' + availableProviders.length + ' systems...</td></tr>';
-    try {
-      const composite = await buildCompositeRankings(cachedLeagueData.rosters, cachedLeagueData.players);
-      if (!composite) throw new Error('No projection data available');
-      currentProvider = { id: 'composite', name: 'Composite' };
-      baseTeams = composite;
-      recomputeAndRender();
-      setDataTimestamp(null);
-    } catch (err) {
-      console.error('Failed to build composite rankings:', err);
-      document.getElementById('rankings-body').innerHTML =
-        '<tr><td colspan="12" style="text-align:center;padding:32px;color:#ef4444;">Error building composite rankings. Check console.</td></tr>';
-    }
+function checkDataStaleness(isoString) {
+  const banner = document.getElementById('staleness-banner');
+  if (!banner) return;
+  if (!isoString) {
+    banner.style.display = 'none';
     return;
   }
-
-  const provider = ProjectionRegistry.get(providerId);
-  if (!provider || !cachedLeagueData) return;
-
-  currentProvider = provider;
-  const tbody = document.getElementById('rankings-body');
-  tbody.innerHTML = '<tr><td colspan="12" style="text-align:center;padding:32px;">Loading ' + escapeHtml(provider.name) + ' projections...</td></tr>';
-
-  try {
-    const [batR, pitR] = await Promise.all([
-      fetch(provider.battingFile),
-      fetch(provider.pitchingFile),
-    ]);
-    if (!batR.ok || !pitR.ok) throw new Error('Projection files not found');
-    const batting = await batR.json();
-    const pitching = await pitR.json();
-
-    baseTeams = buildRankings(
-      cachedLeagueData.rosters, cachedLeagueData.players,
-      batting, pitching, provider
-    );
-    recomputeAndRender();
-    setDataTimestamp(batting.generatedAt || pitching.generatedAt || null);
-  } catch (err) {
-    console.error('Failed to load projections:', err);
-    tbody.innerHTML =
-      '<tr><td colspan="12" style="text-align:center;padding:32px;color:#ef4444;">Error loading ' + escapeHtml(provider.name) + ' projections. Run <code>node data/api.js --projections ' + escapeHtml(provider.id) + '</code> to fetch the data.</td></tr>';
+  const ageMs = Date.now() - new Date(isoString).getTime();
+  const ageHours = ageMs / (1000 * 60 * 60);
+  if (ageHours > 24) {
+    const days = Math.floor(ageHours / 24);
+    banner.textContent = 'Data is ' + days + ' day' + (days > 1 ? 's' : '') +
+      ' old. Projection data may be outdated.';
+    banner.className = 'staleness-banner' + (ageHours > 72 ? ' error' : '');
+    banner.style.display = '';
+  } else {
+    banner.style.display = 'none';
   }
+}
+
+function switchProvider(systemId) {
+  setCurrentSystem(systemId);
+  recomputeAndRender();
 }
 
 async function init() {
   try {
-    availableProviders = await detectAvailableProviders();
+    const [rankResp, histResp] = await Promise.all([
+      fetch('data/power_rankings.json'),
+      fetch('data/power_rankings_history.json'),
+    ]);
 
-    if (availableProviders.length === 0) {
-      document.getElementById('rankings-body').innerHTML =
-        '<tr><td colspan="12" style="text-align:center;padding:32px;color:#ef4444;">No projection data found. Run <code>node data/api.js --projections steamer</code> to fetch data.</td></tr>';
-      return;
+    if (!rankResp.ok) throw new Error('power_rankings.json not found. Run: node scripts/refresh-data.js --skip-api');
+    rankingsData = await rankResp.json();
+    liveServerDate = rankingsData.serverDate || null;
+
+    if (histResp.ok) {
+      historyData = await histResp.json();
+      const today = liveServerDate || localDateKey();
+      histPastEntries = (historyData.entries || []).filter(e => e.date < today);
     }
 
-    // Default to composite when multiple systems are available
-    const useComposite = availableProviders.length > 1;
-    currentProvider = useComposite
-      ? { id: 'composite', name: 'Composite' }
-      : availableProviders[0];
+    populateProviderDropdown();
 
-    // Need a real provider to load rosters/players; use steamer or first available
-    const seedProvider = availableProviders.find(p => p.id === ProjectionRegistry.defaultId)
-      || availableProviders[0];
+    const defaultSystem = rankingsData.consensus ? 'consensus' : rankingsData.primarySystem;
+    setCurrentSystem(defaultSystem);
 
-    populateProviderDropdown(availableProviders);
-    // Mark the composite option as selected in the dropdown
-    if (useComposite) {
-      const select = document.getElementById('projection-select');
-      if (select) select.value = 'composite';
-    }
-
-    const data = await loadAllData(seedProvider);
-    cachedLeagueData = { rosters: data.rosters, players: data.players };
-    cachedRankingsMeta = data.rankingsMeta;
-    realStatsWeight = getAutoRealStatsWeight(data.rosters);
-
-    if (useComposite) {
-      const composite = await buildCompositeRankings(data.rosters, data.players);
-      baseTeams = composite || buildRankings(data.rosters, data.players, data.batting, data.pitching, seedProvider);
-    } else {
-      baseTeams = buildRankings(
-        data.rosters, data.players,
-        data.batting, data.pitching,
-        currentProvider
-      );
-    }
-
-    // Load history first (needed for delta computation)
-    await loadHistoryData();
-
-    // Pre-compute today's consensus rankings for delta reference, then load delta before rendering
-    const todayForDelta = buildDisplayRankings(baseTeams, cachedRealStats, realStatsWeight);
-    await loadRankingsDelta(todayForDelta);
+    computeLiveDelta();
     recomputeAndRender();
-    setDataTimestamp(data.dataGeneratedAt);
-
-    // Build history navigation after live data is rendered
+    setDataTimestamp(rankingsData.generatedAt);
     buildHistoryNav();
 
     const projSelect = document.getElementById('projection-select');
     if (projSelect) {
-      projSelect.addEventListener('change', e => {
-        switchProvider(e.target.value);
-      });
+      projSelect.addEventListener('change', e => switchProvider(e.target.value));
     }
   } catch (err) {
     console.error('Failed to load power rankings:', err);
     document.getElementById('rankings-body').innerHTML =
-      '<tr><td colspan="12" style="text-align:center;padding:32px;color:#ef4444;">Error loading data. Check console.</td></tr>';
+      '<tr><td colspan="12" style="text-align:center;padding:32px;color:#ef4444;">Error loading data: ' + escapeHtml(err.message) + '</td></tr>';
   }
 }
 

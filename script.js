@@ -8,6 +8,12 @@ async function loadData() {
   return { rosters, players };
 }
 
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str || '';
+  return div.innerHTML;
+}
+
 function render(rosters, players, teamFilter, posFilter, statusFilter, search) {
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
@@ -51,7 +57,7 @@ function render(rosters, players, teamFilter, posFilter, statusFilter, search) {
 
     card.innerHTML = `
       <div class="team-header">
-        <div class="team-name">${teamData.teamName}</div>
+        <div class="team-name">${escapeHtml(teamData.teamName)}</div>
         <div class="team-count">${all.length} players</div>
       </div>
       <table>
@@ -82,10 +88,10 @@ function render(rosters, players, teamFilter, posFilter, statusFilter, search) {
         const tr = document.createElement('tr');
         if (isReserve) tr.classList.add('reserve');
         tr.innerHTML = `
-          <td><span class="pos-badge ${p.position}">${p.position}</span></td>
-          <td class="player-name ${isReserve ? 'reserve-label' : ''}">${p.name}</td>
-          <td class="mlb-team">${p.mlbTeam}</td>
-          <td><span class="status-badge ${p.status}">${p.status}</span></td>
+          <td><span class="pos-badge ${escapeHtml(p.position)}">${escapeHtml(p.position)}</span></td>
+          <td class="player-name ${isReserve ? 'reserve-label' : ''}">${escapeHtml(p.name)}</td>
+          <td class="mlb-team">${escapeHtml(p.mlbTeam)}</td>
+          <td><span class="status-badge ${escapeHtml(p.status)}">${escapeHtml(p.status)}</span></td>
         `;
         tbody.appendChild(tr);
       }

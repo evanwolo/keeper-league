@@ -12,6 +12,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +29,24 @@ jobs:
           FANTRAX_LEAGUE_ID: ${{ secrets.FANTRAX_LEAGUE_ID }}
           FANTRAX_COOKIE: ${{ secrets.FANTRAX_COOKIE }}
         run: node scripts/refresh-data.js
+
+      - name: Validate generated data
+        run: |
+          echo "Validating JSON files..."
+          for f in data/*.json; do
+            if ! python3 -m json.tool "$f" > /dev/null 2>&1; then
+              echo "INVALID JSON: $f"
+              exit 1
+            fi
+          done
+          # Ensure critical files exist and are non-empty
+          for f in data/fantrax_rosters.json data/fantrax_players.json data/power_rankings.json; do
+            if [ ! -s "$f" ]; then
+              echo "MISSING or EMPTY: $f"
+              exit 1
+            fi
+          done
+          echo "All JSON files valid."
 
       - name: Commit and push updated data
         run: |

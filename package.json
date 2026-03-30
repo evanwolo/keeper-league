@@ -11,10 +11,14 @@
     "fetch": "node data/api.js",
     "fetch:rosters": "node data/api.js --rosters",
     "fetch:projections": "node data/api.js --projections steamer zips atc thebat thebatx dc",
-    "fetch:stats": "node data/api.js --real-stats"
+    "fetch:stats": "node data/api.js --real-stats",
+    "test": "jest"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
     "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<header>
-  <div style="width:10px;height:10px;border-radius:50%;background:#c41e3a;box-shadow:0 0 8px #c41e3a"></div>
+<header role="banner">
+  <div style="width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)"></div>
   <h1>Keeper League Roster Viewer</h1>
   <div class="header-actions">
     <a href="power-rankings.html" class="header-link">Power Rankings</a>
@@ -17,7 +17,7 @@
   </div>
 </header>
 
-<div class="controls">
+<div class="controls" role="search" aria-label="Filter controls">
   <label for="team-filter">Team</label>
   <select id="team-filter">
     <option value="">All Teams</option>
@@ -51,7 +51,7 @@
 
 <div id="error-msg"></div>
 
-<main id="grid">
+<main id="grid" role="main" aria-label="Team roster cards" aria-live="polite">
   <div id="loading">Loading roster data...</div>
 </main>
 

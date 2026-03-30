@@ -159,6 +159,31 @@ function writeData(filePath, data) {
   console.log(`  Saved ${path.basename(filePath)}`);
 }
 
+// ── Response validation ─────────────────────────────────────────────────────
+
+function validateRosters(rosters) {
+  if (!rosters || typeof rosters !== 'object') throw new Error('Roster response is not an object');
+  if (!rosters.rosters || typeof rosters.rosters !== 'object') throw new Error('Roster response missing rosters map');
+  const teamIds = Object.keys(rosters.rosters);
+  if (teamIds.length === 0) throw new Error('Roster response has zero teams');
+  for (const [id, team] of Object.entries(rosters.rosters)) {
+    if (!team.teamName) throw new Error(`Team ${id} missing teamName`);
+    if (!Array.isArray(team.rosterItems)) throw new Error(`Team ${id} missing rosterItems array`);
+  }
+}
+
+function validateProjections(data, type, stat) {
+  const arr = Array.isArray(data) ? data : (data && data.players) || [];
+  if (arr.length < 50) throw new Error(`${type} ${stat} projections: only ${arr.length} players (expected 50+)`);
+  const sample = arr[0];
+  if (!sample.PlayerName) throw new Error(`${type} ${stat} projections: missing PlayerName field`);
+}
+
+function validatePlayers(players) {
+  if (!players || typeof players !== 'object') throw new Error('Players response is not an object');
+  if (Object.keys(players).length < 10) throw new Error(`Players response has only ${Object.keys(players).length} entries (expected 10+)`);
+}
+
 // ── Fantrax API ─────────────────────────────────────────────────────────────
 
 async function fetchRosters(period) {
@@ -189,7 +214,7 @@ async function fetchPlayers() {
   const resp = await postFantrax('getPlayerIds', { leagueId: LEAGUE_ID });
   const playerMap = resp.responses?.[0]?.data;
   if (!playerMap) throw new Error('Unexpected players response structure');
-
+  validatePlayers(playerMap);
   return playerMap;
 }
 
@@ -360,16 +385,12 @@ async function fetchRealStats(period) {
 }
 
 // ── FanGraphs Projections ───────────────────────────────────────────────────
-// Supported projection types and their FanGraphs API 'type' parameter.
-
-const PROJECTION_TYPES = {
-  steamer:  'steamer',
-  zips:     'zips',
-  atc:      'atc',
-  thebat:   'thebat',
-  thebatx:  'thebatx',
-  dc:       'fangraphsdc',
-};
+// Derive projection types from shared config.
+const { PROJECTION_SYSTEMS } = require('../shared/categories');
+const PROJECTION_TYPES = {};
+for (const sys of PROJECTION_SYSTEMS) {
+  if (sys.fangraphsType) PROJECTION_TYPES[sys.id] = sys.fangraphsType;
+}
 
 function fetchBattingProjections(type) {
   const fgType = PROJECTION_TYPES[type];
@@ -418,6 +439,7 @@ async function updateRealPlayerStats() {
 async function updateRosters() {
   console.log('Fetching rosters...');
   const rosters = await fetchRosters();
+  validateRosters(rosters);
   writeData(FILES.rosters, rosters);
 
   console.log('Fetching players...');
@@ -433,10 +455,12 @@ async function updateProjections(type) {
   type = type || 'steamer';
   console.log(`Fetching ${type} batting projections...`);
   const bat = await fetchBattingProjections(type);
+  validateProjections(bat, type, 'batting');
   writeData(path.join(DATA_DIR, `${type}_batting.json`), bat);
 
   console.log(`Fetching ${type} pitching projections...`);
   const pit = await fetchPitchingProjections(type);
+  validateProjections(pit, type, 'pitching');
   writeData(path.join(DATA_DIR, `${type}_pitching.json`), pit);
 }
 

@@ -104,7 +104,13 @@ async function main() {
     fetchErrors.forEach((e, i) => console.log(`  ${i + 1}. ${e}`));
   }
 
-  // Exit 0 even with partial failures so CI doesn't fail on optional endpoints
+  // Exit non-zero if critical steps failed (rosters or rankings generation)
+  const critical = fetchErrors.filter(e => e.startsWith('rosters:') || e.startsWith('rankings:'));
+  if (critical.length > 0) {
+    console.error('\nCritical failures detected — exiting with error.');
+    process.exit(1);
+  }
+
   process.exit(0);
 }
 

@@ -2,8 +2,10 @@
  * Projection Provider Registry — Strategy Pattern
  *
  * Each provider defines how to load, parse, and extract stats from a
- * projection source.  Register new providers to support additional
- * projection systems (ZiPS, ATC, THE BAT, etc.).
+ * projection source.  
+ *
+ * Shared modules loaded via <script> tags before this file:
+ *   shared/categories.js — CATEGORIES, TEAM_ABBR_MAP, PROJECTION_SYSTEMS
  *
  * Interface contract every provider must satisfy:
  *   id             : string   — unique key (e.g. 'steamer')
@@ -101,28 +103,8 @@ function createFanGraphsProvider({ id, name, fangraphsType }) {
   };
 }
 
-// ── Built-in providers ──────────────────────────────────────────────────────
+// ── Built-in providers — auto-registered from shared PROJECTION_SYSTEMS ─────
 
-ProjectionRegistry.register(createFanGraphsProvider({
-  id: 'steamer', name: 'Steamer', fangraphsType: 'steamer',
-}));
-
-ProjectionRegistry.register(createFanGraphsProvider({
-  id: 'zips', name: 'ZiPS', fangraphsType: 'zips',
-}));
-
-ProjectionRegistry.register(createFanGraphsProvider({
-  id: 'atc', name: 'ATC', fangraphsType: 'atc',
-}));
-
-ProjectionRegistry.register(createFanGraphsProvider({
-  id: 'thebat', name: 'THE BAT', fangraphsType: 'thebat',
-}));
-
-ProjectionRegistry.register(createFanGraphsProvider({
-  id: 'thebatx', name: 'THE BAT X', fangraphsType: 'thebatx',
-}));
-
-ProjectionRegistry.register(createFanGraphsProvider({
-  id: 'dc', name: 'Depth Charts', fangraphsType: 'fangraphsdc',
-}));
+for (const sys of KeeperShared.PROJECTION_SYSTEMS) {
+  ProjectionRegistry.register(createFanGraphsProvider(sys));
+}

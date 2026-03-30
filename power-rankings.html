@@ -380,11 +380,27 @@
     }
     /* Historical view: simplified table header */
     .cat-sys { text-align: center; font-size: 0.75rem; padding: 8px 6px; }
+
+    /* Staleness banner */
+    .staleness-banner {
+      background: #332200;
+      border: 1px solid #665500;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+      color: #ddaa00;
+    }
+    .staleness-banner.error {
+      background: #331111;
+      border-color: #663333;
+      color: #dd4444;
+    }
   </style>
 </head>
 <body>
 
-<header>
+<header role="banner">
   <div style="width:9px;height:9px;border-radius:50%;background:#b01c35;box-shadow:0 0 6px rgba(176,28,53,0.7)"></div>
   <h1>Power Rankings</h1>
   <div class="header-actions">
@@ -394,6 +410,9 @@
 </header>
 
 <div class="pr-container">
+
+  <!-- Data Staleness Banner -->
+  <div id="staleness-banner" class="staleness-banner" style="display:none"></div>
 
   <!-- History Date Navigation -->
   <div class="history-nav" id="history-nav" style="visibility:hidden">
@@ -416,7 +435,7 @@
 
   <!-- Rankings Table -->
   <div style="overflow-x:auto">
-  <table class="ranking-table">
+  <table class="ranking-table" role="table" aria-label="Power rankings by category">
     <thead id="rankings-head">
       <tr>
         <th rowspan="2" style="width:44px">#</th>
@@ -499,7 +518,7 @@
   <div class="team-detail" id="team-detail"></div>
 </div>
 
-<script src="projections.js"></script>
+<script src="shared/categories.js"></script>
 <script src="power-rankings.js"></script>
 </body>
 </html>

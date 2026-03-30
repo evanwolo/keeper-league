@@ -5,6 +5,32 @@ const config = require('./config');
 const scheduler = require('./scheduler');
 
 const ROOT = path.resolve(__dirname, '..');
+const API_TOKEN = process.env.API_TOKEN || '';
+
+// ── Rate limiting ───────────────────────────────────────────────────────────
+
+const RATE_WINDOW_MS = 60 * 1000; // 1 minute
+const RATE_MAX = 5; // max refresh requests per window
+const rateBuckets = new Map();
+
+function isRateLimited(ip) {
+  const now = Date.now();
+  let bucket = rateBuckets.get(ip);
+  if (!bucket || now - bucket.windowStart > RATE_WINDOW_MS) {
+    bucket = { windowStart: now, count: 0 };
+    rateBuckets.set(ip, bucket);
+  }
+  bucket.count++;
+  return bucket.count > RATE_MAX;
+}
+
+// Clean up stale buckets every 5 minutes
+setInterval(() => {
+  const cutoff = Date.now() - RATE_WINDOW_MS * 2;
+  for (const [ip, bucket] of rateBuckets) {
+    if (bucket.windowStart < cutoff) rateBuckets.delete(ip);
+  }
+}, 5 * 60 * 1000).unref();
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -22,7 +48,10 @@ const MIME = {
 const BLOCKED = new Set(['server', 'node_modules', '.env', '.git', '.gitignore']);
 
 function sendJSON(res, code, data) {
-  res.writeHead(code, { 'Content-Type': 'application/json' });
+  res.writeHead(code, {
+    'Content-Type': 'application/json',
+    'X-Content-Type-Options': 'nosniff',
+  });
   res.end(JSON.stringify(data, null, 2));
 }
 
@@ -60,6 +89,9 @@ function serveStatic(req, res) {
       'Content-Type': contentType,
       // JSON and JS files: no cache so the frontend always gets fresh data
       'Cache-Control': (ext === '.json' || ext === '.js') ? 'no-cache' : 'public, max-age=300',
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'SAMEORIGIN',
+      'Content-Security-Policy': "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src 'self'",
     });
     res.end(data);
   });
@@ -95,6 +127,23 @@ function handleAPI(req, res) {
 
   // POST/GET /api/refresh[/jobName] — manually trigger a data refresh
   if (url.startsWith('/api/refresh')) {
+    // Auth check: if API_TOKEN is configured, require it
+    if (API_TOKEN) {
+      const authHeader = req.headers['authorization'] || '';
+      const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : '';
+      if (token !== API_TOKEN) {
+        sendJSON(res, 401, { error: 'Unauthorized — set Authorization: Bearer <API_TOKEN>' });
+        return;
+      }
+    }
+
+    // Rate limit
+    const clientIp = req.socket.remoteAddress || 'unknown';
+    if (isRateLimited(clientIp)) {
+      sendJSON(res, 429, { error: 'Too many requests. Try again in 1 minute.' });
+      return;
+    }
+
     const parts = url.split('/').filter(Boolean); // ['api', 'refresh', 'rosters']
     const jobName = parts[2];
 

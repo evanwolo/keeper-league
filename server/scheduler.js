@@ -10,17 +10,26 @@ function ts() {
   return new Date().toISOString();
 }
 
+const JOB_TIMEOUT_MS = 10 * 60 * 1000; // 10 minute hard timeout per job
+
 async function runJob(name, fn) {
   const entry = status[name] || (status[name] = {
     lastRun: null, lastError: null, running: false, runCount: 0,
   });
 
   if (entry.running) {
-    console.log(`[${ts()}] Skipping ${name} — already running`);
-    return;
+    // Safety valve: if a job has been "running" for over 10 minutes, assume it crashed
+    if (entry.runStart && Date.now() - entry.runStart > JOB_TIMEOUT_MS) {
+      console.warn(`[${ts()}] Force-resetting stuck job: ${name} (started ${entry.runStart})`);
+      entry.running = false;
+    } else {
+      console.log(`[${ts()}] Skipping ${name} — already running`);
+      return;
+    }
   }
 
   entry.running = true;
+  entry.runStart = Date.now();
   console.log(`[${ts()}] Starting: ${name}`);
 
   try {
@@ -34,6 +43,7 @@ async function runJob(name, fn) {
     console.error(`[${ts()}] Failed: ${name} — ${err.message}`);
   } finally {
     entry.running = false;
+    entry.runStart = null;
   }
 }
 
