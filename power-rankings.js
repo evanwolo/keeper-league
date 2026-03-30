@@ -366,14 +366,12 @@ let rankingsDelta = {}; // teamId → signed int (positive = moved up, negative 
 
 let realStatsWeight = DEFAULT_REAL_STATS_WEIGHT;
 
-function renderRankings(sortByName) {
+function renderRankings() {
   const tbody = document.getElementById('rankings-body');
   tbody.innerHTML = '';
 
   const pointsSorted = [...currentRankings].sort((a, b) => b.totalPoints - a.totalPoints);
-  const display = sortByName
-    ? [...currentRankings].sort((a, b) => a.teamName.localeCompare(b.teamName))
-    : pointsSorted;
+  const display = pointsSorted;
 
   display.forEach(team => {
     const rank = pointsSorted.indexOf(team) + 1;
@@ -439,7 +437,7 @@ function updateRealStatsStatus() {
 
 function recomputeAndRender() {
   currentRankings = buildDisplayRankings(baseTeams, cachedRealStats, realStatsWeight);
-  renderRankings(document.getElementById('sort-by-name').checked);
+  renderRankings();
   updateRealStatsStatus();
 }
 
@@ -1002,10 +1000,6 @@ async function init() {
 
     // Build history navigation after live data is rendered
     buildHistoryNav();
-
-    document.getElementById('sort-by-name').addEventListener('change', e => {
-      renderRankings(e.target.checked);
-    });
 
     const projSelect = document.getElementById('projection-select');
     if (projSelect) {

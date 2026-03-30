@@ -1,36 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #0c1221;
-  --panel: #111d32;
-  --panel-soft: #0e1828;
-  --border: #243a58;
-  --border-soft: #1a2840;
-  --text: #e6ecf5;
-  --muted: #9aa8bd;
-  --accent: #c41e3a;
-  --accent-soft: #ef6b73;
+  --bg: #0b1120;
+  --panel: #101929;
+  --panel-soft: #0d1421;
+  --border: #1e3250;
+  --border-soft: #172840;
+  --text: #dce5f2;
+  --muted: #8a9ab3;
+  --accent: #b01c35;
+  --accent-soft: #d95060;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif;
-  background: radial-gradient(120% 120% at 100% 0%, #132744 0%, var(--bg) 55%);
+  background: radial-gradient(110% 110% at 100% 0%, #0f2040 0%, var(--bg) 60%);
   color: var(--text);
   line-height: 1.45;
   min-height: 100vh;
 }
 
 header {
-  background: linear-gradient(135deg, #111d33, #1b2d4a);
+  background: linear-gradient(135deg, #0e1a2e, #14253e);
   border-bottom: 2px solid var(--accent);
   padding: 20px 32px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.40);
 }
 
 header h1 {

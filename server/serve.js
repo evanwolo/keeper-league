@@ -58,8 +58,8 @@ function serveStatic(req, res) {
     }
     res.writeHead(200, {
       'Content-Type': contentType,
-      // JSON data files: no cache so the frontend always gets fresh data
-      'Cache-Control': ext === '.json' ? 'no-cache' : 'public, max-age=300',
+      // JSON and JS files: no cache so the frontend always gets fresh data
+      'Cache-Control': (ext === '.json' || ext === '.js') ? 'no-cache' : 'public, max-age=300',
     });
     res.end(data);
   });
