@@ -1,7 +1,7 @@
 {
-  "generatedAt": null,
-  "leagueId": null,
+  "generatedAt": "2026-03-30T00:30:00.844Z",
+  "leagueId": "p3cvqmbkmg9m448i",
   "period": null,
-  "sourceMethod": null,
+  "sourceMethod": "getStandings",
   "teams": {}
 }

@@ -1,0 +1,6753 @@
+{
+  "generatedAt": "2026-03-30T00:56:00.562Z",
+  "serverDate": "2026-03-29",
+  "leagueId": "p3cvqmbkmg9m448i",
+  "period": 6,
+  "realStatsWeight": 0.36,
+  "realStatsAvailable": true,
+  "realStatsSource": "fangraphs-player-stats",
+  "categories": [
+    {
+      "key": "HR",
+      "label": "HR",
+      "type": "hitting",
+      "higher": true
+    },
+    {
+      "key": "RBI",
+      "label": "RBI",
+      "type": "hitting",
+      "higher": true
+    },
+    {
+      "key": "TB",
+      "label": "TB",
+      "type": "hitting",
+      "higher": true
+    },
+    {
+      "key": "OPS",
+      "label": "OPS",
+      "type": "hitting",
+      "higher": true
+    },
+    {
+      "key": "SBN",
+      "label": "SBN",
+      "type": "hitting",
+      "higher": true
+    },
+    {
+      "key": "K",
+      "label": "K",
+      "type": "pitching",
+      "higher": true
+    },
+    {
+      "key": "ERA",
+      "label": "ERA",
+      "type": "pitching",
+      "higher": false
+    },
+    {
+      "key": "WHIP",
+      "label": "WHIP",
+      "type": "pitching",
+      "higher": false
+    },
+    {
+      "key": "WQS",
+      "label": "W+QS",
+      "type": "pitching",
+      "higher": true
+    },
+    {
+      "key": "SVH",
+      "label": "SVH",
+      "type": "pitching",
+      "higher": true
+    }
+  ],
+  "primarySystem": "steamer",
+  "systems": {
+    "steamer": {
+      "name": "Steamer",
+      "rankings": [
+        {
+          "rank": 1,
+          "teamId": "wy7sg1p4mg9m448m",
+          "teamName": "She jazz on my holm till I chis",
+          "totalPoints": 71,
+          "stats": {
+            "HR": 127.04,
+            "RBI": 393.96,
+            "TB": 1241.56,
+            "OPS": 0.879,
+            "SBN": 58.04,
+            "K": 568.56,
+            "ERA": 3.527,
+            "WHIP": 1.034,
+            "WQS": 70.624,
+            "SVH": 53.312
+          },
+          "projectedStats": {
+            "HR": 194,
+            "RBI": 606,
+            "TB": 1909,
+            "OPS": 0.778,
+            "SBN": 89,
+            "K": 876,
+            "ERA": 3.34,
+            "WHIP": 1.133,
+            "WQS": 108.1,
+            "SVH": 83.3
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 5
+            },
+            "RBI": {
+              "rank": 7,
+              "points": 4
+            },
+            "TB": {
+              "rank": 8,
+              "points": 3
+            },
+            "OPS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 9
+            },
+            "K": {
+              "rank": 1,
+              "points": 10
+            },
+            "ERA": {
+              "rank": 6,
+              "points": 5
+            },
+            "WHIP": {
+              "rank": 2,
+              "points": 9
+            },
+            "WQS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SVH": {
+              "rank": 4,
+              "points": 7
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 8,
+              "RBI": 17,
+              "TB": 55,
+              "OPS": 1.059,
+              "SBN": 3,
+              "K": 22,
+              "ERA": 3.86,
+              "WHIP": 0.857,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "teamId": "jgg562fvmg9m448n",
+          "teamName": "Wander If Franco was Right",
+          "totalPoints": 64,
+          "stats": {
+            "HR": 135.4,
+            "RBI": 422.36,
+            "TB": 1339.24,
+            "OPS": 0.66,
+            "SBN": 57.784,
+            "K": 489.48,
+            "ERA": 2.713,
+            "WHIP": 1.171,
+            "WQS": 57.504,
+            "SVH": 44.608
+          },
+          "projectedStats": {
+            "HR": 211,
+            "RBI": 656,
+            "TB": 2083,
+            "OPS": 0.795,
+            "SBN": 88.6,
+            "K": 753,
+            "ERA": 3.66,
+            "WHIP": 1.216,
+            "WQS": 87.6,
+            "SVH": 69.7
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 5,
+              "points": 6
+            },
+            "RBI": {
+              "rank": 4,
+              "points": 7
+            },
+            "TB": {
+              "rank": 3,
+              "points": 8
+            },
+            "OPS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SBN": {
+              "rank": 3,
+              "points": 8
+            },
+            "K": {
+              "rank": 4,
+              "points": 7
+            },
+            "ERA": {
+              "rank": 2,
+              "points": 9
+            },
+            "WHIP": {
+              "rank": 5,
+              "points": 6
+            },
+            "WQS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 6
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 7,
+              "TB": 17,
+              "OPS": 0.42,
+              "SBN": 3,
+              "K": 21,
+              "ERA": 1.03,
+              "WHIP": 1.092,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 3,
+          "teamId": "3tdnrntnmg9m448l",
+          "teamName": "Booby Titt’s",
+          "totalPoints": 63,
+          "stats": {
+            "HR": 143.8,
+            "RBI": 436.8,
+            "TB": 1324.96,
+            "OPS": 0.88,
+            "SBN": 29.328,
+            "K": 389.48,
+            "ERA": 3.3,
+            "WHIP": 1.127,
+            "WQS": 37.52,
+            "SVH": 78.112
+          },
+          "projectedStats": {
+            "HR": 223,
+            "RBI": 678,
+            "TB": 2050,
+            "OPS": 0.818,
+            "SBN": 44.7,
+            "K": 599,
+            "ERA": 3.71,
+            "WHIP": 1.238,
+            "WQS": 57.5,
+            "SVH": 119.8
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 3,
+              "points": 8
+            },
+            "RBI": {
+              "rank": 3,
+              "points": 8
+            },
+            "TB": {
+              "rank": 4,
+              "points": 7
+            },
+            "OPS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SBN": {
+              "rank": 10,
+              "points": 1
+            },
+            "K": {
+              "rank": 9,
+              "points": 2
+            },
+            "ERA": {
+              "rank": 4,
+              "points": 7
+            },
+            "WHIP": {
+              "rank": 3,
+              "points": 8
+            },
+            "WQS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SVH": {
+              "rank": 1,
+              "points": 10
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 3,
+              "RBI": 8,
+              "TB": 36,
+              "OPS": 0.99,
+              "SBN": 2,
+              "K": 17,
+              "ERA": 2.57,
+              "WHIP": 0.929,
+              "WQS": 2,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 4,
+          "teamId": "jzyh7c72mg9m448r",
+          "teamName": "Durans Tennis Racket",
+          "totalPoints": 61,
+          "stats": {
+            "HR": 154.4,
+            "RBI": 466.04,
+            "TB": 1388,
+            "OPS": 0.746,
+            "SBN": 42.856,
+            "K": 487.48,
+            "ERA": 4.138,
+            "WHIP": 1.189,
+            "WQS": 60.728,
+            "SVH": 43.88
+          },
+          "projectedStats": {
+            "HR": 239,
+            "RBI": 722,
+            "TB": 2153,
+            "OPS": 0.808,
+            "SBN": 66.4,
+            "K": 751,
+            "ERA": 3.58,
+            "WHIP": 1.217,
+            "WQS": 93.2,
+            "SVH": 68
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 1,
+              "points": 10
+            },
+            "RBI": {
+              "rank": 1,
+              "points": 10
+            },
+            "TB": {
+              "rank": 2,
+              "points": 9
+            },
+            "OPS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SBN": {
+              "rank": 8,
+              "points": 3
+            },
+            "K": {
+              "rank": 5,
+              "points": 6
+            },
+            "ERA": {
+              "rank": 8,
+              "points": 3
+            },
+            "WHIP": {
+              "rank": 6,
+              "points": 5
+            },
+            "WQS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 6,
+              "points": 5
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 4,
+              "RBI": 11,
+              "TB": 28,
+              "OPS": 0.636,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 5.13,
+              "WHIP": 1.14,
+              "WQS": 3,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 5,
+          "teamId": "h5oigo07mg9m448r",
+          "teamName": "Shohei’s gambling buddies",
+          "totalPoints": 57,
+          "stats": {
+            "HR": 152.4,
+            "RBI": 457.64,
+            "TB": 1413.36,
+            "OPS": 0.753,
+            "SBN": 50.92,
+            "K": 397.92,
+            "ERA": 5.075,
+            "WHIP": 1.417,
+            "WQS": 41.792,
+            "SVH": 57.76
+          },
+          "projectedStats": {
+            "HR": 237,
+            "RBI": 710,
+            "TB": 2196,
+            "OPS": 0.818,
+            "SBN": 79,
+            "K": 615,
+            "ERA": 3.61,
+            "WHIP": 1.186,
+            "WQS": 65.3,
+            "SVH": 88
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 2,
+              "points": 9
+            },
+            "RBI": {
+              "rank": 2,
+              "points": 9
+            },
+            "TB": {
+              "rank": 1,
+              "points": 10
+            },
+            "OPS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SBN": {
+              "rank": 6,
+              "points": 5
+            },
+            "K": {
+              "rank": 8,
+              "points": 3
+            },
+            "ERA": {
+              "rank": 9,
+              "points": 2
+            },
+            "WHIP": {
+              "rank": 9,
+              "points": 2
+            },
+            "WQS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SVH": {
+              "rank": 3,
+              "points": 8
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 22,
+              "OPS": 0.637,
+              "SBN": 1,
+              "K": 12,
+              "ERA": 7.68,
+              "WHIP": 1.829,
+              "WQS": 0,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 6,
+          "teamId": "g3w8nouhmg9m448p",
+          "teamName": "Wander Franco Children's Foundation",
+          "totalPoints": 53,
+          "stats": {
+            "HR": 118.76,
+            "RBI": 399.6,
+            "TB": 1273.04,
+            "OPS": 0.786,
+            "SBN": 33.792,
+            "K": 524.68,
+            "ERA": 3.383,
+            "WHIP": 1.17,
+            "WQS": 69.88,
+            "SVH": 42.384
+          },
+          "projectedStats": {
+            "HR": 185,
+            "RBI": 621,
+            "TB": 1970,
+            "OPS": 0.798,
+            "SBN": 52.8,
+            "K": 808,
+            "ERA": 3.88,
+            "WHIP": 1.297,
+            "WQS": 107.5,
+            "SVH": 65.1
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 8,
+              "points": 3
+            },
+            "RBI": {
+              "rank": 6,
+              "points": 5
+            },
+            "TB": {
+              "rank": 7,
+              "points": 4
+            },
+            "OPS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SBN": {
+              "rank": 9,
+              "points": 2
+            },
+            "K": {
+              "rank": 3,
+              "points": 8
+            },
+            "ERA": {
+              "rank": 5,
+              "points": 6
+            },
+            "WHIP": {
+              "rank": 4,
+              "points": 7
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SVH": {
+              "rank": 7,
+              "points": 4
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 6,
+              "TB": 34,
+              "OPS": 0.766,
+              "SBN": 0,
+              "K": 21,
+              "ERA": 2.5,
+              "WHIP": 0.944,
+              "WQS": 3,
+              "SVH": 2
+            }
+          }
+        },
+        {
+          "rank": 7,
+          "teamId": "9qvn9hxamg9m448q",
+          "teamName": "Ohtani Betts",
+          "totalPoints": 49,
+          "stats": {
+            "HR": 115.28,
+            "RBI": 390.44,
+            "TB": 1218.96,
+            "OPS": 0.743,
+            "SBN": 62.24,
+            "K": 399.48,
+            "ERA": 2.259,
+            "WHIP": 0.865,
+            "WQS": 41.64,
+            "SVH": 37.096
+          },
+          "projectedStats": {
+            "HR": 179,
+            "RBI": 605,
+            "TB": 1890,
+            "OPS": 0.77,
+            "SBN": 95,
+            "K": 618,
+            "ERA": 3.53,
+            "WHIP": 1.2,
+            "WQS": 64.5,
+            "SVH": 57.4
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 9,
+              "points": 2
+            },
+            "RBI": {
+              "rank": 8,
+              "points": 3
+            },
+            "TB": {
+              "rank": 9,
+              "points": 2
+            },
+            "OPS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SBN": {
+              "rank": 1,
+              "points": 10
+            },
+            "K": {
+              "rank": 6,
+              "points": 5
+            },
+            "ERA": {
+              "rank": 1,
+              "points": 10
+            },
+            "WHIP": {
+              "rank": 1,
+              "points": 10
+            },
+            "WQS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SVH": {
+              "rank": 9,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 26,
+              "OPS": 0.694,
+              "SBN": 4,
+              "K": 11,
+              "ERA": 0,
+              "WHIP": 0.27,
+              "WQS": 1,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 8,
+          "teamId": "ksl78cwnmg9m448p",
+          "teamName": "Ippeis Bookie",
+          "totalPoints": 47,
+          "stats": {
+            "HR": 108.04,
+            "RBI": 357.24,
+            "TB": 1151.12,
+            "OPS": 0.825,
+            "SBN": 57.64,
+            "K": 541.24,
+            "ERA": 3.751,
+            "WHIP": 1.21,
+            "WQS": 70.224,
+            "SVH": 39.272
+          },
+          "projectedStats": {
+            "HR": 166,
+            "RBI": 552,
+            "TB": 1775,
+            "OPS": 0.767,
+            "SBN": 89.5,
+            "K": 835,
+            "ERA": 3.69,
+            "WHIP": 1.247,
+            "WQS": 108.6,
+            "SVH": 60.8
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 10,
+              "points": 1
+            },
+            "RBI": {
+              "rank": 10,
+              "points": 1
+            },
+            "TB": {
+              "rank": 10,
+              "points": 1
+            },
+            "OPS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SBN": {
+              "rank": 4,
+              "points": 7
+            },
+            "K": {
+              "rank": 2,
+              "points": 9
+            },
+            "ERA": {
+              "rank": 7,
+              "points": 4
+            },
+            "WHIP": {
+              "rank": 7,
+              "points": 4
+            },
+            "WQS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 3
+            }
+          },
+          "matchedHitters": 8,
+          "matchedPitchers": 6,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 5,
+              "RBI": 11,
+              "TB": 42,
+              "OPS": 0.928,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 3.86,
+              "WHIP": 1.143,
+              "WQS": 2,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 9,
+          "teamId": "zcapyjosmg9m448o",
+          "teamName": "Monkey Neva Cramp",
+          "totalPoints": 45,
+          "stats": {
+            "HR": 125.4,
+            "RBI": 389.48,
+            "TB": 1286.52,
+            "OPS": 0.821,
+            "SBN": 53.432,
+            "K": 398.16,
+            "ERA": 2.792,
+            "WHIP": 1.234,
+            "WQS": 50.552,
+            "SVH": 31.872
+          },
+          "projectedStats": {
+            "HR": 192,
+            "RBI": 599,
+            "TB": 1986,
+            "OPS": 0.811,
+            "SBN": 81.8,
+            "K": 612,
+            "ERA": 4.11,
+            "WHIP": 1.285,
+            "WQS": 77.3,
+            "SVH": 49.8
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 7,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 9,
+              "points": 2
+            },
+            "TB": {
+              "rank": 6,
+              "points": 5
+            },
+            "OPS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SBN": {
+              "rank": 5,
+              "points": 6
+            },
+            "K": {
+              "rank": 7,
+              "points": 4
+            },
+            "ERA": {
+              "rank": 3,
+              "points": 8
+            },
+            "WHIP": {
+              "rank": 8,
+              "points": 3
+            },
+            "WQS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SVH": {
+              "rank": 10,
+              "points": 1
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 7,
+              "RBI": 17,
+              "TB": 43,
+              "OPS": 0.84,
+              "SBN": 3,
+              "K": 18,
+              "ERA": 0.45,
+              "WHIP": 1.144,
+              "WQS": 3,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 10,
+          "teamId": "l2qxmel1mg9m448n",
+          "teamName": "Chaz Jizzolm",
+          "totalPoints": 40,
+          "stats": {
+            "HR": 137.04,
+            "RBI": 414.04,
+            "TB": 1294,
+            "OPS": 0.75,
+            "SBN": 48.848,
+            "K": 340.6,
+            "ERA": 8.925,
+            "WHIP": 1.854,
+            "WQS": 30.784,
+            "SVH": 62.072
+          },
+          "projectedStats": {
+            "HR": 213,
+            "RBI": 643,
+            "TB": 2005,
+            "OPS": 0.807,
+            "SBN": 75.2,
+            "K": 526,
+            "ERA": 3.82,
+            "WHIP": 1.253,
+            "WQS": 48.1,
+            "SVH": 95.3
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 4,
+              "points": 7
+            },
+            "RBI": {
+              "rank": 5,
+              "points": 6
+            },
+            "TB": {
+              "rank": 5,
+              "points": 6
+            },
+            "OPS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 4
+            },
+            "K": {
+              "rank": 10,
+              "points": 1
+            },
+            "ERA": {
+              "rank": 10,
+              "points": 1
+            },
+            "WHIP": {
+              "rank": 10,
+              "points": 1
+            },
+            "WQS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SVH": {
+              "rank": 2,
+              "points": 9
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 7,
+              "TB": 30,
+              "OPS": 0.65,
+              "SBN": 2,
+              "K": 11,
+              "ERA": 18,
+              "WHIP": 2.923,
+              "WQS": 0,
+              "SVH": 3
+            }
+          }
+        }
+      ]
+    },
+    "zips": {
+      "name": "ZiPS",
+      "rankings": [
+        {
+          "rank": 1,
+          "teamId": "wy7sg1p4mg9m448m",
+          "teamName": "She jazz on my holm till I chis",
+          "totalPoints": 71,
+          "stats": {
+            "HR": 129.6,
+            "RBI": 441.96,
+            "TB": 1268.44,
+            "OPS": 0.886,
+            "SBN": 67,
+            "K": 523.12,
+            "ERA": 3.457,
+            "WHIP": 1,
+            "WQS": 33.44,
+            "SVH": 53.12
+          },
+          "projectedStats": {
+            "HR": 198,
+            "RBI": 681,
+            "TB": 1951,
+            "OPS": 0.788,
+            "SBN": 103,
+            "K": 805,
+            "ERA": 3.23,
+            "WHIP": 1.081,
+            "WQS": 50,
+            "SVH": 83
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 5,
+              "points": 6
+            },
+            "RBI": {
+              "rank": 7,
+              "points": 4
+            },
+            "TB": {
+              "rank": 9,
+              "points": 2
+            },
+            "OPS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 9
+            },
+            "K": {
+              "rank": 1,
+              "points": 10
+            },
+            "ERA": {
+              "rank": 6,
+              "points": 5
+            },
+            "WHIP": {
+              "rank": 2,
+              "points": 9
+            },
+            "WQS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SVH": {
+              "rank": 4,
+              "points": 7
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 8,
+              "RBI": 17,
+              "TB": 55,
+              "OPS": 1.059,
+              "SBN": 3,
+              "K": 22,
+              "ERA": 3.86,
+              "WHIP": 0.857,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "teamId": "3tdnrntnmg9m448l",
+          "teamName": "Booby Titt’s",
+          "totalPoints": 65,
+          "stats": {
+            "HR": 143.16,
+            "RBI": 480.32,
+            "TB": 1371.68,
+            "OPS": 0.874,
+            "SBN": 31.44,
+            "K": 322.92,
+            "ERA": 3.152,
+            "WHIP": 1.082,
+            "WQS": 25.68,
+            "SVH": 77.6
+          },
+          "projectedStats": {
+            "HR": 222,
+            "RBI": 746,
+            "TB": 2123,
+            "OPS": 0.808,
+            "SBN": 48,
+            "K": 495,
+            "ERA": 3.48,
+            "WHIP": 1.168,
+            "WQS": 39,
+            "SVH": 119
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 3,
+              "points": 8
+            },
+            "RBI": {
+              "rank": 3,
+              "points": 8
+            },
+            "TB": {
+              "rank": 3,
+              "points": 8
+            },
+            "OPS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SBN": {
+              "rank": 10,
+              "points": 1
+            },
+            "K": {
+              "rank": 10,
+              "points": 1
+            },
+            "ERA": {
+              "rank": 4,
+              "points": 7
+            },
+            "WHIP": {
+              "rank": 3,
+              "points": 8
+            },
+            "WQS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SVH": {
+              "rank": 1,
+              "points": 10
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 3,
+              "RBI": 8,
+              "TB": 36,
+              "OPS": 0.99,
+              "SBN": 2,
+              "K": 17,
+              "ERA": 2.57,
+              "WHIP": 0.929,
+              "WQS": 2,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 3,
+          "teamId": "jzyh7c72mg9m448r",
+          "teamName": "Durans Tennis Racket",
+          "totalPoints": 62,
+          "stats": {
+            "HR": 157.6,
+            "RBI": 502.52,
+            "TB": 1437.92,
+            "OPS": 0.747,
+            "SBN": 44.52,
+            "K": 435,
+            "ERA": 4.132,
+            "WHIP": 1.137,
+            "WQS": 28.6,
+            "SVH": 43.88
+          },
+          "projectedStats": {
+            "HR": 244,
+            "RBI": 779,
+            "TB": 2231,
+            "OPS": 0.81,
+            "SBN": 69,
+            "K": 669,
+            "ERA": 3.57,
+            "WHIP": 1.136,
+            "WQS": 43,
+            "SVH": 68
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 1,
+              "points": 10
+            },
+            "RBI": {
+              "rank": 2,
+              "points": 9
+            },
+            "TB": {
+              "rank": 2,
+              "points": 9
+            },
+            "OPS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SBN": {
+              "rank": 8,
+              "points": 3
+            },
+            "K": {
+              "rank": 4,
+              "points": 7
+            },
+            "ERA": {
+              "rank": 8,
+              "points": 3
+            },
+            "WHIP": {
+              "rank": 6,
+              "points": 5
+            },
+            "WQS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 6,
+              "points": 5
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 4,
+              "RBI": 11,
+              "TB": 28,
+              "OPS": 0.636,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 5.13,
+              "WHIP": 1.14,
+              "WQS": 3,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 4,
+          "teamId": "h5oigo07mg9m448r",
+          "teamName": "Shohei’s gambling buddies",
+          "totalPoints": 60,
+          "stats": {
+            "HR": 153.68,
+            "RBI": 506.28,
+            "TB": 1455.6,
+            "OPS": 0.752,
+            "SBN": 54.76,
+            "K": 362.08,
+            "ERA": 5.018,
+            "WHIP": 1.389,
+            "WQS": 25.6,
+            "SVH": 57.76
+          },
+          "projectedStats": {
+            "HR": 239,
+            "RBI": 786,
+            "TB": 2262,
+            "OPS": 0.817,
+            "SBN": 85,
+            "K": 559,
+            "ERA": 3.52,
+            "WHIP": 1.141,
+            "WQS": 40,
+            "SVH": 88
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 2,
+              "points": 9
+            },
+            "RBI": {
+              "rank": 1,
+              "points": 10
+            },
+            "TB": {
+              "rank": 1,
+              "points": 10
+            },
+            "OPS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SBN": {
+              "rank": 5,
+              "points": 6
+            },
+            "K": {
+              "rank": 7,
+              "points": 4
+            },
+            "ERA": {
+              "rank": 9,
+              "points": 2
+            },
+            "WHIP": {
+              "rank": 9,
+              "points": 2
+            },
+            "WQS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SVH": {
+              "rank": 3,
+              "points": 8
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 22,
+              "OPS": 0.637,
+              "SBN": 1,
+              "K": 12,
+              "ERA": 7.68,
+              "WHIP": 1.829,
+              "WQS": 0,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 5,
+          "teamId": "9qvn9hxamg9m448q",
+          "teamName": "Ohtani Betts",
+          "totalPoints": 59,
+          "stats": {
+            "HR": 121.04,
+            "RBI": 464.04,
+            "TB": 1338.64,
+            "OPS": 0.743,
+            "SBN": 78.24,
+            "K": 381.56,
+            "ERA": 2.278,
+            "WHIP": 0.841,
+            "WQS": 21.48,
+            "SVH": 38.12
+          },
+          "projectedStats": {
+            "HR": 188,
+            "RBI": 720,
+            "TB": 2077,
+            "OPS": 0.77,
+            "SBN": 120,
+            "K": 590,
+            "ERA": 3.56,
+            "WHIP": 1.162,
+            "WQS": 33,
+            "SVH": 59
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 7,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 4,
+              "points": 7
+            },
+            "TB": {
+              "rank": 4,
+              "points": 7
+            },
+            "OPS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SBN": {
+              "rank": 1,
+              "points": 10
+            },
+            "K": {
+              "rank": 6,
+              "points": 5
+            },
+            "ERA": {
+              "rank": 1,
+              "points": 10
+            },
+            "WHIP": {
+              "rank": 1,
+              "points": 10
+            },
+            "WQS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SVH": {
+              "rank": 9,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 26,
+              "OPS": 0.694,
+              "SBN": 4,
+              "K": 11,
+              "ERA": 0,
+              "WHIP": 0.27,
+              "WQS": 1,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 6,
+          "teamId": "jgg562fvmg9m448n",
+          "teamName": "Wander If Franco was Right",
+          "totalPoints": 58,
+          "stats": {
+            "HR": 125.16,
+            "RBI": 455,
+            "TB": 1314.28,
+            "OPS": 0.657,
+            "SBN": 57.4,
+            "K": 400.52,
+            "ERA": 2.496,
+            "WHIP": 1.13,
+            "WQS": 26.4,
+            "SVH": 44.8
+          },
+          "projectedStats": {
+            "HR": 195,
+            "RBI": 707,
+            "TB": 2044,
+            "OPS": 0.79,
+            "SBN": 88,
+            "K": 614,
+            "ERA": 3.32,
+            "WHIP": 1.151,
+            "WQS": 39,
+            "SVH": 70
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 5
+            },
+            "RBI": {
+              "rank": 6,
+              "points": 5
+            },
+            "TB": {
+              "rank": 5,
+              "points": 6
+            },
+            "OPS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SBN": {
+              "rank": 4,
+              "points": 7
+            },
+            "K": {
+              "rank": 5,
+              "points": 6
+            },
+            "ERA": {
+              "rank": 2,
+              "points": 9
+            },
+            "WHIP": {
+              "rank": 4,
+              "points": 7
+            },
+            "WQS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 6
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 7,
+              "TB": 17,
+              "OPS": 0.42,
+              "SBN": 3,
+              "K": 21,
+              "ERA": 1.03,
+              "WHIP": 1.092,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 7,
+          "teamId": "g3w8nouhmg9m448p",
+          "teamName": "Wander Franco Children's Foundation",
+          "totalPoints": 49,
+          "stats": {
+            "HR": 115.56,
+            "RBI": 411.76,
+            "TB": 1272.4,
+            "OPS": 0.787,
+            "SBN": 33.28,
+            "K": 465.16,
+            "ERA": 3.313,
+            "WHIP": 1.132,
+            "WQS": 35,
+            "SVH": 42.96
+          },
+          "projectedStats": {
+            "HR": 180,
+            "RBI": 640,
+            "TB": 1969,
+            "OPS": 0.799,
+            "SBN": 52,
+            "K": 715,
+            "ERA": 3.77,
+            "WHIP": 1.238,
+            "WQS": 53,
+            "SVH": 66
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 9,
+              "points": 2
+            },
+            "RBI": {
+              "rank": 9,
+              "points": 2
+            },
+            "TB": {
+              "rank": 8,
+              "points": 3
+            },
+            "OPS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SBN": {
+              "rank": 9,
+              "points": 2
+            },
+            "K": {
+              "rank": 3,
+              "points": 8
+            },
+            "ERA": {
+              "rank": 5,
+              "points": 6
+            },
+            "WHIP": {
+              "rank": 5,
+              "points": 6
+            },
+            "WQS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SVH": {
+              "rank": 7,
+              "points": 4
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 6,
+              "TB": 34,
+              "OPS": 0.766,
+              "SBN": 0,
+              "K": 21,
+              "ERA": 2.5,
+              "WHIP": 0.944,
+              "WQS": 3,
+              "SVH": 2
+            }
+          }
+        },
+        {
+          "rank": 8,
+          "teamId": "ksl78cwnmg9m448p",
+          "teamName": "Ippeis Bookie",
+          "totalPoints": 47,
+          "stats": {
+            "HR": 101,
+            "RBI": 382.2,
+            "TB": 1167.12,
+            "OPS": 0.825,
+            "SBN": 62.44,
+            "K": 497.72,
+            "ERA": 3.732,
+            "WHIP": 1.18,
+            "WQS": 32.72,
+            "SVH": 38.76
+          },
+          "projectedStats": {
+            "HR": 155,
+            "RBI": 591,
+            "TB": 1800,
+            "OPS": 0.767,
+            "SBN": 97,
+            "K": 767,
+            "ERA": 3.66,
+            "WHIP": 1.201,
+            "WQS": 50,
+            "SVH": 60
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 10,
+              "points": 1
+            },
+            "RBI": {
+              "rank": 10,
+              "points": 1
+            },
+            "TB": {
+              "rank": 10,
+              "points": 1
+            },
+            "OPS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SBN": {
+              "rank": 3,
+              "points": 8
+            },
+            "K": {
+              "rank": 2,
+              "points": 9
+            },
+            "ERA": {
+              "rank": 7,
+              "points": 4
+            },
+            "WHIP": {
+              "rank": 7,
+              "points": 4
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 3
+            }
+          },
+          "matchedHitters": 8,
+          "matchedPitchers": 6,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 5,
+              "RBI": 11,
+              "TB": 42,
+              "OPS": 0.928,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 3.86,
+              "WHIP": 1.143,
+              "WQS": 2,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 9,
+          "teamId": "l2qxmel1mg9m448n",
+          "teamName": "Chaz Jizzolm",
+          "totalPoints": 40,
+          "stats": {
+            "HR": 136.4,
+            "RBI": 459.48,
+            "TB": 1310,
+            "OPS": 0.742,
+            "SBN": 49.36,
+            "K": 326.52,
+            "ERA": 8.963,
+            "WHIP": 1.847,
+            "WQS": 22.4,
+            "SVH": 61.88
+          },
+          "projectedStats": {
+            "HR": 212,
+            "RBI": 714,
+            "TB": 2030,
+            "OPS": 0.793,
+            "SBN": 76,
+            "K": 504,
+            "ERA": 3.88,
+            "WHIP": 1.242,
+            "WQS": 35,
+            "SVH": 95
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 4,
+              "points": 7
+            },
+            "RBI": {
+              "rank": 5,
+              "points": 6
+            },
+            "TB": {
+              "rank": 6,
+              "points": 5
+            },
+            "OPS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 4
+            },
+            "K": {
+              "rank": 9,
+              "points": 2
+            },
+            "ERA": {
+              "rank": 10,
+              "points": 1
+            },
+            "WHIP": {
+              "rank": 10,
+              "points": 1
+            },
+            "WQS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SVH": {
+              "rank": 2,
+              "points": 9
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 7,
+              "TB": 30,
+              "OPS": 0.65,
+              "SBN": 2,
+              "K": 11,
+              "ERA": 18,
+              "WHIP": 2.923,
+              "WQS": 0,
+              "SVH": 3
+            }
+          }
+        },
+        {
+          "rank": 10,
+          "teamId": "zcapyjosmg9m448o",
+          "teamName": "Monkey Neva Cramp",
+          "totalPoints": 39,
+          "stats": {
+            "HR": 119.64,
+            "RBI": 438.12,
+            "TB": 1297.4,
+            "OPS": 0.813,
+            "SBN": 52.28,
+            "K": 327.76,
+            "ERA": 2.652,
+            "WHIP": 1.204,
+            "WQS": 21.56,
+            "SVH": 32
+          },
+          "projectedStats": {
+            "HR": 183,
+            "RBI": 675,
+            "TB": 2003,
+            "OPS": 0.798,
+            "SBN": 80,
+            "K": 502,
+            "ERA": 3.89,
+            "WHIP": 1.237,
+            "WQS": 32,
+            "SVH": 50
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 8,
+              "points": 3
+            },
+            "RBI": {
+              "rank": 8,
+              "points": 3
+            },
+            "TB": {
+              "rank": 7,
+              "points": 4
+            },
+            "OPS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SBN": {
+              "rank": 6,
+              "points": 5
+            },
+            "K": {
+              "rank": 8,
+              "points": 3
+            },
+            "ERA": {
+              "rank": 3,
+              "points": 8
+            },
+            "WHIP": {
+              "rank": 8,
+              "points": 3
+            },
+            "WQS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SVH": {
+              "rank": 10,
+              "points": 1
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 7,
+              "RBI": 17,
+              "TB": 43,
+              "OPS": 0.84,
+              "SBN": 3,
+              "K": 18,
+              "ERA": 0.45,
+              "WHIP": 1.144,
+              "WQS": 3,
+              "SVH": 0
+            }
+          }
+        }
+      ]
+    },
+    "atc": {
+      "name": "ATC",
+      "rankings": [
+        {
+          "rank": 1,
+          "teamId": "wy7sg1p4mg9m448m",
+          "teamName": "She jazz on my holm till I chis",
+          "totalPoints": 72,
+          "stats": {
+            "HR": 137.92,
+            "RBI": 424.04,
+            "TB": 1331.8,
+            "OPS": 0.877,
+            "SBN": 69.304,
+            "K": 545.52,
+            "ERA": 3.502,
+            "WHIP": 1.006,
+            "WQS": 64.288,
+            "SVH": 60.416
+          },
+          "projectedStats": {
+            "HR": 211,
+            "RBI": 653,
+            "TB": 2050,
+            "OPS": 0.774,
+            "SBN": 106.6,
+            "K": 840,
+            "ERA": 3.3,
+            "WHIP": 1.09,
+            "WQS": 98.2,
+            "SVH": 94.4
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 5,
+              "points": 6
+            },
+            "RBI": {
+              "rank": 8,
+              "points": 3
+            },
+            "TB": {
+              "rank": 8,
+              "points": 3
+            },
+            "OPS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 9
+            },
+            "K": {
+              "rank": 1,
+              "points": 10
+            },
+            "ERA": {
+              "rank": 6,
+              "points": 5
+            },
+            "WHIP": {
+              "rank": 2,
+              "points": 9
+            },
+            "WQS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SVH": {
+              "rank": 4,
+              "points": 7
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 8,
+              "RBI": 17,
+              "TB": 55,
+              "OPS": 1.059,
+              "SBN": 3,
+              "K": 22,
+              "ERA": 3.86,
+              "WHIP": 0.857,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "teamId": "3tdnrntnmg9m448l",
+          "teamName": "Booby Titt’s",
+          "totalPoints": 62,
+          "stats": {
+            "HR": 148.92,
+            "RBI": 464.32,
+            "TB": 1390.24,
+            "OPS": 0.872,
+            "SBN": 33.104,
+            "K": 371.56,
+            "ERA": 3.223,
+            "WHIP": 1.087,
+            "WQS": 34.896,
+            "SVH": 81.376
+          },
+          "projectedStats": {
+            "HR": 231,
+            "RBI": 721,
+            "TB": 2152,
+            "OPS": 0.805,
+            "SBN": 50.6,
+            "K": 571,
+            "ERA": 3.59,
+            "WHIP": 1.176,
+            "WQS": 53.4,
+            "SVH": 124.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 3,
+              "points": 8
+            },
+            "RBI": {
+              "rank": 3,
+              "points": 8
+            },
+            "TB": {
+              "rank": 4,
+              "points": 7
+            },
+            "OPS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SBN": {
+              "rank": 10,
+              "points": 1
+            },
+            "K": {
+              "rank": 9,
+              "points": 2
+            },
+            "ERA": {
+              "rank": 4,
+              "points": 7
+            },
+            "WHIP": {
+              "rank": 3,
+              "points": 8
+            },
+            "WQS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SVH": {
+              "rank": 1,
+              "points": 10
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 3,
+              "RBI": 8,
+              "TB": 36,
+              "OPS": 0.99,
+              "SBN": 2,
+              "K": 17,
+              "ERA": 2.57,
+              "WHIP": 0.929,
+              "WQS": 2,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 3,
+          "teamId": "jgg562fvmg9m448n",
+          "teamName": "Wander If Franco was Right",
+          "totalPoints": 61,
+          "stats": {
+            "HR": 137.32,
+            "RBI": 447.96,
+            "TB": 1390.44,
+            "OPS": 0.655,
+            "SBN": 65.464,
+            "K": 456.84,
+            "ERA": 2.636,
+            "WHIP": 1.144,
+            "WQS": 52.704,
+            "SVH": 51.712
+          },
+          "projectedStats": {
+            "HR": 214,
+            "RBI": 696,
+            "TB": 2163,
+            "OPS": 0.787,
+            "SBN": 100.6,
+            "K": 702,
+            "ERA": 3.54,
+            "WHIP": 1.174,
+            "WQS": 80.1,
+            "SVH": 80.8
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 5
+            },
+            "RBI": {
+              "rank": 4,
+              "points": 7
+            },
+            "TB": {
+              "rank": 3,
+              "points": 8
+            },
+            "OPS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SBN": {
+              "rank": 4,
+              "points": 7
+            },
+            "K": {
+              "rank": 5,
+              "points": 6
+            },
+            "ERA": {
+              "rank": 2,
+              "points": 9
+            },
+            "WHIP": {
+              "rank": 5,
+              "points": 6
+            },
+            "WQS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 6
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 7,
+              "TB": 17,
+              "OPS": 0.42,
+              "SBN": 3,
+              "K": 21,
+              "ERA": 1.03,
+              "WHIP": 1.092,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 4,
+          "teamId": "jzyh7c72mg9m448r",
+          "teamName": "Durans Tennis Racket",
+          "totalPoints": 59,
+          "stats": {
+            "HR": 158.24,
+            "RBI": 486.52,
+            "TB": 1430.24,
+            "OPS": 0.739,
+            "SBN": 45.608,
+            "K": 468.92,
+            "ERA": 4.125,
+            "WHIP": 1.157,
+            "WQS": 54.84,
+            "SVH": 40.552
+          },
+          "projectedStats": {
+            "HR": 245,
+            "RBI": 754,
+            "TB": 2219,
+            "OPS": 0.797,
+            "SBN": 70.7,
+            "K": 722,
+            "ERA": 3.56,
+            "WHIP": 1.167,
+            "WQS": 84,
+            "SVH": 62.8
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 1,
+              "points": 10
+            },
+            "RBI": {
+              "rank": 1,
+              "points": 10
+            },
+            "TB": {
+              "rank": 2,
+              "points": 9
+            },
+            "OPS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SBN": {
+              "rank": 8,
+              "points": 3
+            },
+            "K": {
+              "rank": 4,
+              "points": 7
+            },
+            "ERA": {
+              "rank": 8,
+              "points": 3
+            },
+            "WHIP": {
+              "rank": 6,
+              "points": 5
+            },
+            "WQS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 9,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 4,
+              "RBI": 11,
+              "TB": 28,
+              "OPS": 0.636,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 5.13,
+              "WHIP": 1.14,
+              "WQS": 3,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 5,
+          "teamId": "h5oigo07mg9m448r",
+          "teamName": "Shohei’s gambling buddies",
+          "totalPoints": 58,
+          "stats": {
+            "HR": 156.88,
+            "RBI": 482.6,
+            "TB": 1469.68,
+            "OPS": 0.745,
+            "SBN": 56.296,
+            "K": 373.6,
+            "ERA": 5.075,
+            "WHIP": 1.394,
+            "WQS": 39.808,
+            "SVH": 63.456
+          },
+          "projectedStats": {
+            "HR": 244,
+            "RBI": 749,
+            "TB": 2284,
+            "OPS": 0.806,
+            "SBN": 87.4,
+            "K": 577,
+            "ERA": 3.61,
+            "WHIP": 1.149,
+            "WQS": 62.2,
+            "SVH": 96.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 2,
+              "points": 9
+            },
+            "RBI": {
+              "rank": 2,
+              "points": 9
+            },
+            "TB": {
+              "rank": 1,
+              "points": 10
+            },
+            "OPS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SBN": {
+              "rank": 5,
+              "points": 6
+            },
+            "K": {
+              "rank": 8,
+              "points": 3
+            },
+            "ERA": {
+              "rank": 9,
+              "points": 2
+            },
+            "WHIP": {
+              "rank": 9,
+              "points": 2
+            },
+            "WQS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SVH": {
+              "rank": 3,
+              "points": 8
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 22,
+              "OPS": 0.637,
+              "SBN": 1,
+              "K": 12,
+              "ERA": 7.68,
+              "WHIP": 1.829,
+              "WQS": 0,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 6,
+          "teamId": "g3w8nouhmg9m448p",
+          "teamName": "Wander Franco Children's Foundation",
+          "totalPoints": 53,
+          "stats": {
+            "HR": 123.88,
+            "RBI": 425.84,
+            "TB": 1346,
+            "OPS": 0.778,
+            "SBN": 36.288,
+            "K": 506.12,
+            "ERA": 3.383,
+            "WHIP": 1.14,
+            "WQS": 63.928,
+            "SVH": 42.32
+          },
+          "projectedStats": {
+            "HR": 193,
+            "RBI": 662,
+            "TB": 2084,
+            "OPS": 0.785,
+            "SBN": 56.7,
+            "K": 779,
+            "ERA": 3.88,
+            "WHIP": 1.25,
+            "WQS": 98.2,
+            "SVH": 65
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 8,
+              "points": 3
+            },
+            "RBI": {
+              "rank": 7,
+              "points": 4
+            },
+            "TB": {
+              "rank": 6,
+              "points": 5
+            },
+            "OPS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SBN": {
+              "rank": 9,
+              "points": 2
+            },
+            "K": {
+              "rank": 3,
+              "points": 8
+            },
+            "ERA": {
+              "rank": 5,
+              "points": 6
+            },
+            "WHIP": {
+              "rank": 4,
+              "points": 7
+            },
+            "WQS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 3
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 6,
+              "TB": 34,
+              "OPS": 0.766,
+              "SBN": 0,
+              "K": 21,
+              "ERA": 2.5,
+              "WHIP": 0.944,
+              "WQS": 3,
+              "SVH": 2
+            }
+          }
+        },
+        {
+          "rank": 7,
+          "teamId": "9qvn9hxamg9m448q",
+          "teamName": "Ohtani Betts",
+          "totalPoints": 51,
+          "stats": {
+            "HR": 117.2,
+            "RBI": 419.88,
+            "TB": 1277.2,
+            "OPS": 0.731,
+            "SBN": 74.528,
+            "K": 408.44,
+            "ERA": 2.221,
+            "WHIP": 0.845,
+            "WQS": 39.016,
+            "SVH": 43.176
+          },
+          "projectedStats": {
+            "HR": 182,
+            "RBI": 651,
+            "TB": 1981,
+            "OPS": 0.752,
+            "SBN": 114.2,
+            "K": 632,
+            "ERA": 3.47,
+            "WHIP": 1.168,
+            "WQS": 60.4,
+            "SVH": 66.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 9,
+              "points": 2
+            },
+            "RBI": {
+              "rank": 9,
+              "points": 2
+            },
+            "TB": {
+              "rank": 9,
+              "points": 2
+            },
+            "OPS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SBN": {
+              "rank": 1,
+              "points": 10
+            },
+            "K": {
+              "rank": 6,
+              "points": 5
+            },
+            "ERA": {
+              "rank": 1,
+              "points": 10
+            },
+            "WHIP": {
+              "rank": 1,
+              "points": 10
+            },
+            "WQS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SVH": {
+              "rank": 6,
+              "points": 5
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 26,
+              "OPS": 0.694,
+              "SBN": 4,
+              "K": 11,
+              "ERA": 0,
+              "WHIP": 0.27,
+              "WQS": 1,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 8,
+          "teamId": "ksl78cwnmg9m448p",
+          "teamName": "Ippeis Bookie",
+          "totalPoints": 47.5,
+          "stats": {
+            "HR": 106.76,
+            "RBI": 370.04,
+            "TB": 1183.12,
+            "OPS": 0.813,
+            "SBN": 66.856,
+            "K": 522.04,
+            "ERA": 3.764,
+            "WHIP": 1.194,
+            "WQS": 63.44,
+            "SVH": 43.048
+          },
+          "projectedStats": {
+            "HR": 164,
+            "RBI": 572,
+            "TB": 1825,
+            "OPS": 0.748,
+            "SBN": 103.9,
+            "K": 805,
+            "ERA": 3.71,
+            "WHIP": 1.222,
+            "WQS": 98,
+            "SVH": 66.7
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 10,
+              "points": 1
+            },
+            "RBI": {
+              "rank": 10,
+              "points": 1
+            },
+            "TB": {
+              "rank": 10,
+              "points": 1
+            },
+            "OPS": {
+              "rank": 3,
+              "points": 7.5
+            },
+            "SBN": {
+              "rank": 3,
+              "points": 8
+            },
+            "K": {
+              "rank": 2,
+              "points": 9
+            },
+            "ERA": {
+              "rank": 7,
+              "points": 4
+            },
+            "WHIP": {
+              "rank": 7,
+              "points": 4
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SVH": {
+              "rank": 7,
+              "points": 4
+            }
+          },
+          "matchedHitters": 8,
+          "matchedPitchers": 6,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 5,
+              "RBI": 11,
+              "TB": 42,
+              "OPS": 0.928,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 3.86,
+              "WHIP": 1.143,
+              "WQS": 2,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 9,
+          "teamId": "zcapyjosmg9m448o",
+          "teamName": "Monkey Neva Cramp",
+          "totalPoints": 46.5,
+          "stats": {
+            "HR": 127.32,
+            "RBI": 426.6,
+            "TB": 1331.96,
+            "OPS": 0.812,
+            "SBN": 55.16,
+            "K": 380.88,
+            "ERA": 2.677,
+            "WHIP": 1.204,
+            "WQS": 45.624,
+            "SVH": 36.288
+          },
+          "projectedStats": {
+            "HR": 195,
+            "RBI": 657,
+            "TB": 2057,
+            "OPS": 0.797,
+            "SBN": 84.5,
+            "K": 585,
+            "ERA": 3.93,
+            "WHIP": 1.237,
+            "WQS": 69.6,
+            "SVH": 56.7
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 7,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 6,
+              "points": 5
+            },
+            "TB": {
+              "rank": 7,
+              "points": 4
+            },
+            "OPS": {
+              "rank": 3,
+              "points": 7.5
+            },
+            "SBN": {
+              "rank": 6,
+              "points": 5
+            },
+            "K": {
+              "rank": 7,
+              "points": 4
+            },
+            "ERA": {
+              "rank": 3,
+              "points": 8
+            },
+            "WHIP": {
+              "rank": 8,
+              "points": 3
+            },
+            "WQS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SVH": {
+              "rank": 10,
+              "points": 1
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 7,
+              "RBI": 17,
+              "TB": 43,
+              "OPS": 0.84,
+              "SBN": 3,
+              "K": 18,
+              "ERA": 0.45,
+              "WHIP": 1.144,
+              "WQS": 3,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 10,
+          "teamId": "l2qxmel1mg9m448n",
+          "teamName": "Chaz Jizzolm",
+          "totalPoints": 40,
+          "stats": {
+            "HR": 143.44,
+            "RBI": 446.68,
+            "TB": 1361.2,
+            "OPS": 0.743,
+            "SBN": 50.32,
+            "K": 315.64,
+            "ERA": 8.957,
+            "WHIP": 1.838,
+            "WQS": 29.632,
+            "SVH": 71.16
+          },
+          "projectedStats": {
+            "HR": 223,
+            "RBI": 694,
+            "TB": 2110,
+            "OPS": 0.795,
+            "SBN": 77.5,
+            "K": 487,
+            "ERA": 3.87,
+            "WHIP": 1.227,
+            "WQS": 46.3,
+            "SVH": 109.5
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 4,
+              "points": 7
+            },
+            "RBI": {
+              "rank": 5,
+              "points": 6
+            },
+            "TB": {
+              "rank": 5,
+              "points": 6
+            },
+            "OPS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 4
+            },
+            "K": {
+              "rank": 10,
+              "points": 1
+            },
+            "ERA": {
+              "rank": 10,
+              "points": 1
+            },
+            "WHIP": {
+              "rank": 10,
+              "points": 1
+            },
+            "WQS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SVH": {
+              "rank": 2,
+              "points": 9
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 7,
+              "TB": 30,
+              "OPS": 0.65,
+              "SBN": 2,
+              "K": 11,
+              "ERA": 18,
+              "WHIP": 2.923,
+              "WQS": 0,
+              "SVH": 3
+            }
+          }
+        }
+      ]
+    },
+    "thebat": {
+      "name": "THE BAT",
+      "rankings": [
+        {
+          "rank": 1,
+          "teamId": "wy7sg1p4mg9m448m",
+          "teamName": "She jazz on my holm till I chis",
+          "totalPoints": 73,
+          "stats": {
+            "HR": 137.28,
+            "RBI": 427.24,
+            "TB": 1327.96,
+            "OPS": 0.873,
+            "SBN": 66.872,
+            "K": 546.16,
+            "ERA": 3.572,
+            "WHIP": 1.007,
+            "WQS": 60.128,
+            "SVH": 56.768
+          },
+          "projectedStats": {
+            "HR": 210,
+            "RBI": 658,
+            "TB": 2044,
+            "OPS": 0.769,
+            "SBN": 102.8,
+            "K": 841,
+            "ERA": 3.41,
+            "WHIP": 1.092,
+            "WQS": 91.7,
+            "SVH": 88.7
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 5
+            },
+            "RBI": {
+              "rank": 7,
+              "points": 4
+            },
+            "TB": {
+              "rank": 6,
+              "points": 5
+            },
+            "OPS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 9
+            },
+            "K": {
+              "rank": 1,
+              "points": 10
+            },
+            "ERA": {
+              "rank": 5,
+              "points": 6
+            },
+            "WHIP": {
+              "rank": 2,
+              "points": 9
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SVH": {
+              "rank": 4,
+              "points": 7
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 8,
+              "RBI": 17,
+              "TB": 55,
+              "OPS": 1.059,
+              "SBN": 3,
+              "K": 22,
+              "ERA": 3.86,
+              "WHIP": 0.857,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "teamId": "jgg562fvmg9m448n",
+          "teamName": "Wander If Franco was Right",
+          "totalPoints": 63,
+          "stats": {
+            "HR": 139.24,
+            "RBI": 446.04,
+            "TB": 1393,
+            "OPS": 0.658,
+            "SBN": 58.36,
+            "K": 453.64,
+            "ERA": 2.784,
+            "WHIP": 1.152,
+            "WQS": 49.312,
+            "SVH": 47.488
+          },
+          "projectedStats": {
+            "HR": 217,
+            "RBI": 693,
+            "TB": 2167,
+            "OPS": 0.792,
+            "SBN": 89.5,
+            "K": 697,
+            "ERA": 3.77,
+            "WHIP": 1.186,
+            "WQS": 74.8,
+            "SVH": 74.2
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 5,
+              "points": 6
+            },
+            "RBI": {
+              "rank": 5,
+              "points": 6
+            },
+            "TB": {
+              "rank": 3,
+              "points": 8
+            },
+            "OPS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SBN": {
+              "rank": 4,
+              "points": 7
+            },
+            "K": {
+              "rank": 5,
+              "points": 6
+            },
+            "ERA": {
+              "rank": 2,
+              "points": 9
+            },
+            "WHIP": {
+              "rank": 4,
+              "points": 7
+            },
+            "WQS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 6
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 7,
+              "TB": 17,
+              "OPS": 0.42,
+              "SBN": 3,
+              "K": 21,
+              "ERA": 1.03,
+              "WHIP": 1.092,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 3,
+          "teamId": "3tdnrntnmg9m448l",
+          "teamName": "Booby Titt’s",
+          "totalPoints": 63,
+          "stats": {
+            "HR": 151.48,
+            "RBI": 466.24,
+            "TB": 1391.52,
+            "OPS": 0.872,
+            "SBN": 33.744,
+            "K": 367.08,
+            "ERA": 3.261,
+            "WHIP": 1.086,
+            "WQS": 29.264,
+            "SVH": 78.816
+          },
+          "projectedStats": {
+            "HR": 235,
+            "RBI": 724,
+            "TB": 2154,
+            "OPS": 0.806,
+            "SBN": 51.6,
+            "K": 564,
+            "ERA": 3.65,
+            "WHIP": 1.175,
+            "WQS": 44.6,
+            "SVH": 120.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 3,
+              "points": 8
+            },
+            "RBI": {
+              "rank": 3,
+              "points": 8
+            },
+            "TB": {
+              "rank": 4,
+              "points": 7
+            },
+            "OPS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SBN": {
+              "rank": 10,
+              "points": 1
+            },
+            "K": {
+              "rank": 8,
+              "points": 3
+            },
+            "ERA": {
+              "rank": 4,
+              "points": 7
+            },
+            "WHIP": {
+              "rank": 3,
+              "points": 8
+            },
+            "WQS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SVH": {
+              "rank": 1,
+              "points": 10
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 3,
+              "RBI": 8,
+              "TB": 36,
+              "OPS": 0.99,
+              "SBN": 2,
+              "K": 17,
+              "ERA": 2.57,
+              "WHIP": 0.929,
+              "WQS": 2,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 4,
+          "teamId": "jzyh7c72mg9m448r",
+          "teamName": "Durans Tennis Racket",
+          "totalPoints": 58,
+          "stats": {
+            "HR": 160.8,
+            "RBI": 480.12,
+            "TB": 1435.36,
+            "OPS": 0.74,
+            "SBN": 46.44,
+            "K": 463.8,
+            "ERA": 4.228,
+            "WHIP": 1.176,
+            "WQS": 48.824,
+            "SVH": 39.72
+          },
+          "projectedStats": {
+            "HR": 249,
+            "RBI": 744,
+            "TB": 2227,
+            "OPS": 0.798,
+            "SBN": 72,
+            "K": 714,
+            "ERA": 3.72,
+            "WHIP": 1.197,
+            "WQS": 74.6,
+            "SVH": 61.5
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 1,
+              "points": 10
+            },
+            "RBI": {
+              "rank": 1,
+              "points": 10
+            },
+            "TB": {
+              "rank": 2,
+              "points": 9
+            },
+            "OPS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SBN": {
+              "rank": 8,
+              "points": 3
+            },
+            "K": {
+              "rank": 4,
+              "points": 7
+            },
+            "ERA": {
+              "rank": 8,
+              "points": 3
+            },
+            "WHIP": {
+              "rank": 6,
+              "points": 5
+            },
+            "WQS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SVH": {
+              "rank": 9,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 4,
+              "RBI": 11,
+              "TB": 28,
+              "OPS": 0.636,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 5.13,
+              "WHIP": 1.14,
+              "WQS": 3,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 5,
+          "teamId": "h5oigo07mg9m448r",
+          "teamName": "Shohei’s gambling buddies",
+          "totalPoints": 56.5,
+          "stats": {
+            "HR": 155.6,
+            "RBI": 475.56,
+            "TB": 1465.84,
+            "OPS": 0.743,
+            "SBN": 54.376,
+            "K": 360.8,
+            "ERA": 5.242,
+            "WHIP": 1.405,
+            "WQS": 36.544,
+            "SVH": 61.792
+          },
+          "projectedStats": {
+            "HR": 242,
+            "RBI": 738,
+            "TB": 2278,
+            "OPS": 0.803,
+            "SBN": 84.4,
+            "K": 557,
+            "ERA": 3.87,
+            "WHIP": 1.167,
+            "WQS": 57.1,
+            "SVH": 94.3
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 2,
+              "points": 9
+            },
+            "RBI": {
+              "rank": 2,
+              "points": 9
+            },
+            "TB": {
+              "rank": 1,
+              "points": 10
+            },
+            "OPS": {
+              "rank": 6,
+              "points": 4.5
+            },
+            "SBN": {
+              "rank": 5,
+              "points": 6
+            },
+            "K": {
+              "rank": 9,
+              "points": 2
+            },
+            "ERA": {
+              "rank": 9,
+              "points": 2
+            },
+            "WHIP": {
+              "rank": 9,
+              "points": 2
+            },
+            "WQS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SVH": {
+              "rank": 3,
+              "points": 8
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 22,
+              "OPS": 0.637,
+              "SBN": 1,
+              "K": 12,
+              "ERA": 7.68,
+              "WHIP": 1.829,
+              "WQS": 0,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 6,
+          "teamId": "ksl78cwnmg9m448p",
+          "teamName": "Ippeis Bookie",
+          "totalPoints": 51,
+          "stats": {
+            "HR": 108.04,
+            "RBI": 368.12,
+            "TB": 1179.28,
+            "OPS": 0.814,
+            "SBN": 65.768,
+            "K": 511.16,
+            "ERA": 3.86,
+            "WHIP": 1.19,
+            "WQS": 61.072,
+            "SVH": 45.032
+          },
+          "projectedStats": {
+            "HR": 166,
+            "RBI": 569,
+            "TB": 1819,
+            "OPS": 0.75,
+            "SBN": 102.2,
+            "K": 788,
+            "ERA": 3.86,
+            "WHIP": 1.216,
+            "WQS": 94.3,
+            "SVH": 69.8
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 10,
+              "points": 1
+            },
+            "RBI": {
+              "rank": 10,
+              "points": 1
+            },
+            "TB": {
+              "rank": 10,
+              "points": 1
+            },
+            "OPS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SBN": {
+              "rank": 3,
+              "points": 8
+            },
+            "K": {
+              "rank": 2,
+              "points": 9
+            },
+            "ERA": {
+              "rank": 7,
+              "points": 4
+            },
+            "WHIP": {
+              "rank": 7,
+              "points": 4
+            },
+            "WQS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SVH": {
+              "rank": 6,
+              "points": 5
+            }
+          },
+          "matchedHitters": 8,
+          "matchedPitchers": 6,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 5,
+              "RBI": 11,
+              "TB": 42,
+              "OPS": 0.928,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 3.86,
+              "WHIP": 1.143,
+              "WQS": 2,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 7,
+          "teamId": "9qvn9hxamg9m448q",
+          "teamName": "Ohtani Betts",
+          "totalPoints": 50,
+          "stats": {
+            "HR": 119.76,
+            "RBI": 408.36,
+            "TB": 1279.12,
+            "OPS": 0.731,
+            "SBN": 70.368,
+            "K": 405.24,
+            "ERA": 2.374,
+            "WHIP": 0.858,
+            "WQS": 34.984,
+            "SVH": 41.256
+          },
+          "projectedStats": {
+            "HR": 186,
+            "RBI": 633,
+            "TB": 1984,
+            "OPS": 0.752,
+            "SBN": 107.7,
+            "K": 627,
+            "ERA": 3.71,
+            "WHIP": 1.188,
+            "WQS": 54.1,
+            "SVH": 63.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 8,
+              "points": 3
+            },
+            "RBI": {
+              "rank": 9,
+              "points": 2
+            },
+            "TB": {
+              "rank": 9,
+              "points": 2
+            },
+            "OPS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SBN": {
+              "rank": 1,
+              "points": 10
+            },
+            "K": {
+              "rank": 6,
+              "points": 5
+            },
+            "ERA": {
+              "rank": 1,
+              "points": 10
+            },
+            "WHIP": {
+              "rank": 1,
+              "points": 10
+            },
+            "WQS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 3
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 26,
+              "OPS": 0.694,
+              "SBN": 4,
+              "K": 11,
+              "ERA": 0,
+              "WHIP": 0.27,
+              "WQS": 1,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 8,
+          "teamId": "g3w8nouhmg9m448p",
+          "teamName": "Wander Franco Children's Foundation",
+          "totalPoints": 48,
+          "stats": {
+            "HR": 119.4,
+            "RBI": 416.88,
+            "TB": 1319.12,
+            "OPS": 0.769,
+            "SBN": 38.784,
+            "K": 483.72,
+            "ERA": 3.582,
+            "WHIP": 1.162,
+            "WQS": 60.6,
+            "SVH": 42.128
+          },
+          "projectedStats": {
+            "HR": 186,
+            "RBI": 648,
+            "TB": 2042,
+            "OPS": 0.77,
+            "SBN": 60.6,
+            "K": 744,
+            "ERA": 4.19,
+            "WHIP": 1.285,
+            "WQS": 93,
+            "SVH": 64.7
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 9,
+              "points": 2
+            },
+            "RBI": {
+              "rank": 8,
+              "points": 3
+            },
+            "TB": {
+              "rank": 8,
+              "points": 3
+            },
+            "OPS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SBN": {
+              "rank": 9,
+              "points": 2
+            },
+            "K": {
+              "rank": 3,
+              "points": 8
+            },
+            "ERA": {
+              "rank": 6,
+              "points": 5
+            },
+            "WHIP": {
+              "rank": 5,
+              "points": 6
+            },
+            "WQS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SVH": {
+              "rank": 7,
+              "points": 4
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 6,
+              "TB": 34,
+              "OPS": 0.766,
+              "SBN": 0,
+              "K": 21,
+              "ERA": 2.5,
+              "WHIP": 0.944,
+              "WQS": 3,
+              "SVH": 2
+            }
+          }
+        },
+        {
+          "rank": 9,
+          "teamId": "zcapyjosmg9m448o",
+          "teamName": "Monkey Neva Cramp",
+          "totalPoints": 46,
+          "stats": {
+            "HR": 126.68,
+            "RBI": 429.8,
+            "TB": 1323,
+            "OPS": 0.807,
+            "SBN": 49.656,
+            "K": 373.2,
+            "ERA": 2.869,
+            "WHIP": 1.212,
+            "WQS": 45.816,
+            "SVH": 33.216
+          },
+          "projectedStats": {
+            "HR": 194,
+            "RBI": 662,
+            "TB": 2043,
+            "OPS": 0.789,
+            "SBN": 75.9,
+            "K": 573,
+            "ERA": 4.23,
+            "WHIP": 1.251,
+            "WQS": 69.9,
+            "SVH": 51.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 7,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 6,
+              "points": 5
+            },
+            "TB": {
+              "rank": 7,
+              "points": 4
+            },
+            "OPS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SBN": {
+              "rank": 6,
+              "points": 5
+            },
+            "K": {
+              "rank": 7,
+              "points": 4
+            },
+            "ERA": {
+              "rank": 3,
+              "points": 8
+            },
+            "WHIP": {
+              "rank": 8,
+              "points": 3
+            },
+            "WQS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SVH": {
+              "rank": 10,
+              "points": 1
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 7,
+              "RBI": 17,
+              "TB": 43,
+              "OPS": 0.84,
+              "SBN": 3,
+              "K": 18,
+              "ERA": 0.45,
+              "WHIP": 1.144,
+              "WQS": 3,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 10,
+          "teamId": "l2qxmel1mg9m448n",
+          "teamName": "Chaz Jizzolm",
+          "totalPoints": 41.5,
+          "stats": {
+            "HR": 144.08,
+            "RBI": 447.32,
+            "TB": 1363.76,
+            "OPS": 0.743,
+            "SBN": 48.464,
+            "K": 275.96,
+            "ERA": 9.008,
+            "WHIP": 1.826,
+            "WQS": 21.824,
+            "SVH": 63.096
+          },
+          "projectedStats": {
+            "HR": 224,
+            "RBI": 695,
+            "TB": 2114,
+            "OPS": 0.796,
+            "SBN": 74.6,
+            "K": 425,
+            "ERA": 3.95,
+            "WHIP": 1.209,
+            "WQS": 34.1,
+            "SVH": 96.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 4,
+              "points": 7
+            },
+            "RBI": {
+              "rank": 4,
+              "points": 7
+            },
+            "TB": {
+              "rank": 5,
+              "points": 6
+            },
+            "OPS": {
+              "rank": 6,
+              "points": 4.5
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 4
+            },
+            "K": {
+              "rank": 10,
+              "points": 1
+            },
+            "ERA": {
+              "rank": 10,
+              "points": 1
+            },
+            "WHIP": {
+              "rank": 10,
+              "points": 1
+            },
+            "WQS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SVH": {
+              "rank": 2,
+              "points": 9
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 7,
+              "TB": 30,
+              "OPS": 0.65,
+              "SBN": 2,
+              "K": 11,
+              "ERA": 18,
+              "WHIP": 2.923,
+              "WQS": 0,
+              "SVH": 3
+            }
+          }
+        }
+      ]
+    },
+    "thebatx": {
+      "name": "THE BAT X",
+      "rankings": [
+        {
+          "rank": 1,
+          "teamId": "wy7sg1p4mg9m448m",
+          "teamName": "She jazz on my holm till I chis",
+          "totalPoints": 68,
+          "stats": {
+            "HR": 133.44,
+            "RBI": 422.76,
+            "TB": 1314.52,
+            "OPS": 0.87,
+            "SBN": 65.144,
+            "K": 551.92,
+            "ERA": 3.521,
+            "WHIP": 1.002,
+            "WQS": 60.384,
+            "SVH": 56.768
+          },
+          "projectedStats": {
+            "HR": 204,
+            "RBI": 651,
+            "TB": 2023,
+            "OPS": 0.764,
+            "SBN": 100.1,
+            "K": 850,
+            "ERA": 3.33,
+            "WHIP": 1.083,
+            "WQS": 92.1,
+            "SVH": 88.7
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 5
+            },
+            "RBI": {
+              "rank": 8,
+              "points": 3
+            },
+            "TB": {
+              "rank": 8,
+              "points": 3
+            },
+            "OPS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SBN": {
+              "rank": 3,
+              "points": 8
+            },
+            "K": {
+              "rank": 1,
+              "points": 10
+            },
+            "ERA": {
+              "rank": 6,
+              "points": 5
+            },
+            "WHIP": {
+              "rank": 2,
+              "points": 9
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SVH": {
+              "rank": 4,
+              "points": 7
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 8,
+              "RBI": 17,
+              "TB": 55,
+              "OPS": 1.059,
+              "SBN": 3,
+              "K": 22,
+              "ERA": 3.86,
+              "WHIP": 0.857,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "teamId": "jgg562fvmg9m448n",
+          "teamName": "Wander If Franco was Right",
+          "totalPoints": 64,
+          "stats": {
+            "HR": 137.96,
+            "RBI": 444.76,
+            "TB": 1388.52,
+            "OPS": 0.657,
+            "SBN": 58.616,
+            "K": 460.04,
+            "ERA": 2.784,
+            "WHIP": 1.153,
+            "WQS": 49.376,
+            "SVH": 47.488
+          },
+          "projectedStats": {
+            "HR": 215,
+            "RBI": 691,
+            "TB": 2160,
+            "OPS": 0.791,
+            "SBN": 89.9,
+            "K": 707,
+            "ERA": 3.77,
+            "WHIP": 1.187,
+            "WQS": 74.9,
+            "SVH": 74.2
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 5,
+              "points": 6
+            },
+            "RBI": {
+              "rank": 5,
+              "points": 6
+            },
+            "TB": {
+              "rank": 3,
+              "points": 8
+            },
+            "OPS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SBN": {
+              "rank": 4,
+              "points": 7
+            },
+            "K": {
+              "rank": 4,
+              "points": 7
+            },
+            "ERA": {
+              "rank": 2,
+              "points": 9
+            },
+            "WHIP": {
+              "rank": 4,
+              "points": 7
+            },
+            "WQS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 6
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 7,
+              "TB": 17,
+              "OPS": 0.42,
+              "SBN": 3,
+              "K": 21,
+              "ERA": 1.03,
+              "WHIP": 1.092,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 3,
+          "teamId": "3tdnrntnmg9m448l",
+          "teamName": "Booby Titt’s",
+          "totalPoints": 63,
+          "stats": {
+            "HR": 148.92,
+            "RBI": 463.04,
+            "TB": 1376.16,
+            "OPS": 0.868,
+            "SBN": 34.768,
+            "K": 365.8,
+            "ERA": 3.28,
+            "WHIP": 1.076,
+            "WQS": 29.264,
+            "SVH": 78.816
+          },
+          "projectedStats": {
+            "HR": 231,
+            "RBI": 719,
+            "TB": 2130,
+            "OPS": 0.799,
+            "SBN": 53.2,
+            "K": 562,
+            "ERA": 3.68,
+            "WHIP": 1.158,
+            "WQS": 44.6,
+            "SVH": 120.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 3,
+              "points": 8
+            },
+            "RBI": {
+              "rank": 3,
+              "points": 8
+            },
+            "TB": {
+              "rank": 4,
+              "points": 7
+            },
+            "OPS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SBN": {
+              "rank": 10,
+              "points": 1
+            },
+            "K": {
+              "rank": 8,
+              "points": 3
+            },
+            "ERA": {
+              "rank": 4,
+              "points": 7
+            },
+            "WHIP": {
+              "rank": 3,
+              "points": 8
+            },
+            "WQS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SVH": {
+              "rank": 1,
+              "points": 10
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 3,
+              "RBI": 8,
+              "TB": 36,
+              "OPS": 0.99,
+              "SBN": 2,
+              "K": 17,
+              "ERA": 2.57,
+              "WHIP": 0.929,
+              "WQS": 2,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 4,
+          "teamId": "h5oigo07mg9m448r",
+          "teamName": "Shohei’s gambling buddies",
+          "totalPoints": 57,
+          "stats": {
+            "HR": 156.88,
+            "RBI": 476.84,
+            "TB": 1468.4,
+            "OPS": 0.744,
+            "SBN": 52.072,
+            "K": 359.52,
+            "ERA": 5.267,
+            "WHIP": 1.406,
+            "WQS": 36.544,
+            "SVH": 61.792
+          },
+          "projectedStats": {
+            "HR": 244,
+            "RBI": 740,
+            "TB": 2282,
+            "OPS": 0.804,
+            "SBN": 80.8,
+            "K": 555,
+            "ERA": 3.91,
+            "WHIP": 1.168,
+            "WQS": 57.1,
+            "SVH": 94.3
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 2,
+              "points": 9
+            },
+            "RBI": {
+              "rank": 2,
+              "points": 9
+            },
+            "TB": {
+              "rank": 1,
+              "points": 10
+            },
+            "OPS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SBN": {
+              "rank": 5,
+              "points": 6
+            },
+            "K": {
+              "rank": 9,
+              "points": 2
+            },
+            "ERA": {
+              "rank": 9,
+              "points": 2
+            },
+            "WHIP": {
+              "rank": 9,
+              "points": 2
+            },
+            "WQS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SVH": {
+              "rank": 3,
+              "points": 8
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 22,
+              "OPS": 0.637,
+              "SBN": 1,
+              "K": 12,
+              "ERA": 7.68,
+              "WHIP": 1.829,
+              "WQS": 0,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 5,
+          "teamId": "jzyh7c72mg9m448r",
+          "teamName": "Durans Tennis Racket",
+          "totalPoints": 56,
+          "stats": {
+            "HR": 158.88,
+            "RBI": 478.84,
+            "TB": 1429.6,
+            "OPS": 0.738,
+            "SBN": 45.224,
+            "K": 459.96,
+            "ERA": 4.33,
+            "WHIP": 1.194,
+            "WQS": 48.568,
+            "SVH": 39.72
+          },
+          "projectedStats": {
+            "HR": 246,
+            "RBI": 742,
+            "TB": 2218,
+            "OPS": 0.796,
+            "SBN": 70.1,
+            "K": 708,
+            "ERA": 3.88,
+            "WHIP": 1.225,
+            "WQS": 74.2,
+            "SVH": 61.5
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 1,
+              "points": 10
+            },
+            "RBI": {
+              "rank": 1,
+              "points": 10
+            },
+            "TB": {
+              "rank": 2,
+              "points": 9
+            },
+            "OPS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SBN": {
+              "rank": 8,
+              "points": 3
+            },
+            "K": {
+              "rank": 5,
+              "points": 6
+            },
+            "ERA": {
+              "rank": 8,
+              "points": 3
+            },
+            "WHIP": {
+              "rank": 7,
+              "points": 4
+            },
+            "WQS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SVH": {
+              "rank": 9,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 4,
+              "RBI": 11,
+              "TB": 28,
+              "OPS": 0.636,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 5.13,
+              "WHIP": 1.14,
+              "WQS": 3,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 6,
+          "teamId": "g3w8nouhmg9m448p",
+          "teamName": "Wander Franco Children's Foundation",
+          "totalPoints": 53,
+          "stats": {
+            "HR": 128.36,
+            "RBI": 429.68,
+            "TB": 1351.12,
+            "OPS": 0.776,
+            "SBN": 35.392,
+            "K": 483.08,
+            "ERA": 3.505,
+            "WHIP": 1.158,
+            "WQS": 61.048,
+            "SVH": 42.128
+          },
+          "projectedStats": {
+            "HR": 200,
+            "RBI": 668,
+            "TB": 2092,
+            "OPS": 0.782,
+            "SBN": 55.3,
+            "K": 743,
+            "ERA": 4.07,
+            "WHIP": 1.278,
+            "WQS": 93.7,
+            "SVH": 64.7
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 8,
+              "points": 3
+            },
+            "RBI": {
+              "rank": 7,
+              "points": 4
+            },
+            "TB": {
+              "rank": 6,
+              "points": 5
+            },
+            "OPS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SBN": {
+              "rank": 9,
+              "points": 2
+            },
+            "K": {
+              "rank": 3,
+              "points": 8
+            },
+            "ERA": {
+              "rank": 5,
+              "points": 6
+            },
+            "WHIP": {
+              "rank": 5,
+              "points": 6
+            },
+            "WQS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SVH": {
+              "rank": 7,
+              "points": 4
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 6,
+              "TB": 34,
+              "OPS": 0.766,
+              "SBN": 0,
+              "K": 21,
+              "ERA": 2.5,
+              "WHIP": 0.944,
+              "WQS": 3,
+              "SVH": 2
+            }
+          }
+        },
+        {
+          "rank": 7,
+          "teamId": "ksl78cwnmg9m448p",
+          "teamName": "Ippeis Bookie",
+          "totalPoints": 53,
+          "stats": {
+            "HR": 104.84,
+            "RBI": 360.44,
+            "TB": 1169.04,
+            "OPS": 0.81,
+            "SBN": 66.536,
+            "K": 518.2,
+            "ERA": 3.815,
+            "WHIP": 1.187,
+            "WQS": 61.2,
+            "SVH": 45.032
+          },
+          "projectedStats": {
+            "HR": 161,
+            "RBI": 557,
+            "TB": 1803,
+            "OPS": 0.744,
+            "SBN": 103.4,
+            "K": 799,
+            "ERA": 3.79,
+            "WHIP": 1.211,
+            "WQS": 94.5,
+            "SVH": 69.8
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 10,
+              "points": 1
+            },
+            "RBI": {
+              "rank": 10,
+              "points": 1
+            },
+            "TB": {
+              "rank": 10,
+              "points": 1
+            },
+            "OPS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 9
+            },
+            "K": {
+              "rank": 2,
+              "points": 9
+            },
+            "ERA": {
+              "rank": 7,
+              "points": 4
+            },
+            "WHIP": {
+              "rank": 6,
+              "points": 5
+            },
+            "WQS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SVH": {
+              "rank": 6,
+              "points": 5
+            }
+          },
+          "matchedHitters": 8,
+          "matchedPitchers": 6,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 5,
+              "RBI": 11,
+              "TB": 42,
+              "OPS": 0.928,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 3.86,
+              "WHIP": 1.143,
+              "WQS": 2,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 8,
+          "teamId": "9qvn9hxamg9m448q",
+          "teamName": "Ohtani Betts",
+          "totalPoints": 49,
+          "stats": {
+            "HR": 115.92,
+            "RBI": 401.32,
+            "TB": 1256.08,
+            "OPS": 0.725,
+            "SBN": 69.216,
+            "K": 419.32,
+            "ERA": 2.221,
+            "WHIP": 0.837,
+            "WQS": 35.432,
+            "SVH": 41.256
+          },
+          "projectedStats": {
+            "HR": 180,
+            "RBI": 622,
+            "TB": 1948,
+            "OPS": 0.742,
+            "SBN": 105.9,
+            "K": 649,
+            "ERA": 3.47,
+            "WHIP": 1.156,
+            "WQS": 54.8,
+            "SVH": 63.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 9,
+              "points": 2
+            },
+            "RBI": {
+              "rank": 9,
+              "points": 2
+            },
+            "TB": {
+              "rank": 9,
+              "points": 2
+            },
+            "OPS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SBN": {
+              "rank": 1,
+              "points": 10
+            },
+            "K": {
+              "rank": 6,
+              "points": 5
+            },
+            "ERA": {
+              "rank": 1,
+              "points": 10
+            },
+            "WHIP": {
+              "rank": 1,
+              "points": 10
+            },
+            "WQS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 3
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 26,
+              "OPS": 0.694,
+              "SBN": 4,
+              "K": 11,
+              "ERA": 0,
+              "WHIP": 0.27,
+              "WQS": 1,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 9,
+          "teamId": "zcapyjosmg9m448o",
+          "teamName": "Monkey Neva Cramp",
+          "totalPoints": 46,
+          "stats": {
+            "HR": 128.6,
+            "RBI": 433,
+            "TB": 1328.76,
+            "OPS": 0.809,
+            "SBN": 48.504,
+            "K": 375.76,
+            "ERA": 2.856,
+            "WHIP": 1.202,
+            "WQS": 45.88,
+            "SVH": 33.216
+          },
+          "projectedStats": {
+            "HR": 197,
+            "RBI": 667,
+            "TB": 2052,
+            "OPS": 0.792,
+            "SBN": 74.1,
+            "K": 577,
+            "ERA": 4.21,
+            "WHIP": 1.235,
+            "WQS": 70,
+            "SVH": 51.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 7,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 6,
+              "points": 5
+            },
+            "TB": {
+              "rank": 7,
+              "points": 4
+            },
+            "OPS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SBN": {
+              "rank": 6,
+              "points": 5
+            },
+            "K": {
+              "rank": 7,
+              "points": 4
+            },
+            "ERA": {
+              "rank": 3,
+              "points": 8
+            },
+            "WHIP": {
+              "rank": 8,
+              "points": 3
+            },
+            "WQS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SVH": {
+              "rank": 10,
+              "points": 1
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 7,
+              "RBI": 17,
+              "TB": 43,
+              "OPS": 0.84,
+              "SBN": 3,
+              "K": 18,
+              "ERA": 0.45,
+              "WHIP": 1.144,
+              "WQS": 3,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 10,
+          "teamId": "l2qxmel1mg9m448n",
+          "teamName": "Chaz Jizzolm",
+          "totalPoints": 41,
+          "stats": {
+            "HR": 143.44,
+            "RBI": 447.96,
+            "TB": 1356.72,
+            "OPS": 0.742,
+            "SBN": 47.312,
+            "K": 273.4,
+            "ERA": 8.925,
+            "WHIP": 1.821,
+            "WQS": 22.08,
+            "SVH": 63.096
+          },
+          "projectedStats": {
+            "HR": 223,
+            "RBI": 696,
+            "TB": 2103,
+            "OPS": 0.793,
+            "SBN": 72.8,
+            "K": 421,
+            "ERA": 3.82,
+            "WHIP": 1.201,
+            "WQS": 34.5,
+            "SVH": 96.9
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 4,
+              "points": 7
+            },
+            "RBI": {
+              "rank": 4,
+              "points": 7
+            },
+            "TB": {
+              "rank": 5,
+              "points": 6
+            },
+            "OPS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 4
+            },
+            "K": {
+              "rank": 10,
+              "points": 1
+            },
+            "ERA": {
+              "rank": 10,
+              "points": 1
+            },
+            "WHIP": {
+              "rank": 10,
+              "points": 1
+            },
+            "WQS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SVH": {
+              "rank": 2,
+              "points": 9
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 7,
+              "TB": 30,
+              "OPS": 0.65,
+              "SBN": 2,
+              "K": 11,
+              "ERA": 18,
+              "WHIP": 2.923,
+              "WQS": 0,
+              "SVH": 3
+            }
+          }
+        }
+      ]
+    },
+    "dc": {
+      "name": "Depth Charts",
+      "rankings": [
+        {
+          "rank": 1,
+          "teamId": "wy7sg1p4mg9m448m",
+          "teamName": "She jazz on my holm till I chis",
+          "totalPoints": 73,
+          "stats": {
+            "HR": 141.12,
+            "RBI": 465.64,
+            "TB": 1397.72,
+            "OPS": 0.882,
+            "SBN": 68.92,
+            "K": 571.76,
+            "ERA": 3.489,
+            "WHIP": 1.018,
+            "WQS": 72.48,
+            "SVH": 53.12
+          },
+          "projectedStats": {
+            "HR": 216,
+            "RBI": 718,
+            "TB": 2153,
+            "OPS": 0.782,
+            "SBN": 106,
+            "K": 881,
+            "ERA": 3.28,
+            "WHIP": 1.109,
+            "WQS": 111,
+            "SVH": 83
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 5,
+              "points": 6
+            },
+            "RBI": {
+              "rank": 6,
+              "points": 5
+            },
+            "TB": {
+              "rank": 7,
+              "points": 4
+            },
+            "OPS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 9
+            },
+            "K": {
+              "rank": 1,
+              "points": 10
+            },
+            "ERA": {
+              "rank": 6,
+              "points": 5
+            },
+            "WHIP": {
+              "rank": 2,
+              "points": 9
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SVH": {
+              "rank": 4,
+              "points": 7
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 8,
+              "RBI": 17,
+              "TB": 55,
+              "OPS": 1.059,
+              "SBN": 3,
+              "K": 22,
+              "ERA": 3.86,
+              "WHIP": 0.857,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "teamId": "3tdnrntnmg9m448l",
+          "teamName": "Booby Titt’s",
+          "totalPoints": 63,
+          "stats": {
+            "HR": 157.24,
+            "RBI": 500.16,
+            "TB": 1470.88,
+            "OPS": 0.877,
+            "SBN": 32.08,
+            "K": 376.04,
+            "ERA": 3.223,
+            "WHIP": 1.107,
+            "WQS": 41.68,
+            "SVH": 77.6
+          },
+          "projectedStats": {
+            "HR": 244,
+            "RBI": 777,
+            "TB": 2278,
+            "OPS": 0.813,
+            "SBN": 49,
+            "K": 578,
+            "ERA": 3.59,
+            "WHIP": 1.207,
+            "WQS": 64,
+            "SVH": 119
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 3,
+              "points": 8
+            },
+            "RBI": {
+              "rank": 3,
+              "points": 8
+            },
+            "TB": {
+              "rank": 3,
+              "points": 8
+            },
+            "OPS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SBN": {
+              "rank": 10,
+              "points": 1
+            },
+            "K": {
+              "rank": 9,
+              "points": 2
+            },
+            "ERA": {
+              "rank": 4,
+              "points": 7
+            },
+            "WHIP": {
+              "rank": 3,
+              "points": 8
+            },
+            "WQS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SVH": {
+              "rank": 1,
+              "points": 10
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 3,
+              "RBI": 8,
+              "TB": 36,
+              "OPS": 0.99,
+              "SBN": 2,
+              "K": 17,
+              "ERA": 2.57,
+              "WHIP": 0.929,
+              "WQS": 2,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 3,
+          "teamId": "jzyh7c72mg9m448r",
+          "teamName": "Durans Tennis Racket",
+          "totalPoints": 62,
+          "stats": {
+            "HR": 166.56,
+            "RBI": 516.6,
+            "TB": 1510.88,
+            "OPS": 0.747,
+            "SBN": 45.8,
+            "K": 481.08,
+            "ERA": 4.138,
+            "WHIP": 1.164,
+            "WQS": 62.52,
+            "SVH": 43.88
+          },
+          "projectedStats": {
+            "HR": 258,
+            "RBI": 801,
+            "TB": 2345,
+            "OPS": 0.809,
+            "SBN": 71,
+            "K": 741,
+            "ERA": 3.58,
+            "WHIP": 1.178,
+            "WQS": 96,
+            "SVH": 68
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 1,
+              "points": 10
+            },
+            "RBI": {
+              "rank": 2,
+              "points": 9
+            },
+            "TB": {
+              "rank": 2,
+              "points": 9
+            },
+            "OPS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SBN": {
+              "rank": 8,
+              "points": 3
+            },
+            "K": {
+              "rank": 4,
+              "points": 7
+            },
+            "ERA": {
+              "rank": 8,
+              "points": 3
+            },
+            "WHIP": {
+              "rank": 6,
+              "points": 5
+            },
+            "WQS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 6,
+              "points": 5
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 4,
+              "RBI": 11,
+              "TB": 28,
+              "OPS": 0.636,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 5.13,
+              "WHIP": 1.14,
+              "WQS": 3,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 4,
+          "teamId": "h5oigo07mg9m448r",
+          "teamName": "Shohei’s gambling buddies",
+          "totalPoints": 61,
+          "stats": {
+            "HR": 163.92,
+            "RBI": 519.08,
+            "TB": 1540.72,
+            "OPS": 0.749,
+            "SBN": 56.68,
+            "K": 397.28,
+            "ERA": 5.043,
+            "WHIP": 1.403,
+            "WQS": 45.44,
+            "SVH": 57.76
+          },
+          "projectedStats": {
+            "HR": 255,
+            "RBI": 806,
+            "TB": 2395,
+            "OPS": 0.812,
+            "SBN": 88,
+            "K": 614,
+            "ERA": 3.56,
+            "WHIP": 1.164,
+            "WQS": 71,
+            "SVH": 88
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 2,
+              "points": 9
+            },
+            "RBI": {
+              "rank": 1,
+              "points": 10
+            },
+            "TB": {
+              "rank": 1,
+              "points": 10
+            },
+            "OPS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SBN": {
+              "rank": 5,
+              "points": 6
+            },
+            "K": {
+              "rank": 6,
+              "points": 5
+            },
+            "ERA": {
+              "rank": 9,
+              "points": 2
+            },
+            "WHIP": {
+              "rank": 9,
+              "points": 2
+            },
+            "WQS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SVH": {
+              "rank": 3,
+              "points": 8
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 22,
+              "OPS": 0.637,
+              "SBN": 1,
+              "K": 12,
+              "ERA": 7.68,
+              "WHIP": 1.829,
+              "WQS": 0,
+              "SVH": 4
+            }
+          }
+        },
+        {
+          "rank": 5,
+          "teamId": "jgg562fvmg9m448n",
+          "teamName": "Wander If Franco was Right",
+          "totalPoints": 58.5,
+          "stats": {
+            "HR": 139.88,
+            "RBI": 478.68,
+            "TB": 1437.8,
+            "OPS": 0.657,
+            "SBN": 63.8,
+            "K": 479.88,
+            "ERA": 2.604,
+            "WHIP": 1.151,
+            "WQS": 60.96,
+            "SVH": 44.8
+          },
+          "projectedStats": {
+            "HR": 218,
+            "RBI": 744,
+            "TB": 2237,
+            "OPS": 0.79,
+            "SBN": 98,
+            "K": 738,
+            "ERA": 3.49,
+            "WHIP": 1.184,
+            "WQS": 93,
+            "SVH": 70
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 5
+            },
+            "RBI": {
+              "rank": 5,
+              "points": 6
+            },
+            "TB": {
+              "rank": 5,
+              "points": 6
+            },
+            "OPS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SBN": {
+              "rank": 4,
+              "points": 7
+            },
+            "K": {
+              "rank": 5,
+              "points": 6
+            },
+            "ERA": {
+              "rank": 2,
+              "points": 9
+            },
+            "WHIP": {
+              "rank": 4,
+              "points": 6.5
+            },
+            "WQS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 6
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 7,
+              "TB": 17,
+              "OPS": 0.42,
+              "SBN": 3,
+              "K": 21,
+              "ERA": 1.03,
+              "WHIP": 1.092,
+              "WQS": 4,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 6,
+          "teamId": "g3w8nouhmg9m448p",
+          "teamName": "Wander Franco Children's Foundation",
+          "totalPoints": 56.5,
+          "stats": {
+            "HR": 131.56,
+            "RBI": 459.76,
+            "TB": 1438.8,
+            "OPS": 0.784,
+            "SBN": 37.76,
+            "K": 516.36,
+            "ERA": 3.345,
+            "WHIP": 1.152,
+            "WQS": 74.68,
+            "SVH": 42.96
+          },
+          "projectedStats": {
+            "HR": 205,
+            "RBI": 715,
+            "TB": 2229,
+            "OPS": 0.794,
+            "SBN": 59,
+            "K": 795,
+            "ERA": 3.82,
+            "WHIP": 1.269,
+            "WQS": 115,
+            "SVH": 66
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 8,
+              "points": 3
+            },
+            "RBI": {
+              "rank": 7,
+              "points": 4
+            },
+            "TB": {
+              "rank": 4,
+              "points": 7
+            },
+            "OPS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SBN": {
+              "rank": 9,
+              "points": 2
+            },
+            "K": {
+              "rank": 3,
+              "points": 8
+            },
+            "ERA": {
+              "rank": 5,
+              "points": 6
+            },
+            "WHIP": {
+              "rank": 4,
+              "points": 6.5
+            },
+            "WQS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SVH": {
+              "rank": 7,
+              "points": 4
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 1,
+              "RBI": 6,
+              "TB": 34,
+              "OPS": 0.766,
+              "SBN": 0,
+              "K": 21,
+              "ERA": 2.5,
+              "WHIP": 0.944,
+              "WQS": 3,
+              "SVH": 2
+            }
+          }
+        },
+        {
+          "rank": 7,
+          "teamId": "ksl78cwnmg9m448p",
+          "teamName": "Ippeis Bookie",
+          "totalPoints": 48,
+          "stats": {
+            "HR": 114.44,
+            "RBI": 407.8,
+            "TB": 1274,
+            "OPS": 0.823,
+            "SBN": 67.56,
+            "K": 532.92,
+            "ERA": 3.738,
+            "WHIP": 1.192,
+            "WQS": 74.32,
+            "SVH": 38.76
+          },
+          "projectedStats": {
+            "HR": 176,
+            "RBI": 631,
+            "TB": 1967,
+            "OPS": 0.764,
+            "SBN": 105,
+            "K": 822,
+            "ERA": 3.67,
+            "WHIP": 1.22,
+            "WQS": 115,
+            "SVH": 60
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 10,
+              "points": 1
+            },
+            "RBI": {
+              "rank": 10,
+              "points": 1
+            },
+            "TB": {
+              "rank": 10,
+              "points": 1
+            },
+            "OPS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SBN": {
+              "rank": 3,
+              "points": 8
+            },
+            "K": {
+              "rank": 2,
+              "points": 9
+            },
+            "ERA": {
+              "rank": 7,
+              "points": 4
+            },
+            "WHIP": {
+              "rank": 7,
+              "points": 4
+            },
+            "WQS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 3
+            }
+          },
+          "matchedHitters": 8,
+          "matchedPitchers": 6,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 5,
+              "RBI": 11,
+              "TB": 42,
+              "OPS": 0.928,
+              "SBN": 1,
+              "K": 19,
+              "ERA": 3.86,
+              "WHIP": 1.143,
+              "WQS": 2,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 8,
+          "teamId": "9qvn9hxamg9m448q",
+          "teamName": "Ohtani Betts",
+          "totalPoints": 47,
+          "stats": {
+            "HR": 124.24,
+            "RBI": 443.56,
+            "TB": 1339.92,
+            "OPS": 0.741,
+            "SBN": 74.4,
+            "K": 396.92,
+            "ERA": 2.259,
+            "WHIP": 0.854,
+            "WQS": 44.52,
+            "SVH": 38.12
+          },
+          "projectedStats": {
+            "HR": 193,
+            "RBI": 688,
+            "TB": 2079,
+            "OPS": 0.768,
+            "SBN": 114,
+            "K": 614,
+            "ERA": 3.53,
+            "WHIP": 1.182,
+            "WQS": 69,
+            "SVH": 59
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 9,
+              "points": 2
+            },
+            "RBI": {
+              "rank": 9,
+              "points": 2
+            },
+            "TB": {
+              "rank": 9,
+              "points": 2
+            },
+            "OPS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SBN": {
+              "rank": 1,
+              "points": 10
+            },
+            "K": {
+              "rank": 7,
+              "points": 4
+            },
+            "ERA": {
+              "rank": 1,
+              "points": 10
+            },
+            "WHIP": {
+              "rank": 1,
+              "points": 10
+            },
+            "WQS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SVH": {
+              "rank": 9,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 9,
+              "TB": 26,
+              "OPS": 0.694,
+              "SBN": 4,
+              "K": 11,
+              "ERA": 0,
+              "WHIP": 0.27,
+              "WQS": 1,
+              "SVH": 1
+            }
+          }
+        },
+        {
+          "rank": 9,
+          "teamId": "zcapyjosmg9m448o",
+          "teamName": "Monkey Neva Cramp",
+          "totalPoints": 42,
+          "stats": {
+            "HR": 131.8,
+            "RBI": 444.52,
+            "TB": 1390.84,
+            "OPS": 0.817,
+            "SBN": 56.12,
+            "K": 384.72,
+            "ERA": 2.722,
+            "WHIP": 1.221,
+            "WQS": 52.92,
+            "SVH": 32
+          },
+          "projectedStats": {
+            "HR": 202,
+            "RBI": 685,
+            "TB": 2149,
+            "OPS": 0.804,
+            "SBN": 86,
+            "K": 591,
+            "ERA": 4,
+            "WHIP": 1.264,
+            "WQS": 81,
+            "SVH": 50
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 7,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 8,
+              "points": 3
+            },
+            "TB": {
+              "rank": 8,
+              "points": 3
+            },
+            "OPS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SBN": {
+              "rank": 6,
+              "points": 5
+            },
+            "K": {
+              "rank": 8,
+              "points": 3
+            },
+            "ERA": {
+              "rank": 3,
+              "points": 8
+            },
+            "WHIP": {
+              "rank": 8,
+              "points": 3
+            },
+            "WQS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SVH": {
+              "rank": 10,
+              "points": 1
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 7,
+              "RBI": 17,
+              "TB": 43,
+              "OPS": 0.84,
+              "SBN": 3,
+              "K": 18,
+              "ERA": 0.45,
+              "WHIP": 1.144,
+              "WQS": 3,
+              "SVH": 0
+            }
+          }
+        },
+        {
+          "rank": 10,
+          "teamId": "l2qxmel1mg9m448n",
+          "teamName": "Chaz Jizzolm",
+          "totalPoints": 39,
+          "stats": {
+            "HR": 152.4,
+            "RBI": 483.16,
+            "TB": 1432.24,
+            "OPS": 0.746,
+            "SBN": 52.56,
+            "K": 336.12,
+            "ERA": 8.918,
+            "WHIP": 1.849,
+            "WQS": 33.28,
+            "SVH": 61.88
+          },
+          "projectedStats": {
+            "HR": 237,
+            "RBI": 751,
+            "TB": 2221,
+            "OPS": 0.8,
+            "SBN": 81,
+            "K": 519,
+            "ERA": 3.81,
+            "WHIP": 1.245,
+            "WQS": 52,
+            "SVH": 95
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 4,
+              "points": 7
+            },
+            "RBI": {
+              "rank": 4,
+              "points": 7
+            },
+            "TB": {
+              "rank": 6,
+              "points": 5
+            },
+            "OPS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 4
+            },
+            "K": {
+              "rank": 10,
+              "points": 1
+            },
+            "ERA": {
+              "rank": 10,
+              "points": 1
+            },
+            "WHIP": {
+              "rank": 10,
+              "points": 1
+            },
+            "WQS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SVH": {
+              "rank": 2,
+              "points": 9
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": true,
+            "weight": 0.36,
+            "source": "fantrax-real-stats",
+            "actual": {
+              "HR": 2,
+              "RBI": 7,
+              "TB": 30,
+              "OPS": 0.65,
+              "SBN": 2,
+              "K": 11,
+              "ERA": 18,
+              "WHIP": 2.923,
+              "WQS": 0,
+              "SVH": 3
+            }
+          }
+        }
+      ]
+    },
+    "real": {
+      "name": "Real YTD",
+      "rankings": [
+        {
+          "rank": 1,
+          "teamId": "wy7sg1p4mg9m448m",
+          "teamName": "She jazz on my holm till I chis",
+          "totalPoints": 82.5,
+          "stats": {
+            "HR": 8,
+            "RBI": 17,
+            "TB": 55,
+            "OPS": 1.059,
+            "SBN": 3,
+            "K": 22,
+            "ERA": 3.86,
+            "WHIP": 0.857,
+            "WQS": 4,
+            "SVH": 0
+          },
+          "projectedStats": {
+            "HR": 8,
+            "RBI": 17,
+            "TB": 55,
+            "OPS": 1.059,
+            "SBN": 3,
+            "K": 22,
+            "ERA": 3.86,
+            "WHIP": 0.857,
+            "WQS": 4,
+            "SVH": 0
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 1,
+              "points": 10
+            },
+            "RBI": {
+              "rank": 1,
+              "points": 9.5
+            },
+            "TB": {
+              "rank": 1,
+              "points": 10
+            },
+            "OPS": {
+              "rank": 1,
+              "points": 10
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 8
+            },
+            "K": {
+              "rank": 1,
+              "points": 10
+            },
+            "ERA": {
+              "rank": 6,
+              "points": 4.5
+            },
+            "WHIP": {
+              "rank": 2,
+              "points": 9
+            },
+            "WQS": {
+              "rank": 1,
+              "points": 9.5
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 4,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 2,
+          "teamId": "zcapyjosmg9m448o",
+          "teamName": "Monkey Neva Cramp",
+          "totalPoints": 69,
+          "stats": {
+            "HR": 7,
+            "RBI": 17,
+            "TB": 43,
+            "OPS": 0.84,
+            "SBN": 3,
+            "K": 18,
+            "ERA": 0.45,
+            "WHIP": 1.144,
+            "WQS": 3,
+            "SVH": 0
+          },
+          "projectedStats": {
+            "HR": 7,
+            "RBI": 17,
+            "TB": 43,
+            "OPS": 0.84,
+            "SBN": 3,
+            "K": 18,
+            "ERA": 0.45,
+            "WHIP": 1.144,
+            "WQS": 3,
+            "SVH": 0
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 2,
+              "points": 9
+            },
+            "RBI": {
+              "rank": 1,
+              "points": 9.5
+            },
+            "TB": {
+              "rank": 2,
+              "points": 9
+            },
+            "OPS": {
+              "rank": 4,
+              "points": 7
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 8
+            },
+            "K": {
+              "rank": 6,
+              "points": 5
+            },
+            "ERA": {
+              "rank": 2,
+              "points": 9
+            },
+            "WHIP": {
+              "rank": 7,
+              "points": 3.5
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 3,
+          "teamId": "3tdnrntnmg9m448l",
+          "teamName": "Booby Titt’s",
+          "totalPoints": 63.5,
+          "stats": {
+            "HR": 3,
+            "RBI": 8,
+            "TB": 36,
+            "OPS": 0.99,
+            "SBN": 2,
+            "K": 17,
+            "ERA": 2.57,
+            "WHIP": 0.929,
+            "WQS": 2,
+            "SVH": 4
+          },
+          "projectedStats": {
+            "HR": 3,
+            "RBI": 8,
+            "TB": 36,
+            "OPS": 0.99,
+            "SBN": 2,
+            "K": 17,
+            "ERA": 2.57,
+            "WHIP": 0.929,
+            "WQS": 2,
+            "SVH": 4
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 5,
+              "points": 6
+            },
+            "RBI": {
+              "rank": 7,
+              "points": 4
+            },
+            "TB": {
+              "rank": 4,
+              "points": 7
+            },
+            "OPS": {
+              "rank": 2,
+              "points": 9
+            },
+            "SBN": {
+              "rank": 5,
+              "points": 5.5
+            },
+            "K": {
+              "rank": 7,
+              "points": 4
+            },
+            "ERA": {
+              "rank": 5,
+              "points": 6
+            },
+            "WHIP": {
+              "rank": 3,
+              "points": 8
+            },
+            "WQS": {
+              "rank": 6,
+              "points": 4.5
+            },
+            "SVH": {
+              "rank": 1,
+              "points": 9.5
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 4,
+          "teamId": "ksl78cwnmg9m448p",
+          "teamName": "Ippeis Bookie",
+          "totalPoints": 58.5,
+          "stats": {
+            "HR": 5,
+            "RBI": 11,
+            "TB": 42,
+            "OPS": 0.928,
+            "SBN": 1,
+            "K": 19,
+            "ERA": 3.86,
+            "WHIP": 1.143,
+            "WQS": 2,
+            "SVH": 1
+          },
+          "projectedStats": {
+            "HR": 5,
+            "RBI": 11,
+            "TB": 42,
+            "OPS": 0.928,
+            "SBN": 1,
+            "K": 19,
+            "ERA": 3.86,
+            "WHIP": 1.143,
+            "WQS": 2,
+            "SVH": 1
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 3,
+              "points": 8
+            },
+            "RBI": {
+              "rank": 3,
+              "points": 7.5
+            },
+            "TB": {
+              "rank": 3,
+              "points": 8
+            },
+            "OPS": {
+              "rank": 3,
+              "points": 8
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 3
+            },
+            "K": {
+              "rank": 4,
+              "points": 6.5
+            },
+            "ERA": {
+              "rank": 6,
+              "points": 4.5
+            },
+            "WHIP": {
+              "rank": 7,
+              "points": 3.5
+            },
+            "WQS": {
+              "rank": 6,
+              "points": 4.5
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 5
+            }
+          },
+          "matchedHitters": 8,
+          "matchedPitchers": 4,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 5,
+          "teamId": "9qvn9hxamg9m448q",
+          "teamName": "Ohtani Betts",
+          "totalPoints": 57,
+          "stats": {
+            "HR": 2,
+            "RBI": 9,
+            "TB": 26,
+            "OPS": 0.694,
+            "SBN": 4,
+            "K": 11,
+            "ERA": 0,
+            "WHIP": 0.27,
+            "WQS": 1,
+            "SVH": 1
+          },
+          "projectedStats": {
+            "HR": 2,
+            "RBI": 9,
+            "TB": 26,
+            "OPS": 0.694,
+            "SBN": 4,
+            "K": 11,
+            "ERA": 0,
+            "WHIP": 0.27,
+            "WQS": 1,
+            "SVH": 1
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 5,
+              "points": 5.5
+            },
+            "TB": {
+              "rank": 8,
+              "points": 3
+            },
+            "OPS": {
+              "rank": 6,
+              "points": 5
+            },
+            "SBN": {
+              "rank": 1,
+              "points": 10
+            },
+            "K": {
+              "rank": 9,
+              "points": 1.5
+            },
+            "ERA": {
+              "rank": 1,
+              "points": 10
+            },
+            "WHIP": {
+              "rank": 1,
+              "points": 10
+            },
+            "WQS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 5
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 4,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 6,
+          "teamId": "g3w8nouhmg9m448p",
+          "teamName": "Wander Franco Children's Foundation",
+          "totalPoints": 52,
+          "stats": {
+            "HR": 1,
+            "RBI": 6,
+            "TB": 34,
+            "OPS": 0.766,
+            "SBN": 0,
+            "K": 21,
+            "ERA": 2.5,
+            "WHIP": 0.944,
+            "WQS": 3,
+            "SVH": 2
+          },
+          "projectedStats": {
+            "HR": 1,
+            "RBI": 6,
+            "TB": 34,
+            "OPS": 0.766,
+            "SBN": 0,
+            "K": 21,
+            "ERA": 2.5,
+            "WHIP": 0.944,
+            "WQS": 3,
+            "SVH": 2
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 9,
+              "points": 1.5
+            },
+            "RBI": {
+              "rank": 10,
+              "points": 1
+            },
+            "TB": {
+              "rank": 5,
+              "points": 6
+            },
+            "OPS": {
+              "rank": 5,
+              "points": 6
+            },
+            "SBN": {
+              "rank": 10,
+              "points": 1
+            },
+            "K": {
+              "rank": 2,
+              "points": 8.5
+            },
+            "ERA": {
+              "rank": 4,
+              "points": 7
+            },
+            "WHIP": {
+              "rank": 4,
+              "points": 7
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 4,
+              "points": 7
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 4,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 7,
+          "teamId": "jzyh7c72mg9m448r",
+          "teamName": "Durans Tennis Racket",
+          "totalPoints": 50,
+          "stats": {
+            "HR": 4,
+            "RBI": 11,
+            "TB": 28,
+            "OPS": 0.636,
+            "SBN": 1,
+            "K": 19,
+            "ERA": 5.13,
+            "WHIP": 1.14,
+            "WQS": 3,
+            "SVH": 1
+          },
+          "projectedStats": {
+            "HR": 4,
+            "RBI": 11,
+            "TB": 28,
+            "OPS": 0.636,
+            "SBN": 1,
+            "K": 19,
+            "ERA": 5.13,
+            "WHIP": 1.14,
+            "WQS": 3,
+            "SVH": 1
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 4,
+              "points": 7
+            },
+            "RBI": {
+              "rank": 3,
+              "points": 7.5
+            },
+            "TB": {
+              "rank": 7,
+              "points": 4
+            },
+            "OPS": {
+              "rank": 9,
+              "points": 2
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 3
+            },
+            "K": {
+              "rank": 4,
+              "points": 6.5
+            },
+            "ERA": {
+              "rank": 8,
+              "points": 3
+            },
+            "WHIP": {
+              "rank": 6,
+              "points": 5
+            },
+            "WQS": {
+              "rank": 3,
+              "points": 7
+            },
+            "SVH": {
+              "rank": 5,
+              "points": 5
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 6,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 8,
+          "teamId": "jgg562fvmg9m448n",
+          "teamName": "Wander If Franco was Right",
+          "totalPoints": 48,
+          "stats": {
+            "HR": 1,
+            "RBI": 7,
+            "TB": 17,
+            "OPS": 0.42,
+            "SBN": 3,
+            "K": 21,
+            "ERA": 1.03,
+            "WHIP": 1.092,
+            "WQS": 4,
+            "SVH": 0
+          },
+          "projectedStats": {
+            "HR": 1,
+            "RBI": 7,
+            "TB": 17,
+            "OPS": 0.42,
+            "SBN": 3,
+            "K": 21,
+            "ERA": 1.03,
+            "WHIP": 1.092,
+            "WQS": 4,
+            "SVH": 0
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 9,
+              "points": 1.5
+            },
+            "RBI": {
+              "rank": 8,
+              "points": 2.5
+            },
+            "TB": {
+              "rank": 10,
+              "points": 1
+            },
+            "OPS": {
+              "rank": 10,
+              "points": 1
+            },
+            "SBN": {
+              "rank": 2,
+              "points": 8
+            },
+            "K": {
+              "rank": 2,
+              "points": 8.5
+            },
+            "ERA": {
+              "rank": 3,
+              "points": 8
+            },
+            "WHIP": {
+              "rank": 5,
+              "points": 6
+            },
+            "WQS": {
+              "rank": 1,
+              "points": 9.5
+            },
+            "SVH": {
+              "rank": 8,
+              "points": 2
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 9,
+          "teamId": "h5oigo07mg9m448r",
+          "teamName": "Shohei’s gambling buddies",
+          "totalPoints": 35.5,
+          "stats": {
+            "HR": 2,
+            "RBI": 9,
+            "TB": 22,
+            "OPS": 0.637,
+            "SBN": 1,
+            "K": 12,
+            "ERA": 7.68,
+            "WHIP": 1.829,
+            "WQS": 0,
+            "SVH": 4
+          },
+          "projectedStats": {
+            "HR": 2,
+            "RBI": 9,
+            "TB": 22,
+            "OPS": 0.637,
+            "SBN": 1,
+            "K": 12,
+            "ERA": 7.68,
+            "WHIP": 1.829,
+            "WQS": 0,
+            "SVH": 4
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 5,
+              "points": 5.5
+            },
+            "TB": {
+              "rank": 9,
+              "points": 2
+            },
+            "OPS": {
+              "rank": 8,
+              "points": 3
+            },
+            "SBN": {
+              "rank": 7,
+              "points": 3
+            },
+            "K": {
+              "rank": 8,
+              "points": 3
+            },
+            "ERA": {
+              "rank": 9,
+              "points": 2
+            },
+            "WHIP": {
+              "rank": 9,
+              "points": 2
+            },
+            "WQS": {
+              "rank": 9,
+              "points": 1.5
+            },
+            "SVH": {
+              "rank": 1,
+              "points": 9.5
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 4,
+          "totalActive": 14,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        },
+        {
+          "rank": 10,
+          "teamId": "l2qxmel1mg9m448n",
+          "teamName": "Chaz Jizzolm",
+          "totalPoints": 34,
+          "stats": {
+            "HR": 2,
+            "RBI": 7,
+            "TB": 30,
+            "OPS": 0.65,
+            "SBN": 2,
+            "K": 11,
+            "ERA": 18,
+            "WHIP": 2.923,
+            "WQS": 0,
+            "SVH": 3
+          },
+          "projectedStats": {
+            "HR": 2,
+            "RBI": 7,
+            "TB": 30,
+            "OPS": 0.65,
+            "SBN": 2,
+            "K": 11,
+            "ERA": 18,
+            "WHIP": 2.923,
+            "WQS": 0,
+            "SVH": 3
+          },
+          "catRanks": {
+            "HR": {
+              "rank": 6,
+              "points": 4
+            },
+            "RBI": {
+              "rank": 8,
+              "points": 2.5
+            },
+            "TB": {
+              "rank": 6,
+              "points": 5
+            },
+            "OPS": {
+              "rank": 7,
+              "points": 4
+            },
+            "SBN": {
+              "rank": 5,
+              "points": 5.5
+            },
+            "K": {
+              "rank": 9,
+              "points": 1.5
+            },
+            "ERA": {
+              "rank": 10,
+              "points": 1
+            },
+            "WHIP": {
+              "rank": 10,
+              "points": 1
+            },
+            "WQS": {
+              "rank": 9,
+              "points": 1.5
+            },
+            "SVH": {
+              "rank": 3,
+              "points": 8
+            }
+          },
+          "matchedHitters": 9,
+          "matchedPitchers": 5,
+          "totalActive": 15,
+          "adjustment": {
+            "applied": false,
+            "weight": 0.36,
+            "source": "projection-only"
+          }
+        }
+      ]
+    }
+  },
+  "consensus": {
+    "name": "Consensus",
+    "systemsUsed": [
+      "steamer",
+      "zips",
+      "atc",
+      "thebat",
+      "thebatx",
+      "dc",
+      "real"
+    ],
+    "rankings": [
+      {
+        "teamId": "wy7sg1p4mg9m448m",
+        "teamName": "She jazz on my holm till I chis",
+        "totalPoints": 72.9,
+        "avgStats": {
+          "HR": 116.343,
+          "RBI": 370.371,
+          "TB": 1133.857,
+          "OPS": 0.904,
+          "SBN": 56.897,
+          "K": 475.577,
+          "ERA": 3.561,
+          "WHIP": 0.989,
+          "WQS": 52.192,
+          "SVH": 47.643
+        },
+        "avgCatPoints": {
+          "HR": 6.1,
+          "RBI": 4.6,
+          "TB": 4.3,
+          "OPS": 9.9,
+          "SBN": 8.7,
+          "K": 10,
+          "ERA": 5.1,
+          "WHIP": 9,
+          "WQS": 8.9,
+          "SVH": 6.3
+        },
+        "systemCount": 7,
+        "rank": 1
+      },
+      {
+        "teamId": "3tdnrntnmg9m448l",
+        "teamName": "Booby Titt’s",
+        "totalPoints": 63.2,
+        "avgStats": {
+          "HR": 128.074,
+          "RBI": 402.697,
+          "TB": 1194.491,
+          "OPS": 0.89,
+          "SBN": 28.066,
+          "K": 315.697,
+          "ERA": 3.144,
+          "WHIP": 1.071,
+          "WQS": 28.615,
+          "SVH": 68.046
+        },
+        "avgCatPoints": {
+          "HR": 7.7,
+          "RBI": 7.4,
+          "TB": 7.3,
+          "OPS": 9.1,
+          "SBN": 1.6,
+          "K": 2.4,
+          "ERA": 6.9,
+          "WHIP": 8,
+          "WQS": 2.8,
+          "SVH": 9.9
+        },
+        "systemCount": 7,
+        "rank": 2
+      },
+      {
+        "teamId": "jgg562fvmg9m448n",
+        "teamName": "Wander If Franco was Right",
+        "totalPoints": 59.5,
+        "avgStats": {
+          "HR": 116.566,
+          "RBI": 385.971,
+          "TB": 1182.897,
+          "OPS": 0.623,
+          "SBN": 52.061,
+          "K": 394.486,
+          "ERA": 2.435,
+          "WHIP": 1.142,
+          "WQS": 42.894,
+          "SVH": 40.128
+        },
+        "avgCatPoints": {
+          "HR": 4.9,
+          "RBI": 5.6,
+          "TB": 6.4,
+          "OPS": 1,
+          "SBN": 7.3,
+          "K": 6.6,
+          "ERA": 8.9,
+          "WHIP": 6.5,
+          "WQS": 6.8,
+          "SVH": 5.4
+        },
+        "systemCount": 7,
+        "rank": 3
+      },
+      {
+        "teamId": "jzyh7c72mg9m448r",
+        "teamName": "Durans Tennis Racket",
+        "totalPoints": 58.3,
+        "avgStats": {
+          "HR": 137.211,
+          "RBI": 420.234,
+          "TB": 1237.143,
+          "OPS": 0.728,
+          "SBN": 38.778,
+          "K": 402.177,
+          "ERA": 4.317,
+          "WHIP": 1.165,
+          "WQS": 43.869,
+          "SVH": 36.09
+        },
+        "avgCatPoints": {
+          "HR": 9.6,
+          "RBI": 9.4,
+          "TB": 8.3,
+          "OPS": 3.1,
+          "SBN": 3,
+          "K": 6.6,
+          "ERA": 3,
+          "WHIP": 4.9,
+          "WQS": 6.7,
+          "SVH": 3.7
+        },
+        "systemCount": 7,
+        "rank": 4
+      },
+      {
+        "teamId": "h5oigo07mg9m448r",
+        "teamName": "Shohei’s gambling buddies",
+        "totalPoints": 55,
+        "avgStats": {
+          "HR": 134.48,
+          "RBI": 418.143,
+          "TB": 1262.229,
+          "OPS": 0.732,
+          "SBN": 46.586,
+          "K": 323.314,
+          "ERA": 5.486,
+          "WHIP": 1.463,
+          "WQS": 32.247,
+          "SVH": 52.046
+        },
+        "avgCatPoints": {
+          "HR": 8.3,
+          "RBI": 8.8,
+          "TB": 8.9,
+          "OPS": 4.6,
+          "SBN": 5.4,
+          "K": 3.1,
+          "ERA": 2,
+          "WHIP": 2,
+          "WQS": 3.6,
+          "SVH": 8.2
+        },
+        "systemCount": 7,
+        "rank": 5
+      },
+      {
+        "teamId": "g3w8nouhmg9m448p",
+        "teamName": "Wander Franco Children's Foundation",
+        "totalPoints": 52.1,
+        "avgStats": {
+          "HR": 105.503,
+          "RBI": 364.217,
+          "TB": 1147.783,
+          "OPS": 0.778,
+          "SBN": 30.757,
+          "K": 428.589,
+          "ERA": 3.287,
+          "WHIP": 1.123,
+          "WQS": 52.591,
+          "SVH": 36.697
+        },
+        "avgCatPoints": {
+          "HR": 2.5,
+          "RBI": 3.3,
+          "TB": 4.7,
+          "OPS": 6,
+          "SBN": 1.9,
+          "K": 8.1,
+          "ERA": 6,
+          "WHIP": 6.5,
+          "WQS": 8.9,
+          "SVH": 4.3
+        },
+        "systemCount": 7,
+        "rank": 6
+      },
+      {
+        "teamId": "9qvn9hxamg9m448q",
+        "teamName": "Ohtani Betts",
+        "totalPoints": 51.7,
+        "avgStats": {
+          "HR": 102.206,
+          "RBI": 362.371,
+          "TB": 1105.131,
+          "OPS": 0.73,
+          "SBN": 61.856,
+          "K": 345.994,
+          "ERA": 1.945,
+          "WHIP": 0.767,
+          "WQS": 31.153,
+          "SVH": 34.289
+        },
+        "avgCatPoints": {
+          "HR": 2.7,
+          "RBI": 3.4,
+          "TB": 2.9,
+          "OPS": 2.6,
+          "SBN": 10,
+          "K": 4.4,
+          "ERA": 10,
+          "WHIP": 10,
+          "WQS": 2.7,
+          "SVH": 3.1
+        },
+        "systemCount": 7,
+        "rank": 7
+      },
+      {
+        "teamId": "ksl78cwnmg9m448p",
+        "teamName": "Ippeis Bookie",
+        "totalPoints": 50.3,
+        "avgStats": {
+          "HR": 92.589,
+          "RBI": 322.406,
+          "TB": 1023.669,
+          "OPS": 0.834,
+          "SBN": 55.4,
+          "K": 448.897,
+          "ERA": 3.789,
+          "WHIP": 1.185,
+          "WQS": 52.139,
+          "SVH": 35.843
+        },
+        "avgCatPoints": {
+          "HR": 2,
+          "RBI": 1.9,
+          "TB": 2,
+          "OPS": 7.9,
+          "SBN": 7.3,
+          "K": 8.6,
+          "ERA": 4.1,
+          "WHIP": 4.1,
+          "WQS": 8.4,
+          "SVH": 4
+        },
+        "systemCount": 7,
+        "rank": 8
+      },
+      {
+        "teamId": "zcapyjosmg9m448o",
+        "teamName": "Monkey Neva Cramp",
+        "totalPoints": 47.6,
+        "avgStats": {
+          "HR": 109.491,
+          "RBI": 368.36,
+          "TB": 1143.069,
+          "OPS": 0.817,
+          "SBN": 45.45,
+          "K": 322.64,
+          "ERA": 2.431,
+          "WHIP": 1.203,
+          "WQS": 37.907,
+          "SVH": 28.37
+        },
+        "avgCatPoints": {
+          "HR": 4.6,
+          "RBI": 4.6,
+          "TB": 4.7,
+          "OPS": 7.1,
+          "SBN": 5.6,
+          "K": 3.9,
+          "ERA": 8.1,
+          "WHIP": 3.1,
+          "WQS": 4.9,
+          "SVH": 1.1
+        },
+        "systemCount": 7,
+        "rank": 9
+      },
+      {
+        "teamId": "l2qxmel1mg9m448n",
+        "teamName": "Chaz Jizzolm",
+        "totalPoints": 39.4,
+        "avgStats": {
+          "HR": 122.686,
+          "RBI": 386.52,
+          "TB": 1163.989,
+          "OPS": 0.731,
+          "SBN": 42.695,
+          "K": 268.463,
+          "ERA": 10.242,
+          "WHIP": 1.994,
+          "WQS": 22.857,
+          "SVH": 55.169
+        },
+        "avgCatPoints": {
+          "HR": 6.6,
+          "RBI": 5.9,
+          "TB": 5.6,
+          "OPS": 3.6,
+          "SBN": 4.2,
+          "K": 1.2,
+          "ERA": 1,
+          "WHIP": 1,
+          "WQS": 1.4,
+          "SVH": 8.9
+        },
+        "systemCount": 7,
+        "rank": 10
+      }
+    ]
+  }
+}

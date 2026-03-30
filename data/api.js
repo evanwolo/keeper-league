@@ -30,6 +30,7 @@ const FANTRAX_COOKIE = process.env.FANTRAX_COOKIE || '';
 
 const FANTRAX_BASE = 'https://www.fantrax.com/fxpa/req';
 const FANGRAPHS_BASE = 'https://www.fangraphs.com/api/projections';
+const FANGRAPHS_STATS_BASE = 'https://www.fangraphs.com/api/leaders/major-league/data';
 
 const FILES = {
   rosters: path.join(DATA_DIR, 'fantrax_rosters.json'),
@@ -38,6 +39,8 @@ const FILES = {
   steamerPit: path.join(DATA_DIR, 'steamer_pitching.json'),
   leagueInfo: path.join(DATA_DIR, 'league_info.json'),
   realStats: path.join(DATA_DIR, 'fantrax_real_stats.json'),
+  playerStatsBat: path.join(DATA_DIR, 'fangraphs_batting_stats.json'),
+  playerStatsPit: path.join(DATA_DIR, 'fangraphs_pitching_stats.json'),
   realStatsRaw: path.join(DATA_DIR, 'fantrax_real_stats_raw.json'),
 };
 
@@ -198,6 +201,20 @@ async function fetchLeagueInfo() {
     console.warn(`  Skipping league info fetch: ${err.message}`);
     return {};
   }
+}
+
+async function fetchDraftPicks() {
+  const resp = await postFantrax('getDraftPicks', { leagueId: LEAGUE_ID });
+  return resp.responses?.[0]?.data || {};
+}
+
+async function fetchDraftResults() {
+  const resp = await postFantrax('getDraftResults', { leagueId: LEAGUE_ID });
+  return resp.responses?.[0]?.data || {};
+}
+
+async function fetchADP() {
+  return fetchJSON('https://www.fantrax.com/fxea/general/getAdp?sport=MLB');
 }
 
 function toNumber(val) {
@@ -368,6 +385,34 @@ function fetchPitchingProjections(type) {
   return fetchJSON(url);
 }
 
+function currentSeason() {
+  return new Date().getFullYear();
+}
+
+async function fetchBattingStats() {
+  const season = currentSeason();
+  const url = `${FANGRAPHS_STATS_BASE}?pos=all&stats=bat&lg=all&qual=0&season=${season}&season1=${season}&month=0&team=0&pageitems=2000000&pagenum=1&ind=0&rost=0&players=0&type=0`;
+  const raw = await fetchJSON(url);
+  return Array.isArray(raw) ? raw : (raw.data || []);
+}
+
+async function fetchPitchingStats() {
+  const season = currentSeason();
+  const url = `${FANGRAPHS_STATS_BASE}?pos=all&stats=pit&lg=all&qual=0&season=${season}&season1=${season}&month=0&team=0&pageitems=2000000&pagenum=1&ind=0&rost=0&players=0&type=0`;
+  const raw = await fetchJSON(url);
+  return Array.isArray(raw) ? raw : (raw.data || []);
+}
+
+async function updateRealPlayerStats() {
+  console.log('Fetching real batting stats from FanGraphs...');
+  const bat = await fetchBattingStats();
+  writeData(FILES.playerStatsBat, bat);
+
+  console.log('Fetching real pitching stats from FanGraphs...');
+  const pit = await fetchPitchingStats();
+  writeData(FILES.playerStatsPit, pit);
+}
+
 // ── Update routines ─────────────────────────────────────────────────────────
 
 async function updateRosters() {
@@ -393,6 +438,24 @@ async function updateProjections(type) {
   console.log(`Fetching ${type} pitching projections...`);
   const pit = await fetchPitchingProjections(type);
   writeData(path.join(DATA_DIR, `${type}_pitching.json`), pit);
+}
+
+async function updateDraftPicks() {
+  console.log('Fetching draft picks...');
+  const data = await fetchDraftPicks();
+  writeData(path.join(DATA_DIR, 'fantrax_draft_picks.json'), data);
+}
+
+async function updateDraftResults() {
+  console.log('Fetching draft results...');
+  const data = await fetchDraftResults();
+  writeData(path.join(DATA_DIR, 'fantrax_draft_results.json'), data);
+}
+
+async function updateADP() {
+  console.log('Fetching ADP data...');
+  const data = await fetchADP();
+  writeData(path.join(DATA_DIR, 'fantrax_adp.json'), data);
 }
 
 async function updateRealStats(period) {
@@ -447,6 +510,8 @@ async function main() {
   try {
     if (args.includes('--rosters')) {
       await updateRosters();
+    } else if (args.includes('--player-stats')) {
+      await updateRealPlayerStats();
     } else if (args.includes('--real-stats')) {
       const idx = args.indexOf('--real-stats');
       const maybePeriod = args[idx + 1];
@@ -476,7 +541,10 @@ if (require.main === module) {
 }
 
 module.exports = {
-  updateAll, updateRosters, updateProjections, updateRealStats,
+  updateAll, updateRosters, updateProjections, updateRealStats, updateRealPlayerStats,
+  updateDraftPicks, updateDraftResults, updateADP,
   fetchRosters, fetchPlayers, fetchBattingProjections, fetchPitchingProjections, fetchRealStats,
+  fetchBattingStats, fetchPitchingStats,
+  fetchDraftPicks, fetchDraftResults, fetchADP,
   PROJECTION_TYPES,
 };

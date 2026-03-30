@@ -1,0 +1,18 @@
+{
+  "name": "keeper-league",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fantasy baseball keeper league — data backend and frontend",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "fetch": "node data/api.js",
+    "fetch:rosters": "node data/api.js --rosters",
+    "fetch:projections": "node data/api.js --projections steamer zips atc thebat thebatx dc",
+    "fetch:stats": "node data/api.js --real-stats"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "node-cron": "^3.0.3"
+  }
+}

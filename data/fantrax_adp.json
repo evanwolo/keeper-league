@@ -1,0 +1,9188 @@
+[
+  {
+    "pos": "DH",
+    "name": "Ohtani, Shohei",
+    "id": "02yc4",
+    "ADP": 1.28
+  },
+  {
+    "pos": "RF",
+    "name": "Judge, Aaron",
+    "id": "02z0s",
+    "ADP": 1.85
+  },
+  {
+    "pos": "DH",
+    "name": "Ohtani-H, Shohei",
+    "id": "06alt",
+    "ADP": 1.92
+  },
+  {
+    "pos": "RF",
+    "name": "Soto, Juan",
+    "id": "03ynj",
+    "ADP": 3.5
+  },
+  {
+    "pos": "SS",
+    "name": "Witt Jr., Bobby",
+    "id": "04lgp",
+    "ADP": 4.02
+  },
+  {
+    "pos": "3B",
+    "name": "Ramirez, Jose",
+    "id": "01ub6",
+    "ADP": 5.51
+  },
+  {
+    "pos": "SP",
+    "name": "Skubal, Tarik",
+    "id": "04ptt",
+    "ADP": 7.11
+  },
+  {
+    "pos": "RF",
+    "name": "Acuna Jr., Ronald",
+    "id": "03wha",
+    "ADP": 7.29
+  },
+  {
+    "pos": "SP",
+    "name": "Skenes, Paul",
+    "id": "05wru",
+    "ADP": 9.62
+  },
+  {
+    "pos": "SS",
+    "name": "De La Cruz, Elly",
+    "id": "05udp",
+    "ADP": 10.42
+  },
+  {
+    "pos": "CF",
+    "name": "Rodriguez, Julio",
+    "id": "04fhb",
+    "ADP": 11.24
+  },
+  {
+    "pos": "SP",
+    "name": "Crochet, Garrett",
+    "id": "05ajh",
+    "ADP": 11.72
+  },
+  {
+    "pos": "RF",
+    "name": "Tucker, Kyle",
+    "id": "03pir",
+    "ADP": 13.6
+  },
+  {
+    "pos": "C",
+    "name": "Raleigh, Cal",
+    "id": "04my4",
+    "ADP": 14.43
+  },
+  {
+    "pos": "RF",
+    "name": "Tatis Jr., Fernando",
+    "id": "03zbh",
+    "ADP": 15.28
+  },
+  {
+    "pos": "DH",
+    "name": "Schwarber, Kyle",
+    "id": "03cag",
+    "ADP": 15.55
+  },
+  {
+    "pos": "RF",
+    "name": "Carroll, Corbin",
+    "id": "04y4e",
+    "ADP": 16.13
+  },
+  {
+    "pos": "3B",
+    "name": "Caminero, Junior",
+    "id": "05xch",
+    "ADP": 17.77
+  },
+  {
+    "pos": "SS",
+    "name": "Henderson, Gunnar",
+    "id": "050w9",
+    "ADP": 17.93
+  },
+  {
+    "pos": "1B",
+    "name": "Guerrero Jr., Vladimir",
+    "id": "03ojr",
+    "ADP": 18.7
+  },
+  {
+    "pos": "1B",
+    "name": "Kurtz, Nick",
+    "id": "062k5",
+    "ADP": 18.73
+  },
+  {
+    "pos": "2B",
+    "name": "Chisholm Jr., Jazz",
+    "id": "045qo",
+    "ADP": 22.1
+  },
+  {
+    "pos": "SP",
+    "name": "Yamamoto, Yoshinobu",
+    "id": "05r8n",
+    "ADP": 24.09
+  },
+  {
+    "pos": "CF",
+    "name": "Chourio, Jackson",
+    "id": "05m1e",
+    "ADP": 24.28
+  },
+  {
+    "pos": "1B",
+    "name": "Alonso, Pete",
+    "id": "041pz",
+    "ADP": 25.16
+  },
+  {
+    "pos": "2B",
+    "name": "Marte, Ketel",
+    "id": "0326s",
+    "ADP": 26.77
+  },
+  {
+    "pos": "SP",
+    "name": "Sanchez, Cristopher",
+    "id": "052c8",
+    "ADP": 28.91
+  },
+  {
+    "pos": "LF",
+    "name": "Wood, James",
+    "id": "05rat",
+    "ADP": 30.54
+  },
+  {
+    "pos": "3B",
+    "name": "Machado, Manny",
+    "id": "01svq",
+    "ADP": 30.99
+  },
+  {
+    "pos": "CF",
+    "name": "Crow-Armstrong, Pete",
+    "id": "051wv",
+    "ADP": 31.61
+  },
+  {
+    "pos": "SS",
+    "name": "Turner, Trea",
+    "id": "02c68",
+    "ADP": 32.86
+  },
+  {
+    "pos": "1B",
+    "name": "Olson, Matt",
+    "id": "02mwm",
+    "ADP": 32.91
+  },
+  {
+    "pos": "SS",
+    "name": "Lindor, Francisco",
+    "id": "02611",
+    "ADP": 34.01
+  },
+  {
+    "pos": "SP",
+    "name": "Brown, Hunter",
+    "id": "05144",
+    "ADP": 35.42
+  },
+  {
+    "pos": "LF",
+    "name": "Alvarez, Yordan",
+    "id": "04355",
+    "ADP": 35.63
+  },
+  {
+    "pos": "RF",
+    "name": "Anthony, Roman",
+    "id": "05u9z",
+    "ADP": 38.64
+  },
+  {
+    "pos": "1B",
+    "name": "Harper, Bryce",
+    "id": "01fh9",
+    "ADP": 38.86
+  },
+  {
+    "pos": "DH",
+    "name": "Devers, Rafael",
+    "id": "030uc",
+    "ADP": 39.56
+  },
+  {
+    "pos": "SP",
+    "name": "Woo, Bryan",
+    "id": "05y62",
+    "ADP": 39.7
+  },
+  {
+    "pos": "DH",
+    "name": "Rooker, Brent",
+    "id": "04e2u",
+    "ADP": 40.07
+  },
+  {
+    "pos": "2B",
+    "name": "Turang, Brice",
+    "id": "04b00",
+    "ADP": 41.27
+  },
+  {
+    "pos": "SP",
+    "name": "Gilbert, Logan",
+    "id": "04n0m",
+    "ADP": 41.62
+  },
+  {
+    "pos": "SS",
+    "name": "Neto, Zach",
+    "id": "05xu5",
+    "ADP": 42.43
+  },
+  {
+    "pos": "SP",
+    "name": "Sale, Chris",
+    "id": "01uca",
+    "ADP": 42.96
+  },
+  {
+    "pos": "SP",
+    "name": "Webb, Logan",
+    "id": "03dbm",
+    "ADP": 43.73
+  },
+  {
+    "pos": "LF",
+    "name": "Langford, Wyatt",
+    "id": "060pm",
+    "ADP": 43.83
+  },
+  {
+    "pos": "SP",
+    "name": "Fried, Max",
+    "id": "02i2j",
+    "ADP": 45.68
+  },
+  {
+    "pos": "SS",
+    "name": "Betts, Mookie",
+    "id": "02btf",
+    "ADP": 49.44
+  },
+  {
+    "pos": "SP",
+    "name": "Ragans, Cole",
+    "id": "041ma",
+    "ADP": 52.3
+  },
+  {
+    "pos": "1B",
+    "name": "Freeman, Freddie",
+    "id": "01cgo",
+    "ADP": 54.17
+  },
+  {
+    "pos": "LF",
+    "name": "Arozarena, Randy",
+    "id": "040b5",
+    "ADP": 54.74
+  },
+  {
+    "pos": "SP",
+    "name": "Peralta, Freddy",
+    "id": "03dc4",
+    "ADP": 55.62
+  },
+  {
+    "pos": "SP",
+    "name": "deGrom, Jacob",
+    "id": "02hjp",
+    "ADP": 56.08
+  },
+  {
+    "pos": "3B",
+    "name": "Riley, Austin",
+    "id": "03pom",
+    "ADP": 57.07
+  },
+  {
+    "pos": "LF",
+    "name": "Duran, Jarren",
+    "id": "04pst",
+    "ADP": 57.92
+  },
+  {
+    "pos": "1B",
+    "name": "Naylor, Josh",
+    "id": "03pjd",
+    "ADP": 60
+  },
+  {
+    "pos": "SS",
+    "name": "Perdomo, Geraldo",
+    "id": "04pbq",
+    "ADP": 61.54
+  },
+  {
+    "pos": "SP",
+    "name": "Luzardo, Jesus",
+    "id": "041r1",
+    "ADP": 62.81
+  },
+  {
+    "pos": "3B",
+    "name": "Garcia, Maikel",
+    "id": "05g3x",
+    "ADP": 64.36
+  },
+  {
+    "pos": "C",
+    "name": "Contreras, William",
+    "id": "03yrz",
+    "ADP": 64.4
+  },
+  {
+    "pos": "LF",
+    "name": "Greene, Riley",
+    "id": "04nb2",
+    "ADP": 66.06
+  },
+  {
+    "pos": "3B",
+    "name": "Suarez, Eugenio",
+    "id": "02jh6",
+    "ADP": 66.29
+  },
+  {
+    "pos": "CF",
+    "name": "Buxton, Byron",
+    "id": "02i2k",
+    "ADP": 66.88
+  },
+  {
+    "pos": "SP",
+    "name": "Cease, Dylan",
+    "id": "03df2",
+    "ADP": 67.63
+  },
+  {
+    "pos": "1B",
+    "name": "Pasquantino, Vinnie",
+    "id": "05184",
+    "ADP": 68.04
+  },
+  {
+    "pos": "LF",
+    "name": "Bellinger, Cody",
+    "id": "03120",
+    "ADP": 69.63
+  },
+  {
+    "pos": "SP",
+    "name": "Kirby, George",
+    "id": "04yie",
+    "ADP": 70.27
+  },
+  {
+    "pos": "SP",
+    "name": "Valdez, Framber",
+    "id": "04auj",
+    "ADP": 70.28
+  },
+  {
+    "pos": "CF",
+    "name": "Merrill, Jackson",
+    "id": "05ua7",
+    "ADP": 70.61
+  },
+  {
+    "pos": "RP",
+    "name": "Miller, Mason",
+    "id": "05ucd",
+    "ADP": 71.02
+  },
+  {
+    "pos": "C",
+    "name": "Langeliers, Shea",
+    "id": "04o4s",
+    "ADP": 72.42
+  },
+  {
+    "pos": "SS",
+    "name": "Abrams, CJ",
+    "id": "04qk8",
+    "ADP": 74.29
+  },
+  {
+    "pos": "1B",
+    "name": "Rice, Ben",
+    "id": "05yo5",
+    "ADP": 74.78
+  },
+  {
+    "pos": "SP",
+    "name": "Ohtani-P, Shohei",
+    "id": "06als",
+    "ADP": 77.68
+  },
+  {
+    "pos": "RP",
+    "name": "Diaz, Edwin",
+    "id": "02my5",
+    "ADP": 78.83
+  },
+  {
+    "pos": "CF",
+    "name": "Cruz, Oneil",
+    "id": "03zlh",
+    "ADP": 79.65
+  },
+  {
+    "pos": "3B",
+    "name": "Bregman, Alex",
+    "id": "02w7p",
+    "ADP": 80.46
+  },
+  {
+    "pos": "SP",
+    "name": "Bradish, Kyle",
+    "id": "04pq4",
+    "ADP": 83.12
+  },
+  {
+    "pos": "SS",
+    "name": "Seager, Corey",
+    "id": "02mw6",
+    "ADP": 83.55
+  },
+  {
+    "pos": "RF",
+    "name": "Springer, George",
+    "id": "025he",
+    "ADP": 83.91
+  },
+  {
+    "pos": "LF",
+    "name": "Soderstrom, Tyler",
+    "id": "05gtn",
+    "ADP": 84.31
+  },
+  {
+    "pos": "SP",
+    "name": "Pivetta, Nick",
+    "id": "0316j",
+    "ADP": 85.42
+  },
+  {
+    "pos": "RP",
+    "name": "Munoz, Andres",
+    "id": "0403o",
+    "ADP": 86.4
+  },
+  {
+    "pos": "DH",
+    "name": "Yelich, Christian",
+    "id": "025dn",
+    "ADP": 87.5
+  },
+  {
+    "pos": "SP",
+    "name": "Strider, Spencer",
+    "id": "05mre",
+    "ADP": 89.43
+  },
+  {
+    "pos": "SP",
+    "name": "Ryan, Joe",
+    "id": "04ps7",
+    "ADP": 89.83
+  },
+  {
+    "pos": "C",
+    "name": "Goodman, Hunter",
+    "id": "05u2v",
+    "ADP": 91.12
+  },
+  {
+    "pos": "SP",
+    "name": "Gausman, Kevin",
+    "id": "02hi7",
+    "ADP": 91.22
+  },
+  {
+    "pos": "2B",
+    "name": "Hoerner, Nico",
+    "id": "04pkr",
+    "ADP": 91.41
+  },
+  {
+    "pos": "SS",
+    "name": "Bichette, Bo",
+    "id": "041qb",
+    "ADP": 92.07
+  },
+  {
+    "pos": "RP",
+    "name": "Duran, Jhoan",
+    "id": "04apj",
+    "ADP": 92.21
+  },
+  {
+    "pos": "RP",
+    "name": "Smith, Cade",
+    "id": "04eor",
+    "ADP": 93.25
+  },
+  {
+    "pos": "SP",
+    "name": "Perez, Eury",
+    "id": "05aoc",
+    "ADP": 94.08
+  },
+  {
+    "pos": "SS",
+    "name": "Adames, Willy",
+    "id": "03atq",
+    "ADP": 94.91
+  },
+  {
+    "pos": "2B",
+    "name": "Altuve, Jose",
+    "id": "024m0",
+    "ADP": 97.19
+  },
+  {
+    "pos": "SP",
+    "name": "Misiorowski, Jacob",
+    "id": "061yu",
+    "ADP": 98.5
+  },
+  {
+    "pos": "1B",
+    "name": "Busch, Michael",
+    "id": "04t9b",
+    "ADP": 100.45
+  },
+  {
+    "pos": "SP",
+    "name": "Gray, Sonny",
+    "id": "0260v",
+    "ADP": 102.69
+  },
+  {
+    "pos": "SP",
+    "name": "McLean, Nolan",
+    "id": "05y7s",
+    "ADP": 103.6
+  },
+  {
+    "pos": "LF",
+    "name": "Nimmo, Brandon",
+    "id": "02bq2",
+    "ADP": 103.94
+  },
+  {
+    "pos": "CF",
+    "name": "Harris II, Michael",
+    "id": "0512v",
+    "ADP": 104.77
+  },
+  {
+    "pos": "SP",
+    "name": "Burns, Chase",
+    "id": "05rb3",
+    "ADP": 105.78
+  },
+  {
+    "pos": "2B",
+    "name": "Keaschall, Luke",
+    "id": "05zh9",
+    "ADP": 108.49
+  },
+  {
+    "pos": "SP",
+    "name": "Glasnow, Tyler",
+    "id": "02btx",
+    "ADP": 110.73
+  },
+  {
+    "pos": "3B",
+    "name": "Chapman, Matt",
+    "id": "03d6s",
+    "ADP": 113.47
+  },
+  {
+    "pos": "LF",
+    "name": "Ward, Taylor",
+    "id": "03pje",
+    "ADP": 114.48
+  },
+  {
+    "pos": "LF",
+    "name": "Happ, Ian",
+    "id": "03nmw",
+    "ADP": 114.7
+  },
+  {
+    "pos": "RF",
+    "name": "Hernandez, Teoscar",
+    "id": "02xic",
+    "ADP": 115.01
+  },
+  {
+    "pos": "C",
+    "name": "Ramirez, Agustin",
+    "id": "04z6m",
+    "ADP": 118.02
+  },
+  {
+    "pos": "SP",
+    "name": "Castillo, Luis",
+    "id": "03nuc",
+    "ADP": 119.56
+  },
+  {
+    "pos": "CF",
+    "name": "Marsee, Jakob",
+    "id": "065ji",
+    "ADP": 120.07
+  },
+  {
+    "pos": "CF",
+    "name": "Robert Jr., Luis",
+    "id": "047l7",
+    "ADP": 120.61
+  },
+  {
+    "pos": "SP",
+    "name": "Williams, Gavin",
+    "id": "05jp7",
+    "ADP": 125.13
+  },
+  {
+    "pos": "RP",
+    "name": "Chapman, Aroldis",
+    "id": "01gya",
+    "ADP": 125.82
+  },
+  {
+    "pos": "C",
+    "name": "Perez, Salvador",
+    "id": "01u75",
+    "ADP": 126.22
+  },
+  {
+    "pos": "CF",
+    "name": "Adell, Jo",
+    "id": "04aee",
+    "ADP": 127.72
+  },
+  {
+    "pos": "SP",
+    "name": "Pepiot, Ryan",
+    "id": "0512m",
+    "ADP": 128.29
+  },
+  {
+    "pos": "SP",
+    "name": "Schlittler, Cam",
+    "id": "05u6q",
+    "ADP": 128.34
+  },
+  {
+    "pos": "SP",
+    "name": "Alcantara, Sandy",
+    "id": "03btv",
+    "ADP": 128.57
+  },
+  {
+    "pos": "C",
+    "name": "Baldwin, Drake",
+    "id": "0630d",
+    "ADP": 129.7
+  },
+  {
+    "pos": "RP",
+    "name": "Bednar, David",
+    "id": "04aqc",
+    "ADP": 129.92
+  },
+  {
+    "pos": "DH",
+    "name": "Suzuki, Seiya",
+    "id": "04b02",
+    "ADP": 130.57
+  },
+  {
+    "pos": "SP",
+    "name": "Woodruff, Brandon",
+    "id": "02bu3",
+    "ADP": 132.9
+  },
+  {
+    "pos": "RF",
+    "name": "Butler, Lawrence",
+    "id": "04prt",
+    "ADP": 133.85
+  },
+  {
+    "pos": "LF",
+    "name": "Kwan, Steven",
+    "id": "04pr1",
+    "ADP": 134.69
+  },
+  {
+    "pos": "2B",
+    "name": "Albies, Ozzie",
+    "id": "03fi0",
+    "ADP": 135.25
+  },
+  {
+    "pos": "SS",
+    "name": "Swanson, Dansby",
+    "id": "03ae8",
+    "ADP": 136.8
+  },
+  {
+    "pos": "CF",
+    "name": "Pages, Andy",
+    "id": "04ru5",
+    "ADP": 137.12
+  },
+  {
+    "pos": "1B",
+    "name": "Torkelson, Spencer",
+    "id": "04yk2",
+    "ADP": 137.18
+  },
+  {
+    "pos": "SP",
+    "name": "Rogers, Trevor",
+    "id": "04ak5",
+    "ADP": 137.41
+  },
+  {
+    "pos": "SP",
+    "name": "Sheehan, Emmet",
+    "id": "05y2l",
+    "ADP": 138.18
+  },
+  {
+    "pos": "SP",
+    "name": "Lodolo, Nick",
+    "id": "041ps",
+    "ADP": 138.58
+  },
+  {
+    "pos": "DH",
+    "name": "Trout, Mike",
+    "id": "01s8u",
+    "ADP": 139.34
+  },
+  {
+    "pos": "LF",
+    "name": "Stowers, Kyle",
+    "id": "04y97",
+    "ADP": 139.91
+  },
+  {
+    "pos": "RP",
+    "name": "Williams, Devin",
+    "id": "0311c",
+    "ADP": 141.07
+  },
+  {
+    "pos": "SP",
+    "name": "Gore, MacKenzie",
+    "id": "04cd5",
+    "ADP": 141.38
+  },
+  {
+    "pos": "SP",
+    "name": "King, Michael",
+    "id": "041wv",
+    "ADP": 142.42
+  },
+  {
+    "pos": "DH",
+    "name": "Diaz, Yandy",
+    "id": "03m6o",
+    "ADP": 142.49
+  },
+  {
+    "pos": "SP",
+    "name": "Eovaldi, Nathan",
+    "id": "01ut7",
+    "ADP": 142.58
+  },
+  {
+    "pos": "2B",
+    "name": "Lowe, Brandon",
+    "id": "03qjy",
+    "ADP": 147.02
+  },
+  {
+    "pos": "SP",
+    "name": "Wheeler, Zack",
+    "id": "01sb3",
+    "ADP": 149.63
+  },
+  {
+    "pos": "CF",
+    "name": "Rafaela, Ceddanne",
+    "id": "05gsi",
+    "ADP": 149.99
+  },
+  {
+    "pos": "SP",
+    "name": "Rasmussen, Drew",
+    "id": "04eee",
+    "ADP": 150.62
+  },
+  {
+    "pos": "3B",
+    "name": "Murakami, Munetaka",
+    "id": "05y3u",
+    "ADP": 151.93
+  },
+  {
+    "pos": "SP",
+    "name": "Ray, Robbie",
+    "id": "025j1",
+    "ADP": 154.76
+  },
+  {
+    "pos": "SP",
+    "name": "Suarez, Ranger",
+    "id": "03et8",
+    "ADP": 155.71
+  },
+  {
+    "pos": "SP",
+    "name": "Bibee, Tanner",
+    "id": "05y23",
+    "ADP": 158.26
+  },
+  {
+    "pos": "SP",
+    "name": "Chandler, Bubba",
+    "id": "05rik",
+    "ADP": 158.4
+  },
+  {
+    "pos": "RF",
+    "name": "Marte, Noelvi",
+    "id": "04qnd",
+    "ADP": 158.78
+  },
+  {
+    "pos": "SS",
+    "name": "Story, Trevor",
+    "id": "02bqh",
+    "ADP": 160.23
+  },
+  {
+    "pos": "SP",
+    "name": "Imai, Tatsuya",
+    "id": "06ktn",
+    "ADP": 161.58
+  },
+  {
+    "pos": "RF",
+    "name": "Reynolds, Bryan",
+    "id": "03e5m",
+    "ADP": 162.14
+  },
+  {
+    "pos": "SP",
+    "name": "Imanaga, Shota",
+    "id": "05ge9",
+    "ADP": 165.89
+  },
+  {
+    "pos": "CF",
+    "name": "Simpson, Chandler",
+    "id": "0622w",
+    "ADP": 165.98
+  },
+  {
+    "pos": "1B",
+    "name": "Walker, Christian",
+    "id": "02mw3",
+    "ADP": 167.14
+  },
+  {
+    "pos": "2B",
+    "name": "Stott, Bryson",
+    "id": "04p10",
+    "ADP": 167.29
+  },
+  {
+    "pos": "RP",
+    "name": "Estevez, Carlos",
+    "id": "03mnq",
+    "ADP": 167.79
+  },
+  {
+    "pos": "RF",
+    "name": "Caglianone, Jac",
+    "id": "05u9q",
+    "ADP": 169.8
+  },
+  {
+    "pos": "SP",
+    "name": "Horton, Cade",
+    "id": "05gww",
+    "ADP": 169.89
+  },
+  {
+    "pos": "SP",
+    "name": "Gallen, Zac",
+    "id": "041qo",
+    "ADP": 171.34
+  },
+  {
+    "pos": "1B",
+    "name": "Contreras, Willson",
+    "id": "03oh0",
+    "ADP": 174.4
+  },
+  {
+    "pos": "2B",
+    "name": "Torres, Gleyber",
+    "id": "031t0",
+    "ADP": 175.27
+  },
+  {
+    "pos": "RP",
+    "name": "Iglesias, Raisel",
+    "id": "03aqv",
+    "ADP": 175.5
+  },
+  {
+    "pos": "LF",
+    "name": "Ramos, Heliot",
+    "id": "04ee8",
+    "ADP": 175.67
+  },
+  {
+    "pos": "2B",
+    "name": "Edwards, Xavier",
+    "id": "04n8z",
+    "ADP": 175.98
+  },
+  {
+    "pos": "3B",
+    "name": "Barger, Addison",
+    "id": "04qii",
+    "ADP": 176.12
+  },
+  {
+    "pos": "SS",
+    "name": "Pena, Jeremy",
+    "id": "04ppj",
+    "ADP": 177.48
+  },
+  {
+    "pos": "3B",
+    "name": "Paredes, Isaac",
+    "id": "04071",
+    "ADP": 177.78
+  },
+  {
+    "pos": "2B",
+    "name": "McLain, Matt",
+    "id": "04pks",
+    "ADP": 178.32
+  },
+  {
+    "pos": "RP",
+    "name": "Helsley, Ryan",
+    "id": "03ql5",
+    "ADP": 180.51
+  },
+  {
+    "pos": "SP",
+    "name": "Cabrera, Edward",
+    "id": "04ali",
+    "ADP": 181.13
+  },
+  {
+    "pos": "SP",
+    "name": "Nola, Aaron",
+    "id": "02i3o",
+    "ADP": 181.73
+  },
+  {
+    "pos": "CF",
+    "name": "Varsho, Daulton",
+    "id": "04efa",
+    "ADP": 183.43
+  },
+  {
+    "pos": "SP",
+    "name": "Flaherty, Jack",
+    "id": "03d6w",
+    "ADP": 185.86
+  },
+  {
+    "pos": "SP",
+    "name": "Snell, Blake",
+    "id": "02bqr",
+    "ADP": 186.44
+  },
+  {
+    "pos": "3B",
+    "name": "Okamoto, Kazuma",
+    "id": "06fzu",
+    "ADP": 187.83
+  },
+  {
+    "pos": "SS",
+    "name": "Wilson, Jacob",
+    "id": "0622t",
+    "ADP": 187.96
+  },
+  {
+    "pos": "1B",
+    "name": "Aranda, Jonathan",
+    "id": "05t9v",
+    "ADP": 189.52
+  },
+  {
+    "pos": "SP",
+    "name": "Baz, Shane",
+    "id": "04cwf",
+    "ADP": 189.72
+  },
+  {
+    "pos": "SP",
+    "name": "Bubic, Kris",
+    "id": "04pmb",
+    "ADP": 190.05
+  },
+  {
+    "pos": "RP",
+    "name": "Hoffman, Jeff",
+    "id": "03ann",
+    "ADP": 191.89
+  },
+  {
+    "pos": "C",
+    "name": "Smith, Will",
+    "id": "042sz",
+    "ADP": 193.61
+  },
+  {
+    "pos": "SP",
+    "name": "Boyd, Matthew",
+    "id": "02n4s",
+    "ADP": 193.72
+  },
+  {
+    "pos": "SP",
+    "name": "Abbott, Andrew",
+    "id": "05jq2",
+    "ADP": 193.99
+  },
+  {
+    "pos": "RF",
+    "name": "Garcia, Adolis",
+    "id": "04aq4",
+    "ADP": 194.63
+  },
+  {
+    "pos": "1B",
+    "name": "Burleson, Alec",
+    "id": "05jr0",
+    "ADP": 195.15
+  },
+  {
+    "pos": "2B",
+    "name": "Semien, Marcus",
+    "id": "02bu9",
+    "ADP": 197.53
+  },
+  {
+    "pos": "DH",
+    "name": "Polanco, Jorge",
+    "id": "02yd1",
+    "ADP": 197.95
+  },
+  {
+    "pos": "SS",
+    "name": "Griffin, Konnor",
+    "id": "05u3u",
+    "ADP": 201.5
+  },
+  {
+    "pos": "RP",
+    "name": "Palencia, Daniel",
+    "id": "05u4l",
+    "ADP": 203.01
+  },
+  {
+    "pos": "RF",
+    "name": "Frelick, Sal",
+    "id": "05rb1",
+    "ADP": 203.93
+  },
+  {
+    "pos": "1B",
+    "name": "Stewart, Sal",
+    "id": "05u9o",
+    "ADP": 203.99
+  },
+  {
+    "pos": "RP",
+    "name": "Megill, Trevor",
+    "id": "03dau",
+    "ADP": 204.17
+  },
+  {
+    "pos": "RP",
+    "name": "Hader, Josh",
+    "id": "02n96",
+    "ADP": 207.59
+  },
+  {
+    "pos": "CF",
+    "name": "Grisham, Trent",
+    "id": "03pit",
+    "ADP": 211.02
+  },
+  {
+    "pos": "LF",
+    "name": "Laureano, Ramon",
+    "id": "03dp8",
+    "ADP": 212.42
+  },
+  {
+    "pos": "RF",
+    "name": "Abreu, Wilyer",
+    "id": "060x1",
+    "ADP": 213.87
+  },
+  {
+    "pos": "RF",
+    "name": "Lile, Daylen",
+    "id": "05t2b",
+    "ADP": 214.46
+  },
+  {
+    "pos": "3B",
+    "name": "Lewis, Royce",
+    "id": "04aeb",
+    "ADP": 214.48
+  },
+  {
+    "pos": "RP",
+    "name": "Fairbanks, Pete",
+    "id": "03qo0",
+    "ADP": 215.34
+  },
+  {
+    "pos": "3B",
+    "name": "Durbin, Caleb",
+    "id": "05y4b",
+    "ADP": 215.98
+  },
+  {
+    "pos": "CF",
+    "name": "Friedl, TJ",
+    "id": "045gu",
+    "ADP": 216.54
+  },
+  {
+    "pos": "CF",
+    "name": "Cowser, Colton",
+    "id": "05ras",
+    "ADP": 218.27
+  },
+  {
+    "pos": "SP",
+    "name": "McClanahan, Shane",
+    "id": "04mlt",
+    "ADP": 219.49
+  },
+  {
+    "pos": "SP",
+    "name": "Leiter, Jack",
+    "id": "04y9o",
+    "ADP": 219.57
+  },
+  {
+    "pos": "RP",
+    "name": "Pagan, Emilio",
+    "id": "031cy",
+    "ADP": 220.3
+  },
+  {
+    "pos": "SS",
+    "name": "Montgomery, Colson",
+    "id": "05rch",
+    "ADP": 221.83
+  },
+  {
+    "pos": "SS",
+    "name": "Tovar, Ezequiel",
+    "id": "04mra",
+    "ADP": 224.34
+  },
+  {
+    "pos": "SP",
+    "name": "Cameron, Noah",
+    "id": "05ycf",
+    "ADP": 226.06
+  },
+  {
+    "pos": "SP",
+    "name": "Kelly, Merrill",
+    "id": "02hj7",
+    "ADP": 228.09
+  },
+  {
+    "pos": "SP",
+    "name": "Yesavage, Trey",
+    "id": "06apx",
+    "ADP": 229.05
+  },
+  {
+    "pos": "2B",
+    "name": "Donovan, Brendan",
+    "id": "04pse",
+    "ADP": 230.4
+  },
+  {
+    "pos": "SP",
+    "name": "Singer, Brady",
+    "id": "03pov",
+    "ADP": 234.63
+  },
+  {
+    "pos": "LF",
+    "name": "Beck, Jordan",
+    "id": "051b4",
+    "ADP": 236.71
+  },
+  {
+    "pos": "3B",
+    "name": "Bohm, Alec",
+    "id": "04mn5",
+    "ADP": 237.67
+  },
+  {
+    "pos": "RP",
+    "name": "Jansen, Kenley",
+    "id": "01svz",
+    "ADP": 238.26
+  },
+  {
+    "pos": "SP",
+    "name": "Musgrove, Joe",
+    "id": "02bqy",
+    "ADP": 238.55
+  },
+  {
+    "pos": "SS",
+    "name": "Wetherholt, JJ",
+    "id": "06aw3",
+    "ADP": 240.49
+  },
+  {
+    "pos": "CF",
+    "name": "Carter, Evan",
+    "id": "05mdt",
+    "ADP": 240.86
+  },
+  {
+    "pos": "DH",
+    "name": "Manzardo, Kyle",
+    "id": "05rfu",
+    "ADP": 240.92
+  },
+  {
+    "pos": "SP",
+    "name": "Rodon, Carlos",
+    "id": "02c2r",
+    "ADP": 241.38
+  },
+  {
+    "pos": "SP",
+    "name": "Keller, Mitch",
+    "id": "03d7h",
+    "ADP": 244.57
+  },
+  {
+    "pos": "DH",
+    "name": "Ozuna, Marcell",
+    "id": "01usi",
+    "ADP": 245.36
+  },
+  {
+    "pos": "SP",
+    "name": "Nelson, Ryne",
+    "id": "04yid",
+    "ADP": 247.42
+  },
+  {
+    "pos": "SP",
+    "name": "Kikuchi, Yusei",
+    "id": "04ml0",
+    "ADP": 250.28
+  },
+  {
+    "pos": "SP",
+    "name": "Mize, Casey",
+    "id": "04mlf",
+    "ADP": 250.49
+  },
+  {
+    "pos": "SP",
+    "name": "Smith, Shane",
+    "id": "06dqb",
+    "ADP": 250.63
+  },
+  {
+    "pos": "SP",
+    "name": "Senga, Kodai",
+    "id": "04a2t",
+    "ADP": 252.19
+  },
+  {
+    "pos": "CF",
+    "name": "Lee, Jung Hoo",
+    "id": "05m49",
+    "ADP": 252.98
+  },
+  {
+    "pos": "SP",
+    "name": "Soriano, Jose",
+    "id": "04c0o",
+    "ADP": 256.77
+  },
+  {
+    "pos": "1B",
+    "name": "Arraez, Luis",
+    "id": "03mew",
+    "ADP": 258.12
+  },
+  {
+    "pos": "SP",
+    "name": "Early, Connelly",
+    "id": "06f1r",
+    "ADP": 259.38
+  },
+  {
+    "pos": "3B",
+    "name": "Vargas, Miguel",
+    "id": "04ru7",
+    "ADP": 259.41
+  },
+  {
+    "pos": "SS",
+    "name": "Correa, Carlos",
+    "id": "02i2q",
+    "ADP": 260.86
+  },
+  {
+    "pos": "RF",
+    "name": "Moniak, Mickey",
+    "id": "041e2",
+    "ADP": 261.55
+  },
+  {
+    "pos": "SS",
+    "name": "Caballero, Jose",
+    "id": "04eig",
+    "ADP": 261.6
+  },
+  {
+    "pos": "SP",
+    "name": "Ponce, Cody",
+    "id": "03pj4",
+    "ADP": 261.77
+  },
+  {
+    "pos": "C",
+    "name": "Rutschman, Adley",
+    "id": "04q2n",
+    "ADP": 262.72
+  },
+  {
+    "pos": "SP",
+    "name": "Ober, Bailey",
+    "id": "0425t",
+    "ADP": 263.14
+  },
+  {
+    "pos": "CF",
+    "name": "Doyle, Brenton",
+    "id": "0513l",
+    "ADP": 263.17
+  },
+  {
+    "pos": "SP",
+    "name": "Bello, Brayan",
+    "id": "04t40",
+    "ADP": 264.3
+  },
+  {
+    "pos": "3B",
+    "name": "Muncy, Max",
+    "id": "02mzg",
+    "ADP": 264.98
+  },
+  {
+    "pos": "SS",
+    "name": "McGonigle, Kevin",
+    "id": "05yby",
+    "ADP": 265.78
+  },
+  {
+    "pos": "RF",
+    "name": "Carpenter, Kerry",
+    "id": "051em",
+    "ADP": 268.05
+  },
+  {
+    "pos": "1B",
+    "name": "Vaughn, Andrew",
+    "id": "04si2",
+    "ADP": 269.64
+  },
+  {
+    "pos": "C",
+    "name": "Kirk, Alejandro",
+    "id": "04t3y",
+    "ADP": 269.93
+  },
+  {
+    "pos": "RP",
+    "name": "Walker, Ryan",
+    "id": "066n3",
+    "ADP": 270.3
+  },
+  {
+    "pos": "SP",
+    "name": "Holmes, Clay",
+    "id": "02bx4",
+    "ADP": 271.04
+  },
+  {
+    "pos": "SP",
+    "name": "Sasaki, Roki",
+    "id": "05gdz",
+    "ADP": 271.37
+  },
+  {
+    "pos": "1B",
+    "name": "Burger, Jake",
+    "id": "04azv",
+    "ADP": 273.69
+  },
+  {
+    "pos": "RF",
+    "name": "Lowe, Josh",
+    "id": "041ah",
+    "ADP": 274.24
+  },
+  {
+    "pos": "C",
+    "name": "Diaz, Yainer",
+    "id": "0524l",
+    "ADP": 275.81
+  },
+  {
+    "pos": "SP",
+    "name": "Wacha, Michael",
+    "id": "02iug",
+    "ADP": 275.84
+  },
+  {
+    "pos": "RP",
+    "name": "Jax, Griffin",
+    "id": "0317q",
+    "ADP": 276.61
+  },
+  {
+    "pos": "C",
+    "name": "Realmuto, J.T.",
+    "id": "025i9",
+    "ADP": 277.05
+  },
+  {
+    "pos": "SP",
+    "name": "Weathers, Ryan",
+    "id": "04mnw",
+    "ADP": 278.09
+  },
+  {
+    "pos": "SP",
+    "name": "Rodriguez, Grayson",
+    "id": "04pko",
+    "ADP": 278.96
+  },
+  {
+    "pos": "DH",
+    "name": "Stanton, Giancarlo",
+    "id": "01cdf",
+    "ADP": 279.28
+  },
+  {
+    "pos": "RP",
+    "name": "Santana, Dennis",
+    "id": "046yd",
+    "ADP": 280.38
+  },
+  {
+    "pos": "SP",
+    "name": "Peterson, David",
+    "id": "04g1x",
+    "ADP": 280.69
+  },
+  {
+    "pos": "SP",
+    "name": "Gil, Luis",
+    "id": "04s1h",
+    "ADP": 281.16
+  },
+  {
+    "pos": "3B",
+    "name": "Clement, Ernie",
+    "id": "04alp",
+    "ADP": 281.66
+  },
+  {
+    "pos": "SP",
+    "name": "Lugo, Seth",
+    "id": "03sef",
+    "ADP": 284.3
+  },
+  {
+    "pos": "SP",
+    "name": "Bassitt, Chris",
+    "id": "02c2h",
+    "ADP": 285.53
+  },
+  {
+    "pos": "SP",
+    "name": "Henderson, Logan",
+    "id": "05uo2",
+    "ADP": 286.4
+  },
+  {
+    "pos": "SP",
+    "name": "Pfaadt, Brandon",
+    "id": "05lg3",
+    "ADP": 286.48
+  },
+  {
+    "pos": "SS",
+    "name": "Winn, Masyn",
+    "id": "05gwy",
+    "ADP": 286.68
+  },
+  {
+    "pos": "RP",
+    "name": "Ashcraft, Braxton",
+    "id": "04pmq",
+    "ADP": 286.99
+  },
+  {
+    "pos": "RP",
+    "name": "Suarez, Robert",
+    "id": "05r01",
+    "ADP": 288.07
+  },
+  {
+    "pos": "2B",
+    "name": "Gimenez, Andres",
+    "id": "03pzn",
+    "ADP": 289.22
+  },
+  {
+    "pos": "C",
+    "name": "Basallo, Samuel",
+    "id": "05rbv",
+    "ADP": 289.98
+  },
+  {
+    "pos": "SP",
+    "name": "Burrows, Mike",
+    "id": "04pvl",
+    "ADP": 290.91
+  },
+  {
+    "pos": "LF",
+    "name": "Beavers, Dylan",
+    "id": "05xty",
+    "ADP": 291.1
+  },
+  {
+    "pos": "1B",
+    "name": "O'Hearn, Ryan",
+    "id": "03dgq",
+    "ADP": 291.74
+  },
+  {
+    "pos": "RP",
+    "name": "Abreu, Bryan",
+    "id": "04tlv",
+    "ADP": 292.1
+  },
+  {
+    "pos": "RP",
+    "name": "Cantillo, Joey",
+    "id": "04eos",
+    "ADP": 293.9
+  },
+  {
+    "pos": "LF",
+    "name": "Dominguez, Jasson",
+    "id": "050c3",
+    "ADP": 295.44
+  },
+  {
+    "pos": "CF",
+    "name": "DeLauter, Chase",
+    "id": "05uei",
+    "ADP": 295.67
+  },
+  {
+    "pos": "RF",
+    "name": "Wallner, Matt",
+    "id": "04o78",
+    "ADP": 296.64
+  },
+  {
+    "pos": "SP",
+    "name": "Cole, Gerrit",
+    "id": "01spo",
+    "ADP": 297.55
+  },
+  {
+    "pos": "RF",
+    "name": "Crews, Dylan",
+    "id": "0596e",
+    "ADP": 299.57
+  },
+  {
+    "pos": "2B",
+    "name": "Castro, Willi",
+    "id": "03btu",
+    "ADP": 300.46
+  },
+  {
+    "pos": "CF",
+    "name": "Mullins, Cedric",
+    "id": "03qr0",
+    "ADP": 300.73
+  },
+  {
+    "pos": "2B",
+    "name": "Holliday, Jackson",
+    "id": "05ybv",
+    "ADP": 301.26
+  },
+  {
+    "pos": "SP",
+    "name": "Patrick, Chad",
+    "id": "05yb8",
+    "ADP": 301.52
+  },
+  {
+    "pos": "SP",
+    "name": "Warren, Will",
+    "id": "05yaz",
+    "ADP": 301.89
+  },
+  {
+    "pos": "C",
+    "name": "Alvarez, Francisco",
+    "id": "04qnc",
+    "ADP": 302.14
+  },
+  {
+    "pos": "RF",
+    "name": "Castellanos, Nick",
+    "id": "01uc9",
+    "ADP": 303.31
+  },
+  {
+    "pos": "SP",
+    "name": "Manaea, Sean",
+    "id": "02x0f",
+    "ADP": 304.62
+  },
+  {
+    "pos": "CF",
+    "name": "Crawford, Justin",
+    "id": "05y30",
+    "ADP": 307.77
+  },
+  {
+    "pos": "SP",
+    "name": "Taillon, Jameson",
+    "id": "01srb",
+    "ADP": 308.42
+  },
+  {
+    "pos": "RF",
+    "name": "Smith, Cam",
+    "id": "060jo",
+    "ADP": 309.67
+  },
+  {
+    "pos": "RP",
+    "name": "Seymour, Ian",
+    "id": "05jpd",
+    "ADP": 309.75
+  },
+  {
+    "pos": "SP",
+    "name": "Miller, Bryce",
+    "id": "05vy6",
+    "ADP": 310.87
+  },
+  {
+    "pos": "C",
+    "name": "Teel, Kyle",
+    "id": "05wxy",
+    "ADP": 311.02
+  },
+  {
+    "pos": "SP",
+    "name": "Messick, Parker",
+    "id": "05tzn",
+    "ADP": 311.87
+  },
+  {
+    "pos": "SP",
+    "name": "Bieber, Shane",
+    "id": "041rf",
+    "ADP": 312.27
+  },
+  {
+    "pos": "3B",
+    "name": "Lawlar, Jordan",
+    "id": "05r1m",
+    "ADP": 312.49
+  },
+  {
+    "pos": "2B",
+    "name": "India, Jonathan",
+    "id": "04nx3",
+    "ADP": 312.84
+  },
+  {
+    "pos": "SP",
+    "name": "Painter, Andrew",
+    "id": "05r3i",
+    "ADP": 313
+  },
+  {
+    "pos": "SS",
+    "name": "Bogaerts, Xander",
+    "id": "025gb",
+    "ADP": 313.89
+  },
+  {
+    "pos": "SS",
+    "name": "Lopez, Otto",
+    "id": "04tjl",
+    "ADP": 317.62
+  },
+  {
+    "pos": "1B",
+    "name": "Steer, Spencer",
+    "id": "0512e",
+    "ADP": 319.31
+  },
+  {
+    "pos": "C",
+    "name": "O'Hoppe, Logan",
+    "id": "04q56",
+    "ADP": 321.43
+  },
+  {
+    "pos": "1B",
+    "name": "Schanuel, Nolan",
+    "id": "05yj1",
+    "ADP": 325.58
+  },
+  {
+    "pos": "SP",
+    "name": "Lopez, Reynaldo",
+    "id": "03i81",
+    "ADP": 327.34
+  },
+  {
+    "pos": "SP",
+    "name": "Mahle, Tyler",
+    "id": "0312g",
+    "ADP": 327.88
+  },
+  {
+    "pos": "2B",
+    "name": "Garcia Jr., Luis",
+    "id": "0414g",
+    "ADP": 329.11
+  },
+  {
+    "pos": "C",
+    "name": "Wells, Austin",
+    "id": "05ahg",
+    "ADP": 331.87
+  },
+  {
+    "pos": "SP",
+    "name": "Javier, Cristian",
+    "id": "045kb",
+    "ADP": 333.34
+  },
+  {
+    "pos": "CF",
+    "name": "Benge, Carson",
+    "id": "06aly",
+    "ADP": 333.71
+  },
+  {
+    "pos": "2B",
+    "name": "Sosa, Lenyn",
+    "id": "04llv",
+    "ADP": 333.73
+  },
+  {
+    "pos": "CF",
+    "name": "Scott, Victor",
+    "id": "0648z",
+    "ADP": 335.56
+  },
+  {
+    "pos": "SP",
+    "name": "Matthews, Zebby",
+    "id": "066cf",
+    "ADP": 335.81
+  },
+  {
+    "pos": "SP",
+    "name": "Steele, Justin",
+    "id": "03deg",
+    "ADP": 336.59
+  },
+  {
+    "pos": "3B",
+    "name": "Shaw, Matt",
+    "id": "063vu",
+    "ADP": 337.08
+  },
+  {
+    "pos": "C",
+    "name": "Moreno, Gabriel",
+    "id": "04s1g",
+    "ADP": 338.11
+  },
+  {
+    "pos": "RP",
+    "name": "Detmers, Reid",
+    "id": "0596g",
+    "ADP": 338.16
+  },
+  {
+    "pos": "SP",
+    "name": "Liberatore, Matthew",
+    "id": "04mlx",
+    "ADP": 340.53
+  },
+  {
+    "pos": "DH",
+    "name": "Herrera, Ivan",
+    "id": "04hyc",
+    "ADP": 341.96
+  },
+  {
+    "pos": "SP",
+    "name": "Springs, Jeffrey",
+    "id": "04mlr",
+    "ADP": 342.97
+  },
+  {
+    "pos": "SP",
+    "name": "Lopez, Jacob",
+    "id": "051ui",
+    "ADP": 343.36
+  },
+  {
+    "pos": "C",
+    "name": "Jensen, Carter",
+    "id": "05vy5",
+    "ADP": 344.36
+  },
+  {
+    "pos": "DH",
+    "name": "Keith, Colt",
+    "id": "05jrh",
+    "ADP": 345.19
+  },
+  {
+    "pos": "SP",
+    "name": "May, Dustin",
+    "id": "041r5",
+    "ADP": 346.89
+  },
+  {
+    "pos": "RP",
+    "name": "Dominguez, Seranthony",
+    "id": "04auk",
+    "ADP": 346.9
+  },
+  {
+    "pos": "RP",
+    "name": "Garcia, Robert",
+    "id": "04enz",
+    "ADP": 347.32
+  },
+  {
+    "pos": "2B",
+    "name": "Cronenworth, Jake",
+    "id": "03qmh",
+    "ADP": 348.3
+  },
+  {
+    "pos": "3B",
+    "name": "Vientos, Mark",
+    "id": "03zcy",
+    "ADP": 349.1
+  },
+  {
+    "pos": "3B",
+    "name": "Baty, Brett",
+    "id": "04yib",
+    "ADP": 350.08
+  },
+  {
+    "pos": "3B",
+    "name": "McKinstry, Zach",
+    "id": "0473m",
+    "ADP": 350.14
+  },
+  {
+    "pos": "SP",
+    "name": "Greene, Hunter",
+    "id": "04aea",
+    "ADP": 350.26
+  },
+  {
+    "pos": "SP",
+    "name": "Priester, Quinn",
+    "id": "050vn",
+    "ADP": 352.39
+  },
+  {
+    "pos": "SP",
+    "name": "Severino, Luis",
+    "id": "03ab0",
+    "ADP": 352.45
+  },
+  {
+    "pos": "2B",
+    "name": "McNeil, Jeff",
+    "id": "0317o",
+    "ADP": 355.23
+  },
+  {
+    "pos": "SS",
+    "name": "Crawford, J.P.",
+    "id": "0310z",
+    "ADP": 356.55
+  },
+  {
+    "pos": "SP",
+    "name": "Cecconi, Slade",
+    "id": "04tk1",
+    "ADP": 358.21
+  },
+  {
+    "pos": "SS",
+    "name": "Smith, Josh",
+    "id": "052ru",
+    "ADP": 358.96
+  },
+  {
+    "pos": "SP",
+    "name": "Cavalli, Cade",
+    "id": "05gef",
+    "ADP": 358.97
+  },
+  {
+    "pos": "C",
+    "name": "Jeffers, Ryan",
+    "id": "04pmu",
+    "ADP": 362.24
+  },
+  {
+    "pos": "3B",
+    "name": "Westburg, Jordan",
+    "id": "05gsc",
+    "ADP": 363.48
+  },
+  {
+    "pos": "RF",
+    "name": "Caissie, Owen",
+    "id": "05jsg",
+    "ADP": 363.7
+  },
+  {
+    "pos": "DH",
+    "name": "Larnach, Trevor",
+    "id": "04nky",
+    "ADP": 365.02
+  },
+  {
+    "pos": "SP",
+    "name": "Eflin, Zach",
+    "id": "02mwq",
+    "ADP": 365.63
+  },
+  {
+    "pos": "C",
+    "name": "Dingler, Dillon",
+    "id": "05gx4",
+    "ADP": 366.45
+  },
+  {
+    "pos": "3B",
+    "name": "Arenado, Nolan",
+    "id": "01sy3",
+    "ADP": 367.43
+  },
+  {
+    "pos": "SP",
+    "name": "Giolito, Lucas",
+    "id": "02i37",
+    "ADP": 368.17
+  },
+  {
+    "pos": "SP",
+    "name": "Meyer, Max",
+    "id": "05a2d",
+    "ADP": 369.14
+  },
+  {
+    "pos": "CF",
+    "name": "Marsh, Brandon",
+    "id": "041q8",
+    "ADP": 369.41
+  },
+  {
+    "pos": "3B",
+    "name": "McMahon, Ryan",
+    "id": "0310n",
+    "ADP": 369.47
+  },
+  {
+    "pos": "C",
+    "name": "Stephenson, Tyler",
+    "id": "03pix",
+    "ADP": 370.89
+  },
+  {
+    "pos": "SP",
+    "name": "Bradley, Taj",
+    "id": "04pr8",
+    "ADP": 371.89
+  },
+  {
+    "pos": "DH",
+    "name": "Bell, Josh",
+    "id": "026lz",
+    "ADP": 376.19
+  },
+  {
+    "pos": "SP",
+    "name": "Snelling, Robby",
+    "id": "061mh",
+    "ADP": 376.55
+  },
+  {
+    "pos": "CF",
+    "name": "Bader, Harrison",
+    "id": "03qjv",
+    "ADP": 377.72
+  },
+  {
+    "pos": "3B",
+    "name": "Jung, Josh",
+    "id": "04y44",
+    "ADP": 378.1
+  },
+  {
+    "pos": "SP",
+    "name": "Holmes, Grant",
+    "id": "03d6p",
+    "ADP": 379.2
+  },
+  {
+    "pos": "2B",
+    "name": "Edman, Tommy",
+    "id": "041sq",
+    "ADP": 379.46
+  },
+  {
+    "pos": "SP",
+    "name": "Tong, Jonah",
+    "id": "0658b",
+    "ADP": 379.92
+  },
+  {
+    "pos": "SS",
+    "name": "Meidroth, Chase",
+    "id": "0648n",
+    "ADP": 382.11
+  },
+  {
+    "pos": "RF",
+    "name": "Yastrzemski, Mike",
+    "id": "031dw",
+    "ADP": 383.02
+  },
+  {
+    "pos": "SP",
+    "name": "Berrios, Jose",
+    "id": "02mwk",
+    "ADP": 383.93
+  },
+  {
+    "pos": "LF",
+    "name": "Collins, Isaac",
+    "id": "0516n",
+    "ADP": 384.61
+  },
+  {
+    "pos": "RF",
+    "name": "Canzone, Dominic",
+    "id": "05161",
+    "ADP": 385.48
+  },
+  {
+    "pos": "RP",
+    "name": "Uribe, Abner",
+    "id": "05nso",
+    "ADP": 385.79
+  },
+  {
+    "pos": "2B",
+    "name": "Acuna, Luisangel",
+    "id": "04z6k",
+    "ADP": 386.49
+  },
+  {
+    "pos": "SS",
+    "name": "Volpe, Anthony",
+    "id": "04y9p",
+    "ADP": 386.96
+  },
+  {
+    "pos": "RF",
+    "name": "Soler, Jorge",
+    "id": "02i11",
+    "ADP": 387.18
+  },
+  {
+    "pos": "RF",
+    "name": "O'Neill, Tyler",
+    "id": "02yk4",
+    "ADP": 387.43
+  },
+  {
+    "pos": "RF",
+    "name": "Sanchez, Jesus",
+    "id": "03nru",
+    "ADP": 388.13
+  },
+  {
+    "pos": "1B",
+    "name": "Eldridge, Bryce",
+    "id": "05u96",
+    "ADP": 388.21
+  },
+  {
+    "pos": "SP",
+    "name": "Martinez, Nick",
+    "id": "02c4q",
+    "ADP": 388.22
+  },
+  {
+    "pos": "RP",
+    "name": "Taylor, Grant",
+    "id": "066er",
+    "ADP": 388.52
+  },
+  {
+    "pos": "SP",
+    "name": "Verlander, Justin",
+    "id": "000dp",
+    "ADP": 389.43
+  },
+  {
+    "pos": "RF",
+    "name": "Walker, Jordan",
+    "id": "05gbf",
+    "ADP": 389.5
+  },
+  {
+    "pos": "SP",
+    "name": "Abel, Mick",
+    "id": "05g4k",
+    "ADP": 389.67
+  },
+  {
+    "pos": "3B",
+    "name": "Gorman, Nolan",
+    "id": "04ai4",
+    "ADP": 389.82
+  },
+  {
+    "pos": "SP",
+    "name": "Waldrep, Hurston",
+    "id": "0603p",
+    "ADP": 391.56
+  },
+  {
+    "pos": "LF",
+    "name": "Hays, Austin",
+    "id": "041qs",
+    "ADP": 392.01
+  },
+  {
+    "pos": "SP",
+    "name": "Arrighetti, Spencer",
+    "id": "05y0j",
+    "ADP": 392.29
+  },
+  {
+    "pos": "RP",
+    "name": "Vest, Will",
+    "id": "04em6",
+    "ADP": 392.51
+  },
+  {
+    "pos": "LF",
+    "name": "Sheets, Gavin",
+    "id": "04eej",
+    "ADP": 393.52
+  },
+  {
+    "pos": "DH",
+    "name": "Ballesteros, Moises",
+    "id": "05rbs",
+    "ADP": 395.52
+  },
+  {
+    "pos": "SS",
+    "name": "Lee, Brooks",
+    "id": "04yig",
+    "ADP": 395.6
+  },
+  {
+    "pos": "SP",
+    "name": "Kremer, Dean",
+    "id": "041yb",
+    "ADP": 395.82
+  },
+  {
+    "pos": "RP",
+    "name": "O'Brien, Riley",
+    "id": "04ej3",
+    "ADP": 395.87
+  },
+  {
+    "pos": "SP",
+    "name": "Oviedo, Johan",
+    "id": "04674",
+    "ADP": 396.89
+  },
+  {
+    "pos": "LF",
+    "name": "Nootbaar, Lars",
+    "id": "04pt2",
+    "ADP": 397.33
+  },
+  {
+    "pos": "SP",
+    "name": "Lowder, Rhett",
+    "id": "061bo",
+    "ADP": 397.47
+  },
+  {
+    "pos": "1B",
+    "name": "Mayo, Coby",
+    "id": "05js5",
+    "ADP": 397.8
+  },
+  {
+    "pos": "SP",
+    "name": "Rodriguez, Eduardo",
+    "id": "029si",
+    "ADP": 400.21
+  },
+  {
+    "pos": "SP",
+    "name": "Woods-Richardson, Simeon",
+    "id": "04pmp",
+    "ADP": 402.4
+  },
+  {
+    "pos": "SP",
+    "name": "Jones, Jared",
+    "id": "05h2u",
+    "ADP": 402.58
+  },
+  {
+    "pos": "C",
+    "name": "Narvaez, Carlos",
+    "id": "048tn",
+    "ADP": 404.19
+  },
+  {
+    "pos": "SP",
+    "name": "Roupp, Landen",
+    "id": "05y72",
+    "ADP": 404.23
+  },
+  {
+    "pos": "3B",
+    "name": "Norby, Connor",
+    "id": "05tce",
+    "ADP": 404.75
+  },
+  {
+    "pos": "C",
+    "name": "Kelly, Carson",
+    "id": "02mxf",
+    "ADP": 406.49
+  },
+  {
+    "pos": "SP",
+    "name": "Schwellenbach, Spencer",
+    "id": "05tq1",
+    "ADP": 407.72
+  },
+  {
+    "pos": "1B",
+    "name": "Horwitz, Spencer",
+    "id": "051ia",
+    "ADP": 408.71
+  },
+  {
+    "pos": "CF",
+    "name": "Meadows, Parker",
+    "id": "04pmn",
+    "ADP": 411.84
+  },
+  {
+    "pos": "RP",
+    "name": "Estrada, Jeremiah",
+    "id": "04ehz",
+    "ADP": 412.38
+  },
+  {
+    "pos": "SP",
+    "name": "McGreevy, Michael",
+    "id": "05sr2",
+    "ADP": 412.98
+  },
+  {
+    "pos": "C",
+    "name": "Naylor, Bo",
+    "id": "04mrn",
+    "ADP": 413.52
+  },
+  {
+    "pos": "RP",
+    "name": "Uceta, Edwin",
+    "id": "04tji",
+    "ADP": 415.65
+  },
+  {
+    "pos": "LF",
+    "name": "Mangum, Jake",
+    "id": "05135",
+    "ADP": 415.84
+  },
+  {
+    "pos": "SP",
+    "name": "Scherzer, Max",
+    "id": "004ee",
+    "ADP": 416.7
+  },
+  {
+    "pos": "LF",
+    "name": "Benintendi, Andrew",
+    "id": "03pdw",
+    "ADP": 416.84
+  },
+  {
+    "pos": "RP",
+    "name": "Whitlock, Garrett",
+    "id": "04eqa",
+    "ADP": 419.36
+  },
+  {
+    "pos": "SS",
+    "name": "Kim, Ha-seong",
+    "id": "05ajg",
+    "ADP": 419.93
+  },
+  {
+    "pos": "SP",
+    "name": "Garrett, Braxton",
+    "id": "041e3",
+    "ADP": 421.67
+  },
+  {
+    "pos": "C",
+    "name": "Quero, Edgar",
+    "id": "05un2",
+    "ADP": 421.76
+  },
+  {
+    "pos": "RF",
+    "name": "Robles, Victor",
+    "id": "03c65",
+    "ADP": 423.4
+  },
+  {
+    "pos": "RP",
+    "name": "Romero, JoJo",
+    "id": "041rj",
+    "ADP": 423.57
+  },
+  {
+    "pos": "SP",
+    "name": "Littell, Zack",
+    "id": "031d4",
+    "ADP": 423.98
+  },
+  {
+    "pos": "RP",
+    "name": "Beeter, Clayton",
+    "id": "05jnq",
+    "ADP": 425.55
+  },
+  {
+    "pos": "3B",
+    "name": "Mayer, Marcelo",
+    "id": "05r9j",
+    "ADP": 425.66
+  },
+  {
+    "pos": "SP",
+    "name": "Morales, Luis",
+    "id": "0662m",
+    "ADP": 426.04
+  },
+  {
+    "pos": "SP",
+    "name": "Sproat, Brandon",
+    "id": "0515o",
+    "ADP": 426.51
+  },
+  {
+    "pos": "SP",
+    "name": "Houser, Adrian",
+    "id": "02brc",
+    "ADP": 426.59
+  },
+  {
+    "pos": "RP",
+    "name": "Yates, Kirby",
+    "id": "030vs",
+    "ADP": 426.89
+  },
+  {
+    "pos": "SP",
+    "name": "Harrison, Kyle",
+    "id": "05js3",
+    "ADP": 427.7
+  },
+  {
+    "pos": "2B",
+    "name": "Campbell, Kristian",
+    "id": "06f0q",
+    "ADP": 428.09
+  },
+  {
+    "pos": "2B",
+    "name": "Moore, Christian",
+    "id": "06cq8",
+    "ADP": 428.22
+  },
+  {
+    "pos": "1B",
+    "name": "Casas, Triston",
+    "id": "04de1",
+    "ADP": 428.34
+  },
+  {
+    "pos": "SS",
+    "name": "Ortiz, Joey",
+    "id": "0513c",
+    "ADP": 429.61
+  },
+  {
+    "pos": "2B",
+    "name": "Kim, Hyeseong",
+    "id": "06in4",
+    "ADP": 430.61
+  },
+  {
+    "pos": "RP",
+    "name": "Finnegan, Kyle",
+    "id": "031bl",
+    "ADP": 431
+  },
+  {
+    "pos": "DH",
+    "name": "Santander, Anthony",
+    "id": "02w16",
+    "ADP": 431.48
+  },
+  {
+    "pos": "RP",
+    "name": "Scott, Tanner",
+    "id": "03dfa",
+    "ADP": 431.58
+  },
+  {
+    "pos": "LF",
+    "name": "Gurriel Jr., Lourdes",
+    "id": "03nri",
+    "ADP": 432
+  },
+  {
+    "pos": "SP",
+    "name": "Olson, Reese",
+    "id": "04px8",
+    "ADP": 432.44
+  },
+  {
+    "pos": "2B",
+    "name": "Bazzana, Travis",
+    "id": "05zde",
+    "ADP": 436.76
+  },
+  {
+    "pos": "3B",
+    "name": "Hayes, Ke'Bryan",
+    "id": "03pji",
+    "ADP": 437.6
+  },
+  {
+    "pos": "3B",
+    "name": "House, Brady",
+    "id": "059bx",
+    "ADP": 437.7
+  },
+  {
+    "pos": "SS",
+    "name": "Emerson, Colt",
+    "id": "060ub",
+    "ADP": 438.18
+  },
+  {
+    "pos": "RP",
+    "name": "Cleavinger, Garrett",
+    "id": "03qju",
+    "ADP": 439.3
+  },
+  {
+    "pos": "RP",
+    "name": "Ginkel, Kevin",
+    "id": "03dpg",
+    "ADP": 439.37
+  },
+  {
+    "pos": "RP",
+    "name": "Vodnik, Victor",
+    "id": "04pxp",
+    "ADP": 439.8
+  },
+  {
+    "pos": "RF",
+    "name": "Perez, Wenceel",
+    "id": "04an8",
+    "ADP": 440.27
+  },
+  {
+    "pos": "CF",
+    "name": "Meyers, Jake",
+    "id": "04emt",
+    "ADP": 440.57
+  },
+  {
+    "pos": "SP",
+    "name": "Burnes, Corbin",
+    "id": "041rd",
+    "ADP": 441.08
+  },
+  {
+    "pos": "CF",
+    "name": "Thomas, Lane",
+    "id": "03dei",
+    "ADP": 441.15
+  },
+  {
+    "pos": "SP",
+    "name": "Boyle, Joe",
+    "id": "05jpk",
+    "ADP": 441.25
+  },
+  {
+    "pos": "1B",
+    "name": "Clemens, Kody",
+    "id": "04ppi",
+    "ADP": 442.2
+  },
+  {
+    "pos": "C",
+    "name": "Ford, Harry",
+    "id": "05raw",
+    "ADP": 442.73
+  },
+  {
+    "pos": "LF",
+    "name": "McCarthy, Jake",
+    "id": "03qyv",
+    "ADP": 442.75
+  },
+  {
+    "pos": "SS",
+    "name": "Baez, Javier",
+    "id": "026mn",
+    "ADP": 442.84
+  },
+  {
+    "pos": "3B",
+    "name": "Rengifo, Luis",
+    "id": "03avk",
+    "ADP": 443.05
+  },
+  {
+    "pos": "SP",
+    "name": "Burke, Sean",
+    "id": "05xod",
+    "ADP": 443.38
+  },
+  {
+    "pos": "RP",
+    "name": "Rogers, Taylor",
+    "id": "02n3l",
+    "ADP": 443.49
+  },
+  {
+    "pos": "2B",
+    "name": "Young, Cole",
+    "id": "05y7x",
+    "ADP": 443.51
+  },
+  {
+    "pos": "C",
+    "name": "Murphy, Sean",
+    "id": "03aoy",
+    "ADP": 443.91
+  },
+  {
+    "pos": "RP",
+    "name": "Morejon, Adrian",
+    "id": "043ia",
+    "ADP": 444.07
+  },
+  {
+    "pos": "SS",
+    "name": "Williams, Carson",
+    "id": "05t9n",
+    "ADP": 444.2
+  },
+  {
+    "pos": "C",
+    "name": "Bailey, Patrick",
+    "id": "04yuu",
+    "ADP": 444.31
+  },
+  {
+    "pos": "SP",
+    "name": "Wells, Tyler",
+    "id": "0473n",
+    "ADP": 444.36
+  },
+  {
+    "pos": "SS",
+    "name": "Triolo, Jared",
+    "id": "05128",
+    "ADP": 445.04
+  },
+  {
+    "pos": "SP",
+    "name": "White, Thomas",
+    "id": "05tp6",
+    "ADP": 445.73
+  },
+  {
+    "pos": "RP",
+    "name": "Weaver, Luke",
+    "id": "02c5l",
+    "ADP": 445.74
+  },
+  {
+    "pos": "3B",
+    "name": "Muncy, Max",
+    "id": "05t9l",
+    "ADP": 446.05
+  },
+  {
+    "pos": "DH",
+    "name": "Lux, Gavin",
+    "id": "041ai",
+    "ADP": 446.23
+  },
+  {
+    "pos": "RP",
+    "name": "Strahm, Matt",
+    "id": "02nax",
+    "ADP": 448.33
+  },
+  {
+    "pos": "SP",
+    "name": "Griffin, Foster",
+    "id": "03caf",
+    "ADP": 448.34
+  },
+  {
+    "pos": "1B",
+    "name": "Goldschmidt, Paul",
+    "id": "01ual",
+    "ADP": 448.4
+  },
+  {
+    "pos": "RP",
+    "name": "Brash, Matt",
+    "id": "05138",
+    "ADP": 449.58
+  },
+  {
+    "pos": "RP",
+    "name": "Doval, Camilo",
+    "id": "04k0w",
+    "ADP": 449.84
+  },
+  {
+    "pos": "RP",
+    "name": "Sewald, Paul",
+    "id": "02n2x",
+    "ADP": 450.02
+  },
+  {
+    "pos": "CF",
+    "name": "Clarke, Denzel",
+    "id": "05unf",
+    "ADP": 450.47
+  },
+  {
+    "pos": "RP",
+    "name": "Santillan, Tony",
+    "id": "03poq",
+    "ADP": 451.4
+  },
+  {
+    "pos": "C",
+    "name": "Ruiz, Keibert",
+    "id": "03rmz",
+    "ADP": 451.81
+  },
+  {
+    "pos": "LF",
+    "name": "Morel, Christopher",
+    "id": "04pbp",
+    "ADP": 452.42
+  },
+  {
+    "pos": "C",
+    "name": "Fermin, Freddy",
+    "id": "05lo5",
+    "ADP": 452.87
+  },
+  {
+    "pos": "RP",
+    "name": "Leasure, Jordan",
+    "id": "0614c",
+    "ADP": 453.07
+  },
+  {
+    "pos": "3B",
+    "name": "Song, Sung Mun",
+    "id": "070bf",
+    "ADP": 453.19
+  },
+  {
+    "pos": "C",
+    "name": "Caratini, Victor",
+    "id": "0311f",
+    "ADP": 453.6
+  },
+  {
+    "pos": "SS",
+    "name": "Nunez, Nasim",
+    "id": "04ya4",
+    "ADP": 453.66
+  },
+  {
+    "pos": "2B",
+    "name": "Gelof, Zack",
+    "id": "05ub0",
+    "ADP": 454.23
+  },
+  {
+    "pos": "CF",
+    "name": "Jenkins, Walker",
+    "id": "05u3v",
+    "ADP": 454.52
+  },
+  {
+    "pos": "SP",
+    "name": "Sears, J.P.",
+    "id": "04eld",
+    "ADP": 454.57
+  },
+  {
+    "pos": "C",
+    "name": "Rushing, Dalton",
+    "id": "05xtz",
+    "ADP": 455.08
+  },
+  {
+    "pos": "RP",
+    "name": "Henriquez, Ronny",
+    "id": "04tzu",
+    "ADP": 455.19
+  },
+  {
+    "pos": "LF",
+    "name": "Dubon, Mauricio",
+    "id": "03aqw",
+    "ADP": 455.67
+  },
+  {
+    "pos": "CF",
+    "name": "Jones, Spencer",
+    "id": "04yi8",
+    "ADP": 456.7
+  },
+  {
+    "pos": "SP",
+    "name": "Fuentes, Didier",
+    "id": "064zm",
+    "ADP": 456.92
+  },
+  {
+    "pos": "RP",
+    "name": "Harris, Hogan",
+    "id": "04pps",
+    "ADP": 457.02
+  },
+  {
+    "pos": "1B",
+    "name": "Hoskins, Rhys",
+    "id": "03de9",
+    "ADP": 457.02
+  },
+  {
+    "pos": "RP",
+    "name": "Stephenson, Robert",
+    "id": "02bq7",
+    "ADP": 457.37
+  },
+  {
+    "pos": "CF",
+    "name": "Mitchell, Garrett",
+    "id": "04en7",
+    "ADP": 457.45
+  },
+  {
+    "pos": "RP",
+    "name": "Maton, Phil",
+    "id": "03qwa",
+    "ADP": 457.69
+  },
+  {
+    "pos": "SS",
+    "name": "Miller, Aidan",
+    "id": "05u36",
+    "ADP": 458.05
+  },
+  {
+    "pos": "C",
+    "name": "Jansen, Danny",
+    "id": "031el",
+    "ADP": 458.12
+  },
+  {
+    "pos": "RF",
+    "name": "Lukes, Nathan",
+    "id": "03qmr",
+    "ADP": 458.22
+  },
+  {
+    "pos": "RP",
+    "name": "Svanson, Matt",
+    "id": "06elo",
+    "ADP": 458.55
+  },
+  {
+    "pos": "3B",
+    "name": "Andujar, Miguel",
+    "id": "02i3l",
+    "ADP": 458.59
+  },
+  {
+    "pos": "RP",
+    "name": "Erceg, Lucas",
+    "id": "041am",
+    "ADP": 459.18
+  },
+  {
+    "pos": "SP",
+    "name": "Kay, Anthony",
+    "id": "041mb",
+    "ADP": 459.18
+  },
+  {
+    "pos": "RP",
+    "name": "Latz, Jake",
+    "id": "03div",
+    "ADP": 459.25
+  },
+  {
+    "pos": "SP",
+    "name": "Rocker, Kumar",
+    "id": "04azu",
+    "ADP": 459.34
+  },
+  {
+    "pos": "2B",
+    "name": "Gonzales, Nick",
+    "id": "0597k",
+    "ADP": 459.49
+  },
+  {
+    "pos": "C",
+    "name": "Amaya, Miguel",
+    "id": "03xs3",
+    "ADP": 459.65
+  },
+  {
+    "pos": "LF",
+    "name": "Waldschmidt, Ryan",
+    "id": "06dlz",
+    "ADP": 459.78
+  },
+  {
+    "pos": "SP",
+    "name": "Feltman, Durbin",
+    "id": "04ppx",
+    "ADP": 459.8
+  },
+  {
+    "pos": "RP",
+    "name": "Ferrer, Jose",
+    "id": "062ob",
+    "ADP": 459.82
+  },
+  {
+    "pos": "RP",
+    "name": "Sanmartin, Reiver",
+    "id": "04j1w",
+    "ADP": 459.88
+  },
+  {
+    "pos": "RP",
+    "name": "Shawver, Evan",
+    "id": "05tzk",
+    "ADP": 459.97
+  },
+  {
+    "pos": "2B",
+    "name": "Gonzalez, Jacob",
+    "id": "05tzp",
+    "ADP": 460
+  },
+  {
+    "pos": "RF",
+    "name": "Ehrhard, Zach",
+    "id": "066l0",
+    "ADP": 460.01
+  },
+  {
+    "pos": "SS",
+    "name": "Cavaco, Keoni",
+    "id": "050w8",
+    "ADP": 460.02
+  },
+  {
+    "pos": "1B",
+    "name": "Dalbec, Bobby",
+    "id": "03z62",
+    "ADP": 460.02
+  },
+  {
+    "pos": "1B",
+    "name": "Early, Tyler",
+    "id": "072ym",
+    "ADP": 460.02
+  },
+  {
+    "pos": "1B",
+    "name": "Hickey, Nathan",
+    "id": "05tzm",
+    "ADP": 460.02
+  },
+  {
+    "pos": "SP",
+    "name": "Debiec, Max",
+    "id": "05ua0",
+    "ADP": 460.05
+  },
+  {
+    "pos": "SP",
+    "name": "Mejia, Ian",
+    "id": "06585",
+    "ADP": 460.06
+  },
+  {
+    "pos": "CF",
+    "name": "Mena, Ismael",
+    "id": "0527e",
+    "ADP": 460.06
+  },
+  {
+    "pos": "RP",
+    "name": "Jacobson, Tanner",
+    "id": "06588",
+    "ADP": 460.07
+  },
+  {
+    "pos": "CF",
+    "name": "Migliaccio, Anthony",
+    "id": "05tzd",
+    "ADP": 460.08
+  },
+  {
+    "pos": "1B",
+    "name": "Voit, Luke",
+    "id": "03199",
+    "ADP": 460.08
+  },
+  {
+    "pos": "CF",
+    "name": "Cerda, Allan",
+    "id": "0529m",
+    "ADP": 460.1
+  },
+  {
+    "pos": "3B",
+    "name": "Serretti, Danny",
+    "id": "0657b",
+    "ADP": 460.14
+  },
+  {
+    "pos": "RP",
+    "name": "Diaz, Jhonathan",
+    "id": "04oc6",
+    "ADP": 460.16
+  },
+  {
+    "pos": "RP",
+    "name": "Jessee, Brody",
+    "id": "0657g",
+    "ADP": 460.16
+  },
+  {
+    "pos": "2B",
+    "name": "Kachel, Andrew",
+    "id": "0657f",
+    "ADP": 460.16
+  },
+  {
+    "pos": "LF",
+    "name": "Ketchup, Caleb",
+    "id": "06htn",
+    "ADP": 460.17
+  },
+  {
+    "pos": "RP",
+    "name": "Lara, Jhancarlos",
+    "id": "06cev",
+    "ADP": 460.17
+  },
+  {
+    "pos": "SP",
+    "name": "Nett, Braden",
+    "id": "066a6",
+    "ADP": 460.17
+  },
+  {
+    "pos": "RP",
+    "name": "Taylor, Troy",
+    "id": "065ns",
+    "ADP": 460.17
+  },
+  {
+    "pos": "RP",
+    "name": "McLaughlin, Mark",
+    "id": "0657a",
+    "ADP": 460.18
+  },
+  {
+    "pos": "RP",
+    "name": "Tate, Dillon",
+    "id": "03p9d",
+    "ADP": 460.18
+  },
+  {
+    "pos": "CF",
+    "name": "Burke, Jacob",
+    "id": "06584",
+    "ADP": 460.19
+  },
+  {
+    "pos": "RP",
+    "name": "Neeck, Brandon",
+    "id": "06589",
+    "ADP": 460.19
+  },
+  {
+    "pos": "SP",
+    "name": "Lowe, Isaiah",
+    "id": "06586",
+    "ADP": 460.2
+  },
+  {
+    "pos": "RP",
+    "name": "Mabrey, Will",
+    "id": "0657c",
+    "ADP": 460.21
+  },
+  {
+    "pos": "RP",
+    "name": "Roach, Dalton",
+    "id": "04q48",
+    "ADP": 460.21
+  },
+  {
+    "pos": "C",
+    "name": "Rubalcaba, Alonzo",
+    "id": "063uz",
+    "ADP": 460.22
+  },
+  {
+    "pos": "SP",
+    "name": "Sanchez, Sixto",
+    "id": "0440n",
+    "ADP": 460.23
+  },
+  {
+    "pos": "1B",
+    "name": "Gallo, Joey",
+    "id": "02i3v",
+    "ADP": 460.25
+  },
+  {
+    "pos": "RP",
+    "name": "Varland, Gus",
+    "id": "04pxq",
+    "ADP": 460.26
+  },
+  {
+    "pos": "RP",
+    "name": "Rogers, Tyler",
+    "id": "0374m",
+    "ADP": 460.27
+  },
+  {
+    "pos": "SP",
+    "name": "Macko, Adam",
+    "id": "0515q",
+    "ADP": 460.28
+  },
+  {
+    "pos": "2B",
+    "name": "Moore, Robert",
+    "id": "05raq",
+    "ADP": 460.28
+  },
+  {
+    "pos": "SP",
+    "name": "Uberstine, Tyler",
+    "id": "066qr",
+    "ADP": 460.28
+  },
+  {
+    "pos": "CF",
+    "name": "Jones, Brendan",
+    "id": "06lp5",
+    "ADP": 460.29
+  },
+  {
+    "pos": "C",
+    "name": "Garcia, Aramis",
+    "id": "02c6c",
+    "ADP": 460.3
+  },
+  {
+    "pos": "RP",
+    "name": "Kilian, Caleb",
+    "id": "04q1w",
+    "ADP": 460.3
+  },
+  {
+    "pos": "RP",
+    "name": "Legumina, Casey",
+    "id": "0427a",
+    "ADP": 460.3
+  },
+  {
+    "pos": "RP",
+    "name": "Altavilla, Dan",
+    "id": "03dec",
+    "ADP": 460.31
+  },
+  {
+    "pos": "RP",
+    "name": "Brigham, Jeff",
+    "id": "03dbv",
+    "ADP": 460.31
+  },
+  {
+    "pos": "SP",
+    "name": "De Jesus, Enmanuel",
+    "id": "05r0r",
+    "ADP": 460.31
+  },
+  {
+    "pos": "2B",
+    "name": "Joyce, Corey",
+    "id": "05190",
+    "ADP": 460.31
+  },
+  {
+    "pos": "LF",
+    "name": "Mendez, Hendry",
+    "id": "05rhb",
+    "ADP": 460.31
+  },
+  {
+    "pos": "3B",
+    "name": "Harber, Parks",
+    "id": "06qlr",
+    "ADP": 460.34
+  },
+  {
+    "pos": "RP",
+    "name": "Martin, Chris",
+    "id": "02j77",
+    "ADP": 460.34
+  },
+  {
+    "pos": "SS",
+    "name": "Encarnacion, Anyelo",
+    "id": "063zd",
+    "ADP": 460.36
+  },
+  {
+    "pos": "SP",
+    "name": "Williams, Trevor",
+    "id": "0311b",
+    "ADP": 460.36
+  },
+  {
+    "pos": "SP",
+    "name": "Baez, Henry",
+    "id": "05iyp",
+    "ADP": 460.37
+  },
+  {
+    "pos": "RP",
+    "name": "Palacios, Luis",
+    "id": "04tp0",
+    "ADP": 460.39
+  },
+  {
+    "pos": "RF",
+    "name": "Ramos, Jose",
+    "id": "050vp",
+    "ADP": 460.4
+  },
+  {
+    "pos": "3B",
+    "name": "Sanchez, Junior",
+    "id": "05294",
+    "ADP": 460.4
+  },
+  {
+    "pos": "RP",
+    "name": "Wolfram, Grant",
+    "id": "03qub",
+    "ADP": 460.41
+  },
+  {
+    "pos": "RP",
+    "name": "Clase, Emmanuel",
+    "id": "04ug5",
+    "ADP": 460.43
+  },
+  {
+    "pos": "RP",
+    "name": "Pallette, Peyton",
+    "id": "05u38",
+    "ADP": 460.43
+  },
+  {
+    "pos": "SS",
+    "name": "Kent, Kaeden",
+    "id": "06ykk",
+    "ADP": 460.44
+  },
+  {
+    "pos": "RP",
+    "name": "Qin, Zack",
+    "id": "0657d",
+    "ADP": 460.46
+  },
+  {
+    "pos": "SP",
+    "name": "Sullivan, Sean",
+    "id": "06ahu",
+    "ADP": 460.47
+  },
+  {
+    "pos": "SP",
+    "name": "Black, Mason",
+    "id": "05r3g",
+    "ADP": 460.48
+  },
+  {
+    "pos": "RP",
+    "name": "Sterner, Justin",
+    "id": "066n1",
+    "ADP": 460.54
+  },
+  {
+    "pos": "RP",
+    "name": "Englert, Mason",
+    "id": "04pqh",
+    "ADP": 460.55
+  },
+  {
+    "pos": "RP",
+    "name": "Bird, Jake",
+    "id": "04pqs",
+    "ADP": 460.57
+  },
+  {
+    "pos": "2B",
+    "name": "Crisantes, Demetrio",
+    "id": "064o4",
+    "ADP": 460.58
+  },
+  {
+    "pos": "CF",
+    "name": "Renteria, Francisco",
+    "id": "0724c",
+    "ADP": 460.58
+  },
+  {
+    "pos": "RP",
+    "name": "Brebbia, John",
+    "id": "03xmd",
+    "ADP": 460.59
+  },
+  {
+    "pos": "RP",
+    "name": "Colleran, Dennis",
+    "id": "06pq9",
+    "ADP": 460.6
+  },
+  {
+    "pos": "SP",
+    "name": "Murphy, Shane",
+    "id": "066l9",
+    "ADP": 460.6
+  },
+  {
+    "pos": "RF",
+    "name": "Oliva, Jared",
+    "id": "04eia",
+    "ADP": 460.6
+  },
+  {
+    "pos": "SP",
+    "name": "Braun, Lucas",
+    "id": "06f18",
+    "ADP": 460.61
+  },
+  {
+    "pos": "2B",
+    "name": "Godbout, Henry",
+    "id": "06am1",
+    "ADP": 460.61
+  },
+  {
+    "pos": "SP",
+    "name": "Schoolcraft, Kruz",
+    "id": "064wj",
+    "ADP": 460.62
+  },
+  {
+    "pos": "RP",
+    "name": "Zambrano, Carlos",
+    "id": "06sbi",
+    "ADP": 460.63
+  },
+  {
+    "pos": "SP",
+    "name": "Bauer, Trevor",
+    "id": "025hm",
+    "ADP": 460.64
+  },
+  {
+    "pos": "SS",
+    "name": "Hernandez, Luis",
+    "id": "071w9",
+    "ADP": 460.64
+  },
+  {
+    "pos": "RF",
+    "name": "Gonzales, Justin",
+    "id": "06mff",
+    "ADP": 460.66
+  },
+  {
+    "pos": "SP",
+    "name": "Mozzicato, Frank",
+    "id": "05tcb",
+    "ADP": 460.66
+  },
+  {
+    "pos": "RP",
+    "name": "Victor, Najer",
+    "id": "06qsl",
+    "ADP": 460.66
+  },
+  {
+    "pos": "RP",
+    "name": "Mendez, Miguel",
+    "id": "06r8f",
+    "ADP": 460.69
+  },
+  {
+    "pos": "C",
+    "name": "Rodriguez, Rainiel",
+    "id": "06mnp",
+    "ADP": 460.69
+  },
+  {
+    "pos": "C",
+    "name": "Mitchell, Blake",
+    "id": "05y3q",
+    "ADP": 460.7
+  },
+  {
+    "pos": "1B",
+    "name": "Cano, Ichiro",
+    "id": "06jh6",
+    "ADP": 460.71
+  },
+  {
+    "pos": "SS",
+    "name": "Morales, Emil",
+    "id": "06ibo",
+    "ADP": 460.72
+  },
+  {
+    "pos": "SS",
+    "name": "Pena, Elian",
+    "id": "06m0g",
+    "ADP": 460.72
+  },
+  {
+    "pos": "CF",
+    "name": "Quintero, Eduardo",
+    "id": "06c79",
+    "ADP": 460.72
+  },
+  {
+    "pos": "SP",
+    "name": "Stanifer, Gage",
+    "id": "066fg",
+    "ADP": 460.72
+  },
+  {
+    "pos": "SP",
+    "name": "Ziehl, Gage",
+    "id": "066iu",
+    "ADP": 460.72
+  },
+  {
+    "pos": "RP",
+    "name": "Hentges, Sam",
+    "id": "03dbu",
+    "ADP": 460.73
+  },
+  {
+    "pos": "SS",
+    "name": "Willits, Eli",
+    "id": "06n8y",
+    "ADP": 460.73
+  },
+  {
+    "pos": "CF",
+    "name": "Frey, Ethan",
+    "id": "06yjs",
+    "ADP": 460.74
+  },
+  {
+    "pos": "2B",
+    "name": "Made, Kevin",
+    "id": "0527f",
+    "ADP": 460.74
+  },
+  {
+    "pos": "SP",
+    "name": "Nichols, T.J.",
+    "id": "05ucb",
+    "ADP": 460.74
+  },
+  {
+    "pos": "SP",
+    "name": "Aldegheri, Samuel",
+    "id": "06aw2",
+    "ADP": 460.75
+  },
+  {
+    "pos": "LF",
+    "name": "McKenna, Ryan",
+    "id": "03qkw",
+    "ADP": 460.75
+  },
+  {
+    "pos": "1B",
+    "name": "Solano, Donovan",
+    "id": "01te5",
+    "ADP": 460.75
+  },
+  {
+    "pos": "SS",
+    "name": "Arias, Franklin",
+    "id": "06c78",
+    "ADP": 460.76
+  },
+  {
+    "pos": "SP",
+    "name": "Darvish, Yu",
+    "id": "01c5l",
+    "ADP": 460.76
+  },
+  {
+    "pos": "2B",
+    "name": "Furman, Nate",
+    "id": "06487",
+    "ADP": 460.76
+  },
+  {
+    "pos": "CF",
+    "name": "Jones, Druw",
+    "id": "05tdk",
+    "ADP": 460.76
+  },
+  {
+    "pos": "RP",
+    "name": "Stratton, Hunter",
+    "id": "04eoy",
+    "ADP": 460.76
+  },
+  {
+    "pos": "SP",
+    "name": "Dotel, Wilber",
+    "id": "05t5k",
+    "ADP": 460.77
+  },
+  {
+    "pos": "SS",
+    "name": "Fitz-Gerald, Devin",
+    "id": "06p5z",
+    "ADP": 460.77
+  },
+  {
+    "pos": "SP",
+    "name": "Lively, Ben",
+    "id": "0311w",
+    "ADP": 460.77
+  },
+  {
+    "pos": "SP",
+    "name": "Rogers, Grant",
+    "id": "06gjy",
+    "ADP": 460.77
+  },
+  {
+    "pos": "SP",
+    "name": "Scarborough, Caden",
+    "id": "06f1j",
+    "ADP": 460.77
+  },
+  {
+    "pos": "SS",
+    "name": "Fien, Gavin",
+    "id": "06qyu",
+    "ADP": 460.78
+  },
+  {
+    "pos": "SP",
+    "name": "German, Nestor",
+    "id": "06gjv",
+    "ADP": 460.78
+  },
+  {
+    "pos": "C",
+    "name": "Alfaro, Jorge",
+    "id": "025iy",
+    "ADP": 460.79
+  },
+  {
+    "pos": "SS",
+    "name": "Celesten, Felnin",
+    "id": "05mx9",
+    "ADP": 460.79
+  },
+  {
+    "pos": "SP",
+    "name": "Eagen, Daniel",
+    "id": "06o03",
+    "ADP": 460.79
+  },
+  {
+    "pos": "C",
+    "name": "Murphy, Tom",
+    "id": "02t8m",
+    "ADP": 460.79
+  },
+  {
+    "pos": "RP",
+    "name": "Scholtens, Jesse",
+    "id": "041uv",
+    "ADP": 460.79
+  },
+  {
+    "pos": "SS",
+    "name": "Asigen, Wandy",
+    "id": "071wa",
+    "ADP": 460.8
+  },
+  {
+    "pos": "RP",
+    "name": "Hoffmann, Andrew",
+    "id": "05y29",
+    "ADP": 460.8
+  },
+  {
+    "pos": "3B",
+    "name": "Wilson, Will",
+    "id": "04yia",
+    "ADP": 460.8
+  },
+  {
+    "pos": "CF",
+    "name": "Gillen, Theo",
+    "id": "05u2m",
+    "ADP": 460.81
+  },
+  {
+    "pos": "LF",
+    "name": "Heyward, Jason",
+    "id": "01c5o",
+    "ADP": 460.81
+  },
+  {
+    "pos": "SP",
+    "name": "Hill, Dasan",
+    "id": "06mnh",
+    "ADP": 460.81
+  },
+  {
+    "pos": "SP",
+    "name": "Hill, Rich",
+    "id": "0008c",
+    "ADP": 460.81
+  },
+  {
+    "pos": "SP",
+    "name": "Steinmetz, Jacob",
+    "id": "05xos",
+    "ADP": 460.81
+  },
+  {
+    "pos": "RP",
+    "name": "Little, Luke",
+    "id": "05koh",
+    "ADP": 460.82
+  },
+  {
+    "pos": "RP",
+    "name": "Lopez, Leandro",
+    "id": "06pfc",
+    "ADP": 460.82
+  },
+  {
+    "pos": "RF",
+    "name": "Trimble, Reed",
+    "id": "05uwb",
+    "ADP": 460.82
+  },
+  {
+    "pos": "SS",
+    "name": "Colome, Johenssy",
+    "id": "071wb",
+    "ADP": 460.83
+  },
+  {
+    "pos": "RP",
+    "name": "Ekness, Josh",
+    "id": "05yj3",
+    "ADP": 460.83
+  },
+  {
+    "pos": "SS",
+    "name": "Gil, John",
+    "id": "06hsz",
+    "ADP": 460.83
+  },
+  {
+    "pos": "SS",
+    "name": "Lewis, Tyson",
+    "id": "06mnk",
+    "ADP": 460.83
+  },
+  {
+    "pos": "SP",
+    "name": "Mayfield, Kash",
+    "id": "06lp4",
+    "ADP": 460.83
+  },
+  {
+    "pos": "SP",
+    "name": "Oppor, Christian",
+    "id": "06f1q",
+    "ADP": 460.83
+  },
+  {
+    "pos": "SS",
+    "name": "Carlson, Billy",
+    "id": "06alq",
+    "ADP": 460.84
+  },
+  {
+    "pos": "SP",
+    "name": "Cunningham, Bryce",
+    "id": "06l3m",
+    "ADP": 460.84
+  },
+  {
+    "pos": "SP",
+    "name": "Garcia, Luis",
+    "id": "04ni3",
+    "ADP": 460.84
+  },
+  {
+    "pos": "SP",
+    "name": "Hicks, James",
+    "id": "06hw7",
+    "ADP": 460.84
+  },
+  {
+    "pos": "RP",
+    "name": "Iriarte, Jairo",
+    "id": "060q2",
+    "ADP": 460.84
+  },
+  {
+    "pos": "SS",
+    "name": "Rojas, Jefferson",
+    "id": "061wh",
+    "ADP": 460.84
+  },
+  {
+    "pos": "C",
+    "name": "Suero, Chris",
+    "id": "06lfg",
+    "ADP": 460.84
+  },
+  {
+    "pos": "2B",
+    "name": "Taylor, Samad",
+    "id": "041vt",
+    "ADP": 460.84
+  },
+  {
+    "pos": "SP",
+    "name": "Chourio, Kendry",
+    "id": "06rm6",
+    "ADP": 460.85
+  },
+  {
+    "pos": "RF",
+    "name": "De La Paz, Reynaldo",
+    "id": "06iez",
+    "ADP": 460.85
+  },
+  {
+    "pos": "SP",
+    "name": "Jang, Hyun-Seok",
+    "id": "06f8f",
+    "ADP": 460.85
+  },
+  {
+    "pos": "CF",
+    "name": "LaViolette, Jace",
+    "id": "067zb",
+    "ADP": 460.85
+  },
+  {
+    "pos": "CF",
+    "name": "Morabito, Nick",
+    "id": "0630l",
+    "ADP": 460.85
+  },
+  {
+    "pos": "SP",
+    "name": "Hamm, Jaden",
+    "id": "06f0u",
+    "ADP": 460.86
+  },
+  {
+    "pos": "SP",
+    "name": "Hendricks, Kyle",
+    "id": "02bwg",
+    "ADP": 460.86
+  },
+  {
+    "pos": "CF",
+    "name": "Payne, Braylon",
+    "id": "06kkf",
+    "ADP": 460.86
+  },
+  {
+    "pos": "SP",
+    "name": "Davenport, Aaron",
+    "id": "05w9t",
+    "ADP": 460.87
+  },
+  {
+    "pos": "2B",
+    "name": "Leblanc, Charles",
+    "id": "041r7",
+    "ADP": 460.87
+  },
+  {
+    "pos": "RP",
+    "name": "Miller, Mason",
+    "id": "06hw9",
+    "ADP": 460.87
+  },
+  {
+    "pos": "SP",
+    "name": "Roby, Tekoah",
+    "id": "05jqh",
+    "ADP": 460.87
+  },
+  {
+    "pos": "SP",
+    "name": "Sterling, Levi",
+    "id": "06hf3",
+    "ADP": 460.87
+  },
+  {
+    "pos": "CF",
+    "name": "Davalan, Charles",
+    "id": "06rvt",
+    "ADP": 460.88
+  },
+  {
+    "pos": "RP",
+    "name": "Mayza, Tim",
+    "id": "031dd",
+    "ADP": 460.88
+  },
+  {
+    "pos": "SP",
+    "name": "Eyanson, Anthony",
+    "id": "06mph",
+    "ADP": 460.89
+  },
+  {
+    "pos": "SS",
+    "name": "Hall, Steele",
+    "id": "06rw2",
+    "ADP": 460.89
+  },
+  {
+    "pos": "SP",
+    "name": "Hughes, Gabriel",
+    "id": "05ubl",
+    "ADP": 460.89
+  },
+  {
+    "pos": "3B",
+    "name": "Sanchez, Juan",
+    "id": "06rgw",
+    "ADP": 460.89
+  },
+  {
+    "pos": "RP",
+    "name": "Bowden, Ben",
+    "id": "041px",
+    "ADP": 460.9
+  },
+  {
+    "pos": "3B",
+    "name": "Harlan, Chase",
+    "id": "06kjz",
+    "ADP": 460.9
+  },
+  {
+    "pos": "SP",
+    "name": "Wells, Levi",
+    "id": "067xi",
+    "ADP": 460.9
+  },
+  {
+    "pos": "SP",
+    "name": "Winquest, Cade",
+    "id": "06683",
+    "ADP": 460.9
+  },
+  {
+    "pos": "CF",
+    "name": "Alvarez, Kevin",
+    "id": "06psn",
+    "ADP": 460.91
+  },
+  {
+    "pos": "SS",
+    "name": "Cunningham, Kayson",
+    "id": "067z9",
+    "ADP": 460.91
+  },
+  {
+    "pos": "3B",
+    "name": "Downs, Jeter",
+    "id": "04eeg",
+    "ADP": 460.91
+  },
+  {
+    "pos": "RP",
+    "name": "Duplantier, Jon",
+    "id": "041qq",
+    "ADP": 460.91
+  },
+  {
+    "pos": "SP",
+    "name": "Houck, Tanner",
+    "id": "03djk",
+    "ADP": 460.91
+  },
+  {
+    "pos": "SP",
+    "name": "Doughty, Braylon",
+    "id": "06kk6",
+    "ADP": 460.92
+  },
+  {
+    "pos": "1B",
+    "name": "Cedeno, Leandro",
+    "id": "04gge",
+    "ADP": 460.93
+  },
+  {
+    "pos": "1B",
+    "name": "Castro, Luis",
+    "id": "02yhb",
+    "ADP": 460.94
+  },
+  {
+    "pos": "C",
+    "name": "Irish, Ike",
+    "id": "06c10",
+    "ADP": 460.94
+  },
+  {
+    "pos": "RP",
+    "name": "Jackson, Luke",
+    "id": "025ey",
+    "ADP": 460.94
+  },
+  {
+    "pos": "SS",
+    "name": "Rainer, Bryce",
+    "id": "05yai",
+    "ADP": 460.94
+  },
+  {
+    "pos": "LF",
+    "name": "Petry, Ethan",
+    "id": "05yff",
+    "ADP": 460.95
+  },
+  {
+    "pos": "RP",
+    "name": "Kelly, Zack",
+    "id": "05r1z",
+    "ADP": 460.96
+  },
+  {
+    "pos": "RP",
+    "name": "Crawford, Reggie",
+    "id": "05uee",
+    "ADP": 460.97
+  },
+  {
+    "pos": "SP",
+    "name": "Gutierrez, Luis",
+    "id": "056j7",
+    "ADP": 460.97
+  },
+  {
+    "pos": "RP",
+    "name": "McGough, Trey",
+    "id": "051ip",
+    "ADP": 460.97
+  },
+  {
+    "pos": "SS",
+    "name": "Schunk, Aaron",
+    "id": "0511w",
+    "ADP": 460.97
+  },
+  {
+    "pos": "SP",
+    "name": "Supak, Trey",
+    "id": "03d7n",
+    "ADP": 460.97
+  },
+  {
+    "pos": "RP",
+    "name": "Clarke, Taylor",
+    "id": "03qjz",
+    "ADP": 460.98
+  },
+  {
+    "pos": "SP",
+    "name": "Graves, Mavis",
+    "id": "06578",
+    "ADP": 460.98
+  },
+  {
+    "pos": "C",
+    "name": "Janek, Walker",
+    "id": "06kkk",
+    "ADP": 460.98
+  },
+  {
+    "pos": "SP",
+    "name": "Morton, Charlie",
+    "id": "005jn",
+    "ADP": 460.98
+  },
+  {
+    "pos": "SS",
+    "name": "Cheng, Tsung-Che",
+    "id": "05y34",
+    "ADP": 460.99
+  },
+  {
+    "pos": "SP",
+    "name": "Fulton, Dax",
+    "id": "05gwu",
+    "ADP": 460.99
+  },
+  {
+    "pos": "SS",
+    "name": "Gonzalez, Josuar",
+    "id": "06ps2",
+    "ADP": 460.99
+  },
+  {
+    "pos": "RP",
+    "name": "Hoppe, Alex",
+    "id": "064nv",
+    "ADP": 460.99
+  },
+  {
+    "pos": "RP",
+    "name": "Lambert, Ryan",
+    "id": "06qic",
+    "ADP": 460.99
+  },
+  {
+    "pos": "RP",
+    "name": "Schultz, Paxton",
+    "id": "051b2",
+    "ADP": 460.99
+  },
+  {
+    "pos": "CF",
+    "name": "Caldwell, Slade",
+    "id": "06agr",
+    "ADP": 461
+  },
+  {
+    "pos": "RF",
+    "name": "Hope, Zyhir",
+    "id": "06eyu",
+    "ADP": 461
+  },
+  {
+    "pos": "SS",
+    "name": "Kuroda-Grauer, Joshua",
+    "id": "06nue",
+    "ADP": 461
+  },
+  {
+    "pos": "RP",
+    "name": "Miller, Tyson",
+    "id": "041rc",
+    "ADP": 461
+  },
+  {
+    "pos": "RP",
+    "name": "Fulmer, Michael",
+    "id": "02bqj",
+    "ADP": 461.01
+  },
+  {
+    "pos": "3B",
+    "name": "Short, Zack",
+    "id": "0420g",
+    "ADP": 461.02
+  },
+  {
+    "pos": "SP",
+    "name": "Zhong-Ao Zhuang, Chen",
+    "id": "05zdc",
+    "ADP": 461.02
+  },
+  {
+    "pos": "2B",
+    "name": "Lantigua, Rafael",
+    "id": "060fw",
+    "ADP": 461.03
+  },
+  {
+    "pos": "RF",
+    "name": "Renfroe, Hunter",
+    "id": "03022",
+    "ADP": 461.03
+  },
+  {
+    "pos": "C",
+    "name": "Tait, Eduardo",
+    "id": "06bsb",
+    "ADP": 461.03
+  },
+  {
+    "pos": "3B",
+    "name": "Berti, Jon",
+    "id": "02c4r",
+    "ADP": 461.04
+  },
+  {
+    "pos": "SP",
+    "name": "Gonzales, Marco",
+    "id": "03111",
+    "ADP": 461.04
+  },
+  {
+    "pos": "C",
+    "name": "Haase, Eric",
+    "id": "02bv2",
+    "ADP": 461.04
+  },
+  {
+    "pos": "CF",
+    "name": "Siani, Mike",
+    "id": "04pqb",
+    "ADP": 461.04
+  },
+  {
+    "pos": "SP",
+    "name": "Lin, Wei-En",
+    "id": "06op3",
+    "ADP": 461.05
+  },
+  {
+    "pos": "SP",
+    "name": "Santos, Winston",
+    "id": "061lj",
+    "ADP": 461.05
+  },
+  {
+    "pos": "2B",
+    "name": "Wisely, Brett",
+    "id": "051br",
+    "ADP": 461.05
+  },
+  {
+    "pos": "CF",
+    "name": "Murray, Kyler",
+    "id": "04pkn",
+    "ADP": 461.06
+  },
+  {
+    "pos": "3B",
+    "name": "Wagner, Will",
+    "id": "05yhg",
+    "ADP": 461.06
+  },
+  {
+    "pos": "RF",
+    "name": "Fletcher, Dominic",
+    "id": "04y45",
+    "ADP": 461.07
+  },
+  {
+    "pos": "SS",
+    "name": "Kilby, Dax",
+    "id": "06utg",
+    "ADP": 461.07
+  },
+  {
+    "pos": "SS",
+    "name": "Torin, Cristofer",
+    "id": "063dm",
+    "ADP": 461.07
+  },
+  {
+    "pos": "SP",
+    "name": "Urias, Julio",
+    "id": "02vl6",
+    "ADP": 461.07
+  },
+  {
+    "pos": "SP",
+    "name": "Harmon, Landon",
+    "id": "06pp5",
+    "ADP": 461.08
+  },
+  {
+    "pos": "SP",
+    "name": "Sykora, Travis",
+    "id": "05ycl",
+    "ADP": 461.08
+  },
+  {
+    "pos": "RP",
+    "name": "Gastelum, Luis",
+    "id": "06qgo",
+    "ADP": 461.09
+  },
+  {
+    "pos": "SS",
+    "name": "Hammond, Josh",
+    "id": "06cqi",
+    "ADP": 461.09
+  },
+  {
+    "pos": "3B",
+    "name": "Neyens, Xavier",
+    "id": "05yak",
+    "ADP": 461.09
+  },
+  {
+    "pos": "SP",
+    "name": "Sanchez, Aaron",
+    "id": "0241y",
+    "ADP": 461.09
+  },
+  {
+    "pos": "CF",
+    "name": "Brito, Roldy",
+    "id": "06kui",
+    "ADP": 461.1
+  },
+  {
+    "pos": "RP",
+    "name": "Brogdon, Connor",
+    "id": "04ek8",
+    "ADP": 461.1
+  },
+  {
+    "pos": "SP",
+    "name": "Davitt, Duncan",
+    "id": "066f4",
+    "ADP": 461.1
+  },
+  {
+    "pos": "CF",
+    "name": "Florentino, Edward",
+    "id": "06mh4",
+    "ADP": 461.1
+  },
+  {
+    "pos": "RP",
+    "name": "Alberto, Alexander",
+    "id": "05rh5",
+    "ADP": 461.11
+  },
+  {
+    "pos": "SS",
+    "name": "Quintana, Jorge",
+    "id": "06ibm",
+    "ADP": 461.11
+  },
+  {
+    "pos": "C",
+    "name": "Rivero, Sebastian",
+    "id": "04aod",
+    "ADP": 461.11
+  },
+  {
+    "pos": "RP",
+    "name": "Leclerc, Jose",
+    "id": "030x2",
+    "ADP": 461.12
+  },
+  {
+    "pos": "RP",
+    "name": "Nunez, Eduarniel",
+    "id": "06l0i",
+    "ADP": 461.12
+  },
+  {
+    "pos": "RP",
+    "name": "Petit, RJ",
+    "id": "060ui",
+    "ADP": 461.12
+  },
+  {
+    "pos": "SP",
+    "name": "Blanco, Ronel",
+    "id": "04ydi",
+    "ADP": 461.13
+  },
+  {
+    "pos": "SP",
+    "name": "Yates, Evan",
+    "id": "06qos",
+    "ADP": 461.13
+  },
+  {
+    "pos": "RP",
+    "name": "Allard, Kolby",
+    "id": "03nqg",
+    "ADP": 461.14
+  },
+  {
+    "pos": "2B",
+    "name": "Prieto, Cesar",
+    "id": "05gdq",
+    "ADP": 461.14
+  },
+  {
+    "pos": "RP",
+    "name": "Sandlin, Nick",
+    "id": "04pmm",
+    "ADP": 461.14
+  },
+  {
+    "pos": "SP",
+    "name": "Takahashi, Kona",
+    "id": "06ax2",
+    "ADP": 461.14
+  },
+  {
+    "pos": "SP",
+    "name": "Rodriguez, Carlos",
+    "id": "05yf9",
+    "ADP": 461.15
+  },
+  {
+    "pos": "RP",
+    "name": "Seymour, Carson",
+    "id": "05jqk",
+    "ADP": 461.15
+  },
+  {
+    "pos": "LF",
+    "name": "Sprinkle, Jordan",
+    "id": "05xu7",
+    "ADP": 461.15
+  },
+  {
+    "pos": "SP",
+    "name": "Witherspoon, Kyson",
+    "id": "06ms5",
+    "ADP": 461.16
+  },
+  {
+    "pos": "SP",
+    "name": "Baumann, Garrett",
+    "id": "06aqk",
+    "ADP": 461.17
+  },
+  {
+    "pos": "2B",
+    "name": "Gray, Tristan",
+    "id": "04eme",
+    "ADP": 461.17
+  },
+  {
+    "pos": "RP",
+    "name": "Abad, Andelzon",
+    "id": "064nr",
+    "ADP": 461.18
+  },
+  {
+    "pos": "SS",
+    "name": "Newman, Kevin",
+    "id": "03pj2",
+    "ADP": 461.18
+  },
+  {
+    "pos": "SP",
+    "name": "Wright, Kyle",
+    "id": "04aed",
+    "ADP": 461.18
+  },
+  {
+    "pos": "SP",
+    "name": "Arihara, Kohei",
+    "id": "05gdd",
+    "ADP": 461.19
+  },
+  {
+    "pos": "SP",
+    "name": "Murakami, Shoki",
+    "id": "06idg",
+    "ADP": 461.19
+  },
+  {
+    "pos": "3B",
+    "name": "Reimer, Jacob",
+    "id": "06481",
+    "ADP": 461.19
+  },
+  {
+    "pos": "SS",
+    "name": "Adamczewski, Josh",
+    "id": "06hth",
+    "ADP": 461.2
+  },
+  {
+    "pos": "SS",
+    "name": "Miller, Cody",
+    "id": "06yn2",
+    "ADP": 461.2
+  },
+  {
+    "pos": "SS",
+    "name": "Williams, Luke",
+    "id": "03qk3",
+    "ADP": 461.2
+  },
+  {
+    "pos": "SS",
+    "name": "Arquette, Aiva",
+    "id": "06pg6",
+    "ADP": 461.21
+  },
+  {
+    "pos": "RF",
+    "name": "Campero, Gustavo",
+    "id": "06dpu",
+    "ADP": 461.21
+  },
+  {
+    "pos": "SP",
+    "name": "Suarez, Santiago",
+    "id": "0620x",
+    "ADP": 461.21
+  },
+  {
+    "pos": "RF",
+    "name": "Fairchild, Stuart",
+    "id": "04eel",
+    "ADP": 461.22
+  },
+  {
+    "pos": "SS",
+    "name": "Areinamo, Jadher",
+    "id": "062l0",
+    "ADP": 461.23
+  },
+  {
+    "pos": "SP",
+    "name": "Bloss, Jake",
+    "id": "06dqi",
+    "ADP": 461.23
+  },
+  {
+    "pos": "CF",
+    "name": "Conrad, Ethan",
+    "id": "06pll",
+    "ADP": 461.23
+  },
+  {
+    "pos": "SP",
+    "name": "Hernandez, Seth",
+    "id": "067yn",
+    "ADP": 461.23
+  },
+  {
+    "pos": "RP",
+    "name": "Rodriguez, Randy",
+    "id": "05w9g",
+    "ADP": 461.23
+  },
+  {
+    "pos": "1B",
+    "name": "Turner, Justin",
+    "id": "01lum",
+    "ADP": 461.23
+  },
+  {
+    "pos": "SP",
+    "name": "Gonsolin, Tony",
+    "id": "041v6",
+    "ADP": 461.24
+  },
+  {
+    "pos": "RP",
+    "name": "Soriano, George",
+    "id": "04z9e",
+    "ADP": 461.24
+  },
+  {
+    "pos": "RP",
+    "name": "Suarez, Albert",
+    "id": "02xid",
+    "ADP": 461.24
+  },
+  {
+    "pos": "LF",
+    "name": "Dana, Casey",
+    "id": "066jj",
+    "ADP": 461.26
+  },
+  {
+    "pos": "LF",
+    "name": "Harris, Dustin",
+    "id": "0518r",
+    "ADP": 461.26
+  },
+  {
+    "pos": "RF",
+    "name": "Keirsey, DaShawn",
+    "id": "04pq5",
+    "ADP": 461.26
+  },
+  {
+    "pos": "RP",
+    "name": "Robertson, David",
+    "id": "005m0",
+    "ADP": 461.26
+  },
+  {
+    "pos": "RP",
+    "name": "Whitley, Forrest",
+    "id": "041m3",
+    "ADP": 461.26
+  },
+  {
+    "pos": "RP",
+    "name": "Berroa, Prelander",
+    "id": "0509b",
+    "ADP": 461.27
+  },
+  {
+    "pos": "LF",
+    "name": "Brown, Seth",
+    "id": "03qvr",
+    "ADP": 461.27
+  },
+  {
+    "pos": "RP",
+    "name": "Garcia, Luis",
+    "id": "0321h",
+    "ADP": 461.27
+  },
+  {
+    "pos": "RP",
+    "name": "Kahnle, Tommy",
+    "id": "02ccf",
+    "ADP": 461.27
+  },
+  {
+    "pos": "1B",
+    "name": "Sogard, Nick",
+    "id": "0519f",
+    "ADP": 461.27
+  },
+  {
+    "pos": "RP",
+    "name": "Lopez, Jorge",
+    "id": "02brf",
+    "ADP": 461.28
+  },
+  {
+    "pos": "RP",
+    "name": "Vargas, Carlos",
+    "id": "04rhl",
+    "ADP": 461.28
+  },
+  {
+    "pos": "SP",
+    "name": "Avila, Pedro",
+    "id": "03to4",
+    "ADP": 461.29
+  },
+  {
+    "pos": "SS",
+    "name": "Cholowsky, Roch",
+    "id": "05yeg",
+    "ADP": 461.29
+  },
+  {
+    "pos": "RP",
+    "name": "Cruz, Steven",
+    "id": "05tjx",
+    "ADP": 461.29
+  },
+  {
+    "pos": "SP",
+    "name": "Mederos, Victor",
+    "id": "05jrb",
+    "ADP": 461.29
+  },
+  {
+    "pos": "C",
+    "name": "Duno, Alfredo",
+    "id": "06626",
+    "ADP": 461.3
+  },
+  {
+    "pos": "2B",
+    "name": "Pitre, Emilien",
+    "id": "06nua",
+    "ADP": 461.3
+  },
+  {
+    "pos": "1B",
+    "name": "Melendez, Ivan",
+    "id": "060ih",
+    "ADP": 461.31
+  },
+  {
+    "pos": "CF",
+    "name": "Pinckney, Andrew",
+    "id": "06ek5",
+    "ADP": 461.31
+  },
+  {
+    "pos": "RP",
+    "name": "Garcia, Rico",
+    "id": "04rzp",
+    "ADP": 461.32
+  },
+  {
+    "pos": "RF",
+    "name": "Jackson, JoJo",
+    "id": "06qpp",
+    "ADP": 461.32
+  },
+  {
+    "pos": "SP",
+    "name": "Kelly, Antwone",
+    "id": "06bpq",
+    "ADP": 461.33
+  },
+  {
+    "pos": "1B",
+    "name": "Pratto, Nick",
+    "id": "04b08",
+    "ADP": 461.33
+  },
+  {
+    "pos": "SS",
+    "name": "Bonemer, Caleb",
+    "id": "06hea",
+    "ADP": 461.34
+  },
+  {
+    "pos": "SP",
+    "name": "Estes, Joey",
+    "id": "051cl",
+    "ADP": 461.34
+  },
+  {
+    "pos": "SP",
+    "name": "Henderson, Ixan",
+    "id": "06fzn",
+    "ADP": 461.34
+  },
+  {
+    "pos": "SP",
+    "name": "Jobe, Jackson",
+    "id": "05rb0",
+    "ADP": 461.34
+  },
+  {
+    "pos": "C",
+    "name": "Pereda, Jhonny",
+    "id": "04yd8",
+    "ADP": 461.34
+  },
+  {
+    "pos": "RP",
+    "name": "De Los Santos, Enyel",
+    "id": "03y4y",
+    "ADP": 461.35
+  },
+  {
+    "pos": "RP",
+    "name": "Nunez, Anthony",
+    "id": "057n0",
+    "ADP": 461.36
+  },
+  {
+    "pos": "SP",
+    "name": "Ullola, Miguel",
+    "id": "061xq",
+    "ADP": 461.36
+  },
+  {
+    "pos": "LF",
+    "name": "Bae, Ji-Hwan",
+    "id": "04lcq",
+    "ADP": 461.37
+  },
+  {
+    "pos": "CF",
+    "name": "George, Nate",
+    "id": "06qr6",
+    "ADP": 461.37
+  },
+  {
+    "pos": "1B",
+    "name": "Mancini, Trey",
+    "id": "031c4",
+    "ADP": 461.38
+  },
+  {
+    "pos": "1B",
+    "name": "Miller, Owen",
+    "id": "04ppl",
+    "ADP": 461.38
+  },
+  {
+    "pos": "3B",
+    "name": "Ortiz, Deniel",
+    "id": "06pg4",
+    "ADP": 461.38
+  },
+  {
+    "pos": "DH",
+    "name": "Drury, Brandon",
+    "id": "02hlw",
+    "ADP": 461.39
+  },
+  {
+    "pos": "RP",
+    "name": "Hamilton, Ian",
+    "id": "041w8",
+    "ADP": 461.39
+  },
+  {
+    "pos": "SS",
+    "name": "Holliday, Ethan",
+    "id": "062cx",
+    "ADP": 461.39
+  },
+  {
+    "pos": "SP",
+    "name": "Aguiar, Julian",
+    "id": "05yg3",
+    "ADP": 461.4
+  },
+  {
+    "pos": "2B",
+    "name": "Fitzgerald, Ryan",
+    "id": "05uo0",
+    "ADP": 461.4
+  },
+  {
+    "pos": "RP",
+    "name": "Herrera, Welinton",
+    "id": "06m7f",
+    "ADP": 461.4
+  },
+  {
+    "pos": "RP",
+    "name": "Nicolas, Kyle",
+    "id": "05l9g",
+    "ADP": 461.4
+  },
+  {
+    "pos": "SP",
+    "name": "Smith-Shawver, AJ",
+    "id": "05uy5",
+    "ADP": 461.41
+  },
+  {
+    "pos": "SP",
+    "name": "Taylor, Zane",
+    "id": "06yw0",
+    "ADP": 461.41
+  },
+  {
+    "pos": "SP",
+    "name": "Brown, McCade",
+    "id": "05rg5",
+    "ADP": 461.43
+  },
+  {
+    "pos": "SP",
+    "name": "Madden, Ty",
+    "id": "05oqe",
+    "ADP": 461.43
+  },
+  {
+    "pos": "RP",
+    "name": "Sulser, Cole",
+    "id": "031hc",
+    "ADP": 461.43
+  },
+  {
+    "pos": "RP",
+    "name": "McDermott, Chayce",
+    "id": "05uws",
+    "ADP": 461.44
+  },
+  {
+    "pos": "CF",
+    "name": "Sirota, Mike",
+    "id": "066ip",
+    "ADP": 461.44
+  },
+  {
+    "pos": "RP",
+    "name": "Pushard, Matt",
+    "id": "0665x",
+    "ADP": 461.45
+  },
+  {
+    "pos": "RF",
+    "name": "Vilade, Ryan",
+    "id": "04eew",
+    "ADP": 461.45
+  },
+  {
+    "pos": "RP",
+    "name": "Beck, Tristan",
+    "id": "04afk",
+    "ADP": 461.46
+  },
+  {
+    "pos": "RP",
+    "name": "Graceffo, Gordon",
+    "id": "05wxw",
+    "ADP": 461.46
+  },
+  {
+    "pos": "SP",
+    "name": "Hoglund, Gunnar",
+    "id": "04pmd",
+    "ADP": 461.46
+  },
+  {
+    "pos": "SP",
+    "name": "Megill, Tylor",
+    "id": "04ywk",
+    "ADP": 461.46
+  },
+  {
+    "pos": "RF",
+    "name": "De Paula, Josue",
+    "id": "061zv",
+    "ADP": 461.47
+  },
+  {
+    "pos": "CF",
+    "name": "Ewing, A.J.",
+    "id": "06dn7",
+    "ADP": 461.47
+  },
+  {
+    "pos": "SP",
+    "name": "Quantrill, Cal",
+    "id": "03yxh",
+    "ADP": 461.47
+  },
+  {
+    "pos": "LF",
+    "name": "Slater, Austin",
+    "id": "03dg7",
+    "ADP": 461.47
+  },
+  {
+    "pos": "RP",
+    "name": "Bernardino, Brennan",
+    "id": "061t3",
+    "ADP": 461.48
+  },
+  {
+    "pos": "RP",
+    "name": "Chivilli, Angel",
+    "id": "05j8o",
+    "ADP": 461.48
+  },
+  {
+    "pos": "SP",
+    "name": "Gordon, Colton",
+    "id": "05yfi",
+    "ADP": 461.48
+  },
+  {
+    "pos": "SS",
+    "name": "King, Seaver",
+    "id": "06cq7",
+    "ADP": 461.48
+  },
+  {
+    "pos": "C",
+    "name": "MacIver, Willie",
+    "id": "04ptr",
+    "ADP": 461.48
+  },
+  {
+    "pos": "LF",
+    "name": "Waters, Drew",
+    "id": "04eer",
+    "ADP": 461.48
+  },
+  {
+    "pos": "1B",
+    "name": "Baker, Luken",
+    "id": "04069",
+    "ADP": 461.49
+  },
+  {
+    "pos": "RP",
+    "name": "Gibson, Cade",
+    "id": "066d2",
+    "ADP": 461.49
+  },
+  {
+    "pos": "3B",
+    "name": "Rojas, Josh",
+    "id": "04oct",
+    "ADP": 461.49
+  },
+  {
+    "pos": "1B",
+    "name": "Young, Jared",
+    "id": "04eoj",
+    "ADP": 461.49
+  },
+  {
+    "pos": "SS",
+    "name": "Wade, Tyler",
+    "id": "031b4",
+    "ADP": 461.5
+  },
+  {
+    "pos": "1B",
+    "name": "Bericoto, Victor",
+    "id": "051wu",
+    "ADP": 461.51
+  },
+  {
+    "pos": "RP",
+    "name": "Sandlin, David",
+    "id": "062pn",
+    "ADP": 461.51
+  },
+  {
+    "pos": "RP",
+    "name": "Dodd, Dylan",
+    "id": "05uy4",
+    "ADP": 461.52
+  },
+  {
+    "pos": "CF",
+    "name": "Fedko, Kyler",
+    "id": "05yhm",
+    "ADP": 461.52
+  },
+  {
+    "pos": "RP",
+    "name": "Kowar, Jackson",
+    "id": "04mlg",
+    "ADP": 461.52
+  },
+  {
+    "pos": "SP",
+    "name": "Culpepper, C.J.",
+    "id": "065j0",
+    "ADP": 461.53
+  },
+  {
+    "pos": "RP",
+    "name": "Fluharty, Mason",
+    "id": "0648y",
+    "ADP": 461.53
+  },
+  {
+    "pos": "SS",
+    "name": "Nimmala, Arjun",
+    "id": "05y3p",
+    "ADP": 461.53
+  },
+  {
+    "pos": "2B",
+    "name": "Delgado, Raynel",
+    "id": "04ps5",
+    "ADP": 461.54
+  },
+  {
+    "pos": "SS",
+    "name": "Miller, Noah",
+    "id": "05ua6",
+    "ADP": 461.54
+  },
+  {
+    "pos": "3B",
+    "name": "Woong Kim, Young",
+    "id": "06rrd",
+    "ADP": 461.54
+  },
+  {
+    "pos": "RP",
+    "name": "Ross, Dylan",
+    "id": "06580",
+    "ADP": 461.56
+  },
+  {
+    "pos": "RP",
+    "name": "Zastryzny, Rob",
+    "id": "0310m",
+    "ADP": 461.57
+  },
+  {
+    "pos": "2B",
+    "name": "Hampson, Garrett",
+    "id": "041qk",
+    "ADP": 461.58
+  },
+  {
+    "pos": "LF",
+    "name": "Pinango, Yohendrick",
+    "id": "04z8z",
+    "ADP": 461.58
+  },
+  {
+    "pos": "RF",
+    "name": "Rave, John",
+    "id": "0513s",
+    "ADP": 461.58
+  },
+  {
+    "pos": "CF",
+    "name": "Mesa Jr., Victor",
+    "id": "04y79",
+    "ADP": 461.59
+  },
+  {
+    "pos": "SP",
+    "name": "Paez, Jedixson",
+    "id": "05xzr",
+    "ADP": 461.6
+  },
+  {
+    "pos": "RP",
+    "name": "Suter, Brent",
+    "id": "03cav",
+    "ADP": 461.6
+  },
+  {
+    "pos": "RF",
+    "name": "Ledbetter, Colton",
+    "id": "0689z",
+    "ADP": 461.61
+  },
+  {
+    "pos": "CF",
+    "name": "Meckler, Wade",
+    "id": "066cn",
+    "ADP": 461.61
+  },
+  {
+    "pos": "LF",
+    "name": "Julks, Corey",
+    "id": "04eit",
+    "ADP": 461.63
+  },
+  {
+    "pos": "RP",
+    "name": "Anderson, Grant",
+    "id": "04q3y",
+    "ADP": 461.64
+  },
+  {
+    "pos": "RP",
+    "name": "France, J.P.",
+    "id": "04py3",
+    "ADP": 461.64
+  },
+  {
+    "pos": "SS",
+    "name": "Pena, Luis",
+    "id": "06j3f",
+    "ADP": 461.64
+  },
+  {
+    "pos": "RP",
+    "name": "Walters, Andrew",
+    "id": "061a8",
+    "ADP": 461.64
+  },
+  {
+    "pos": "RP",
+    "name": "Hill, Tim",
+    "id": "04022",
+    "ADP": 461.65
+  },
+  {
+    "pos": "RP",
+    "name": "Karinchak, James",
+    "id": "04ejp",
+    "ADP": 461.66
+  },
+  {
+    "pos": "RP",
+    "name": "Baumler, Carter",
+    "id": "05lg1",
+    "ADP": 461.67
+  },
+  {
+    "pos": "SP",
+    "name": "Diaz, Yilber",
+    "id": "06agh",
+    "ADP": 461.67
+  },
+  {
+    "pos": "RF",
+    "name": "McCray, Grant",
+    "id": "0512r",
+    "ADP": 461.67
+  },
+  {
+    "pos": "SP",
+    "name": "Meyer, Noble",
+    "id": "062yr",
+    "ADP": 461.68
+  },
+  {
+    "pos": "CF",
+    "name": "Taveras, Leody",
+    "id": "03pzo",
+    "ADP": 461.68
+  },
+  {
+    "pos": "RP",
+    "name": "Nance, Tommy",
+    "id": "05rcp",
+    "ADP": 461.69
+  },
+  {
+    "pos": "LF",
+    "name": "Callihan, Tyler",
+    "id": "04y9i",
+    "ADP": 461.7
+  },
+  {
+    "pos": "SS",
+    "name": "Cowles, Ben",
+    "id": "05y6f",
+    "ADP": 461.7
+  },
+  {
+    "pos": "RP",
+    "name": "Mena, Cristian",
+    "id": "05ita",
+    "ADP": 461.7
+  },
+  {
+    "pos": "RP",
+    "name": "Santos, Gregory",
+    "id": "0404s",
+    "ADP": 461.7
+  },
+  {
+    "pos": "RP",
+    "name": "Granillo, Andre",
+    "id": "06alu",
+    "ADP": 461.72
+  },
+  {
+    "pos": "SP",
+    "name": "Nikhazy, Doug",
+    "id": "05taw",
+    "ADP": 461.72
+  },
+  {
+    "pos": "SP",
+    "name": "Church, Marc",
+    "id": "051du",
+    "ADP": 461.73
+  },
+  {
+    "pos": "RP",
+    "name": "Ferguson, Tyler",
+    "id": "03qlm",
+    "ADP": 461.73
+  },
+  {
+    "pos": "RP",
+    "name": "Headrick, Brent",
+    "id": "0516x",
+    "ADP": 461.73
+  },
+  {
+    "pos": "2B",
+    "name": "Triantos, James",
+    "id": "05ucf",
+    "ADP": 461.73
+  },
+  {
+    "pos": "RP",
+    "name": "Harris, Hayden",
+    "id": "0664g",
+    "ADP": 461.74
+  },
+  {
+    "pos": "SS",
+    "name": "Franco, Wander",
+    "id": "04csx",
+    "ADP": 461.75
+  },
+  {
+    "pos": "C",
+    "name": "Keegan, Dominic",
+    "id": "05tde",
+    "ADP": 461.75
+  },
+  {
+    "pos": "RP",
+    "name": "Winn, Keaton",
+    "id": "04esc",
+    "ADP": 461.75
+  },
+  {
+    "pos": "1B",
+    "name": "Elko, Tim",
+    "id": "066da",
+    "ADP": 461.76
+  },
+  {
+    "pos": "SP",
+    "name": "Mazur, Adam",
+    "id": "060gg",
+    "ADP": 461.76
+  },
+  {
+    "pos": "1B",
+    "name": "Burke, Blake",
+    "id": "062jb",
+    "ADP": 461.77
+  },
+  {
+    "pos": "2B",
+    "name": "Urias, Luis",
+    "id": "03o43",
+    "ADP": 461.77
+  },
+  {
+    "pos": "RP",
+    "name": "Payamps, Joel",
+    "id": "03aru",
+    "ADP": 461.79
+  },
+  {
+    "pos": "CF",
+    "name": "Siri, Jose",
+    "id": "039vx",
+    "ADP": 461.8
+  },
+  {
+    "pos": "SP",
+    "name": "Dunning, Dane",
+    "id": "041m9",
+    "ADP": 461.81
+  },
+  {
+    "pos": "SP",
+    "name": "Senzatela, Antonio",
+    "id": "02zoa",
+    "ADP": 461.82
+  },
+  {
+    "pos": "2B",
+    "name": "Dunn, Oliver",
+    "id": "0518b",
+    "ADP": 461.83
+  },
+  {
+    "pos": "CF",
+    "name": "Thomas, Rhylan",
+    "id": "06653",
+    "ADP": 461.83
+  },
+  {
+    "pos": "C",
+    "name": "Gasper, Mickey",
+    "id": "06am0",
+    "ADP": 461.84
+  },
+  {
+    "pos": "RP",
+    "name": "Klein, Will",
+    "id": "05jrv",
+    "ADP": 461.84
+  },
+  {
+    "pos": "LF",
+    "name": "Winker, Jesse",
+    "id": "02mwg",
+    "ADP": 461.84
+  },
+  {
+    "pos": "RP",
+    "name": "Rutledge, Jackson",
+    "id": "04yte",
+    "ADP": 461.85
+  },
+  {
+    "pos": "CF",
+    "name": "Honeycutt, Vance",
+    "id": "062e5",
+    "ADP": 461.86
+  },
+  {
+    "pos": "SP",
+    "name": "Ryan, Ryder",
+    "id": "04aja",
+    "ADP": 461.86
+  },
+  {
+    "pos": "RP",
+    "name": "Stewart, Brock",
+    "id": "03deu",
+    "ADP": 461.86
+  },
+  {
+    "pos": "SP",
+    "name": "Barnett, Mason",
+    "id": "0630h",
+    "ADP": 461.87
+  },
+  {
+    "pos": "C",
+    "name": "Millas, Drew",
+    "id": "0515f",
+    "ADP": 461.87
+  },
+  {
+    "pos": "C",
+    "name": "Salas, Ethan",
+    "id": "05ybr",
+    "ADP": 461.87
+  },
+  {
+    "pos": "SP",
+    "name": "Urena, Walbert",
+    "id": "0629b",
+    "ADP": 461.87
+  },
+  {
+    "pos": "CF",
+    "name": "Farmelo, Jonny",
+    "id": "066sx",
+    "ADP": 461.88
+  },
+  {
+    "pos": "C",
+    "name": "Romo, Drew",
+    "id": "05gwr",
+    "ADP": 461.88
+  },
+  {
+    "pos": "SP",
+    "name": "Bush, Ky",
+    "id": "05tpz",
+    "ADP": 461.89
+  },
+  {
+    "pos": "SP",
+    "name": "Forret, Michael",
+    "id": "06hwt",
+    "ADP": 461.89
+  },
+  {
+    "pos": "CF",
+    "name": "Trammell, Taylor",
+    "id": "041pq",
+    "ADP": 461.89
+  },
+  {
+    "pos": "SP",
+    "name": "Franco, Jose",
+    "id": "05j93",
+    "ADP": 461.9
+  },
+  {
+    "pos": "SS",
+    "name": "McCoy, Mason",
+    "id": "04ehx",
+    "ADP": 461.9
+  },
+  {
+    "pos": "SP",
+    "name": "Young, Brandon",
+    "id": "05r3a",
+    "ADP": 461.9
+  },
+  {
+    "pos": "RP",
+    "name": "Gage, Matt",
+    "id": "03di1",
+    "ADP": 461.91
+  },
+  {
+    "pos": "CF",
+    "name": "Hill, Derek",
+    "id": "03d6q",
+    "ADP": 461.91
+  },
+  {
+    "pos": "RP",
+    "name": "Miller, Shelby",
+    "id": "01sbv",
+    "ADP": 461.91
+  },
+  {
+    "pos": "SS",
+    "name": "Parker, JoJo",
+    "id": "06se6",
+    "ADP": 461.91
+  },
+  {
+    "pos": "CF",
+    "name": "Helman, Michael",
+    "id": "04pvp",
+    "ADP": 461.92
+  },
+  {
+    "pos": "RP",
+    "name": "Kimbrel, Craig",
+    "id": "01scl",
+    "ADP": 461.92
+  },
+  {
+    "pos": "C",
+    "name": "Salazar, Cesar",
+    "id": "04psg",
+    "ADP": 461.92
+  },
+  {
+    "pos": "RP",
+    "name": "Bidois, Brandan",
+    "id": "06ex9",
+    "ADP": 461.93
+  },
+  {
+    "pos": "2B",
+    "name": "Bride, Jonah",
+    "id": "04q5b",
+    "ADP": 461.93
+  },
+  {
+    "pos": "SP",
+    "name": "Gomber, Austin",
+    "id": "03dbe",
+    "ADP": 461.93
+  },
+  {
+    "pos": "RP",
+    "name": "Mey, Luis",
+    "id": "05rks",
+    "ADP": 461.93
+  },
+  {
+    "pos": "CF",
+    "name": "Nori, Dante",
+    "id": "06ien",
+    "ADP": 461.93
+  },
+  {
+    "pos": "RP",
+    "name": "Jacob, Alek",
+    "id": "05xq0",
+    "ADP": 461.94
+  },
+  {
+    "pos": "SS",
+    "name": "Pratt, Cooper",
+    "id": "067xj",
+    "ADP": 461.94
+  },
+  {
+    "pos": "1B",
+    "name": "Meneses, Joey",
+    "id": "03et7",
+    "ADP": 461.95
+  },
+  {
+    "pos": "2B",
+    "name": "Eeles, Payton",
+    "id": "06ltg",
+    "ADP": 461.96
+  },
+  {
+    "pos": "RP",
+    "name": "Herrin, Tim",
+    "id": "061jc",
+    "ADP": 461.98
+  },
+  {
+    "pos": "RP",
+    "name": "Sborz, Josh",
+    "id": "03pp9",
+    "ADP": 461.98
+  },
+  {
+    "pos": "RP",
+    "name": "Bachar, Lake",
+    "id": "041s4",
+    "ADP": 461.99
+  },
+  {
+    "pos": "RP",
+    "name": "Foley, Jason",
+    "id": "04aoq",
+    "ADP": 461.99
+  },
+  {
+    "pos": "RP",
+    "name": "Hill, Jaden",
+    "id": "04w53",
+    "ADP": 462
+  },
+  {
+    "pos": "RP",
+    "name": "Morgan, David",
+    "id": "066a8",
+    "ADP": 462.01
+  },
+  {
+    "pos": "RP",
+    "name": "Brubaker, JT",
+    "id": "03qm8",
+    "ADP": 462.02
+  },
+  {
+    "pos": "SP",
+    "name": "Drake, Kohl",
+    "id": "066m0",
+    "ADP": 462.02
+  },
+  {
+    "pos": "SP",
+    "name": "Rojas, Kendry",
+    "id": "05rgq",
+    "ADP": 462.02
+  },
+  {
+    "pos": "RP",
+    "name": "Bivens, Spencer",
+    "id": "06kvo",
+    "ADP": 462.03
+  },
+  {
+    "pos": "3B",
+    "name": "Wisdom, Patrick",
+    "id": "02mws",
+    "ADP": 462.03
+  },
+  {
+    "pos": "SP",
+    "name": "Bastardo, Angel",
+    "id": "061zg",
+    "ADP": 462.04
+  },
+  {
+    "pos": "LF",
+    "name": "Loftin, Nick",
+    "id": "05gx0",
+    "ADP": 462.04
+  },
+  {
+    "pos": "CF",
+    "name": "Blanco, Dairon",
+    "id": "04mkt",
+    "ADP": 462.05
+  },
+  {
+    "pos": "SP",
+    "name": "De Leon, Luis",
+    "id": "06ckl",
+    "ADP": 462.06
+  },
+  {
+    "pos": "SP",
+    "name": "Wood, Gage",
+    "id": "06ujt",
+    "ADP": 462.06
+  },
+  {
+    "pos": "3B",
+    "name": "Harris, Brett",
+    "id": "05yca",
+    "ADP": 462.07
+  },
+  {
+    "pos": "LF",
+    "name": "Ornelas, Tirso",
+    "id": "04aov",
+    "ADP": 462.07
+  },
+  {
+    "pos": "RP",
+    "name": "Garcia, Brandyn",
+    "id": "06guh",
+    "ADP": 462.08
+  },
+  {
+    "pos": "3B",
+    "name": "Senzel, Nick",
+    "id": "03zc9",
+    "ADP": 462.08
+  },
+  {
+    "pos": "1B",
+    "name": "Kieboom, Carter",
+    "id": "041m8",
+    "ADP": 462.1
+  },
+  {
+    "pos": "LF",
+    "name": "McCormick, Chas",
+    "id": "04esz",
+    "ADP": 462.1
+  },
+  {
+    "pos": "1B",
+    "name": "Morales, Yohandy",
+    "id": "05js4",
+    "ADP": 462.1
+  },
+  {
+    "pos": "RP",
+    "name": "Gonzalez, Wikelman",
+    "id": "052ht",
+    "ADP": 462.11
+  },
+  {
+    "pos": "2B",
+    "name": "Vargas, Ildemaro",
+    "id": "0433b",
+    "ADP": 462.12
+  },
+  {
+    "pos": "1B",
+    "name": "Gonzalez, Romy",
+    "id": "04q0o",
+    "ADP": 462.14
+  },
+  {
+    "pos": "3B",
+    "name": "Urshela, Gio",
+    "id": "026rz",
+    "ADP": 462.16
+  },
+  {
+    "pos": "LF",
+    "name": "Kepler, Max",
+    "id": "01vja",
+    "ADP": 462.17
+  },
+  {
+    "pos": "1B",
+    "name": "Foscue, Justin",
+    "id": "05gsg",
+    "ADP": 462.18
+  },
+  {
+    "pos": "3B",
+    "name": "Ramos, Bryan",
+    "id": "059bs",
+    "ADP": 462.18
+  },
+  {
+    "pos": "C",
+    "name": "Higashioka, Kyle",
+    "id": "01usr",
+    "ADP": 462.19
+  },
+  {
+    "pos": "3B",
+    "name": "Romero, Mikey",
+    "id": "05y7y",
+    "ADP": 462.19
+  },
+  {
+    "pos": "RF",
+    "name": "Tibbs, James",
+    "id": "066ir",
+    "ADP": 462.19
+  },
+  {
+    "pos": "RP",
+    "name": "Coulombe, Danny",
+    "id": "02hxd",
+    "ADP": 462.2
+  },
+  {
+    "pos": "RP",
+    "name": "Hart, Kyle",
+    "id": "0422c",
+    "ADP": 462.2
+  },
+  {
+    "pos": "SS",
+    "name": "Williams, Jett",
+    "id": "060la",
+    "ADP": 462.2
+  },
+  {
+    "pos": "RP",
+    "name": "Fernandez, Julian",
+    "id": "04ana",
+    "ADP": 462.21
+  },
+  {
+    "pos": "SP",
+    "name": "Means, John",
+    "id": "03dim",
+    "ADP": 462.22
+  },
+  {
+    "pos": "3B",
+    "name": "Adams, Luke",
+    "id": "06582",
+    "ADP": 462.23
+  },
+  {
+    "pos": "DH",
+    "name": "Isaac, Xavier",
+    "id": "062pp",
+    "ADP": 462.23
+  },
+  {
+    "pos": "SP",
+    "name": "Farris, Mitch",
+    "id": "06fz3",
+    "ADP": 462.25
+  },
+  {
+    "pos": "RP",
+    "name": "Ferguson, Caleb",
+    "id": "043r7",
+    "ADP": 462.27
+  },
+  {
+    "pos": "LF",
+    "name": "Canha, Mark",
+    "id": "025eo",
+    "ADP": 462.28
+  },
+  {
+    "pos": "RP",
+    "name": "Bido, Osvaldo",
+    "id": "06ala",
+    "ADP": 462.29
+  },
+  {
+    "pos": "CF",
+    "name": "Franklin, Christian",
+    "id": "05rb5",
+    "ADP": 462.29
+  },
+  {
+    "pos": "2B",
+    "name": "Koss, Christian",
+    "id": "04ydt",
+    "ADP": 462.3
+  },
+  {
+    "pos": "C",
+    "name": "McGuire, Reese",
+    "id": "0310a",
+    "ADP": 462.3
+  },
+  {
+    "pos": "1B",
+    "name": "Mervis, Matt",
+    "id": "05ojj",
+    "ADP": 462.3
+  },
+  {
+    "pos": "SP",
+    "name": "Morris, Andrew",
+    "id": "0648r",
+    "ADP": 462.3
+  },
+  {
+    "pos": "SS",
+    "name": "Peguero, Liover",
+    "id": "04ol2",
+    "ADP": 462.3
+  },
+  {
+    "pos": "RP",
+    "name": "Brazoban, Huascar",
+    "id": "060ml",
+    "ADP": 462.33
+  },
+  {
+    "pos": "RP",
+    "name": "Phillips, Tyler",
+    "id": "03qt6",
+    "ADP": 462.35
+  },
+  {
+    "pos": "3B",
+    "name": "Fischer, Andrew",
+    "id": "06k7t",
+    "ADP": 462.37
+  },
+  {
+    "pos": "SP",
+    "name": "Blalock, Bradley",
+    "id": "0579z",
+    "ADP": 462.38
+  },
+  {
+    "pos": "RP",
+    "name": "Bowlan, Jonathan",
+    "id": "04pmg",
+    "ADP": 462.38
+  },
+  {
+    "pos": "LF",
+    "name": "Clase, Jonatan",
+    "id": "057zc",
+    "ADP": 462.38
+  },
+  {
+    "pos": "RP",
+    "name": "Graterol, Brusdar",
+    "id": "03zbj",
+    "ADP": 462.39
+  },
+  {
+    "pos": "2B",
+    "name": "Johnson, Termarr",
+    "id": "05rc5",
+    "ADP": 462.42
+  },
+  {
+    "pos": "C",
+    "name": "Knizner, Andrew",
+    "id": "041t8",
+    "ADP": 462.42
+  },
+  {
+    "pos": "LF",
+    "name": "Luciano, Marco",
+    "id": "04ooy",
+    "ADP": 462.43
+  },
+  {
+    "pos": "SS",
+    "name": "Arroyo, Edwin",
+    "id": "05rcj",
+    "ADP": 462.44
+  },
+  {
+    "pos": "SP",
+    "name": "Ferris, Jackson",
+    "id": "05u6g",
+    "ADP": 462.45
+  },
+  {
+    "pos": "SS",
+    "name": "Serna, Jared",
+    "id": "062jx",
+    "ADP": 462.45
+  },
+  {
+    "pos": "SP",
+    "name": "Rock, Joe",
+    "id": "05tdd",
+    "ADP": 462.46
+  },
+  {
+    "pos": "RP",
+    "name": "Enns, Dietrich",
+    "id": "02n9l",
+    "ADP": 462.48
+  },
+  {
+    "pos": "RP",
+    "name": "Orze, Eric",
+    "id": "05mrv",
+    "ADP": 462.49
+  },
+  {
+    "pos": "CF",
+    "name": "Halpin, Petey",
+    "id": "05gwx",
+    "ADP": 462.5
+  },
+  {
+    "pos": "RF",
+    "name": "Rodriguez, Johnathan",
+    "id": "04gdw",
+    "ADP": 462.5
+  },
+  {
+    "pos": "SP",
+    "name": "Cornelio, Riley",
+    "id": "04yij",
+    "ADP": 462.51
+  },
+  {
+    "pos": "RP",
+    "name": "Alexander, Tyler",
+    "id": "0376h",
+    "ADP": 462.54
+  },
+  {
+    "pos": "C",
+    "name": "Escarra, J.C.",
+    "id": "04ent",
+    "ADP": 462.54
+  },
+  {
+    "pos": "SP",
+    "name": "Hess, Ben",
+    "id": "066iq",
+    "ADP": 462.54
+  },
+  {
+    "pos": "SS",
+    "name": "Rocchio, Brayan",
+    "id": "04si3",
+    "ADP": 462.54
+  },
+  {
+    "pos": "C",
+    "name": "Diaz, Elias",
+    "id": "03fhx",
+    "ADP": 462.56
+  },
+  {
+    "pos": "RP",
+    "name": "Hurter, Brant",
+    "id": "05u6p",
+    "ADP": 462.57
+  },
+  {
+    "pos": "RP",
+    "name": "Alzolay, Adbert",
+    "id": "03aqz",
+    "ADP": 462.58
+  },
+  {
+    "pos": "SS",
+    "name": "Allen, Nick",
+    "id": "04efs",
+    "ADP": 462.6
+  },
+  {
+    "pos": "3B",
+    "name": "LeMahieu, DJ",
+    "id": "01sfi",
+    "ADP": 462.62
+  },
+  {
+    "pos": "RP",
+    "name": "Poulin, PJ",
+    "id": "04pvq",
+    "ADP": 462.63
+  },
+  {
+    "pos": "LF",
+    "name": "Carlson, Dylan",
+    "id": "041mc",
+    "ADP": 462.64
+  },
+  {
+    "pos": "SP",
+    "name": "Freeland, Kyle",
+    "id": "03ca3",
+    "ADP": 462.64
+  },
+  {
+    "pos": "CF",
+    "name": "Misner, Kameron",
+    "id": "04y9h",
+    "ADP": 462.65
+  },
+  {
+    "pos": "RF",
+    "name": "Bryant, Kris",
+    "id": "01ubo",
+    "ADP": 462.66
+  },
+  {
+    "pos": "RP",
+    "name": "Lynch, Daniel",
+    "id": "04pma",
+    "ADP": 462.67
+  },
+  {
+    "pos": "SP",
+    "name": "Medina, Luis",
+    "id": "03zlf",
+    "ADP": 462.67
+  },
+  {
+    "pos": "RP",
+    "name": "Phillips, Evan",
+    "id": "03qto",
+    "ADP": 462.67
+  },
+  {
+    "pos": "2B",
+    "name": "Vivas, Jorbit",
+    "id": "05a1t",
+    "ADP": 462.67
+  },
+  {
+    "pos": "RP",
+    "name": "Criswell, Cooper",
+    "id": "04px6",
+    "ADP": 462.68
+  },
+  {
+    "pos": "3B",
+    "name": "Murray, Tanner",
+    "id": "05jrs",
+    "ADP": 462.68
+  },
+  {
+    "pos": "RP",
+    "name": "Peralta, Wandy",
+    "id": "047sh",
+    "ADP": 462.68
+  },
+  {
+    "pos": "RP",
+    "name": "Bachman, Sam",
+    "id": "05rb4",
+    "ADP": 462.7
+  },
+  {
+    "pos": "1B",
+    "name": "Valdez, Enmanuel",
+    "id": "042af",
+    "ADP": 462.71
+  },
+  {
+    "pos": "2B",
+    "name": "Rodgers, Brendan",
+    "id": "03lua",
+    "ADP": 462.72
+  },
+  {
+    "pos": "SP",
+    "name": "Bennett, Jake",
+    "id": "060i2",
+    "ADP": 462.73
+  },
+  {
+    "pos": "CF",
+    "name": "Robinson, Kristian",
+    "id": "04g7l",
+    "ADP": 462.74
+  },
+  {
+    "pos": "C",
+    "name": "Rortvedt, Ben",
+    "id": "041q7",
+    "ADP": 462.74
+  },
+  {
+    "pos": "SP",
+    "name": "Stroman, Marcus",
+    "id": "02hg4",
+    "ADP": 462.74
+  },
+  {
+    "pos": "LF",
+    "name": "Johnson, Bryce",
+    "id": "04ehv",
+    "ADP": 462.75
+  },
+  {
+    "pos": "3B",
+    "name": "Lipscomb, Trey",
+    "id": "0612z",
+    "ADP": 462.76
+  },
+  {
+    "pos": "SP",
+    "name": "Gordon, Tanner",
+    "id": "05152",
+    "ADP": 462.77
+  },
+  {
+    "pos": "CF",
+    "name": "Barrosa, Jorge",
+    "id": "04mrb",
+    "ADP": 462.78
+  },
+  {
+    "pos": "SP",
+    "name": "Mautz, Brycen",
+    "id": "062q0",
+    "ADP": 462.78
+  },
+  {
+    "pos": "SP",
+    "name": "Caminiti, Cam",
+    "id": "062e0",
+    "ADP": 462.79
+  },
+  {
+    "pos": "C",
+    "name": "Jackson, Alex",
+    "id": "02yoi",
+    "ADP": 462.79
+  },
+  {
+    "pos": "SP",
+    "name": "Waldron, Matt",
+    "id": "051e5",
+    "ADP": 462.8
+  },
+  {
+    "pos": "2B",
+    "name": "Farmer, Kyle",
+    "id": "0312h",
+    "ADP": 462.81
+  },
+  {
+    "pos": "RP",
+    "name": "Suarez, Jose",
+    "id": "03nqc",
+    "ADP": 462.82
+  },
+  {
+    "pos": "SP",
+    "name": "Sloan, Ryan",
+    "id": "06ier",
+    "ADP": 462.83
+  },
+  {
+    "pos": "3B",
+    "name": "Madrigal, Nick",
+    "id": "03qu7",
+    "ADP": 462.84
+  },
+  {
+    "pos": "RF",
+    "name": "Wiemer, Joey",
+    "id": "05jq3",
+    "ADP": 462.84
+  },
+  {
+    "pos": "3B",
+    "name": "Groover, LuJames",
+    "id": "05yj5",
+    "ADP": 462.85
+  },
+  {
+    "pos": "2B",
+    "name": "Riggio, Roc",
+    "id": "060fx",
+    "ADP": 462.85
+  },
+  {
+    "pos": "RP",
+    "name": "Bummer, Aaron",
+    "id": "03drc",
+    "ADP": 462.86
+  },
+  {
+    "pos": "RP",
+    "name": "White, Josh",
+    "id": "05zyb",
+    "ADP": 462.86
+  },
+  {
+    "pos": "RF",
+    "name": "Freeman, Tyler",
+    "id": "04efc",
+    "ADP": 462.87
+  },
+  {
+    "pos": "RP",
+    "name": "Lange, Alex",
+    "id": "03yui",
+    "ADP": 462.87
+  },
+  {
+    "pos": "LF",
+    "name": "Verdugo, Alex",
+    "id": "03d7g",
+    "ADP": 462.87
+  },
+  {
+    "pos": "LF",
+    "name": "Taylor, Chris",
+    "id": "02u47",
+    "ADP": 462.88
+  },
+  {
+    "pos": "RF",
+    "name": "Schreck, RJ",
+    "id": "0603l",
+    "ADP": 462.89
+  },
+  {
+    "pos": "SP",
+    "name": "Yoho, Craig",
+    "id": "06fzq",
+    "ADP": 462.91
+  },
+  {
+    "pos": "RP",
+    "name": "Matsui, Yuki",
+    "id": "0689r",
+    "ADP": 462.94
+  },
+  {
+    "pos": "SP",
+    "name": "Anderson, Tyler",
+    "id": "026mq",
+    "ADP": 462.95
+  },
+  {
+    "pos": "RP",
+    "name": "Burke, Brock",
+    "id": "03dap",
+    "ADP": 462.98
+  },
+  {
+    "pos": "2B",
+    "name": "Whitcomb, Shay",
+    "id": "05jqi",
+    "ADP": 463
+  },
+  {
+    "pos": "SP",
+    "name": "Gusto, Ryan",
+    "id": "0518s",
+    "ADP": 463.01
+  },
+  {
+    "pos": "CF",
+    "name": "Thomas, Alek",
+    "id": "04pmw",
+    "ADP": 463.01
+  },
+  {
+    "pos": "3B",
+    "name": "DeJong, Paul",
+    "id": "03qkh",
+    "ADP": 463.03
+  },
+  {
+    "pos": "2B",
+    "name": "Freeman, Cody",
+    "id": "0513g",
+    "ADP": 463.03
+  },
+  {
+    "pos": "RF",
+    "name": "Leon, Pedro",
+    "id": "05gdv",
+    "ADP": 463.03
+  },
+  {
+    "pos": "SP",
+    "name": "Cortes Jr., Nestor",
+    "id": "03bin",
+    "ADP": 463.04
+  },
+  {
+    "pos": "1B",
+    "name": "Lowe, Nathaniel",
+    "id": "041xv",
+    "ADP": 463.05
+  },
+  {
+    "pos": "SP",
+    "name": "Stephen, Khal",
+    "id": "06nub",
+    "ADP": 463.08
+  },
+  {
+    "pos": "SP",
+    "name": "Rea, Colin",
+    "id": "02bzn",
+    "ADP": 463.1
+  },
+  {
+    "pos": "1B",
+    "name": "Collier, Cam",
+    "id": "05u1y",
+    "ADP": 463.11
+  },
+  {
+    "pos": "1B",
+    "name": "Mountcastle, Ryan",
+    "id": "03pjl",
+    "ADP": 463.15
+  },
+  {
+    "pos": "CF",
+    "name": "Teodosio, Bryce",
+    "id": "0617q",
+    "ADP": 463.16
+  },
+  {
+    "pos": "3B",
+    "name": "Toro, Abraham",
+    "id": "041se",
+    "ADP": 463.19
+  },
+  {
+    "pos": "SP",
+    "name": "Wesneski, Hayden",
+    "id": "0514f",
+    "ADP": 463.19
+  },
+  {
+    "pos": "RP",
+    "name": "Bautista, Felix",
+    "id": "05t64",
+    "ADP": 463.25
+  },
+  {
+    "pos": "RP",
+    "name": "Blackburn, Paul",
+    "id": "02mwd",
+    "ADP": 463.25
+  },
+  {
+    "pos": "C",
+    "name": "Vazquez, Christian",
+    "id": "029us",
+    "ADP": 463.28
+  },
+  {
+    "pos": "RF",
+    "name": "Eaton, Nate",
+    "id": "04q3n",
+    "ADP": 463.29
+  },
+  {
+    "pos": "RP",
+    "name": "Rodriguez, Yariel",
+    "id": "06at1",
+    "ADP": 463.29
+  },
+  {
+    "pos": "RP",
+    "name": "Milner, Hoby",
+    "id": "02n0v",
+    "ADP": 463.31
+  },
+  {
+    "pos": "C",
+    "name": "Adams, Riley",
+    "id": "04azt",
+    "ADP": 463.34
+  },
+  {
+    "pos": "RF",
+    "name": "Fernandez, Yanquiel",
+    "id": "05g3k",
+    "ADP": 463.34
+  },
+  {
+    "pos": "SS",
+    "name": "Genao, Angel",
+    "id": "05r5e",
+    "ADP": 463.35
+  },
+  {
+    "pos": "2B",
+    "name": "Fitzgerald, Tyler",
+    "id": "05131",
+    "ADP": 463.39
+  },
+  {
+    "pos": "RP",
+    "name": "Henriquez, Edgardo",
+    "id": "05w7z",
+    "ADP": 463.39
+  },
+  {
+    "pos": "3B",
+    "name": "Brujan, Vidal",
+    "id": "03yxd",
+    "ADP": 463.4
+  },
+  {
+    "pos": "SP",
+    "name": "Pearson, Nate",
+    "id": "04eec",
+    "ADP": 463.4
+  },
+  {
+    "pos": "SP",
+    "name": "Cijntje, Jurrangelo",
+    "id": "060m8",
+    "ADP": 463.42
+  },
+  {
+    "pos": "SP",
+    "name": "Hurt, Kyle",
+    "id": "05jq7",
+    "ADP": 463.42
+  },
+  {
+    "pos": "2B",
+    "name": "Rivas, Leo",
+    "id": "04ave",
+    "ADP": 463.43
+  },
+  {
+    "pos": "3B",
+    "name": "Mastrobuoni, Miles",
+    "id": "041yi",
+    "ADP": 463.44
+  },
+  {
+    "pos": "SP",
+    "name": "Murphy, Owen",
+    "id": "062pm",
+    "ADP": 463.44
+  },
+  {
+    "pos": "C",
+    "name": "Bernal, Leonardo",
+    "id": "05rcw",
+    "ADP": 463.46
+  },
+  {
+    "pos": "RP",
+    "name": "Webb, Jacob",
+    "id": "04y76",
+    "ADP": 463.46
+  },
+  {
+    "pos": "SP",
+    "name": "Alexander, Jason",
+    "id": "05xze",
+    "ADP": 463.51
+  },
+  {
+    "pos": "LF",
+    "name": "Baddoo, Akil",
+    "id": "041qi",
+    "ADP": 463.51
+  },
+  {
+    "pos": "SP",
+    "name": "Clevinger, Mike",
+    "id": "02bsw",
+    "ADP": 463.51
+  },
+  {
+    "pos": "RF",
+    "name": "Noel, Jhonkensy",
+    "id": "04yrs",
+    "ADP": 463.52
+  },
+  {
+    "pos": "3B",
+    "name": "Tena, Jose",
+    "id": "04sxv",
+    "ADP": 463.53
+  },
+  {
+    "pos": "SP",
+    "name": "Knack, Landon",
+    "id": "05l9f",
+    "ADP": 463.55
+  },
+  {
+    "pos": "LF",
+    "name": "Lockridge, Brandon",
+    "id": "04prc",
+    "ADP": 463.55
+  },
+  {
+    "pos": "C",
+    "name": "Mack, Joe",
+    "id": "05rcd",
+    "ADP": 463.58
+  },
+  {
+    "pos": "3B",
+    "name": "Cabrera, Oswaldo",
+    "id": "042no",
+    "ADP": 463.61
+  },
+  {
+    "pos": "CF",
+    "name": "Ward, Braiden",
+    "id": "05yfw",
+    "ADP": 463.62
+  },
+  {
+    "pos": "RP",
+    "name": "Saalfrank, Andrew",
+    "id": "0514i",
+    "ADP": 463.65
+  },
+  {
+    "pos": "RP",
+    "name": "Maxwell, Zach",
+    "id": "0648f",
+    "ADP": 463.66
+  },
+  {
+    "pos": "LF",
+    "name": "Haggerty, Sam",
+    "id": "03qz9",
+    "ADP": 463.67
+  },
+  {
+    "pos": "SP",
+    "name": "Herz, DJ",
+    "id": "0516h",
+    "ADP": 463.7
+  },
+  {
+    "pos": "SS",
+    "name": "Cruz, Trei",
+    "id": "05gsd",
+    "ADP": 463.71
+  },
+  {
+    "pos": "SP",
+    "name": "Kochanowicz, Jack",
+    "id": "0512u",
+    "ADP": 463.73
+  },
+  {
+    "pos": "RF",
+    "name": "Velazquez, Nelson",
+    "id": "04eh9",
+    "ADP": 463.78
+  },
+  {
+    "pos": "C",
+    "name": "Hedges, Austin",
+    "id": "02brk",
+    "ADP": 463.8
+  },
+  {
+    "pos": "LF",
+    "name": "Gonzalez, Gabriel",
+    "id": "05rcs",
+    "ADP": 463.83
+  },
+  {
+    "pos": "RP",
+    "name": "Teodo, Emiliano",
+    "id": "05uo4",
+    "ADP": 463.83
+  },
+  {
+    "pos": "RP",
+    "name": "Gomez, Yoendrys",
+    "id": "04xne",
+    "ADP": 463.86
+  },
+  {
+    "pos": "RF",
+    "name": "Cortes, Carlos",
+    "id": "0423c",
+    "ADP": 463.87
+  },
+  {
+    "pos": "RP",
+    "name": "Vesia, Alex",
+    "id": "04q05",
+    "ADP": 463.89
+  },
+  {
+    "pos": "SP",
+    "name": "Elder, Bryce",
+    "id": "05jp9",
+    "ADP": 463.92
+  },
+  {
+    "pos": "CF",
+    "name": "Davidson, Bo",
+    "id": "06hua",
+    "ADP": 463.95
+  },
+  {
+    "pos": "RP",
+    "name": "Jimenez, Joe",
+    "id": "03as0",
+    "ADP": 463.95
+  },
+  {
+    "pos": "CF",
+    "name": "Rojas, Johan",
+    "id": "04w4e",
+    "ADP": 463.98
+  },
+  {
+    "pos": "RP",
+    "name": "Wicks, Jordan",
+    "id": "05r1d",
+    "ADP": 463.99
+  },
+  {
+    "pos": "2B",
+    "name": "Iglesias, Jose",
+    "id": "01s98",
+    "ADP": 464.01
+  },
+  {
+    "pos": "RP",
+    "name": "Banks, Tanner",
+    "id": "03dqv",
+    "ADP": 464.03
+  },
+  {
+    "pos": "CF",
+    "name": "Carrigg, Cole",
+    "id": "066eo",
+    "ADP": 464.03
+  },
+  {
+    "pos": "SP",
+    "name": "Harrington, Thomas",
+    "id": "05zya",
+    "ADP": 464.03
+  },
+  {
+    "pos": "RP",
+    "name": "Rodriguez, Bradgley",
+    "id": "05y5d",
+    "ADP": 464.04
+  },
+  {
+    "pos": "SP",
+    "name": "Teng, Kai-Wei",
+    "id": "04zay",
+    "ADP": 464.1
+  },
+  {
+    "pos": "CF",
+    "name": "Bradfield Jr., Enrique",
+    "id": "05jre",
+    "ADP": 464.12
+  },
+  {
+    "pos": "SP",
+    "name": "Davalillo, David",
+    "id": "06mio",
+    "ADP": 464.12
+  },
+  {
+    "pos": "CF",
+    "name": "Paris, Kyren",
+    "id": "050s0",
+    "ADP": 464.13
+  },
+  {
+    "pos": "2B",
+    "name": "Arroyo, Michael",
+    "id": "05yid",
+    "ADP": 464.15
+  },
+  {
+    "pos": "3B",
+    "name": "Ibanez, Andy",
+    "id": "03mm4",
+    "ADP": 464.16
+  },
+  {
+    "pos": "1B",
+    "name": "Morgan, Tre'",
+    "id": "05wrt",
+    "ADP": 464.16
+  },
+  {
+    "pos": "SS",
+    "name": "Guzman, Denzer",
+    "id": "05m1b",
+    "ADP": 464.19
+  },
+  {
+    "pos": "SP",
+    "name": "Evans, Logan",
+    "id": "06hv8",
+    "ADP": 464.21
+  },
+  {
+    "pos": "SP",
+    "name": "Crow, Coleman",
+    "id": "0569p",
+    "ADP": 464.22
+  },
+  {
+    "pos": "LF",
+    "name": "Thompson, Sterlin",
+    "id": "05jsc",
+    "ADP": 464.22
+  },
+  {
+    "pos": "3B",
+    "name": "Candelario, Jeimer",
+    "id": "027fx",
+    "ADP": 464.23
+  },
+  {
+    "pos": "RF",
+    "name": "Malloy, Justyn-Henry",
+    "id": "05uy1",
+    "ADP": 464.23
+  },
+  {
+    "pos": "3B",
+    "name": "Espinal, Santiago",
+    "id": "041vp",
+    "ADP": 464.25
+  },
+  {
+    "pos": "3B",
+    "name": "De Los Santos, Deyvison",
+    "id": "05nsq",
+    "ADP": 464.29
+  },
+  {
+    "pos": "RF",
+    "name": "Montes, Lazaro",
+    "id": "05rfc",
+    "ADP": 464.29
+  },
+  {
+    "pos": "1B",
+    "name": "Condon, Charlie",
+    "id": "06alk",
+    "ADP": 464.32
+  },
+  {
+    "pos": "SP",
+    "name": "Feltner, Ryan",
+    "id": "03r06",
+    "ADP": 464.33
+  },
+  {
+    "pos": "RF",
+    "name": "Brennan, Will",
+    "id": "05165",
+    "ADP": 464.35
+  },
+  {
+    "pos": "SP",
+    "name": "Bratt, Mitch",
+    "id": "05xq2",
+    "ADP": 464.36
+  },
+  {
+    "pos": "RP",
+    "name": "Little, Brendon",
+    "id": "04afl",
+    "ADP": 464.36
+  },
+  {
+    "pos": "SP",
+    "name": "Petty, Chase",
+    "id": "05raz",
+    "ADP": 464.37
+  },
+  {
+    "pos": "C",
+    "name": "Lee, Korey",
+    "id": "0510z",
+    "ADP": 464.4
+  },
+  {
+    "pos": "RP",
+    "name": "Festa, Matt",
+    "id": "041tl",
+    "ADP": 464.42
+  },
+  {
+    "pos": "SP",
+    "name": "McKenzie, Triston",
+    "id": "03pon",
+    "ADP": 464.42
+  },
+  {
+    "pos": "CF",
+    "name": "Suwinski, Jack",
+    "id": "041z2",
+    "ADP": 464.44
+  },
+  {
+    "pos": "RP",
+    "name": "Mejia, Juan",
+    "id": "060o9",
+    "ADP": 464.45
+  },
+  {
+    "pos": "SP",
+    "name": "Cannon, Jonathan",
+    "id": "05rb2",
+    "ADP": 464.46
+  },
+  {
+    "pos": "RP",
+    "name": "Joyce, Ben",
+    "id": "060eu",
+    "ADP": 464.46
+  },
+  {
+    "pos": "RP",
+    "name": "Bigge, Hunter",
+    "id": "0519h",
+    "ADP": 464.47
+  },
+  {
+    "pos": "C",
+    "name": "Bart, Joey",
+    "id": "04mn4",
+    "ADP": 464.51
+  },
+  {
+    "pos": "C",
+    "name": "Pozo, Yohel",
+    "id": "03yr2",
+    "ADP": 464.57
+  },
+  {
+    "pos": "1B",
+    "name": "Locklear, Tyler",
+    "id": "05xu8",
+    "ADP": 464.58
+  },
+  {
+    "pos": "RP",
+    "name": "Hodge, Porter",
+    "id": "051aa",
+    "ADP": 464.59
+  },
+  {
+    "pos": "RP",
+    "name": "Vasil, Mike",
+    "id": "04ok0",
+    "ADP": 464.62
+  },
+  {
+    "pos": "3B",
+    "name": "White, Tommy",
+    "id": "05tp7",
+    "ADP": 464.62
+  },
+  {
+    "pos": "1B",
+    "name": "Toglia, Michael",
+    "id": "04ok3",
+    "ADP": 464.63
+  },
+  {
+    "pos": "RP",
+    "name": "Avila, Luinder",
+    "id": "06am5",
+    "ADP": 464.71
+  },
+  {
+    "pos": "SP",
+    "name": "Perez, Martin",
+    "id": "01fhm",
+    "ADP": 464.72
+  },
+  {
+    "pos": "1B",
+    "name": "Austin, Tyler",
+    "id": "02hma",
+    "ADP": 464.78
+  },
+  {
+    "pos": "SP",
+    "name": "McGarry, Griff",
+    "id": "05uni",
+    "ADP": 464.79
+  },
+  {
+    "pos": "RF",
+    "name": "Valdez, Esmerlyn",
+    "id": "05rbw",
+    "ADP": 464.79
+  },
+  {
+    "pos": "SP",
+    "name": "Thorpe, Drew",
+    "id": "05yb1",
+    "ADP": 464.81
+  },
+  {
+    "pos": "SP",
+    "name": "Francis, Bowden",
+    "id": "0421k",
+    "ADP": 464.86
+  },
+  {
+    "pos": "3B",
+    "name": "Miranda, Jose",
+    "id": "041qh",
+    "ADP": 464.86
+  },
+  {
+    "pos": "SP",
+    "name": "Susana, Jarlin",
+    "id": "05y7n",
+    "ADP": 464.89
+  },
+  {
+    "pos": "RP",
+    "name": "Herget, Jimmy",
+    "id": "03qln",
+    "ADP": 464.95
+  },
+  {
+    "pos": "3B",
+    "name": "Jordan, Blaze",
+    "id": "04nq4",
+    "ADP": 464.96
+  },
+  {
+    "pos": "DH",
+    "name": "Grichuk, Randal",
+    "id": "01s9c",
+    "ADP": 464.97
+  },
+  {
+    "pos": "SP",
+    "name": "Corbin, Patrick",
+    "id": "01xfr",
+    "ADP": 464.99
+  },
+  {
+    "pos": "LF",
+    "name": "Davis, Brennen",
+    "id": "04pmv",
+    "ADP": 465.01
+  },
+  {
+    "pos": "SP",
+    "name": "Montero, Keider",
+    "id": "05a1v",
+    "ADP": 465.02
+  },
+  {
+    "pos": "SP",
+    "name": "Alvarez, Andrew",
+    "id": "060u3",
+    "ADP": 465.03
+  },
+  {
+    "pos": "SP",
+    "name": "Kolek, Stephen",
+    "id": "04pvu",
+    "ADP": 465.06
+  },
+  {
+    "pos": "RP",
+    "name": "Kittredge, Andrew",
+    "id": "04ggi",
+    "ADP": 465.08
+  },
+  {
+    "pos": "RP",
+    "name": "Mears, Nick",
+    "id": "05a06",
+    "ADP": 465.09
+  },
+  {
+    "pos": "RF",
+    "name": "Kayfus, CJ",
+    "id": "06dn6",
+    "ADP": 465.1
+  },
+  {
+    "pos": "RP",
+    "name": "Johnson, Pierce",
+    "id": "02hdy",
+    "ADP": 465.11
+  },
+  {
+    "pos": "SP",
+    "name": "Montgomery, Jordan",
+    "id": "03dbo",
+    "ADP": 465.12
+  },
+  {
+    "pos": "1B",
+    "name": "Valencia, Eduardo",
+    "id": "06rkk",
+    "ADP": 465.13
+  },
+  {
+    "pos": "SP",
+    "name": "Johnson, Ryan",
+    "id": "05zq4",
+    "ADP": 465.16
+  },
+  {
+    "pos": "RP",
+    "name": "Martinez, Justin",
+    "id": "05acp",
+    "ADP": 465.16
+  },
+  {
+    "pos": "LF",
+    "name": "Melendez, MJ",
+    "id": "04eey",
+    "ADP": 465.16
+  },
+  {
+    "pos": "3B",
+    "name": "Alvarez, Nacho",
+    "id": "064da",
+    "ADP": 465.19
+  },
+  {
+    "pos": "SS",
+    "name": "Lombard Jr., George",
+    "id": "06b72",
+    "ADP": 465.2
+  },
+  {
+    "pos": "2B",
+    "name": "Estrada, Thairo",
+    "id": "03aay",
+    "ADP": 465.21
+  },
+  {
+    "pos": "RP",
+    "name": "Schreiber, John",
+    "id": "041z3",
+    "ADP": 465.24
+  },
+  {
+    "pos": "LF",
+    "name": "Dezenzo, Zach",
+    "id": "0641c",
+    "ADP": 465.26
+  },
+  {
+    "pos": "3B",
+    "name": "Wilken, Brock",
+    "id": "05ubi",
+    "ADP": 465.33
+  },
+  {
+    "pos": "SP",
+    "name": "Miller, Bobby",
+    "id": "05gwz",
+    "ADP": 465.34
+  },
+  {
+    "pos": "RF",
+    "name": "Rincones Jr., Gabriel",
+    "id": "0630f",
+    "ADP": 465.34
+  },
+  {
+    "pos": "SP",
+    "name": "Parker, Mitchell",
+    "id": "05jqy",
+    "ADP": 465.38
+  },
+  {
+    "pos": "SS",
+    "name": "Arias, Gabriel",
+    "id": "0414h",
+    "ADP": 465.39
+  },
+  {
+    "pos": "RF",
+    "name": "Hinds, Rece",
+    "id": "04nb4",
+    "ADP": 465.45
+  },
+  {
+    "pos": "SS",
+    "name": "Arcia, Orlando",
+    "id": "02i1q",
+    "ADP": 465.46
+  },
+  {
+    "pos": "3B",
+    "name": "Lee, Hao-Yu",
+    "id": "05u2k",
+    "ADP": 465.49
+  },
+  {
+    "pos": "1B",
+    "name": "Smith, Pavin",
+    "id": "04alq",
+    "ADP": 465.49
+  },
+  {
+    "pos": "2B",
+    "name": "Anderson, Max",
+    "id": "06dmp",
+    "ADP": 465.51
+  },
+  {
+    "pos": "RP",
+    "name": "Sabrowski, Erik",
+    "id": "04pxo",
+    "ADP": 465.51
+  },
+  {
+    "pos": "RP",
+    "name": "Matz, Steven",
+    "id": "02h8d",
+    "ADP": 465.52
+  },
+  {
+    "pos": "SP",
+    "name": "Arnold, Jamie",
+    "id": "06ktt",
+    "ADP": 465.54
+  },
+  {
+    "pos": "RF",
+    "name": "Jimenez, Eloy",
+    "id": "030ud",
+    "ADP": 465.54
+  },
+  {
+    "pos": "CF",
+    "name": "Perez, Junior",
+    "id": "0558r",
+    "ADP": 465.57
+  },
+  {
+    "pos": "RP",
+    "name": "Weissert, Greg",
+    "id": "0421q",
+    "ADP": 465.58
+  },
+  {
+    "pos": "SP",
+    "name": "Falter, Bailey",
+    "id": "03ql8",
+    "ADP": 465.63
+  },
+  {
+    "pos": "RP",
+    "name": "Miller, Erik",
+    "id": "04y8z",
+    "ADP": 465.65
+  },
+  {
+    "pos": "CF",
+    "name": "Tolbert, Tyler",
+    "id": "0519u",
+    "ADP": 465.65
+  },
+  {
+    "pos": "C",
+    "name": "Pages, Pedro",
+    "id": "0514k",
+    "ADP": 465.66
+  },
+  {
+    "pos": "C",
+    "name": "Marchan, Rafael",
+    "id": "0403l",
+    "ADP": 465.67
+  },
+  {
+    "pos": "RP",
+    "name": "Silseth, Chase",
+    "id": "05xsm",
+    "ADP": 465.68
+  },
+  {
+    "pos": "RF",
+    "name": "Baez, Joshua",
+    "id": "05rcf",
+    "ADP": 465.69
+  },
+  {
+    "pos": "RF",
+    "name": "Cole Jr., Zach",
+    "id": "066db",
+    "ADP": 465.71
+  },
+  {
+    "pos": "RP",
+    "name": "Treinen, Blake",
+    "id": "02bve",
+    "ADP": 465.71
+  },
+  {
+    "pos": "LF",
+    "name": "Kelenic, Jarred",
+    "id": "04ggr",
+    "ADP": 465.75
+  },
+  {
+    "pos": "RP",
+    "name": "Hall, DL",
+    "id": "04aeh",
+    "ADP": 465.76
+  },
+  {
+    "pos": "RP",
+    "name": "Loaisiga, Jonathan",
+    "id": "03db4",
+    "ADP": 465.9
+  },
+  {
+    "pos": "2B",
+    "name": "Bliss, Ryan",
+    "id": "05tc7",
+    "ADP": 465.94
+  },
+  {
+    "pos": "SP",
+    "name": "Williamson, Brandon",
+    "id": "05120",
+    "ADP": 465.95
+  },
+  {
+    "pos": "RP",
+    "name": "Strowd, Kade",
+    "id": "05192",
+    "ADP": 465.98
+  },
+  {
+    "pos": "SP",
+    "name": "Prielipp, Connor",
+    "id": "05joq",
+    "ADP": 466.01
+  },
+  {
+    "pos": "RP",
+    "name": "Banda, Anthony",
+    "id": "02n2v",
+    "ADP": 466.05
+  },
+  {
+    "pos": "CF",
+    "name": "Watson, Kahlil",
+    "id": "05rau",
+    "ADP": 466.07
+  },
+  {
+    "pos": "SP",
+    "name": "Ritchie, J.R.",
+    "id": "05tzo",
+    "ADP": 466.11
+  },
+  {
+    "pos": "CF",
+    "name": "Pereira, Everson",
+    "id": "04is5",
+    "ADP": 466.12
+  },
+  {
+    "pos": "1B",
+    "name": "Flores, Rafael",
+    "id": "06f0k",
+    "ADP": 466.13
+  },
+  {
+    "pos": "SS",
+    "name": "Acosta, Maximo",
+    "id": "0568a",
+    "ADP": 466.16
+  },
+  {
+    "pos": "1B",
+    "name": "Tellez, Rowdy",
+    "id": "032gq",
+    "ADP": 466.2
+  },
+  {
+    "pos": "RP",
+    "name": "Hicks, Jordan",
+    "id": "03vcw",
+    "ADP": 466.22
+  },
+  {
+    "pos": "RP",
+    "name": "Hendriks, Liam",
+    "id": "01ub8",
+    "ADP": 466.3
+  },
+  {
+    "pos": "SP",
+    "name": "Bremner, Tyler",
+    "id": "06icx",
+    "ADP": 466.4
+  },
+  {
+    "pos": "SS",
+    "name": "Walcott, Sebastian",
+    "id": "0662o",
+    "ADP": 466.5
+  },
+  {
+    "pos": "RP",
+    "name": "Agnos, Zach",
+    "id": "064ny",
+    "ADP": 466.53
+  },
+  {
+    "pos": "C",
+    "name": "Heineman, Tyler",
+    "id": "02n1c",
+    "ADP": 466.53
+  },
+  {
+    "pos": "RP",
+    "name": "Faucher, Calvin",
+    "id": "04ekf",
+    "ADP": 466.54
+  },
+  {
+    "pos": "SS",
+    "name": "Made, Jesus",
+    "id": "06ibv",
+    "ADP": 466.61
+  },
+  {
+    "pos": "1B",
+    "name": "Rumfield, T.J.",
+    "id": "05yb0",
+    "ADP": 466.61
+  },
+  {
+    "pos": "SP",
+    "name": "Weiss, Ryan",
+    "id": "04pq7",
+    "ADP": 466.62
+  },
+  {
+    "pos": "RP",
+    "name": "Kinley, Tyler",
+    "id": "0313t",
+    "ADP": 466.68
+  },
+  {
+    "pos": "RP",
+    "name": "Leahy, Kyle",
+    "id": "04q08",
+    "ADP": 466.79
+  },
+  {
+    "pos": "1B",
+    "name": "Bernabel, Warming",
+    "id": "04ybm",
+    "ADP": 466.88
+  },
+  {
+    "pos": "RP",
+    "name": "Zerpa, Angel",
+    "id": "05qzx",
+    "ADP": 466.98
+  },
+  {
+    "pos": "RP",
+    "name": "Perales, Luis",
+    "id": "05gd5",
+    "ADP": 467.01
+  },
+  {
+    "pos": "2B",
+    "name": "Torres, Bryan",
+    "id": "06hny",
+    "ADP": 467.03
+  },
+  {
+    "pos": "SP",
+    "name": "Walker, Taijuan",
+    "id": "025dq",
+    "ADP": 467.06
+  },
+  {
+    "pos": "RP",
+    "name": "Fisher, Braydon",
+    "id": "04pqo",
+    "ADP": 467.11
+  },
+  {
+    "pos": "RF",
+    "name": "Gilbert, Drew",
+    "id": "05xu0",
+    "ADP": 467.13
+  },
+  {
+    "pos": "C",
+    "name": "Hicks, Liam",
+    "id": "05ynb",
+    "ADP": 467.13
+  },
+  {
+    "pos": "1B",
+    "name": "Velazquez, Ralphy",
+    "id": "067yp",
+    "ADP": 467.14
+  },
+  {
+    "pos": "CF",
+    "name": "Straw, Myles",
+    "id": "03qqb",
+    "ADP": 467.15
+  },
+  {
+    "pos": "1B",
+    "name": "Wade Jr., LaMonte",
+    "id": "03qo2",
+    "ADP": 467.18
+  },
+  {
+    "pos": "LF",
+    "name": "Baldwin, Brooks",
+    "id": "062z3",
+    "ADP": 467.19
+  },
+  {
+    "pos": "SP",
+    "name": "Lorenzen, Michael",
+    "id": "02hir",
+    "ADP": 467.22
+  },
+  {
+    "pos": "DH",
+    "name": "Flores, Wilmer",
+    "id": "01cgt",
+    "ADP": 467.23
+  },
+  {
+    "pos": "RP",
+    "name": "Barlow, Scott",
+    "id": "02buh",
+    "ADP": 467.29
+  },
+  {
+    "pos": "RP",
+    "name": "Mattson, Isaac",
+    "id": "04eqw",
+    "ADP": 467.33
+  },
+  {
+    "pos": "RP",
+    "name": "Funderburk, Kody",
+    "id": "04pyp",
+    "ADP": 467.41
+  },
+  {
+    "pos": "SP",
+    "name": "Martin, Davis",
+    "id": "04pxf",
+    "ADP": 467.44
+  },
+  {
+    "pos": "SP",
+    "name": "Ryan, River",
+    "id": "05ynx",
+    "ADP": 467.45
+  },
+  {
+    "pos": "SP",
+    "name": "Johnson, Ty",
+    "id": "06htl",
+    "ADP": 467.52
+  },
+  {
+    "pos": "3B",
+    "name": "Moncada, Yoan",
+    "id": "03eet",
+    "ADP": 467.54
+  },
+  {
+    "pos": "RP",
+    "name": "Winn, Cole",
+    "id": "04paj",
+    "ADP": 467.55
+  },
+  {
+    "pos": "1B",
+    "name": "Smith, Dominic",
+    "id": "02z96",
+    "ADP": 467.56
+  },
+  {
+    "pos": "SP",
+    "name": "Drohan, Shane",
+    "id": "04eud",
+    "ADP": 467.61
+  },
+  {
+    "pos": "RF",
+    "name": "Bolte, Henry",
+    "id": "05y7t",
+    "ADP": 467.63
+  },
+  {
+    "pos": "RF",
+    "name": "Tauchman, Mike",
+    "id": "0312v",
+    "ADP": 467.67
+  },
+  {
+    "pos": "RF",
+    "name": "Jones, Jahmai",
+    "id": "03pp6",
+    "ADP": 467.7
+  },
+  {
+    "pos": "LF",
+    "name": "Rodriguez, Hector",
+    "id": "05xse",
+    "ADP": 467.7
+  },
+  {
+    "pos": "C",
+    "name": "Briceno, Josue",
+    "id": "0637j",
+    "ADP": 467.73
+  },
+  {
+    "pos": "RP",
+    "name": "Wrobleski, Justin",
+    "id": "05y9r",
+    "ADP": 467.77
+  },
+  {
+    "pos": "2B",
+    "name": "Schuemann, Max",
+    "id": "04q24",
+    "ADP": 467.82
+  },
+  {
+    "pos": "RP",
+    "name": "Thielbar, Caleb",
+    "id": "02hfr",
+    "ADP": 467.9
+  },
+  {
+    "pos": "SP",
+    "name": "Espino, Daniel",
+    "id": "04ya2",
+    "ADP": 467.96
+  },
+  {
+    "pos": "LF",
+    "name": "Osuna, Alejandro",
+    "id": "05r3s",
+    "ADP": 467.98
+  },
+  {
+    "pos": "2B",
+    "name": "Fermin, Jose",
+    "id": "03zbp",
+    "ADP": 468
+  },
+  {
+    "pos": "SS",
+    "name": "Cauley, Cameron",
+    "id": "05uvx",
+    "ADP": 468.05
+  },
+  {
+    "pos": "3B",
+    "name": "Jung, Jace",
+    "id": "05tzg",
+    "ADP": 468.09
+  },
+  {
+    "pos": "RP",
+    "name": "Minter, A.J.",
+    "id": "03ppa",
+    "ADP": 468.11
+  },
+  {
+    "pos": "CF",
+    "name": "Melton, Jacob",
+    "id": "061gx",
+    "ADP": 468.14
+  },
+  {
+    "pos": "CF",
+    "name": "Perkins, Blake",
+    "id": "03pp5",
+    "ADP": 468.15
+  },
+  {
+    "pos": "SS",
+    "name": "Sweeney, Trey",
+    "id": "05tuw",
+    "ADP": 468.17
+  },
+  {
+    "pos": "RP",
+    "name": "Kopech, Michael",
+    "id": "03d6v",
+    "ADP": 468.24
+  },
+  {
+    "pos": "RP",
+    "name": "Junis, Jakob",
+    "id": "02f9m",
+    "ADP": 468.26
+  },
+  {
+    "pos": "SP",
+    "name": "Sugano, Tomoyuki",
+    "id": "04b01",
+    "ADP": 468.37
+  },
+  {
+    "pos": "RP",
+    "name": "Lawrence, Justin",
+    "id": "03qq9",
+    "ADP": 468.41
+  },
+  {
+    "pos": "C",
+    "name": "Rodriguez, Jesus",
+    "id": "052h8",
+    "ADP": 468.48
+  },
+  {
+    "pos": "SP",
+    "name": "Doyle, Liam",
+    "id": "06roc",
+    "ADP": 468.49
+  },
+  {
+    "pos": "SP",
+    "name": "Vasquez, Randy",
+    "id": "05itb",
+    "ADP": 468.55
+  },
+  {
+    "pos": "RP",
+    "name": "Zeferjahn, Ryan",
+    "id": "04y9f",
+    "ADP": 468.56
+  },
+  {
+    "pos": "1B",
+    "name": "Long, Jonathon",
+    "id": "06fwm",
+    "ADP": 468.59
+  },
+  {
+    "pos": "3B",
+    "name": "Williamson, Ben",
+    "id": "06dqd",
+    "ADP": 468.63
+  },
+  {
+    "pos": "SP",
+    "name": "Wenninger, Jack",
+    "id": "06f1c",
+    "ADP": 468.67
+  },
+  {
+    "pos": "1B",
+    "name": "Johnston, Troy",
+    "id": "051d0",
+    "ADP": 468.73
+  },
+  {
+    "pos": "3B",
+    "name": "Peraza, Oswald",
+    "id": "04g7n",
+    "ADP": 468.76
+  },
+  {
+    "pos": "RP",
+    "name": "Peguero, Joel",
+    "id": "04o10",
+    "ADP": 468.78
+  },
+  {
+    "pos": "C",
+    "name": "Susac, Daniel",
+    "id": "05jpu",
+    "ADP": 468.85
+  },
+  {
+    "pos": "2B",
+    "name": "Antonacci, Sam",
+    "id": "06plc",
+    "ADP": 468.9
+  },
+  {
+    "pos": "C",
+    "name": "Wynns, Austin",
+    "id": "031cs",
+    "ADP": 468.94
+  },
+  {
+    "pos": "SP",
+    "name": "Lauer, Eric",
+    "id": "031ey",
+    "ADP": 468.99
+  },
+  {
+    "pos": "1B",
+    "name": "Julien, Edouard",
+    "id": "051dl",
+    "ADP": 469.01
+  },
+  {
+    "pos": "RP",
+    "name": "Butto, Jose",
+    "id": "05oz7",
+    "ADP": 469.04
+  },
+  {
+    "pos": "1B",
+    "name": "Hernandez, Enrique",
+    "id": "02h98",
+    "ADP": 469.1
+  },
+  {
+    "pos": "SP",
+    "name": "Pallante, Andre",
+    "id": "05133",
+    "ADP": 469.11
+  },
+  {
+    "pos": "2B",
+    "name": "Brito, Juan",
+    "id": "05yhe",
+    "ADP": 469.13
+  },
+  {
+    "pos": "SP",
+    "name": "Marquez, German",
+    "id": "03amq",
+    "ADP": 469.14
+  },
+  {
+    "pos": "SP",
+    "name": "Mikolas, Miles",
+    "id": "02h9r",
+    "ADP": 469.17
+  },
+  {
+    "pos": "LF",
+    "name": "Ward, Ryan",
+    "id": "0516g",
+    "ADP": 469.23
+  },
+  {
+    "pos": "RP",
+    "name": "Cano, Yennier",
+    "id": "050ok",
+    "ADP": 469.26
+  },
+  {
+    "pos": "SP",
+    "name": "Hence, Tink",
+    "id": "05jpx",
+    "ADP": 469.28
+  },
+  {
+    "pos": "RF",
+    "name": "Alderman, Kemp",
+    "id": "06ahe",
+    "ADP": 469.39
+  },
+  {
+    "pos": "RP",
+    "name": "Gaddis, Hunter",
+    "id": "05143",
+    "ADP": 469.41
+  },
+  {
+    "pos": "2B",
+    "name": "Amador, Adael",
+    "id": "04ysv",
+    "ADP": 469.46
+  },
+  {
+    "pos": "RP",
+    "name": "Halvorsen, Seth",
+    "id": "06fqx",
+    "ADP": 469.47
+  },
+  {
+    "pos": "RF",
+    "name": "Raley, Luke",
+    "id": "041ts",
+    "ADP": 469.52
+  },
+  {
+    "pos": "SP",
+    "name": "Brown, Ben",
+    "id": "04o2w",
+    "ADP": 469.63
+  },
+  {
+    "pos": "RF",
+    "name": "Call, Alex",
+    "id": "041qv",
+    "ADP": 469.88
+  },
+  {
+    "pos": "RP",
+    "name": "Nardi, Andrew",
+    "id": "051c3",
+    "ADP": 469.91
+  },
+  {
+    "pos": "SP",
+    "name": "Assad, Javier",
+    "id": "04fq2",
+    "ADP": 470
+  },
+  {
+    "pos": "DH",
+    "name": "McCutchen, Andrew",
+    "id": "01c1g",
+    "ADP": 470
+  },
+  {
+    "pos": "DH",
+    "name": "Yoshida, Masataka",
+    "id": "05rc3",
+    "ADP": 470
+  },
+  {
+    "pos": "SP",
+    "name": "Allen, Logan",
+    "id": "05jp3",
+    "ADP": 470.03
+  },
+  {
+    "pos": "2B",
+    "name": "Frazier, Adam",
+    "id": "0316t",
+    "ADP": 470.04
+  },
+  {
+    "pos": "RP",
+    "name": "Diaz, Alexis",
+    "id": "03qqf",
+    "ADP": 470.07
+  },
+  {
+    "pos": "LF",
+    "name": "Veen, Zac",
+    "id": "05gbg",
+    "ADP": 470.09
+  },
+  {
+    "pos": "2B",
+    "name": "Hamilton, David",
+    "id": "0515v",
+    "ADP": 470.1
+  },
+  {
+    "pos": "2B",
+    "name": "Troy, Tommy",
+    "id": "05jse",
+    "ADP": 470.1
+  },
+  {
+    "pos": "1B",
+    "name": "Crim, Blaine",
+    "id": "051eo",
+    "ADP": 470.12
+  },
+  {
+    "pos": "RP",
+    "name": "Wentz, Joey",
+    "id": "041pr",
+    "ADP": 470.25
+  },
+  {
+    "pos": "RP",
+    "name": "Speier, Gabe",
+    "id": "031fj",
+    "ADP": 470.29
+  },
+  {
+    "pos": "RP",
+    "name": "Sousa, Bennett",
+    "id": "04puc",
+    "ADP": 470.32
+  },
+  {
+    "pos": "RP",
+    "name": "Stanek, Ryne",
+    "id": "02hhj",
+    "ADP": 470.33
+  },
+  {
+    "pos": "RP",
+    "name": "Phillips, Connor",
+    "id": "05jpe",
+    "ADP": 470.41
+  },
+  {
+    "pos": "LF",
+    "name": "Pham, Tommy",
+    "id": "025fx",
+    "ADP": 470.45
+  },
+  {
+    "pos": "SP",
+    "name": "Pecko, Ethan",
+    "id": "06f14",
+    "ADP": 470.5
+  },
+  {
+    "pos": "C",
+    "name": "Feduccia, Hunter",
+    "id": "04pwl",
+    "ADP": 470.61
+  },
+  {
+    "pos": "RF",
+    "name": "Matos, Luis",
+    "id": "04y11",
+    "ADP": 470.61
+  },
+  {
+    "pos": "C",
+    "name": "Del Castillo, Adrian",
+    "id": "05jn0",
+    "ADP": 470.62
+  },
+  {
+    "pos": "RF",
+    "name": "Jackson, Jeremiah",
+    "id": "04pmt",
+    "ADP": 470.67
+  },
+  {
+    "pos": "DH",
+    "name": "Marte, Starling",
+    "id": "01s9k",
+    "ADP": 470.69
+  },
+  {
+    "pos": "RP",
+    "name": "Corniell, Jose",
+    "id": "05gx5",
+    "ADP": 470.75
+  },
+  {
+    "pos": "SP",
+    "name": "Crawford, Kutter",
+    "id": "04ep8",
+    "ADP": 470.78
+  },
+  {
+    "pos": "SP",
+    "name": "Dana, Caden",
+    "id": "063e5",
+    "ADP": 470.8
+  },
+  {
+    "pos": "SP",
+    "name": "Paddack, Chris",
+    "id": "03qne",
+    "ADP": 470.8
+  },
+  {
+    "pos": "LF",
+    "name": "Bauers, Jake",
+    "id": "0316v",
+    "ADP": 470.86
+  },
+  {
+    "pos": "CF",
+    "name": "Rada, Nelson",
+    "id": "05yib",
+    "ADP": 470.86
+  },
+  {
+    "pos": "C",
+    "name": "Fulford, Braxton",
+    "id": "05yc9",
+    "ADP": 470.87
+  },
+  {
+    "pos": "RP",
+    "name": "Puk, A.J.",
+    "id": "03yso",
+    "ADP": 471.05
+  },
+  {
+    "pos": "RP",
+    "name": "Jameson, Drey",
+    "id": "0511r",
+    "ADP": 471.08
+  },
+  {
+    "pos": "3B",
+    "name": "Alexander, Blaze",
+    "id": "04pvs",
+    "ADP": 471.09
+  },
+  {
+    "pos": "LF",
+    "name": "Hernandez, Heriberto",
+    "id": "04up9",
+    "ADP": 471.09
+  },
+  {
+    "pos": "1B",
+    "name": "Chaparro, Andres",
+    "id": "0406n",
+    "ADP": 471.18
+  },
+  {
+    "pos": "2B",
+    "name": "Saggese, Thomas",
+    "id": "05mru",
+    "ADP": 471.19
+  },
+  {
+    "pos": "LF",
+    "name": "Martin, Austin",
+    "id": "05249",
+    "ADP": 471.24
+  },
+  {
+    "pos": "3B",
+    "name": "Black, Tyler",
+    "id": "05u2u",
+    "ADP": 471.25
+  },
+  {
+    "pos": "CF",
+    "name": "Church, Nathan",
+    "id": "064n8",
+    "ADP": 471.26
+  },
+  {
+    "pos": "SP",
+    "name": "Whisenhunt, Carson",
+    "id": "05y7v",
+    "ADP": 471.32
+  },
+  {
+    "pos": "SP",
+    "name": "Irvin, Jake",
+    "id": "04ppz",
+    "ADP": 471.33
+  },
+  {
+    "pos": "RP",
+    "name": "Bender, Anthony",
+    "id": "0423e",
+    "ADP": 471.35
+  },
+  {
+    "pos": "RP",
+    "name": "Gipson-Long, Sawyer",
+    "id": "0514z",
+    "ADP": 471.42
+  },
+  {
+    "pos": "RF",
+    "name": "White, Eli",
+    "id": "041w3",
+    "ADP": 471.43
+  },
+  {
+    "pos": "RP",
+    "name": "Keller, Brad",
+    "id": "0312l",
+    "ADP": 471.57
+  },
+  {
+    "pos": "SP",
+    "name": "Urquidy, Jose",
+    "id": "0440h",
+    "ADP": 471.63
+  },
+  {
+    "pos": "C",
+    "name": "Trevino, Jose",
+    "id": "03df0",
+    "ADP": 471.64
+  },
+  {
+    "pos": "C",
+    "name": "Ingle, Cooper",
+    "id": "06f0p",
+    "ADP": 471.66
+  },
+  {
+    "pos": "SP",
+    "name": "Povich, Cade",
+    "id": "05xop",
+    "ADP": 471.66
+  },
+  {
+    "pos": "SP",
+    "name": "Tiedemann, Ricky",
+    "id": "05js6",
+    "ADP": 471.68
+  },
+  {
+    "pos": "C",
+    "name": "Crooks, Jimmy",
+    "id": "06434",
+    "ADP": 471.73
+  },
+  {
+    "pos": "RP",
+    "name": "Barco, Hunter",
+    "id": "04nb5",
+    "ADP": 471.79
+  },
+  {
+    "pos": "RP",
+    "name": "Varland, Louis",
+    "id": "051bm",
+    "ADP": 471.82
+  },
+  {
+    "pos": "SP",
+    "name": "Hancock, Emerson",
+    "id": "0510l",
+    "ADP": 471.85
+  },
+  {
+    "pos": "DH",
+    "name": "Pederson, Joc",
+    "id": "026qc",
+    "ADP": 471.87
+  },
+  {
+    "pos": "RP",
+    "name": "Alvarado, Elvis",
+    "id": "041g5",
+    "ADP": 471.89
+  },
+  {
+    "pos": "SP",
+    "name": "Buehler, Walker",
+    "id": "03aac",
+    "ADP": 471.89
+  },
+  {
+    "pos": "C",
+    "name": "Davis, Henry",
+    "id": "05oxc",
+    "ADP": 471.91
+  },
+  {
+    "pos": "SP",
+    "name": "Tidwell, Blade",
+    "id": "05u2q",
+    "ADP": 471.93
+  },
+  {
+    "pos": "SP",
+    "name": "Dobbins, Hunter",
+    "id": "05y6w",
+    "ADP": 471.96
+  },
+  {
+    "pos": "2B",
+    "name": "Matthews, Brice",
+    "id": "06c36",
+    "ADP": 471.98
+  },
+  {
+    "pos": "SP",
+    "name": "Birdsong, Hayden",
+    "id": "06650",
+    "ADP": 472.04
+  },
+  {
+    "pos": "SP",
+    "name": "McCullers Jr., Lance",
+    "id": "026l1",
+    "ADP": 472.15
+  },
+  {
+    "pos": "RP",
+    "name": "Akin, Keegan",
+    "id": "041py",
+    "ADP": 472.19
+  },
+  {
+    "pos": "C",
+    "name": "Heim, Jonah",
+    "id": "031b2",
+    "ADP": 472.23
+  },
+  {
+    "pos": "RF",
+    "name": "Encarnacion, Jerar",
+    "id": "04mdf",
+    "ADP": 472.24
+  },
+  {
+    "pos": "1B",
+    "name": "Santana, Carlos",
+    "id": "01cfr",
+    "ADP": 472.3
+  },
+  {
+    "pos": "LF",
+    "name": "Conine, Griffin",
+    "id": "04mn2",
+    "ADP": 472.35
+  },
+  {
+    "pos": "RP",
+    "name": "Kelly, Michael",
+    "id": "02bqn",
+    "ADP": 472.37
+  },
+  {
+    "pos": "SP",
+    "name": "Lagrange, Carlos",
+    "id": "062h4",
+    "ADP": 472.38
+  },
+  {
+    "pos": "SP",
+    "name": "Schmidt, Clarke",
+    "id": "04ee7",
+    "ADP": 472.4
+  },
+  {
+    "pos": "SP",
+    "name": "Stone, Gavin",
+    "id": "05mrx",
+    "ADP": 472.6
+  },
+  {
+    "pos": "RP",
+    "name": "Sands, Cole",
+    "id": "03qxr",
+    "ADP": 472.7
+  },
+  {
+    "pos": "3B",
+    "name": "Urias, Ramon",
+    "id": "04de0",
+    "ADP": 472.72
+  },
+  {
+    "pos": "1B",
+    "name": "Clifford, Ryan",
+    "id": "05ge1",
+    "ADP": 472.74
+  },
+  {
+    "pos": "C",
+    "name": "Campusano, Luis",
+    "id": "04eep",
+    "ADP": 472.76
+  },
+  {
+    "pos": "CF",
+    "name": "Bleday, JJ",
+    "id": "04y95",
+    "ADP": 472.81
+  },
+  {
+    "pos": "LF",
+    "name": "Kjerstad, Heston",
+    "id": "0596f",
+    "ADP": 472.85
+  },
+  {
+    "pos": "C",
+    "name": "Garver, Mitch",
+    "id": "031cd",
+    "ADP": 472.89
+  },
+  {
+    "pos": "RF",
+    "name": "Jones, Nolan",
+    "id": "041q6",
+    "ADP": 472.91
+  },
+  {
+    "pos": "SP",
+    "name": "Fitts, Richard",
+    "id": "05rav",
+    "ADP": 472.92
+  },
+  {
+    "pos": "3B",
+    "name": "Rosario, Amed",
+    "id": "02yh5",
+    "ADP": 472.97
+  },
+  {
+    "pos": "C",
+    "name": "Torrens, Luis",
+    "id": "02nqg",
+    "ADP": 472.97
+  },
+  {
+    "pos": "2B",
+    "name": "Schmitt, Casey",
+    "id": "05jp4",
+    "ADP": 473.13
+  },
+  {
+    "pos": "SP",
+    "name": "Anderson, Kade",
+    "id": "05ydp",
+    "ADP": 473.14
+  },
+  {
+    "pos": "SS",
+    "name": "De Vries, Leodalis",
+    "id": "067yc",
+    "ADP": 473.15
+  },
+  {
+    "pos": "1B",
+    "name": "Rodriguez, Endy",
+    "id": "0529l",
+    "ADP": 473.21
+  },
+  {
+    "pos": "C",
+    "name": "Rogers, Jake",
+    "id": "03av1",
+    "ADP": 473.27
+  },
+  {
+    "pos": "1B",
+    "name": "Encarnacion-Strand, Christian",
+    "id": "05xor",
+    "ADP": 473.28
+  },
+  {
+    "pos": "RF",
+    "name": "Thomas, Colby",
+    "id": "0630e",
+    "ADP": 473.31
+  },
+  {
+    "pos": "LF",
+    "name": "Ruiz, Esteury",
+    "id": "0406v",
+    "ADP": 473.32
+  },
+  {
+    "pos": "SP",
+    "name": "Gasser, Robert",
+    "id": "05u6r",
+    "ADP": 473.33
+  },
+  {
+    "pos": "LF",
+    "name": "Loperfido, Joey",
+    "id": "05yfl",
+    "ADP": 473.36
+  },
+  {
+    "pos": "SP",
+    "name": "Festa, David",
+    "id": "05yav",
+    "ADP": 473.42
+  },
+  {
+    "pos": "SP",
+    "name": "Bergert, Ryan",
+    "id": "05xpo",
+    "ADP": 473.44
+  },
+  {
+    "pos": "CF",
+    "name": "Garcia, Jhostynxon",
+    "id": "05j8u",
+    "ADP": 473.45
+  },
+  {
+    "pos": "SP",
+    "name": "Dollander, Chase",
+    "id": "05yj0",
+    "ADP": 473.47
+  },
+  {
+    "pos": "RP",
+    "name": "Raley, Brooks",
+    "id": "01vxp",
+    "ADP": 473.47
+  },
+  {
+    "pos": "3B",
+    "name": "Sanoja, Javier",
+    "id": "062ho",
+    "ADP": 473.5
+  },
+  {
+    "pos": "RP",
+    "name": "Ashcraft, Graham",
+    "id": "041x9",
+    "ADP": 473.52
+  },
+  {
+    "pos": "DH",
+    "name": "Refsnyder, Rob",
+    "id": "02mzf",
+    "ADP": 473.56
+  },
+  {
+    "pos": "3B",
+    "name": "Karros, Kyle",
+    "id": "06dsa",
+    "ADP": 473.57
+  },
+  {
+    "pos": "SS",
+    "name": "Mateo, Jorge",
+    "id": "03b6k",
+    "ADP": 473.69
+  },
+  {
+    "pos": "RP",
+    "name": "Harvey, Hunter",
+    "id": "0310c",
+    "ADP": 473.74
+  },
+  {
+    "pos": "SP",
+    "name": "Fedde, Erick",
+    "id": "03d6n",
+    "ADP": 473.76
+  },
+  {
+    "pos": "RP",
+    "name": "Slaten, Justin",
+    "id": "0512q",
+    "ADP": 473.82
+  },
+  {
+    "pos": "RP",
+    "name": "Newcomb, Sean",
+    "id": "032lk",
+    "ADP": 473.93
+  },
+  {
+    "pos": "RP",
+    "name": "Henry, Cole",
+    "id": "05gs4",
+    "ADP": 473.98
+  },
+  {
+    "pos": "SP",
+    "name": "Rodriguez, Elmer",
+    "id": "05xoo",
+    "ADP": 473.98
+  },
+  {
+    "pos": "SP",
+    "name": "Smith, Hagen",
+    "id": "05zd4",
+    "ADP": 474.01
+  },
+  {
+    "pos": "SP",
+    "name": "Quintana, Jose",
+    "id": "025kd",
+    "ADP": 474.03
+  },
+  {
+    "pos": "1B",
+    "name": "France, Ty",
+    "id": "03whq",
+    "ADP": 474.04
+  },
+  {
+    "pos": "RP",
+    "name": "Mlodzinski, Carmen",
+    "id": "05a29",
+    "ADP": 474.06
+  },
+  {
+    "pos": "RP",
+    "name": "Okert, Steven",
+    "id": "02myt",
+    "ADP": 474.08
+  },
+  {
+    "pos": "RP",
+    "name": "Romano, Jordan",
+    "id": "03di6",
+    "ADP": 474.15
+  },
+  {
+    "pos": "RP",
+    "name": "Thompson, Ryan",
+    "id": "03duu",
+    "ADP": 474.18
+  },
+  {
+    "pos": "CF",
+    "name": "DeLuca, Jonny",
+    "id": "04y94",
+    "ADP": 474.2
+  },
+  {
+    "pos": "1B",
+    "name": "Mead, Curtis",
+    "id": "05ahe",
+    "ADP": 474.23
+  },
+  {
+    "pos": "2B",
+    "name": "Schneemann, Daniel",
+    "id": "06bs4",
+    "ADP": 474.26
+  },
+  {
+    "pos": "SP",
+    "name": "Schultz, Noah",
+    "id": "05uc7",
+    "ADP": 474.26
+  },
+  {
+    "pos": "2B",
+    "name": "Moore, Dylan",
+    "id": "03qml",
+    "ADP": 474.31
+  },
+  {
+    "pos": "C",
+    "name": "Quero, Jeferson",
+    "id": "05gss",
+    "ADP": 474.32
+  },
+  {
+    "pos": "LF",
+    "name": "Roden, Alan",
+    "id": "061yt",
+    "ADP": 474.37
+  },
+  {
+    "pos": "1B",
+    "name": "Wagaman, Eric",
+    "id": "04emu",
+    "ADP": 474.47
+  },
+  {
+    "pos": "SP",
+    "name": "Anderson, Drew",
+    "id": "02nb6",
+    "ADP": 474.49
+  },
+  {
+    "pos": "SP",
+    "name": "Sandoval, Patrick",
+    "id": "03qpi",
+    "ADP": 474.51
+  },
+  {
+    "pos": "SS",
+    "name": "Culpepper, Kaelen",
+    "id": "06hx4",
+    "ADP": 474.53
+  },
+  {
+    "pos": "SP",
+    "name": "Jump, Gage",
+    "id": "05t9g",
+    "ADP": 474.53
+  },
+  {
+    "pos": "RP",
+    "name": "Koenig, Jared",
+    "id": "05ylp",
+    "ADP": 474.54
+  },
+  {
+    "pos": "SP",
+    "name": "Ginn, J.T.",
+    "id": "04pkt",
+    "ADP": 474.56
+  },
+  {
+    "pos": "SS",
+    "name": "Kiner-Falefa, Isiah",
+    "id": "031b3",
+    "ADP": 474.56
+  },
+  {
+    "pos": "RP",
+    "name": "Topa, Justin",
+    "id": "0318i",
+    "ADP": 474.68
+  },
+  {
+    "pos": "2B",
+    "name": "Grissom, Vaughn",
+    "id": "0518n",
+    "ADP": 474.69
+  },
+  {
+    "pos": "CF",
+    "name": "Taylor, Tyrone",
+    "id": "02mx2",
+    "ADP": 474.73
+  },
+  {
+    "pos": "SS",
+    "name": "Freeland, Alex",
+    "id": "05xu1",
+    "ADP": 474.8
+  },
+  {
+    "pos": "RP",
+    "name": "Adam, Jason",
+    "id": "025it",
+    "ADP": 474.81
+  },
+  {
+    "pos": "RP",
+    "name": "Leiter Jr., Mark",
+    "id": "0319c",
+    "ADP": 474.82
+  },
+  {
+    "pos": "2B",
+    "name": "Yorke, Nick",
+    "id": "05js7",
+    "ADP": 474.98
+  },
+  {
+    "pos": "SP",
+    "name": "Scott, Christian",
+    "id": "05xpq",
+    "ADP": 475.01
+  },
+  {
+    "pos": "3B",
+    "name": "Mauricio, Ronny",
+    "id": "04fyo",
+    "ADP": 475.06
+  },
+  {
+    "pos": "RP",
+    "name": "Cruz, Fernando",
+    "id": "05ym7",
+    "ADP": 475.12
+  },
+  {
+    "pos": "CF",
+    "name": "Isbel, Kyle",
+    "id": "04ppo",
+    "ADP": 475.12
+  },
+  {
+    "pos": "C",
+    "name": "McCann, James",
+    "id": "02bra",
+    "ADP": 475.13
+  },
+  {
+    "pos": "LF",
+    "name": "Schneider, Davis",
+    "id": "04o2x",
+    "ADP": 475.16
+  },
+  {
+    "pos": "DH",
+    "name": "Fry, David",
+    "id": "04psr",
+    "ADP": 475.2
+  },
+  {
+    "pos": "RP",
+    "name": "Lord, Brad",
+    "id": "066du",
+    "ADP": 475.21
+  },
+  {
+    "pos": "1B",
+    "name": "Ortiz, Abimelec",
+    "id": "05uv5",
+    "ADP": 475.3
+  },
+  {
+    "pos": "RF",
+    "name": "Fraley, Jake",
+    "id": "041qd",
+    "ADP": 475.38
+  },
+  {
+    "pos": "C",
+    "name": "Sanchez, Gary",
+    "id": "01t9q",
+    "ADP": 475.44
+  },
+  {
+    "pos": "RP",
+    "name": "Bazardo, Eduard",
+    "id": "04mjn",
+    "ADP": 475.47
+  },
+  {
+    "pos": "CF",
+    "name": "Montgomery, Braden",
+    "id": "05rcg",
+    "ADP": 475.51
+  },
+  {
+    "pos": "C",
+    "name": "d'Arnaud, Travis",
+    "id": "01s99",
+    "ADP": 475.51
+  },
+  {
+    "pos": "SP",
+    "name": "Civale, Aaron",
+    "id": "041qr",
+    "ADP": 475.53
+  },
+  {
+    "pos": "SP",
+    "name": "Hopkins, Brody",
+    "id": "06f1b",
+    "ADP": 475.53
+  },
+  {
+    "pos": "RP",
+    "name": "Casparius, Ben",
+    "id": "05y4k",
+    "ADP": 475.54
+  },
+  {
+    "pos": "2B",
+    "name": "Sosa, Edmundo",
+    "id": "02zpf",
+    "ADP": 475.57
+  },
+  {
+    "pos": "RP",
+    "name": "Holton, Tyler",
+    "id": "04naz",
+    "ADP": 475.58
+  },
+  {
+    "pos": "RF",
+    "name": "Valera, George",
+    "id": "04fqi",
+    "ADP": 475.59
+  },
+  {
+    "pos": "RP",
+    "name": "Dreyer, Jack",
+    "id": "06luc",
+    "ADP": 475.65
+  },
+  {
+    "pos": "SP",
+    "name": "Gray, Josiah",
+    "id": "04pn3",
+    "ADP": 475.65
+  },
+  {
+    "pos": "CF",
+    "name": "Outman, James",
+    "id": "04psu",
+    "ADP": 475.65
+  },
+  {
+    "pos": "RP",
+    "name": "Blubaugh, A.J.",
+    "id": "0649e",
+    "ADP": 475.7
+  },
+  {
+    "pos": "SP",
+    "name": "Klassen, George",
+    "id": "067xm",
+    "ADP": 475.72
+  },
+  {
+    "pos": "SP",
+    "name": "Gibson, Trey",
+    "id": "06mc1",
+    "ADP": 475.75
+  },
+  {
+    "pos": "CF",
+    "name": "Martinez, Angel",
+    "id": "04ydd",
+    "ADP": 475.8
+  },
+  {
+    "pos": "1B",
+    "name": "Tawa, Tim",
+    "id": "05y4m",
+    "ADP": 475.81
+  },
+  {
+    "pos": "CF",
+    "name": "Clark, Max",
+    "id": "05u9y",
+    "ADP": 475.83
+  },
+  {
+    "pos": "RP",
+    "name": "Soto, Gregory",
+    "id": "04aok",
+    "ADP": 475.84
+  },
+  {
+    "pos": "RP",
+    "name": "King, Bryan",
+    "id": "06mi0",
+    "ADP": 475.95
+  },
+  {
+    "pos": "RP",
+    "name": "Garcia, Yimi",
+    "id": "02z0e",
+    "ADP": 475.98
+  },
+  {
+    "pos": "CF",
+    "name": "Myers, Dane",
+    "id": "04ehj",
+    "ADP": 476.08
+  },
+  {
+    "pos": "CF",
+    "name": "Alcantara, Kevin",
+    "id": "04qow",
+    "ADP": 476.15
+  },
+  {
+    "pos": "SP",
+    "name": "Junk, Janson",
+    "id": "04etg",
+    "ADP": 476.15
+  },
+  {
+    "pos": "RP",
+    "name": "Yarbrough, Ryan",
+    "id": "0314j",
+    "ADP": 476.39
+  },
+  {
+    "pos": "CF",
+    "name": "Rodriguez, Emmanuel",
+    "id": "054p6",
+    "ADP": 476.47
+  },
+  {
+    "pos": "SP",
+    "name": "McDonald, Trevor",
+    "id": "0518g",
+    "ADP": 476.51
+  },
+  {
+    "pos": "SP",
+    "name": "Canning, Griffin",
+    "id": "04eek",
+    "ADP": 476.66
+  },
+  {
+    "pos": "SP",
+    "name": "Manoah, Alek",
+    "id": "04yfw",
+    "ADP": 476.71
+  },
+  {
+    "pos": "SS",
+    "name": "Monasterio, Andruw",
+    "id": "04vvy",
+    "ADP": 476.76
+  },
+  {
+    "pos": "RP",
+    "name": "Pomeranz, Drew",
+    "id": "01ucb",
+    "ADP": 476.82
+  },
+  {
+    "pos": "CF",
+    "name": "Young, Jacob",
+    "id": "05yaf",
+    "ADP": 476.84
+  },
+  {
+    "pos": "RP",
+    "name": "Armstrong, Shawn",
+    "id": "02c47",
+    "ADP": 476.85
+  },
+  {
+    "pos": "RP",
+    "name": "Perkins, Jack",
+    "id": "0657l",
+    "ADP": 477.17
+  },
+  {
+    "pos": "LF",
+    "name": "Conforto, Michael",
+    "id": "02z0t",
+    "ADP": 477.18
+  },
+  {
+    "pos": "3B",
+    "name": "Pauley, Graham",
+    "id": "066lr",
+    "ADP": 477.39
+  },
+  {
+    "pos": "C",
+    "name": "Fortes, Nick",
+    "id": "04pqf",
+    "ADP": 477.54
+  },
+  {
+    "pos": "SS",
+    "name": "Hernaiz, Darell",
+    "id": "05145",
+    "ADP": 477.64
+  },
+  {
+    "pos": "RP",
+    "name": "Lee, Dylan",
+    "id": "041vm",
+    "ADP": 477.65
+  },
+  {
+    "pos": "SS",
+    "name": "Ritter, Ryan",
+    "id": "05xu2",
+    "ADP": 477.66
+  },
+  {
+    "pos": "SP",
+    "name": "Wiggins, Jaxon",
+    "id": "05u2p",
+    "ADP": 477.69
+  },
+  {
+    "pos": "SS",
+    "name": "Walls, Taylor",
+    "id": "04bpj",
+    "ADP": 477.7
+  },
+  {
+    "pos": "LF",
+    "name": "Palacios, Richie",
+    "id": "04ppk",
+    "ADP": 477.8
+  },
+  {
+    "pos": "RP",
+    "name": "Ashby, Aaron",
+    "id": "04ew7",
+    "ADP": 478.02
+  },
+  {
+    "pos": "2B",
+    "name": "Massey, Michael",
+    "id": "05139",
+    "ADP": 478.03
+  },
+  {
+    "pos": "SP",
+    "name": "Bradford, Cody",
+    "id": "0514o",
+    "ADP": 478.04
+  },
+  {
+    "pos": "SS",
+    "name": "Duran, Ezequiel",
+    "id": "04nqx",
+    "ADP": 478.3
+  },
+  {
+    "pos": "CF",
+    "name": "Vierling, Matt",
+    "id": "04pqq",
+    "ADP": 478.34
+  },
+  {
+    "pos": "RP",
+    "name": "Alvarado, Jose",
+    "id": "03btm",
+    "ADP": 478.4
+  },
+  {
+    "pos": "C",
+    "name": "Wong, Connor",
+    "id": "04efi",
+    "ADP": 478.46
+  },
+  {
+    "pos": "RP",
+    "name": "Montgomery, Mason",
+    "id": "05y2k",
+    "ADP": 478.51
+  },
+  {
+    "pos": "SP",
+    "name": "Mathews, Quinn",
+    "id": "060gd",
+    "ADP": 478.56
+  },
+  {
+    "pos": "3B",
+    "name": "Kemp, Otto",
+    "id": "066al",
+    "ADP": 478.58
+  },
+  {
+    "pos": "RP",
+    "name": "Myers, Tobias",
+    "id": "041sz",
+    "ADP": 478.77
+  },
+  {
+    "pos": "SP",
+    "name": "McDougal, Tanner",
+    "id": "05xpj",
+    "ADP": 479.01
+  },
+  {
+    "pos": "2B",
+    "name": "Rojas, Miguel",
+    "id": "01t5w",
+    "ADP": 479.17
+  },
+  {
+    "pos": "CF",
+    "name": "Hassell, Robert",
+    "id": "05gbe",
+    "ADP": 479.19
+  },
+  {
+    "pos": "RP",
+    "name": "Kerkering, Orion",
+    "id": "06491",
+    "ADP": 479.76
+  },
+  {
+    "pos": "RF",
+    "name": "Benson, Will",
+    "id": "03zcx",
+    "ADP": 479.84
+  },
+  {
+    "pos": "RP",
+    "name": "Baker, Bryan",
+    "id": "041w4",
+    "ADP": 481.02
+  },
+  {
+    "pos": "SP",
+    "name": "Soroka, Michael",
+    "id": "03pjf",
+    "ADP": 488.23
+  },
+  {
+    "pos": "RP",
+    "name": "Tolle, Payton",
+    "id": "06gwk",
+    "ADP": 493.74
+  },
+  {
+    "pos": "RP",
+    "name": "Melton, Troy",
+    "id": "05uc4",
+    "ADP": 501.64
+  },
+  {
+    "pos": "SP",
+    "name": "Lopez, Pablo",
+    "id": "043f9",
+    "ADP": 523.65
+  },
+  {
+    "pos": "LF",
+    "name": "Profar, Jurickson",
+    "id": "01spl",
+    "ADP": 999
+  }
+]

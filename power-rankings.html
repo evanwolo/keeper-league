@@ -145,6 +145,18 @@
     .rank-badge.silver { background: #c0c0c0; color: #000; }
     .rank-badge.bronze { background: #cd7f32; color: #fff; }
 
+    .delta {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-left: 6px;
+      vertical-align: middle;
+      opacity: 0.85;
+    }
+    .delta.up   { color: #4ade80; }
+    .delta.down { color: #f87171; }
+    .delta.flat { color: #888; }
+
 
     .sub-score {
       text-align: center;
@@ -308,6 +320,70 @@
       .pr-container { padding: 12px; }
       .breakdown-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
+
+    /* History date nav */
+    .history-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .history-nav .nav-label {
+      color: #888;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-right: 4px;
+    }
+    .hist-btn {
+      background: #111d32;
+      border: 1px solid #243a58;
+      color: #e0e0e0;
+      border-radius: 4px;
+      padding: 5px 14px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: border-color 0.15s;
+    }
+    .hist-btn:hover:not(:disabled) { border-color: #c41e3a; color: #fff; }
+    .hist-btn:disabled { opacity: 0.3; cursor: default; }
+    .hist-date-label {
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      min-width: 150px;
+      text-align: center;
+      padding: 5px 10px;
+      background: #111d32;
+      border: 1px solid #243a58;
+      border-radius: 4px;
+    }
+    .hist-date-label.is-live {
+      border-color: #c41e3a;
+      color: #e63946;
+    }
+    .hist-live-btn {
+      background: transparent;
+      border: 1px solid #c41e3a;
+      color: #e63946;
+      border-radius: 4px;
+      padding: 5px 14px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .hist-live-btn:hover { background: rgba(196,30,58,0.15); }
+    .hist-retro-badge {
+      font-size: 0.72rem;
+      color: #888;
+      font-style: italic;
+      margin-left: 4px;
+    }
+    /* Historical view: simplified table header */
+    .cat-sys { text-align: center; font-size: 0.75rem; padding: 8px 6px; }
   </style>
 </head>
 <body>
@@ -323,6 +399,16 @@
 
 <div class="pr-container">
 
+  <!-- History Date Navigation -->
+  <div class="history-nav" id="history-nav" style="visibility:hidden">
+    <span class="nav-label">Date</span>
+    <button class="hist-btn" id="hist-prev" title="Previous date" disabled>&#8249;</button>
+    <span class="hist-date-label is-live" id="hist-date-label">Live &mdash; Today</span>
+    <button class="hist-btn" id="hist-next" title="Next date" disabled>&#8250;</button>
+    <button class="hist-live-btn" id="hist-live-btn" style="display:none">&#9679; Back to Live</button>
+    <span class="hist-retro-badge" id="hist-retro-badge" style="display:none">(retroactive estimate)</span>
+  </div>
+
   <!-- Filters -->
   <div class="filters-section">
     <label style="color:#aaa;font-size:0.85rem;">
@@ -336,7 +422,7 @@
   <!-- Rankings Table -->
   <div style="overflow-x:auto">
   <table class="ranking-table">
-    <thead>
+    <thead id="rankings-head">
       <tr>
         <th rowspan="2" style="width:44px">#</th>
         <th rowspan="2">Team</th>

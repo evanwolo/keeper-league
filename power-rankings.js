@@ -62,8 +62,9 @@ function fantraxNameToNormal(fantraxName) {
 }
 
 function buildProjectionLookup(data, provider) {
+  const arr = Array.isArray(data) ? data : (data.players || []);
   const byName = {};
-  for (const p of data) {
+  for (const p of arr) {
     const key = normalizeName(provider.getPlayerName(p));
     if (!byName[key]) byName[key] = [];
     byName[key].push(p);
@@ -243,20 +244,27 @@ function rankTeams(teams) {
 
 // ── Data Loading ──
 
+let liveServerDate = null; // server's local date from power_rankings.json
+
 async function loadAllData(provider) {
-  const [rostersR, playersR, batR, pitR, realStats] = await Promise.all([
+  const [rostersR, playersR, batR, pitR, rankingsR] = await Promise.all([
     fetch('data/fantrax_rosters.json'),
     fetch('data/fantrax_players.json'),
     fetch(provider.battingFile),
     fetch(provider.pitchingFile),
-    loadOptionalJSON(REAL_STATS_FILE),
+    loadOptionalJSON('data/power_rankings.json'),
   ]);
+  const rosters = await rostersR.json();
+  const batting = await batR.json();
+  const pitching = await pitR.json();
+  if (rankingsR && rankingsR.serverDate) liveServerDate = rankingsR.serverDate;
   return {
-    rosters: await rostersR.json(),
+    rosters,
     players: await playersR.json(),
-    batting: await batR.json(),
-    pitching: await pitR.json(),
-    realStats,
+    batting,
+    pitching,
+    rankingsMeta: rankingsR || null,
+    dataGeneratedAt: batting.generatedAt || pitching.generatedAt || rosters.generatedAt || null,
   };
 }
 
@@ -352,7 +360,10 @@ function buildDisplayRankings(baseTeams, realStats, realStatsWeight) {
 
 let currentRankings = [];
 let baseTeams = [];
-let cachedRealStats = null;
+const cachedRealStats = null; // server already blends real stats; client-side blending not used
+let cachedRankingsMeta = null; // metadata from power_rankings.json (realStatsAvailable, source, etc.)
+let rankingsDelta = {}; // teamId → signed int (positive = moved up, negative = down)
+
 let realStatsWeight = DEFAULT_REAL_STATS_WEIGHT;
 
 function renderRankings(sortByName) {
@@ -371,10 +382,20 @@ function renderRankings(sortByName) {
 
     const badgeClass = rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : '';
 
+    const d = rankingsDelta[team.teamId];
+    // Only show badge if history data loaded; skip entirely if no entry for this team
+    const deltaHtml = (d == null)
+      ? ''
+      : d === 0
+        ? '<span class="delta flat">—</span>'
+        : d > 0
+          ? `<span class="delta up">&#9650;${d}</span>`
+          : `<span class="delta down">&#9660;${Math.abs(d)}</span>`;
+
     let cells = `
       <td><span class="rank-badge ${badgeClass}">${rank}</span></td>
       <td>
-        <strong style="color:#fff">${escapeHtml(team.teamName)}</strong>
+        <strong style="color:#fff">${escapeHtml(team.teamName)}</strong>${deltaHtml}
       </td>
     `;  
 
@@ -389,21 +410,31 @@ function renderRankings(sortByName) {
     row.addEventListener('click', () => showTeamDetail(team));
     tbody.appendChild(row);
   });
-
-  document.getElementById('last-updated').textContent = 'Updated: ' + new Date().toLocaleTimeString();
 }
 
 function updateRealStatsStatus() {
   const status = document.getElementById('real-stats-status');
   if (!status) return;
 
-  if (!hasRealStats(cachedRealStats)) {
-    status.textContent = 'Real-stats auto-adjust unavailable: no Fantrax real-stats file detected';
+  const meta = cachedRankingsMeta;
+  if (!meta) {
+    status.textContent = 'Run the backend to generate rankings data.';
     return;
   }
 
-  const source = cachedRealStats.sourceMethod || 'Fantrax';
-  status.textContent = 'Real-stats auto-adjust ON (' + Math.round(realStatsWeight * 100) + '%, source: ' + source + ')';
+  if (!meta.realStatsAvailable) {
+    status.textContent = 'Projections only — no real stats available yet.';
+    return;
+  }
+
+  const source = meta.realStatsSource || 'FanGraphs';
+  const weight = meta.realStatsWeight != null
+    ? Math.round(meta.realStatsWeight * 100)
+    : Math.round(realStatsWeight * 100);
+  const updated = meta.generatedAt
+    ? ' · updated ' + new Date(meta.generatedAt).toLocaleString()
+    : '';
+  status.textContent = `Real-stats blending ON (${weight}% actual · source: ${source}${updated})`;
 }
 
 function recomputeAndRender() {
@@ -527,6 +558,270 @@ let currentProvider = null;
 let cachedLeagueData = null; // { rosters, players } — reused across provider switches
 let availableProviders = []; // providers whose data files exist
 
+// ── History navigation ──
+
+let historyData = null;   // full history JSON { entries: [...] }
+let histPastEntries = []; // entries before today (today is always shown as live)
+let histDateIdx  = -1;    // -1 = live view; else index into histPastEntries
+let histDelta    = {};    // teamId → signed delta vs the previous history entry
+
+function localDateKey() {
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
+const LIVE_THEAD_HTML = `
+  <tr>
+    <th rowspan="2" style="width:44px">#</th>
+    <th rowspan="2">Team</th>
+    <th colspan="5" class="group-hit">Hitting</th>
+    <th colspan="5" class="group-pit">Pitching</th>
+  </tr>
+  <tr>
+    <th class="cat-hit">HR</th>
+    <th class="cat-hit">RBI</th>
+    <th class="cat-hit">TB</th>
+    <th class="cat-hit">OPS</th>
+    <th class="cat-hit">SBN</th>
+    <th class="cat-pit">K</th>
+    <th class="cat-pit">ERA</th>
+    <th class="cat-pit">WHIP</th>
+    <th class="cat-pit">W+QS</th>
+    <th class="cat-pit">SVH</th>
+  </tr>
+`;
+
+async function loadHistoryData(serverDate) {
+  try {
+    const resp = await fetch('data/power_rankings_history.json');
+    if (!resp.ok) return;
+    historyData = await resp.json();
+    // Use the server's local date to filter — avoids browser timezone discrepancies
+    const today = serverDate || localDateKey();
+    histPastEntries = (historyData.entries || []).filter(e => e.date < today);
+  } catch {
+    historyData = null;
+    histPastEntries = [];
+  }
+}
+
+function buildHistoryNav() {
+  const nav = document.getElementById('history-nav');
+  if (histPastEntries.length === 0) {
+    nav.style.visibility = 'hidden';
+    return;
+  }
+  nav.style.visibility = 'visible';
+  updateHistoryNavUI();
+
+  document.getElementById('hist-prev').addEventListener('click', () => {
+    if (histDateIdx === -1) {
+      // Move from live to most recent past entry
+      navigateHistory(histPastEntries.length - 1);
+    } else if (histDateIdx > 0) {
+      navigateHistory(histDateIdx - 1);
+    }
+  });
+
+  document.getElementById('hist-next').addEventListener('click', () => {
+    if (histDateIdx === -1) return;
+    if (histDateIdx < histPastEntries.length - 1) {
+      navigateHistory(histDateIdx + 1);
+    } else {
+      navigateHistory(-1); // last past entry → back to live
+    }
+  });
+
+  document.getElementById('hist-live-btn').addEventListener('click', () => {
+    navigateHistory(-1);
+  });
+}
+
+function updateHistoryNavUI() {
+  const prevBtn    = document.getElementById('hist-prev');
+  const nextBtn    = document.getElementById('hist-next');
+  const label      = document.getElementById('hist-date-label');
+  const liveBtn    = document.getElementById('hist-live-btn');
+  const retroBadge = document.getElementById('hist-retro-badge');
+
+  const isLive = histDateIdx === -1;
+
+  prevBtn.disabled = isLive ? histPastEntries.length === 0 : histDateIdx <= 0;
+  nextBtn.disabled = isLive;
+
+  if (isLive) {
+    label.textContent = 'Live \u2014 Today';
+    label.classList.add('is-live');
+    liveBtn.style.display = 'none';
+    retroBadge.style.display = 'none';
+  } else {
+    const entry = histPastEntries[histDateIdx];
+    const d = new Date(entry.date + 'T12:00:00');
+    const fmt = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    label.textContent = fmt;
+    label.classList.remove('is-live');
+    liveBtn.style.display = '';
+    retroBadge.style.display = entry.isRetroactive ? '' : 'none';
+  }
+}
+
+function computeHistDelta(currentEntry) {
+  // Find the entry just before the current one in histPastEntries
+  let prevEntry = null;
+  if (histDateIdx === -1) {
+    // Live: compare against most recent past entry
+    prevEntry = histPastEntries.length > 0 ? histPastEntries[histPastEntries.length - 1] : null;
+  } else if (histDateIdx > 0) {
+    prevEntry = histPastEntries[histDateIdx - 1];
+  }
+
+  if (!prevEntry || !prevEntry.consensus || !currentEntry.consensus) { histDelta = {}; return; }
+
+  const prevRank = {};
+  for (const t of (prevEntry.consensus.rankings || [])) prevRank[t.teamId] = t.rank;
+  const curRank  = {};
+  for (const t of (currentEntry.consensus.rankings || [])) curRank[t.teamId] = t.rank;
+
+  histDelta = {};
+  for (const [teamId, cur] of Object.entries(curRank)) {
+    const prev = prevRank[teamId];
+    if (prev != null) histDelta[teamId] = prev - cur; // positive = moved up
+  }
+}
+
+function renderHistoricalRankings(entry) {
+  const thead = document.getElementById('rankings-head');
+  const tbody = document.getElementById('rankings-body');
+
+  const systems = Object.keys(entry.systems || {});
+  const sysHeaders = systems.map(id =>
+    `<th class="cat-sys">${escapeHtml(entry.systems[id].name)}</th>`
+  ).join('');
+  const colCount = 3 + systems.length;
+
+  // Replace table header with simplified historical columns
+  thead.innerHTML = `
+    <tr>
+      <th style="width:44px">#</th>
+      <th>Team</th>
+      <th class="cat-sys">Score</th>
+      ${sysHeaders}
+    </tr>
+  `;
+
+  // Build system rank lookups: sysRank[sysId][teamId] = rank
+  const sysRank = {};
+  for (const [id, sys] of Object.entries(entry.systems)) {
+    sysRank[id] = {};
+    for (const t of (sys.rankings || [])) sysRank[id][t.teamId] = t.rank;
+  }
+
+  const rankings = (entry.consensus && entry.consensus.rankings) || [];
+  const sorted = [...rankings].sort((a, b) => b.totalPoints - a.totalPoints);
+
+  tbody.innerHTML = '';
+  const total = sorted.length;
+  sorted.forEach((team, i) => {
+    const rank = i + 1;
+    const badgeClass = rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : '';
+    const d = histDelta[team.teamId];
+    const deltaHtml = d == null ? '' : d === 0
+      ? '<span class="delta flat">\u2014</span>'
+      : d > 0 ? `<span class="delta up">&#9650;${d}</span>`
+               : `<span class="delta down">&#9660;${Math.abs(d)}</span>`;
+
+    const rankCells = systems.map(id => {
+      const r = sysRank[id] && sysRank[id][team.teamId];
+      return r != null
+        ? `<td class="cat-cell"><span style="color:${getRankColor(r, total)}">#${r}</span></td>`
+        : `<td class="cat-cell"><span style="color:#555">\u2014</span></td>`;
+    }).join('');
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td><span class="rank-badge ${badgeClass}">${rank}</span></td>
+      <td><strong style="color:#fff">${escapeHtml(team.teamName)}</strong>${deltaHtml}</td>
+      <td class="cat-cell"><span style="color:#e0e0e0;font-weight:700">${team.totalPoints.toFixed(1)}</span></td>
+      ${rankCells}
+    `;
+    tbody.appendChild(row);
+  });
+
+  // Disable team detail click in history mode (full stat data not stored)
+  tbody.querySelectorAll('tr').forEach(r => r.style.cursor = 'default');
+}
+
+function restoreLiveTableHead() {
+  document.getElementById('rankings-head').innerHTML = LIVE_THEAD_HTML;
+}
+
+async function navigateHistory(idx) {
+  histDateIdx = idx;
+  updateHistoryNavUI();
+
+  if (idx === -1) {
+    // Return to live view
+    restoreLiveTableHead();
+    recomputeAndRender();
+    return;
+  }
+
+  const entry = histPastEntries[idx];
+  computeHistDelta(entry);
+  renderHistoricalRankings(entry);
+}
+
+// ── Composite Rankings ──
+
+async function buildCompositeRankings(rosters, players) {
+  if (availableProviders.length === 0) return null;
+
+  const results = await Promise.all(availableProviders.map(async p => {
+    try {
+      const [batR, pitR] = await Promise.all([
+        fetch(p.battingFile),
+        fetch(p.pitchingFile),
+      ]);
+      if (!batR.ok || !pitR.ok) return null;
+      const batting = await batR.json();
+      const pitching = await pitR.json();
+      return buildRankings(rosters, players, batting, pitching, p);
+    } catch {
+      return null;
+    }
+  }));
+
+  const valid = results.filter(Boolean);
+  if (valid.length === 0) return null;
+
+  // Average stats per team across all systems
+  return valid[0].map(team => {
+    const statSums = {};
+    let count = 0;
+    for (const teams of valid) {
+      const t = teams.find(tt => tt.teamId === team.teamId);
+      if (!t) continue;
+      count++;
+      for (const cat of CATEGORIES) {
+        statSums[cat.key] = (statSums[cat.key] || 0) + t.projection.stats[cat.key];
+      }
+    }
+    const avgStats = {};
+    for (const cat of CATEGORIES) {
+      avgStats[cat.key] = count > 0 ? statSums[cat.key] / count : 0;
+    }
+    return {
+      teamId: team.teamId,
+      teamName: team.teamName,
+      projection: { ...team.projection, stats: avgStats },
+      catRank: {},
+    };
+  });
+}
+
 async function detectAvailableProviders() {
   const all = ProjectionRegistry.list();
   const checks = all.map(async (p) => {
@@ -551,9 +846,79 @@ function populateProviderDropdown(available) {
     if (p.id === currentProvider.id) opt.selected = true;
     select.appendChild(opt);
   }
+  if (available.length > 1) {
+    const sep = document.createElement('option');
+    sep.disabled = true;
+    sep.textContent = '──────────';
+    select.appendChild(sep);
+    const opt = document.createElement('option');
+    opt.value = 'composite';
+    opt.textContent = 'Composite (All Systems)';
+    select.appendChild(opt);
+  }
+}
+
+// ── Rankings history & delta ──
+
+async function loadRankingsDelta(todayConsensus) {
+  // If historyData is already loaded, use it; otherwise fall back to a fetch
+  const hist = historyData || await (async () => {
+    try {
+      const resp = await fetch('data/power_rankings_history.json');
+      return resp.ok ? resp.json() : null;
+    } catch { return null; }
+  })();
+
+  if (!hist || !hist.entries || hist.entries.length === 0) return;
+
+  const today = localDateKey();
+  const prev = [...hist.entries]
+    .filter(e => e.date < today)
+    .sort((a, b) => b.date.localeCompare(a.date))[0];
+  if (!prev || !prev.consensus || !prev.consensus.rankings) return;
+
+  const prevRank = {};
+  for (const t of prev.consensus.rankings) prevRank[t.teamId] = t.rank;
+
+  const sorted = [...todayConsensus].sort((a, b) => b.totalPoints - a.totalPoints);
+  const deltas = {};
+  sorted.forEach((t, i) => {
+    const yRank = prevRank[t.teamId];
+    if (yRank != null) deltas[t.teamId] = yRank - (i + 1);
+  });
+  rankingsDelta = deltas;
+}
+
+function setDataTimestamp(isoString) {
+  const el = document.getElementById('last-updated');
+  if (!el) return;
+  if (isoString) {
+    el.textContent = 'Data updated: ' + new Date(isoString).toLocaleString();
+  } else {
+    el.textContent = 'Data updated: unknown';
+  }
 }
 
 async function switchProvider(providerId) {
+  if (providerId === 'composite') {
+    if (!cachedLeagueData) return;
+    const tbody = document.getElementById('rankings-body');
+    tbody.innerHTML = '<tr><td colspan="12" style="text-align:center;padding:32px;">Building composite rankings across all ' + availableProviders.length + ' systems...</td></tr>';
+    try {
+      const composite = await buildCompositeRankings(cachedLeagueData.rosters, cachedLeagueData.players);
+      if (!composite) throw new Error('No projection data available');
+      currentProvider = { id: 'composite', name: 'Composite' };
+      baseTeams = composite;
+      recomputeAndRender();
+      setDataTimestamp(null);
+    } catch (err) {
+      console.error('Failed to build composite rankings:', err);
+      document.getElementById('rankings-body').innerHTML =
+        '<tr><td colspan="12" style="text-align:center;padding:32px;color:#ef4444;">Error building composite rankings. Check console.</td></tr>';
+    }
+    return;
+  }
+
   const provider = ProjectionRegistry.get(providerId);
   if (!provider || !cachedLeagueData) return;
 
@@ -575,6 +940,7 @@ async function switchProvider(providerId) {
       batting, pitching, provider
     );
     recomputeAndRender();
+    setDataTimestamp(batting.generatedAt || pitching.generatedAt || null);
   } catch (err) {
     console.error('Failed to load projections:', err);
     tbody.innerHTML =
@@ -585,28 +951,57 @@ async function switchProvider(providerId) {
 async function init() {
   try {
     availableProviders = await detectAvailableProviders();
-    currentProvider = availableProviders.find(p => p.id === ProjectionRegistry.defaultId)
-      || availableProviders[0];
 
-    if (!currentProvider) {
+    if (availableProviders.length === 0) {
       document.getElementById('rankings-body').innerHTML =
         '<tr><td colspan="12" style="text-align:center;padding:32px;color:#ef4444;">No projection data found. Run <code>node data/api.js --projections steamer</code> to fetch data.</td></tr>';
       return;
     }
 
-    populateProviderDropdown(availableProviders);
+    // Default to composite when multiple systems are available
+    const useComposite = availableProviders.length > 1;
+    currentProvider = useComposite
+      ? { id: 'composite', name: 'Composite' }
+      : availableProviders[0];
 
-    const data = await loadAllData(currentProvider);
+    // Need a real provider to load rosters/players; use steamer or first available
+    const seedProvider = availableProviders.find(p => p.id === ProjectionRegistry.defaultId)
+      || availableProviders[0];
+
+    populateProviderDropdown(availableProviders);
+    // Mark the composite option as selected in the dropdown
+    if (useComposite) {
+      const select = document.getElementById('projection-select');
+      if (select) select.value = 'composite';
+    }
+
+    const data = await loadAllData(seedProvider);
     cachedLeagueData = { rosters: data.rosters, players: data.players };
-    cachedRealStats = data.realStats;
+    cachedRankingsMeta = data.rankingsMeta;
     realStatsWeight = getAutoRealStatsWeight(data.rosters);
 
-    baseTeams = buildRankings(
-      data.rosters, data.players,
-      data.batting, data.pitching,
-      currentProvider
-    );
+    if (useComposite) {
+      const composite = await buildCompositeRankings(data.rosters, data.players);
+      baseTeams = composite || buildRankings(data.rosters, data.players, data.batting, data.pitching, seedProvider);
+    } else {
+      baseTeams = buildRankings(
+        data.rosters, data.players,
+        data.batting, data.pitching,
+        currentProvider
+      );
+    }
+
+    // Load history first (needed for delta computation)
+    await loadHistoryData();
+
+    // Pre-compute today's consensus rankings for delta reference, then load delta before rendering
+    const todayForDelta = buildDisplayRankings(baseTeams, cachedRealStats, realStatsWeight);
+    await loadRankingsDelta(todayForDelta);
     recomputeAndRender();
+    setDataTimestamp(data.dataGeneratedAt);
+
+    // Build history navigation after live data is rendered
+    buildHistoryNav();
 
     document.getElementById('sort-by-name').addEventListener('change', e => {
       renderRankings(e.target.checked);
