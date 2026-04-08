@@ -90,45 +90,78 @@ function createProvider(sys) {
 
 // ── Team projection ─────────────────────────────────────────────────────────
 
-// Composite value score used to pick the "best" hitters/pitchers from the full pool
-function hitterValue(s) {
-  return s.HR * 2 + s.RBI + s.TB * 0.4 + s.SBN * 1.5 + s.OPS * 20 + s.PA * 0.01;
+// Composite value score used to pick the "best" hitters/pitchers from the full pool.
+// Each category is normalized to 0-1 range across the pool, then summed equally —
+// no single stat is weighted higher than any other.
+const HITTER_CATS = ['HR','RBI','TB','OPS','SBN'];
+const PITCHER_CATS = ['K','ERA','WHIP','WQS','SVH'];
+
+function normalizedValue(stats, pool, cats, catConfig) {
+  let score = 0;
+  for (const key of cats) {
+    const vals = pool.map(s => s[key]).filter(v => Number.isFinite(v));
+    if (vals.length === 0) continue;
+    const min = Math.min(...vals);
+    const max = Math.max(...vals);
+    const range = max - min;
+    if (range < 0.0001) continue;
+    const raw = (stats[key] - min) / range; // 0 to 1
+    const cat = catConfig.find(c => c.key === key);
+    // For "lower is better" stats (ERA, WHIP), invert so 1 = best
+    score += (cat && !cat.higher) ? (1 - raw) : raw;
+  }
+  return score;
 }
 
-function pitcherValue(s) {
-  return s.K * 0.5 + s.WQS * 3 + s.SVH * 2 + s.IP * 0.1
-    - (s.ERA > 0 ? s.ERA * 2 : 0) - (s.WHIP > 0 ? s.WHIP * 5 : 0);
+function hitterValue(s, pool) {
+  if (!pool) {
+    // Fallback if no pool provided (shouldn't happen)
+    return s.HR * 2 + s.RBI + s.TB * 0.4 + s.SBN * 1.5 + s.OPS * 20 + s.PA * 0.01;
+  }
+  return normalizedValue(s, pool, HITTER_CATS, CATEGORIES);
 }
+
+function pitcherValue(s, pool) {
+  if (!pool) {
+    return s.K * 0.5 + s.WQS * 3 + s.SVH * 2 + s.IP * 0.1;
+  }
+  return normalizedValue(s, pool, PITCHER_CATS, CATEGORIES);
+}
+
+// Position constraints: C:1, 1B:1, 2B:1, 3B:1, SS:1, OF:3, UT:1
+// All healthy pitchers are selected (no cap).
+const HITTER_SLOTS = [
+  { slot: 'C',  count: 1, eligible: pos => pos === 'C' },
+  { slot: '1B', count: 1, eligible: pos => pos === '1B' },
+  { slot: '2B', count: 1, eligible: pos => pos === '2B' },
+  { slot: '3B', count: 1, eligible: pos => pos === '3B' },
+  { slot: 'SS', count: 1, eligible: pos => pos === 'SS' },
+  { slot: 'OF', count: 3, eligible: pos => ['LF','CF','RF','OF'].includes(pos) },
+  // UT is filled last — any hitter (DH lands here)
+  { slot: 'UT', count: 1, eligible: () => true },
+];
 
 function projectTeam(teamData, players, batLookup, pitLookup, provider) {
   const roster = teamData.rosterItems;
-
-  // Read league position constraints (loaded once from league_info.json)
-  // Slots: C:1, 1B:1, 2B:1, 3B:1, SS:1, OF:3, UT:1, P:6
-  const HITTER_SLOTS = [
-    { slot: 'C',  count: 1, eligible: pos => pos === 'C' },
-    { slot: '1B', count: 1, eligible: pos => pos === '1B' || pos === 'DH' },
-    { slot: '2B', count: 1, eligible: pos => pos === '2B' },
-    { slot: '3B', count: 1, eligible: pos => pos === '3B' },
-    { slot: 'SS', count: 1, eligible: pos => pos === 'SS' },
-    { slot: 'OF', count: 3, eligible: pos => ['LF','CF','RF','OF'].includes(pos) },
-    // UT is filled last — any hitter
-    { slot: 'UT', count: 1, eligible: () => true },
-  ];
-  const NUM_PITCHER_SLOTS = 6;
 
   // Pool all rostered non-IL players
   const availableHitters  = roster.filter(r => r.status !== 'INJURED_RESERVE' && r.position !== 'P');
   const availablePitchers = roster.filter(r => r.status !== 'INJURED_RESERVE' && r.position === 'P');
 
-  // Score all hitters
+  // Collect hitter stats (no scoring yet — need the full pool for normalization)
   const hitterPool = [];
   for (const r of availableHitters) {
     const p = players[r.id];
     if (!p) continue;
     const rawProj = findProjection(p, batLookup, provider);
     const stats = rawProj ? provider.extractBatting(rawProj) : null;
-    hitterPool.push({ r, p, stats, value: stats ? hitterValue(stats) : -Infinity });
+    hitterPool.push({ r, p, stats });
+  }
+
+  // Now compute normalized value using the full pool of hitter stats
+  const hitterStatPool = hitterPool.filter(h => h.stats).map(h => h.stats);
+  for (const h of hitterPool) {
+    h.value = h.stats ? hitterValue(h.stats, hitterStatPool) : -Infinity;
   }
   hitterPool.sort((a, b) => b.value - a.value);
 
@@ -151,20 +184,25 @@ function projectTeam(teamData, players, batLookup, pitLookup, provider) {
     }
   }
 
-  // Score all pitchers and pick top N
+  // Collect pitcher stats and compute normalized values
   const pitcherPool = [];
   for (const r of availablePitchers) {
     const p = players[r.id];
     if (!p) continue;
     const rawProj = findProjection(p, pitLookup, provider);
     const stats = rawProj ? provider.extractPitching(rawProj) : null;
-    pitcherPool.push({ r, p, stats, value: stats ? pitcherValue(stats) : -Infinity });
+    pitcherPool.push({ r, p, stats });
+  }
+
+  const pitcherStatPool = pitcherPool.filter(pp => pp.stats).map(pp => pp.stats);
+  for (const pp of pitcherPool) {
+    pp.value = pp.stats ? pitcherValue(pp.stats, pitcherStatPool) : -Infinity;
   }
   pitcherPool.sort((a, b) => b.value - a.value);
 
+  // All healthy pitchers with projections are selected (no cap)
   const selectedPitcherIds = new Set();
   for (const pit of pitcherPool) {
-    if (selectedPitcherIds.size >= NUM_PITCHER_SLOTS) break;
     if (!pit.stats) continue;
     selectedPitcherIds.add(pit.r.id);
     slotAssignments[pit.r.id] = 'P';
@@ -299,64 +337,7 @@ function rankTeams(teams) {
   }
 }
 
-// ── Blending ────────────────────────────────────────────────────────────────
 
-const DEFAULT_REAL_STATS_WEIGHT = 0.35;
-
-function getAutoRealStatsWeight(rosters) {
-  const period = Number(rosters && rosters.period);
-  if (!Number.isFinite(period)) return DEFAULT_REAL_STATS_WEIGHT;
-  const progress = Math.min(Math.max((period - 1) / 26, 0), 1);
-  return +(0.30 + progress * 0.30).toFixed(2);
-}
-
-function blendedStat(projected, actual, weight) {
-  if (!Number.isFinite(actual)) return projected;
-  return projected * (1 - weight) + actual * weight;
-}
-
-function applyRealStats(teamEntry, realTeamStats, weight) {
-  if (!realTeamStats) {
-    teamEntry.adjustment = { applied: false, weight, source: 'projection-only' };
-    return;
-  }
-
-  const blendedStats = { ...teamEntry.stats };
-  for (const cat of CATEGORIES) {
-    const actualValue = Number(realTeamStats[cat.key]);
-    if (Number.isFinite(actualValue)) {
-      blendedStats[cat.key] = +blendedStat(teamEntry.stats[cat.key], actualValue, weight).toFixed(3);
-    }
-  }
-
-  teamEntry.projectedStats = { ...teamEntry.stats };
-  teamEntry.stats = blendedStats;
-  teamEntry.adjustment = {
-    applied: true,
-    weight,
-    source: 'fantrax-real-stats',
-    actual: realTeamStats,
-  };
-}
-
-// ── Build team-level real stats from FanGraphs player files ────────────────
-
-function buildRealTeamStats(rosters, players) {
-  const bat = readOptionalJSON(REAL_STATS_BATTING_FILE);
-  const pit = readOptionalJSON(REAL_STATS_PITCHING_FILE);
-  if (!bat || !pit) return null;
-
-  const realProvider = createProvider({ id: 'real', name: 'Real YTD' });
-  const batLookup = buildProjectionLookup(bat, realProvider);
-  const pitLookup = buildProjectionLookup(pit, realProvider);
-
-  const teams = {};
-  for (const [teamId, teamData] of Object.entries(rosters.rosters)) {
-    const proj = projectTeam(teamData, players, batLookup, pitLookup, realProvider);
-    teams[teamId] = { teamName: teamData.teamName, stats: proj.stats };
-  }
-  return { sourceMethod: 'fangraphs-player-stats', teams };
-}
 
 // ── File helpers ────────────────────────────────────────────────────────────
 
@@ -383,7 +364,7 @@ function writeOutput(data) {
 
 // ── Main computation ────────────────────────────────────────────────────────
 
-function computeRankingsForProvider(provider, rosters, players, realStats, weight) {
+function computeRankingsForProvider(provider, rosters, players) {
   let batting, pitching;
   try {
     batting  = readJSON(provider.battingFile);
@@ -410,15 +391,6 @@ function computeRankingsForProvider(provider, rosters, players, realStats, weigh
     });
   }
 
-  // Apply real stats blending
-  const hasReal = realStats && realStats.teams && Object.keys(realStats.teams).length > 0;
-  for (const team of teams) {
-    const actual = hasReal && realStats.teams[team.teamId]
-      ? realStats.teams[team.teamId].stats
-      : null;
-    applyRealStats(team, actual, weight);
-  }
-
   // Rank
   rankTeams(teams);
   teams.sort((a, b) => b.totalPoints - a.totalPoints);
@@ -429,12 +401,10 @@ function computeRankingsForProvider(provider, rosters, players, realStats, weigh
     teamName: t.teamName,
     totalPoints: +t.totalPoints.toFixed(1),
     stats: t.stats,
-    projectedStats: t.projectedStats || t.stats,
     catRanks: t.catRanks,
     matchedHitters: t.matchedHitters,
     matchedPitchers: t.matchedPitchers,
     totalActive: t.totalActive,
-    adjustment: t.adjustment,
     playerDetails: t.playerDetails || [],
   }));
 }
@@ -444,20 +414,13 @@ async function generateRankings() {
 
   const rosters  = readJSON(path.join(DATA_DIR, 'fantrax_rosters.json'));
   const players  = readJSON(path.join(DATA_DIR, 'fantrax_players.json'));
-  const realStats = buildRealTeamStats(rosters, players);
-
-  const weight = getAutoRealStatsWeight(rosters);
-  const hasReal = realStats && realStats.teams && Object.keys(realStats.teams).length > 0;
-
-  console.log(`  Real-stats weight: ${Math.round(weight * 100)}%${hasReal ? '' : ' (no real data available)'}`);
 
   const bySystem = {};
   let primaryRankings = null;
 
   for (const sys of ALL_SYSTEMS) {
     const provider = createProvider(sys);
-    // No blending — projection systems use pure projections, Real YTD uses pure actuals
-    const rankings = computeRankingsForProvider(provider, rosters, players, null, 0);
+    const rankings = computeRankingsForProvider(provider, rosters, players);
     if (rankings) {
       bySystem[sys.id] = {
         name: sys.name,
@@ -483,9 +446,6 @@ async function generateRankings() {
     serverDate: history.toDateKey(new Date()),
     leagueId: config.leagueId,
     period: rosters.period || null,
-    realStatsWeight: weight,
-    realStatsAvailable: hasReal,
-    realStatsSource: hasReal ? (realStats.sourceMethod || 'fangraphs-player-stats') : null,
     categories: CATEGORIES.map(c => ({ key: c.key, label: c.label, type: c.type, higher: c.higher })),
     primarySystem: primaryRankings,
     systems: bySystem,
@@ -545,6 +505,10 @@ function computeConsensus(bySystem) {
     const avgStats = {};
     const avgCatPoints = {};
     let playerDetails = [];
+
+    if (count < systemIds.length) {
+      console.warn(`  Consensus: team ${teamId} (${teamName}) missing from ${systemIds.length - count} of ${systemIds.length} systems; average based on ${count} system(s).`);
+    }
     for (const cat of CATEGORIES) {
       avgStats[cat.key] = +(statsSums[cat.key] / count).toFixed(3);
       avgCatPoints[cat.key] = +(catPointsSums[cat.key] / count).toFixed(1);
@@ -603,4 +567,4 @@ function computeConsensus(bySystem) {
   };
 }
 
-module.exports = { generateRankings, CATEGORIES };
+module.exports = { generateRankings, CATEGORIES, rankTeams, hitterValue, pitcherValue, normalizedValue };

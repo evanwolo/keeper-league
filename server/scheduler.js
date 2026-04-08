@@ -90,6 +90,10 @@ function startAll() {
       console.error(`  Invalid cron for ${name}: "${schedule}" — skipping`);
       continue;
     }
+    if (!jobs[name]) {
+      console.warn(`  No job registered for schedule key: ${name} — skipping`);
+      continue;
+    }
     cron.schedule(schedule, jobs[name]);
     console.log(`  ${name.padEnd(13)} ${schedule}`);
   }

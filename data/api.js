@@ -571,4 +571,7 @@ module.exports = {
   fetchBattingStats, fetchPitchingStats,
   fetchDraftPicks, fetchDraftResults, fetchADP,
   PROJECTION_TYPES,
+  // Exported for testing
+  validateRosters, validateProjections, validatePlayers,
+  normalizeStatKey, normalizeStatsObject,
 };

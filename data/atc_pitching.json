@@ -4561,8 +4561,8 @@
     "League": "AL",
     "PlayerName": "Tatsuya Imai",
     "xMLBAMID": 837227,
-    "playerids": "sa3062955",
-    "playerid": "sa3062955"
+    "playerids": "37124",
+    "playerid": "37124"
   },
   {
     "Team": "STL",
@@ -9401,8 +9401,8 @@
     "League": "NL",
     "PlayerName": "Andrew Painter",
     "xMLBAMID": 691725,
-    "playerids": "sa3017880",
-    "playerid": "sa3017880"
+    "playerids": "30091",
+    "playerid": "30091"
   },
   {
     "Team": null,
@@ -13420,8 +13420,8 @@
     "playerid": "20539"
   },
   {
-    "Team": null,
-    "ShortName": null,
+    "Team": "TOR",
+    "ShortName": "Blue Jays",
     "W": 3.5373,
     "L": 5.03697,
     "GS": 12.404,
@@ -13467,8 +13467,8 @@
     "Skew": 0.418901,
     "Dim": 4.54135,
     "ADP": 999,
-    "teamid": -1,
-    "League": null,
+    "teamid": 14,
+    "League": "AL",
     "PlayerName": "Patrick Corbin",
     "xMLBAMID": 571578,
     "playerids": "9323",
@@ -19246,8 +19246,8 @@
     "League": "AL",
     "PlayerName": "George Klassen",
     "xMLBAMID": 691946,
-    "playerids": "sa3023440",
-    "playerid": "sa3023440"
+    "playerids": "33464",
+    "playerid": "33464"
   },
   {
     "Team": "COL",
@@ -24915,8 +24915,8 @@
     "playerid": "19879"
   },
   {
-    "Team": "STL",
-    "ShortName": "Cardinals",
+    "Team": "BAL",
+    "ShortName": "Orioles",
     "W": 2.35973,
     "L": 1.69935,
     "GS": 0,
@@ -24962,8 +24962,8 @@
     "Skew": -0.798528,
     "Dim": 3.6563,
     "ADP": 999,
-    "teamid": 28,
-    "League": "NL",
+    "teamid": 2,
+    "League": "AL",
     "PlayerName": "Nick Raquet",
     "xMLBAMID": 675919,
     "playerids": "20333",
@@ -27280,8 +27280,8 @@
     "playerid": "31741"
   },
   {
-    "Team": "TOR",
-    "ShortName": "Blue Jays",
+    "Team": "BOS",
+    "ShortName": "Red Sox",
     "W": 1.21443,
     "L": 1.12896,
     "GS": 0.375576,
@@ -27327,7 +27327,7 @@
     "Skew": 0.518077,
     "Dim": 3.54786,
     "ADP": 999,
-    "teamid": 14,
+    "teamid": 3,
     "League": "AL",
     "PlayerName": "Angel Bastardo",
     "xMLBAMID": 682785,
@@ -28050,8 +28050,8 @@
     "playerid": "27819"
   },
   {
-    "Team": "MIL",
-    "ShortName": "Brewers",
+    "Team": "COL",
+    "ShortName": "Rockies",
     "W": 0.77913,
     "L": 0.97133,
     "GS": 0,
@@ -28097,7 +28097,7 @@
     "Skew": 1.66503,
     "Dim": 3.33377,
     "ADP": 999,
-    "teamid": 23,
+    "teamid": 19,
     "League": "NL",
     "PlayerName": "Sammy Peralta",
     "xMLBAMID": 671111,
@@ -28981,8 +28981,8 @@
     "League": "AL",
     "PlayerName": "Tyler Uberstine",
     "xMLBAMID": 700413,
-    "playerids": "sa3017643",
-    "playerid": "sa3017643"
+    "playerids": "29961",
+    "playerid": "29961"
   },
   {
     "Team": "KCR",
@@ -29421,8 +29421,8 @@
     "League": "NL",
     "PlayerName": "Matt Pushard",
     "xMLBAMID": 690155,
-    "playerids": "sa3019955",
-    "playerid": "sa3019955"
+    "playerids": "31870",
+    "playerid": "31870"
   },
   {
     "Team": "MIA",
@@ -32340,8 +32340,8 @@
     "playerid": "sa3020710"
   },
   {
-    "Team": "CLE",
-    "ShortName": "Guardians",
+    "Team": "CHW",
+    "ShortName": "White Sox",
     "W": 1.22889,
     "L": 2.46465,
     "GS": 2.20542,
@@ -32387,7 +32387,7 @@
     "Skew": 1.8717,
     "Dim": 3.70782,
     "ADP": 999,
-    "teamid": 5,
+    "teamid": 4,
     "League": "AL",
     "PlayerName": "Doug Nikhazy",
     "xMLBAMID": 680951,
@@ -32721,8 +32721,8 @@
     "League": "NL",
     "PlayerName": "Riley Martin",
     "xMLBAMID": 702303,
-    "playerids": "sa3017601",
-    "playerid": "sa3017601"
+    "playerids": "29934",
+    "playerid": "29934"
   },
   {
     "Team": "CHW",
@@ -35145,8 +35145,8 @@
     "playerid": "17948"
   },
   {
-    "Team": "CHW",
-    "ShortName": "White Sox",
+    "Team": "BOS",
+    "ShortName": "Red Sox",
     "W": 1.12403,
     "L": 1.70888,
     "GS": 0,
@@ -35192,7 +35192,7 @@
     "Skew": -1.92202,
     "Dim": 3.72434,
     "ADP": 999,
-    "teamid": 4,
+    "teamid": 3,
     "League": "AL",
     "PlayerName": "Jedixson Paez",
     "xMLBAMID": 699151,
@@ -35860,8 +35860,8 @@
     "playerid": "sa3017751"
   },
   {
-    "Team": null,
-    "ShortName": null,
+    "Team": "NYM",
+    "ShortName": "Mets",
     "W": 1.59309,
     "L": 1.97513,
     "GS": 0,
@@ -35907,8 +35907,8 @@
     "Skew": -0.409522,
     "Dim": 3.74195,
     "ADP": 999,
-    "teamid": -1,
-    "League": null,
+    "teamid": 25,
+    "League": "NL",
     "PlayerName": "Luke Jackson",
     "xMLBAMID": 592426,
     "playerids": "11752",
@@ -36300,8 +36300,8 @@
     "playerid": "16074"
   },
   {
-    "Team": "DET",
-    "ShortName": "Tigers",
+    "Team": "SFG",
+    "ShortName": "Giants",
     "W": 1.40456,
     "L": 1.11079,
     "GS": 0,
@@ -36347,8 +36347,8 @@
     "Skew": -0.801695,
     "Dim": 3.4932,
     "ADP": 999,
-    "teamid": 6,
-    "League": "AL",
+    "teamid": 30,
+    "League": "NL",
     "PlayerName": "Dylan Smith",
     "xMLBAMID": 681916,
     "playerids": "30145",
@@ -37290,8 +37290,8 @@
     "playerid": "20418"
   },
   {
-    "Team": "ARI",
-    "ShortName": "Diamondbacks",
+    "Team": "LAD",
+    "ShortName": "Dodgers",
     "W": 1.44675,
     "L": 1.44119,
     "GS": 0.118198,
@@ -37337,7 +37337,7 @@
     "Skew": -1.31095,
     "Dim": 3.5075,
     "ADP": 999,
-    "teamid": 15,
+    "teamid": 22,
     "League": "NL",
     "PlayerName": "Grant Holman",
     "xMLBAMID": 680880,
@@ -37455,8 +37455,8 @@
     "playerid": "21922"
   },
   {
-    "Team": "LAA",
-    "ShortName": "Angels",
+    "Team": "ATL",
+    "ShortName": "Braves",
     "W": 1.06739,
     "L": 1.92773,
     "GS": 0.525779,
@@ -37502,8 +37502,8 @@
     "Skew": 1.70218,
     "Dim": 3.65234,
     "ADP": 999,
-    "teamid": 1,
-    "League": "AL",
+    "teamid": 16,
+    "League": "NL",
     "PlayerName": "Victor Mederos",
     "xMLBAMID": 682989,
     "playerids": "31533",
@@ -37840,8 +37840,8 @@
     "playerid": "33168"
   },
   {
-    "Team": "WSN",
-    "ShortName": "Nationals",
+    "Team": "LAD",
+    "ShortName": "Dodgers",
     "W": 0.868393,
     "L": 1.38152,
     "GS": 0.000152138,
@@ -37887,7 +37887,7 @@
     "Skew": 1.54416,
     "Dim": 3.45242,
     "ADP": 999,
-    "teamid": 24,
+    "teamid": 22,
     "League": "NL",
     "PlayerName": "Jake Eder",
     "xMLBAMID": 671109,
@@ -39046,8 +39046,8 @@
     "League": "NL",
     "PlayerName": "Jose Franco",
     "xMLBAMID": 683742,
-    "playerids": "sa3008714",
-    "playerid": "sa3008714"
+    "playerids": "27014",
+    "playerid": "27014"
   },
   {
     "Team": "CIN",
@@ -42295,8 +42295,8 @@
     "playerid": "29823"
   },
   {
-    "Team": "ARI",
-    "ShortName": "Diamondbacks",
+    "Team": null,
+    "ShortName": null,
     "W": 1.07208,
     "L": 1.15918,
     "GS": 0.443082,
@@ -42342,8 +42342,8 @@
     "Skew": 1.54405,
     "Dim": 3.53304,
     "ADP": 999,
-    "teamid": 15,
-    "League": "NL",
+    "teamid": -1,
+    "League": null,
     "PlayerName": "Joe Ross",
     "xMLBAMID": 605452,
     "playerids": "12972",
@@ -43780,8 +43780,8 @@
     "playerid": "21132"
   },
   {
-    "Team": "SEA",
-    "ShortName": "Mariners",
+    "Team": null,
+    "ShortName": null,
     "W": 0.719541,
     "L": 0.573805,
     "GS": 0,
@@ -43827,8 +43827,8 @@
     "Skew": 1.27357,
     "Dim": 3.3977,
     "ADP": 999,
-    "teamid": 11,
-    "League": "AL",
+    "teamid": -1,
+    "League": null,
     "PlayerName": "Ryan Loutos",
     "xMLBAMID": 702795,
     "playerids": "29521",
@@ -44000,8 +44000,8 @@
     "playerid": "26257"
   },
   {
-    "Team": "MIA",
-    "ShortName": "Marlins",
+    "Team": "MIN",
+    "ShortName": "Twins",
     "W": 0.832441,
     "L": 0.785352,
     "GS": 0,
@@ -44047,8 +44047,8 @@
     "Skew": 0.352888,
     "Dim": 3.51018,
     "ADP": 999,
-    "teamid": 20,
-    "League": "NL",
+    "teamid": 8,
+    "League": "AL",
     "PlayerName": "Garrett Acton",
     "xMLBAMID": 670183,
     "playerids": "27583",
@@ -46530,8 +46530,8 @@
     "playerid": "20061"
   },
   {
-    "Team": "LAA",
-    "ShortName": "Angels",
+    "Team": "BAL",
+    "ShortName": "Orioles",
     "W": 0.792812,
     "L": 1.04045,
     "GS": 0,
@@ -46577,7 +46577,7 @@
     "Skew": -0.669809,
     "Dim": 3.55952,
     "ADP": 999,
-    "teamid": 1,
+    "teamid": 2,
     "League": "AL",
     "PlayerName": "Jayvien Sandridge",
     "xMLBAMID": 682144,

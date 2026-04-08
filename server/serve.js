@@ -7,6 +7,10 @@ const scheduler = require('./scheduler');
 const ROOT = path.resolve(__dirname, '..');
 const API_TOKEN = process.env.API_TOKEN || '';
 
+if (!API_TOKEN) {
+  console.warn('Warning: API_TOKEN is not set — /api/refresh endpoints are unprotected. Set API_TOKEN in .env to require auth.');
+}
+
 // ── Rate limiting ───────────────────────────────────────────────────────────
 
 const RATE_WINDOW_MS = 60 * 1000; // 1 minute

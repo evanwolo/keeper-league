@@ -23,7 +23,6 @@ function transformEntry(entry) {
     projection: {
       stats: entry.stats || {},
       playerDetails: entry.playerDetails || [],
-      adjustment: entry.adjustment || null,
     },
     catRank: entry.catRanks || {},
   };
@@ -84,51 +83,36 @@ function renderRankings() {
   });
 }
 
-function updateRealStatsStatus() {
-  const status = document.getElementById('real-stats-status');
-  if (!status) return;
-
-  if (!rankingsData) {
-    status.textContent = 'Run the backend to generate rankings data.';
-    return;
-  }
-
-  if (!rankingsData.realStatsAvailable) {
-    status.textContent = 'Projections only — no real stats available yet.';
-    return;
-  }
-
-  const source = rankingsData.realStatsSource || 'FanGraphs';
-  const weight = rankingsData.realStatsWeight != null
-    ? Math.round(rankingsData.realStatsWeight * 100)
-    : 35;
-  const updated = rankingsData.generatedAt
-    ? ' · updated ' + new Date(rankingsData.generatedAt).toLocaleString()
-    : '';
-  status.textContent = `Real-stats blending ON (${weight}% actual \u00b7 source: ${source}${updated})`;
-}
-
 function recomputeAndRender() {
   renderRankings();
-  updateRealStatsStatus();
 }
 
+// Color scale for rank percentile (0 = best, 1 = worst)
+const RANK_COLOR_FIRST  = '#3b82f6'; // rank #1 always blue
+const RANK_COLOR_WORST  = '#c62828';
+const RANK_COLOR_STEPS  = [
+  { threshold: 0.20, color: '#2e7d32' }, // top 20%
+  { threshold: 0.40, color: '#66bb6a' },
+  { threshold: 0.65, color: '#fbc02d' },
+  { threshold: 0.85, color: '#ef6c00' },
+];
+
 function getRankColor(rank, total) {
-  if (rank === 1) return '#3b82f6';
+  if (rank === 1) return RANK_COLOR_FIRST;
   const pct = (rank - 1) / Math.max(total - 1, 1);
-  if (pct <= 0.2) return '#2e7d32';
-  if (pct <= 0.4) return '#66bb6a';
-  if (pct <= 0.65) return '#fbc02d';
-  if (pct <= 0.85) return '#ef6c00';
-  return '#c62828';
+  for (const { threshold, color } of RANK_COLOR_STEPS) {
+    if (pct <= threshold) return color;
+  }
+  return RANK_COLOR_WORST;
 }
 
 function fmtStat(key, value) {
+  const v = value ?? 0;
   switch (key) {
-    case 'OPS': case 'WHIP': return value.toFixed(3);
-    case 'ERA': return value.toFixed(2);
-    case 'SBN': case 'WQS': case 'SVH': return value.toFixed(1);
-    default: return String(Math.round(value));
+    case 'OPS': case 'WHIP': return v.toFixed(3);
+    case 'ERA': return v.toFixed(2);
+    case 'SBN': case 'WQS': case 'SVH': return v.toFixed(1);
+    default: return String(Math.round(v));
   }
 }
 
@@ -140,9 +124,30 @@ function showTeamDetail(team) {
   const allPitchers = team.projection.playerDetails.filter(p => p.type === 'pitcher' && p.status !== 'INJURED_RESERVE');
   const il          = team.projection.playerDetails.filter(p => p.status === 'INJURED_RESERVE');
 
-  // Sort by value descending (players with stats first, then no-projection at bottom)
-  const hVal = p => p.stats ? (p.stats.HR * 2 + p.stats.RBI + p.stats.TB * 0.4 + p.stats.SBN * 1.5 + p.stats.OPS * 20 + (p.stats.PA || 0) * 0.01) : -1;
-  const pVal = p => p.stats ? (p.stats.K * 0.5 + p.stats.WQS * 3 + p.stats.SVH * 2 + p.stats.IP * 0.1 - p.stats.ERA * 2 - p.stats.WHIP * 5) : -1;
+  // Normalized value: each category scaled 0-1 across the pool, then summed equally
+  function normalizedPool(players, cats) {
+    const withStats = players.filter(p => p.stats);
+    const ranges = {};
+    for (const key of cats) {
+      const vals = withStats.map(p => p.stats[key]).filter(v => Number.isFinite(v));
+      const min = Math.min(...vals), max = Math.max(...vals);
+      ranges[key] = { min, max, range: max - min };
+    }
+    return p => {
+      if (!p.stats) return -1;
+      let score = 0;
+      for (const key of cats) {
+        const r = ranges[key];
+        if (!r || r.range < 0.0001) continue;
+        const raw = (p.stats[key] - r.min) / r.range;
+        const cat = CATEGORIES.find(c => c.key === key);
+        score += (cat && !cat.higher) ? (1 - raw) : raw;
+      }
+      return score;
+    };
+  }
+  const hVal = normalizedPool(allHitters, ['HR','RBI','TB','OPS','SBN']);
+  const pVal = normalizedPool(allPitchers, ['K','ERA','WHIP','WQS','SVH']);
   allHitters.sort((a, b) => hVal(b) - hVal(a));
   allPitchers.sort((a, b) => pVal(b) - pVal(a));
 
@@ -167,8 +172,6 @@ function showTeamDetail(team) {
           '</div>';
         }).join('')}
       </div>
-
-      <p style="color:#888;font-size:0.75rem;margin:16px 0 4px;">Top ${selectedCount} players by value are counted in rankings. Dimmed rows are on the roster but not in the optimal lineup.</p>
 
       <div class="player-grid" style="margin-top:8px">
         <div class="player-section">

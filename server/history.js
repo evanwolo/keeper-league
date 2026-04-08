@@ -117,6 +117,11 @@ function appendEntry(rankings) {
 // Entries are marked isRetroactive: true so the UI can note this.
 
 function backfill(rankings, startDate) {
+  if (!startDate || !/^\d{4}-\d{2}-\d{2}$/.test(startDate)) {
+    console.warn(`  History: backfill called with invalid startDate: ${JSON.stringify(startDate)} — skipping`);
+    return;
+  }
+
   const today = toDateKey(new Date());
   const yesterday = addDays(today, -1);
 

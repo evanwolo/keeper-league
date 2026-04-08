@@ -1,31 +1,4 @@
-const { validateRosters, validateProjections, validatePlayers } = (() => {
-  // Extract validation functions from api.js for testing
-  // Since they aren't exported, we redefine them here matching the implementation
-  function validateRosters(rosters) {
-    if (!rosters || typeof rosters !== 'object') throw new Error('Roster response is not an object');
-    if (!rosters.rosters || typeof rosters.rosters !== 'object') throw new Error('Roster response missing rosters map');
-    const teamIds = Object.keys(rosters.rosters);
-    if (teamIds.length === 0) throw new Error('Roster response has zero teams');
-    for (const [id, team] of Object.entries(rosters.rosters)) {
-      if (!team.teamName) throw new Error(`Team ${id} missing teamName`);
-      if (!Array.isArray(team.rosterItems)) throw new Error(`Team ${id} missing rosterItems array`);
-    }
-  }
-
-  function validateProjections(data, type, stat) {
-    const arr = Array.isArray(data) ? data : (data && data.players) || [];
-    if (arr.length < 50) throw new Error(`${type} ${stat} projections: only ${arr.length} players (expected 50+)`);
-    const sample = arr[0];
-    if (!sample.PlayerName) throw new Error(`${type} ${stat} projections: missing PlayerName field`);
-  }
-
-  function validatePlayers(players) {
-    if (!players || typeof players !== 'object') throw new Error('Players response is not an object');
-    if (Object.keys(players).length < 10) throw new Error(`Players response has only ${Object.keys(players).length} entries (expected 10+)`);
-  }
-
-  return { validateRosters, validateProjections, validatePlayers };
-})();
+const { validateRosters, validateProjections, validatePlayers } = require('../data/api');
 
 describe('validateRosters', () => {
   test('accepts valid roster data', () => {

@@ -4161,8 +4161,8 @@
     "League": "AL",
     "PlayerName": "Tatsuya Imai",
     "xMLBAMID": 837227,
-    "playerids": "sa3062955",
-    "playerid": "sa3062955"
+    "playerids": "37124",
+    "playerid": "37124"
   },
   {
     "Team": "MIN",
@@ -5680,8 +5680,8 @@
     "League": "NL",
     "PlayerName": "Andrew Painter",
     "xMLBAMID": 691725,
-    "playerids": "sa3017880",
-    "playerid": "sa3017880"
+    "playerids": "30091",
+    "playerid": "30091"
   },
   {
     "Team": "HOU",
@@ -10094,8 +10094,8 @@
     "playerid": "7048"
   },
   {
-    "Team": null,
-    "ShortName": null,
+    "Team": "TOR",
+    "ShortName": "Blue Jays",
     "W": 4.10863,
     "L": 5.72575,
     "GS": 12.404,
@@ -10135,8 +10135,8 @@
     "RA9-WAR": 0.183679,
     "QS": 4.34793,
     "ADP": 999,
-    "teamid": -1,
-    "League": null,
+    "teamid": 14,
+    "League": "AL",
     "PlayerName": "Patrick Corbin",
     "xMLBAMID": 571578,
     "playerids": "9323",
@@ -14406,8 +14406,8 @@
     "playerid": "12095"
   },
   {
-    "Team": "CHW",
-    "ShortName": "White Sox",
+    "Team": "BOS",
+    "ShortName": "Red Sox",
     "W": 1.39685,
     "L": 1.08058,
     "GS": 0,
@@ -14447,7 +14447,7 @@
     "RA9-WAR": 0.342576,
     "QS": 0,
     "ADP": 999,
-    "teamid": 4,
+    "teamid": 3,
     "League": "AL",
     "PlayerName": "Jedixson Paez",
     "xMLBAMID": 699151,
@@ -16362,8 +16362,8 @@
     "League": "AL",
     "PlayerName": "George Klassen",
     "xMLBAMID": 691946,
-    "playerids": "sa3023440",
-    "playerid": "sa3023440"
+    "playerids": "33464",
+    "playerid": "33464"
   },
   {
     "Team": "SDP",
@@ -20237,8 +20237,8 @@
     "playerid": "16943"
   },
   {
-    "Team": "TOR",
-    "ShortName": "Blue Jays",
+    "Team": "BOS",
+    "ShortName": "Red Sox",
     "W": 0.949997,
     "L": 0.615864,
     "GS": 0.376,
@@ -20278,7 +20278,7 @@
     "RA9-WAR": 0.20738,
     "QS": 0,
     "ADP": 999,
-    "teamid": 14,
+    "teamid": 3,
     "League": "AL",
     "PlayerName": "Angel Bastardo",
     "xMLBAMID": 682785,
@@ -25088,8 +25088,8 @@
     "playerid": "23381"
   },
   {
-    "Team": "MIL",
-    "ShortName": "Brewers",
+    "Team": "COL",
+    "ShortName": "Rockies",
     "W": 0.618211,
     "L": 0.402479,
     "GS": 0,
@@ -25129,7 +25129,7 @@
     "RA9-WAR": 0.0858872,
     "QS": 0,
     "ADP": 999,
-    "teamid": 23,
+    "teamid": 19,
     "League": "NL",
     "PlayerName": "Sammy Peralta",
     "xMLBAMID": 671111,
@@ -27097,8 +27097,8 @@
     "playerid": "sa3015446"
   },
   {
-    "Team": "DET",
-    "ShortName": "Tigers",
+    "Team": "SFG",
+    "ShortName": "Giants",
     "W": 0.725737,
     "L": 0.62663,
     "GS": 0,
@@ -27138,8 +27138,8 @@
     "RA9-WAR": -0.0512588,
     "QS": 0,
     "ADP": 999,
-    "teamid": 6,
-    "League": "AL",
+    "teamid": 30,
+    "League": "NL",
     "PlayerName": "Dylan Smith",
     "xMLBAMID": 681916,
     "playerids": "30145",
@@ -27342,8 +27342,8 @@
     "playerid": "22713"
   },
   {
-    "Team": "STL",
-    "ShortName": "Cardinals",
+    "Team": "BAL",
+    "ShortName": "Orioles",
     "W": 1.09702,
     "L": 0.928104,
     "GS": 0,
@@ -27383,8 +27383,8 @@
     "RA9-WAR": -0.0906441,
     "QS": 0,
     "ADP": 999,
-    "teamid": 28,
-    "League": "NL",
+    "teamid": 2,
+    "League": "AL",
     "PlayerName": "Nick Raquet",
     "xMLBAMID": 675919,
     "playerids": "20333",
@@ -27587,8 +27587,8 @@
     "playerid": "25386"
   },
   {
-    "Team": "MIA",
-    "ShortName": "Marlins",
+    "Team": "MIN",
+    "ShortName": "Twins",
     "W": 0.753173,
     "L": 0.657369,
     "GS": 0,
@@ -27628,8 +27628,8 @@
     "RA9-WAR": -0.0558816,
     "QS": 0,
     "ADP": 999,
-    "teamid": 20,
-    "League": "NL",
+    "teamid": 8,
+    "League": "AL",
     "PlayerName": "Garrett Acton",
     "xMLBAMID": 670183,
     "playerids": "27583",
@@ -29106,8 +29106,8 @@
     "playerid": "11804"
   },
   {
-    "Team": "ARI",
-    "ShortName": "Diamondbacks",
+    "Team": "LAD",
+    "ShortName": "Dodgers",
     "W": 0.631989,
     "L": 0.596968,
     "GS": 0.118,
@@ -29147,7 +29147,7 @@
     "RA9-WAR": -0.060445,
     "QS": 0,
     "ADP": 999,
-    "teamid": 15,
+    "teamid": 22,
     "League": "NL",
     "PlayerName": "Grant Holman",
     "xMLBAMID": 680880,
@@ -29939,8 +29939,8 @@
     "playerid": "19244"
   },
   {
-    "Team": "LAA",
-    "ShortName": "Angels",
+    "Team": "BAL",
+    "ShortName": "Orioles",
     "W": 0.639998,
     "L": 0.574491,
     "GS": 0,
@@ -29980,7 +29980,7 @@
     "RA9-WAR": 0.0414598,
     "QS": 0,
     "ADP": 999,
-    "teamid": 1,
+    "teamid": 2,
     "League": "AL",
     "PlayerName": "Jayvien Sandridge",
     "xMLBAMID": 682144,
@@ -31066,8 +31066,8 @@
     "playerid": "17888"
   },
   {
-    "Team": "WSN",
-    "ShortName": "Nationals",
+    "Team": "LAD",
+    "ShortName": "Dodgers",
     "W": 0.543755,
     "L": 0.607828,
     "GS": 0,
@@ -31107,7 +31107,7 @@
     "RA9-WAR": -0.113189,
     "QS": 0,
     "ADP": 999,
-    "teamid": 24,
+    "teamid": 22,
     "League": "NL",
     "PlayerName": "Jake Eder",
     "xMLBAMID": 671109,
@@ -31164,8 +31164,8 @@
     "playerid": "19588"
   },
   {
-    "Team": "SEA",
-    "ShortName": "Mariners",
+    "Team": null,
+    "ShortName": null,
     "W": 0.565374,
     "L": 0.567877,
     "GS": 0,
@@ -31205,8 +31205,8 @@
     "RA9-WAR": -0.11779,
     "QS": 0,
     "ADP": 999,
-    "teamid": 11,
-    "League": "AL",
+    "teamid": -1,
+    "League": null,
     "PlayerName": "Ryan Loutos",
     "xMLBAMID": 702795,
     "playerids": "29521",
@@ -31454,8 +31454,8 @@
     "League": "NL",
     "PlayerName": "Jose Franco",
     "xMLBAMID": 683742,
-    "playerids": "sa3008714",
-    "playerid": "sa3008714"
+    "playerids": "27014",
+    "playerid": "27014"
   },
   {
     "Team": "TBR",
@@ -33222,8 +33222,8 @@
     "playerid": "29866"
   },
   {
-    "Team": null,
-    "ShortName": null,
+    "Team": "NYM",
+    "ShortName": "Mets",
     "W": 1.641,
     "L": 2.04421,
     "GS": 0,
@@ -33263,16 +33263,16 @@
     "RA9-WAR": -0.178269,
     "QS": 0,
     "ADP": 999,
-    "teamid": -1,
-    "League": null,
+    "teamid": 25,
+    "League": "NL",
     "PlayerName": "Luke Jackson",
     "xMLBAMID": 592426,
     "playerids": "11752",
     "playerid": "11752"
   },
   {
-    "Team": "ARI",
-    "ShortName": "Diamondbacks",
+    "Team": null,
+    "ShortName": null,
     "W": 0.655822,
     "L": 0.794897,
     "GS": 0.443,
@@ -33312,8 +33312,8 @@
     "RA9-WAR": -0.152374,
     "QS": 0,
     "ADP": 999,
-    "teamid": 15,
-    "League": "NL",
+    "teamid": -1,
+    "League": null,
     "PlayerName": "Joe Ross",
     "xMLBAMID": 605452,
     "playerids": "12972",
@@ -33369,8 +33369,8 @@
     "playerid": "10315"
   },
   {
-    "Team": "LAA",
-    "ShortName": "Angels",
+    "Team": "ATL",
+    "ShortName": "Braves",
     "W": 0.684798,
     "L": 0.887035,
     "GS": 0.526,
@@ -33410,8 +33410,8 @@
     "RA9-WAR": -0.0955991,
     "QS": 0,
     "ADP": 999,
-    "teamid": 1,
-    "League": "AL",
+    "teamid": 16,
+    "League": "NL",
     "PlayerName": "Victor Mederos",
     "xMLBAMID": 682989,
     "playerids": "31533",
